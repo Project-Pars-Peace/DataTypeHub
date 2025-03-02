@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DataTypeHub – Detail</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-content">
+    <img src="images/Project-pars-peace-logo.jpeg" alt="Project Pars Peace Logo" class="pars-logo">
+    <div class="header-text">
+      <h1>DataTypeHub – Detail</h1>
+      <p>View comprehensive modality information</p>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+  <p><a href="index.html">&larr; Back to Main Page</a></p>
+  <div id="detailContainer">
+    <p>Loading...</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Project PARS Peace – DataTypeHub</p>
+</footer>
+
+<script>
+(async function(){
+  const params = new URLSearchParams(window.location.search);
+  const modId = params.get('id'); // e.g. "mammography"
+
+  if(!modId){
+    document.getElementById('detailContainer').innerHTML = "<p>No modality specified.</p>";
+    return;
+  }
+
+  try {
+    // Fetch the full JSON from modalities/<id>.json
+    const resp = await fetch(`modalities/${modId}.json`);
+    if(!resp.ok) {
+      throw new Error(`Failed to load modalities/${modId}.json`);
+    }
+    const modality = await resp.json();
+
+    renderModalityDetail(modality);
+  } catch(e) {
+    console.error(e);
+    document.getElementById('detailContainer').innerHTML = `<p>Error loading details for ${modId}.</p>`;
+  }
+})();
+
+function renderModalityDetail(m){
+  const container = document.getElementById('detailContainer');
+  container.innerHTML = `
+    <h2>${m.title}</h2>
+    <p><strong>Modality Name:</strong> ${m.title}</p>
+    <p><strong>Acronyms:</strong> ${(m.acronyms || []).join(', ')}</p>
+    <p><strong>Imaging Principle:</strong> ${m.imagingPrinciple}</p>
+
+    <h3>4. Data Type &amp; File Format</h3>
+    <ul>
+      <li><strong>4.1. Primary File Format(s):</strong> ${(m.dataTypeFileFormat.primaryFileFormats||[]).join(', ')}</li>
+      <li><strong>4.2. Data Type:</strong> ${(m.dataTypeFileFormat.dataType||[]).join(', ')}</li>
+      <li><strong>4.3. Related Data Types (parent type):</strong> ${(m.dataTypeFileFormat.relatedDataTypes||[]).join(', ')}</li>
+      <li><strong>4.4. Standard Storage Format:</strong> ${m.dataTypeFileFormat.standardStorageFormat||''}</li>
+      <li><strong>4.5. Conversion Solutions + Reference:</strong>
+        ${renderConversionTable(m.dataTypeFileFormat.conversionSolutions||[])}
+      </li>
+    </ul>
+
+    <h3>5. Typical Resolution &amp; Image Dimensions</h3>
+    <ul>
+      <li><strong>5.1. Spatial Resolution:</strong> ${m.typicalResolutionImageDims.spatialResolution||''}</li>
+      <li><strong>5.2. Voxel Size / Pixel Spacing:</strong> ${m.typicalResolutionImageDims.voxelSize||''}</li>
+      <li><strong>5.3. Temporal Resolution:</strong> ${m.typicalResolutionImageDims.temporalResolution||''}</li>
+    </ul>
+
+    <h3>6. Data Size (Storage Requirements)</h3>
+    <ul>
+      <li><strong>6.1. Single Image Size:</strong> ${m.dataSize.singleImageSize||''}</li>
+      <li><strong>6.2. Typical Study Size:</strong> ${m.dataSize.typicalStudySize||''}</li>
+    </ul>
+
+    <h3>7. Acquisition Device &amp; Hardware Requirements</h3>
+    <ul>
+      <li><strong>7.1. Equipment Used:</strong> ${nl2br(m.acquisitionHardware.equipmentUsed||'')}</li>
+      <li><strong>7.2. Typical Manufacturers:</strong> ${(m.acquisitionHardware.typicalManufacturers||[]).join(', ')}</li>
+    </ul>
+
+    <h3>8. Common Clinical Applications</h3>
+    <ul>
+      <li><strong>8.1. Primary Uses:</strong> ${(m.commonClinicalApps.primaryUses||[]).join(', ')}</li>
+      <li><strong>8.2. Specialized Uses:</strong> ${(m.commonClinicalApps.specializedUses||[]).join(', ')}</li>
+    </ul>
+
+    <h3>9. Radiation &amp; Safety Considerations</h3>
+    <ul>
+      <li><strong>9.1. Ionizing Radiation:</strong> ${m.radiationSafety.ionizingRadiation||''}</li>
+      <li><strong>9.2. Radiation Dose:</strong> ${m.radiationSafety.radiationDose||''}</li>
+      <li><strong>9.3. Safety Concerns:</strong> ${m.radiationSafety.safetyConcerns||''}</li>
+    </ul>
+
+    <h3>10. Preprocessing &amp; Data Preparation</h3>
+    <ul>
+      <li><strong>10.1. Common Preprocessing Steps:</strong> ${(m.preprocessingData.commonPreprocessingSteps||[]).join('; ')}</li>
+      <li><strong>10.2. Compression Methods:</strong> ${(m.preprocessingData.compressionMethods||[]).join('; ')}</li>
+    </ul>
+
+    <h3>11. Challenges &amp; Limitations</h3>
+    <ul>
+      <li><strong>11.1. Technical Challenges:</strong> ${(m.challengesLimitations.technicalChallenges||[]).join('; ')}</li>
+      <li><strong>11.2. Clinical Limitations:</strong> ${(m.challengesLimitations.clinicalLimitations||[]).join('; ')}</li>
+    </ul>
+
+    <h3>12. References</h3>
+    <ul>
+      ${ (m.references||[]).map(r => `<li><a href="${r}" target="_blank">${r}</a></li>`).join('') }
+    </ul>
+
+    <h4>Preparation Meta</h4>
+    ${renderPreparationMeta(m.preparation_meta||[])}
+
+    <p><a href="index.html">&larr; Back to Main Page</a></p>
+  `;
+}
+
+// Renders a small HTML table for conversion solutions
+function renderConversionTable(solutions){
+  if(!solutions.length) return "<p>No conversion solutions listed.</p>";
+  let html = "<table border='1' cellpadding='5' style='border-collapse:collapse;'><tr><th>From</th><th>To</th><th>Description</th><th>Links</th></tr>";
+  solutions.forEach(s => {
+    let links = (s.conversion_links||[]).map(l => `<a href="${l}" target="_blank">${l}</a>`).join(', ');
+    html += `
+      <tr>
+        <td>${s.conversion_from}</td>
+        <td>${s.conversion_to}</td>
+        <td>${s.conversion_description}</td>
+        <td>${links}</td>
+      </tr>
+    `;
+  });
+  html += "</table>";
+  return html;
+}
+
+function renderPreparationMeta(metas){
+  if(!metas.length) return "<p>No meta information available.</p>";
+  let out = "";
+  metas.forEach(meta => {
+    out += `
+      <div style="border:1px solid #ddd; margin-bottom:1rem; padding:0.5rem;">
+        <p><strong>Prepared By:</strong> ${meta.prepared_by}</p>
+        <p><strong>Confirmed By:</strong> ${meta.confirmed_by}</p>
+        <p><strong>Date of Preparation:</strong> ${meta.date_of_preparation}</p>
+        <p><strong>Planned Next Review:</strong> ${meta.planned_next_review}</p>
+        <p><strong>Requires Completion:</strong> ${meta.requires_completion}</p>
+      </div>
+    `;
+  });
+  return out;
+}
+
+function nl2br(str){
+  return (str||"").replace(/\n/g, "<br>");
+}
+</script>
+</body>
+</html>

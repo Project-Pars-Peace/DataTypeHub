@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>DataTypeHub – Landing Page</title>
-  <!-- Link to your main stylesheet -->
+  <title>DataTypeHub – Main Page</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -11,10 +10,7 @@
   <!-- ========== HEADER ========== -->
   <header class="site-header">
     <div class="header-content">
-      <!-- Make sure the filename here matches your logo in docs/images/ -->
-      <img src="images/Project-pars-peace-logo.jpeg"
-           alt="Project Pars Peace Logo"
-           class="pars-logo">
+      <img src="images/Project-pars-peace-logo.jpeg" alt="Project Pars Peace Logo" class="pars-logo">
       <div class="header-text">
         <h1>DataTypeHub</h1>
         <p>A comprehensive hub of 100+ medical data modalities</p>
@@ -31,9 +27,10 @@
       <input type="text" id="searchInput" placeholder="Type to filter...">
     </section>
 
-    <!-- TABS (Parent Categories) -->
+    <!-- TABS (One "ALL" plus a tab for each parent) -->
     <div class="tabs">
-      <button class="tablink active" data-target="tab-xray">X-Ray</button>
+      <button class="tablink active" data-target="tab-all">ALL</button>
+      <button class="tablink" data-target="tab-xray">X-Ray</button>
       <button class="tablink" data-target="tab-mri">MRI</button>
       <button class="tablink" data-target="tab-nmi">NMI</button>
       <button class="tablink" data-target="tab-us">US</button>
@@ -45,394 +42,133 @@
       <button class="tablink" data-target="tab-proteomics">Proteomics</button>
     </div>
 
-    <!-- ================== X-RAY TAB ================== -->
-    <div id="tab-xray" class="tabcontent" style="display: block;">
-      <div class="modality-grid">
-        <!-- Each child modality = one card -->
-        <div class="modality-card modality-item" data-modality="x-ray xray_fluoroscopy">
-          <h2>XRay_Fluoroscopy</h2>
-          <p>Real-time moving X-ray imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="x-ray xray_dr">
-          <h2>XRay_DR</h2>
-          <p>Digital Radiography for direct capture.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="x-ray xray_dexa dxa">
-          <h2>XRay_DEXA/DXA</h2>
-          <p>Bone densitometry imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="x-ray xray_cr">
-          <h2>XRay_CR</h2>
-          <p>Computed Radiography with imaging plates.</p>
-        </div>
-        
-        <!-- Mammography => Link to details page -->
-        <div class="modality-card modality-item" data-modality="x-ray mammography">
-          <h2>Mammography</h2>
-          <p>Low-dose X-ray imaging for breast tissue.</p>
-          <a href="modalities/mammography.html">Go to Details</a>
-        </div>
-
-        <div class="modality-card modality-item" data-modality="x-ray cephalometric_radiography">
-          <h2>Cephalometric Radiography</h2>
-          <p>Specialized radiograph for head/neck (ortho/dental).</p>
-        </div>
-      </div>
+    <!-- TAB CONTENTS -->
+    <div id="tab-all" class="tabcontent" style="display: block;">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ================== MRI TAB ================== -->
-    <div id="tab-mri" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="mri standard_mri">
-          <h2>Standard MRI</h2>
-          <p>Magnetic resonance imaging for soft tissue contrast.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri functional fmri">
-          <h2>Functional MRI (fMRI)</h2>
-          <p>Measures brain activity via blood oxygen level changes.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri diffusion dwi dti">
-          <h2>Diffusion MRI (DWI/DTI)</h2>
-          <p>Maps diffusion of water molecules in tissue.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri mra angiography">
-          <h2>Magnetic Resonance Angiography (MRA)</h2>
-          <p>Visualizes blood vessels using MRI contrast.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri mrs spectroscopy">
-          <h2>Magnetic Resonance Spectroscopy (MRS)</h2>
-          <p>Analyzes chemical composition in tissues.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri cmr cardiac">
-          <h2>Cardiac MRI (CMR)</h2>
-          <p>Assesses heart function and structure.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri breast_mri">
-          <h2>Breast MRI</h2>
-          <p>MRI specialized for detailed breast imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri whole-body_mri">
-          <h2>Whole-body MRI</h2>
-          <p>Full-body scan for metastases or screening.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri mr_enterography mre">
-          <h2>MR Enterography (MRE)</h2>
-          <p>MRI for detailed evaluation of bowel (e.g. Crohn’s disease).</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri mr_myelography">
-          <h2>MR Myelography</h2>
-          <p>Noninvasive imaging of spinal cord and subarachnoid space.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="mri mr_urography">
-          <h2>MR Urography</h2>
-          <p>MRI-based evaluation of the urinary tract.</p>
-        </div>
-      </div>
+    <div id="tab-xray" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ================== NMI TAB ================== -->
-    <div id="tab-nmi" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="nmi pet">
-          <h2>Positron Emission Tomography (PET)</h2>
-          <p>Functional imaging using radiotracers (e.g., FDG).</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="nmi spect">
-          <h2>Single Photon Emission Computed Tomography (SPECT)</h2>
-          <p>Functional imaging with gamma-emitting tracers.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="nmi scintigraphy">
-          <h2>Scintigraphy</h2>
-          <p>2D imaging using a gamma camera (planar radionuclide imaging).</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="nmi gallium_scan">
-          <h2>Gallium Scan</h2>
-          <p>Uses gallium-67 for tumor or infection imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="nmi mibg_scan">
-          <h2>MIBG Scan</h2>
-          <p>Localizes neuroendocrine tumors (e.g. pheochromocytoma).</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="nmi lymphoscintigraphy">
-          <h2>Lymphoscintigraphy</h2>
-          <p>Maps lymphatic drainage, often for sentinel node biopsy.</p>
-        </div>
-      </div>
+    <div id="tab-mri" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ================== US TAB ================== -->
-    <div id="tab-us" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="us b-mode 2d_ultrasound">
-          <h2>B-mode (2D Ultrasound)</h2>
-          <p>Basic grayscale ultrasound imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us doppler_ultrasound">
-          <h2>Doppler Ultrasound</h2>
-          <p>Measures blood flow velocity and direction.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us ceus contrast-enhanced_ultrasound">
-          <h2>Contrast-enhanced Ultrasound (CEUS)</h2>
-          <p>Uses microbubble contrast agents for vascular imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us elastography">
-          <h2>Elastography</h2>
-          <p>Assesses tissue stiffness (e.g., liver fibrosis).</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us 3d 4d ultrasound">
-          <h2>3D &amp; 4D Ultrasound</h2>
-          <p>Volumetric and real-time volumetric imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us transcranial_doppler tcd">
-          <h2>Transcranial Doppler (TCD)</h2>
-          <p>Evaluates blood flow in intracranial arteries.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us intravascular_ultrasound ivus">
-          <h2>Intravascular Ultrasound (IVUS)</h2>
-          <p>Ultrasound catheters for coronary artery imaging.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us endoscopic_ultrasound eus">
-          <h2>Endoscopic Ultrasound (EUS)</h2>
-          <p>Combines endoscopy and ultrasound for GI tract structures.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="us obstetric_ultrasound">
-          <h2>Obstetric Ultrasound</h2>
-          <p>Fetal imaging for pregnancy assessment.</p>
-        </div>
-      </div>
+    <div id="tab-nmi" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ================== DENTAL TAB ================== -->
-    <div id="tab-dental" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="dental opg panoramic">
-          <h2>Dental_OPG / Panoramic Radiography (OPG)</h2>
-          <p>Wide-view of upper/lower jaws on a single film/image.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="dental cbct cone beam">
-          <h2>Dental_CBCT / Cone Beam CT (CBCT)</h2>
-          <p>3D imaging for dental/maxillofacial structures.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="dental_cr">
-          <h2>Dental_CR</h2>
-          <p>Computed Radiography for dental imaging plates.</p>
-        </div>
-      </div>
+    <div id="tab-us" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ================== VIDEO TAB ================== -->
-    <div id="tab-video" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="video laryngoscopy">
-          <h2>Laryngoscopy</h2>
-          <p>Video-based inspection of the larynx.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video bronchoscopy">
-          <h2>Bronchoscopy</h2>
-          <p>Visualization of the airways using a scope.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video egd endoscopy">
-          <h2>Esophagogastroduodenoscopy (EGD)</h2>
-          <p>Upper GI endoscopy for esophagus, stomach, duodenum.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video colonoscopy">
-          <h2>Colonoscopy</h2>
-          <p>Endoscopic examination of the large bowel.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video cystoscopy">
-          <h2>Cystoscopy</h2>
-          <p>Visualization of the urinary bladder and urethra.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video hysteroscopy">
-          <h2>Hysteroscopy</h2>
-          <p>Endoscopic exam of the uterus.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video ophthalmic_imaging">
-          <h2>Ophthalmic Imaging</h2>
-          <p>Video-based or photographic imaging of the eye.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video confocal_microscopy">
-          <h2>Confocal Microscopy</h2>
-          <p>Optical imaging technique with increased optical resolution.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="video fluorescence_imaging">
-          <h2>Fluorescence Imaging</h2>
-          <p>Uses fluorescent markers to visualize tissues in real-time.</p>
-        </div>
-      </div>
+    <div id="tab-dental" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ================== CT TAB ================== -->
-    <div id="tab-ct" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="ct conventional_ct">
-          <h2>Conventional CT</h2>
-          <p>Standard helical or axial computed tomography.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct hrct high_resolution">
-          <h2>High-resolution CT (HRCT)</h2>
-          <p>Thin-slice imaging, often for lung detail.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct ldct low_dose">
-          <h2>Low-dose CT (LDCT)</h2>
-          <p>Reduced radiation dose for screening (e.g. lung cancer).</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct angiography cta">
-          <h2>CT Angiography (CTA)</h2>
-          <p>Contrast-enhanced imaging of blood vessels.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct perfusion ctp">
-          <h2>CT Perfusion (CTP)</h2>
-          <p>Dynamic imaging to measure blood flow (e.g., stroke).</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct colonography virtual_colonoscopy">
-          <h2>CT Colonography (Virtual Colonoscopy)</h2>
-          <p>Noninvasive colon exam using CT scans.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct dect dual-energy">
-          <h2>Dual-energy CT (DECT)</h2>
-          <p>Uses two different X-ray energy levels for material distinction.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct cone_beam cbct">
-          <h2>Cone Beam CT (CBCT)</h2>
-          <p>3D imaging with a cone-shaped beam, used in dental/ortho.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="ct 4d_ct">
-          <h2>4D CT</h2>
-          <p>Captures motion over time (e.g., breathing cycle for radiotherapy).</p>
-        </div>
-      </div>
+    <div id="tab-video" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ================== GENOMICS TAB ================== -->
-    <div id="tab-genomics" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="genomics genome_assembly">
-          <h2>Genome Assembly</h2>
-          <p>Building consensus sequences from short/long reads.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="genomics sequence_alignments">
-          <h2>Sequence Alignments</h2>
-          <p>Comparing DNA/RNA sequences to a reference or each other.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="genomics annotations">
-          <h2>Annotations</h2>
-          <p>Identifying genes, features, and other elements.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="genomics variant_calls">
-          <h2>Variant Calls</h2>
-          <p>Detecting SNPs, insertions/deletions, structural variants.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="genomics phylogenetic_analysis">
-          <h2>Phylogenetic Analysis</h2>
-          <p>Tracing evolutionary relationships among sequences.</p>
-        </div>
-      </div>
+    <div id="tab-ct" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ============ TRANSCRIPTOMICS TAB ============ -->
-    <div id="tab-transcriptomics" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="transcriptomics sequence_data_formats raw processed">
-          <h2>Sequence Data Formats (Raw and Processed Sequences)</h2>
-          <p>FASTA, FASTQ, SAM/BAM, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="transcriptomics gene_expression_formats">
-          <h2>Gene Expression Data Formats</h2>
-          <p>Counts, FPKM, TPM, expression matrices, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="transcriptomics rna-seq quantification analysis">
-          <h2>RNA-Seq Quantification and Analysis Formats</h2>
-          <p>SALMON, KALLISTO outputs, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="transcriptomics differential_expression statistical_analysis">
-          <h2>Differential Expression and Statistical Analysis Formats</h2>
-          <p>DESeq2 results, edgeR, limma outputs.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="transcriptomics alternative_splicing assembly">
-          <h2>Alternative Splicing and Transcript Assembly Formats</h2>
-          <p>GTF, GFF3, splice junction data.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="transcriptomics single-cell scRNA-Seq data_formats">
-          <h2>Single-Cell RNA-Seq (scRNA-Seq) Data Formats</h2>
-          <p>Cellranger outputs, h5, loom files, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="transcriptomics phylogenetic evolutionary_analysis">
-          <h2>Phylogenetic and Evolutionary Analysis Formats</h2>
-          <p>Alignments, newick trees, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="transcriptomics transcriptome_assembly annotation">
-          <h2>Transcriptome Assembly and Annotation Formats</h2>
-          <p>Trinity outputs, annotated GTF/GFF files.</p>
-        </div>
-      </div>
+    <div id="tab-genomics" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
-    <!-- ============ PROTEOMICS TAB ============ -->
-    <div id="tab-proteomics" class="tabcontent" style="display: none;">
-      <div class="modality-grid">
-        <div class="modality-card modality-item" data-modality="proteomics sequence_data_formats">
-          <h2>Sequence Data Formats</h2>
-          <p>FASTA proteins, peptide sequences, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="proteomics ms_data_formats">
-          <h2>Mass Spectrometry (MS) Data Formats</h2>
-          <p>mzML, mzXML, RAW files, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="proteomics protein_structure_data">
-          <h2>Protein Structure Data Formats</h2>
-          <p>PDB, mmCIF, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="proteomics protein_interaction pathway_data">
-          <h2>Protein Interaction and Pathway Data Formats</h2>
-          <p>BIOPAX, PSI-MI, SBML, etc.</p>
-        </div>
-        <div class="modality-card modality-item" data-modality="proteomics annotation metadata">
-          <h2>Annotation and Metadata Formats</h2>
-          <p>UniProt XML, GO annotations, etc.</p>
-        </div>
-      </div>
+    <div id="tab-transcriptomics" class="tabcontent">
+      <div class="modality-grid"></div>
     </div>
-
+    <div id="tab-proteomics" class="tabcontent">
+      <div class="modality-grid"></div>
+    </div>
   </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
-    <p>&copy; 2025 Project PARS Peace – DataTypeHub</p>
+    <p>
+      &copy; 2025 Project PARS Peace – DataTypeHub |
+      <a href="team.html" style="color:#fff; text-decoration:underline;">Team &amp; Contact</a>
+    </p>
   </footer>
 
   <!-- ========== SCRIPTS ========== -->
   <script>
-    // --- TABS LOGIC ---
+    // ---- TABS LOGIC ----
     const tabButtons = document.querySelectorAll('.tablink');
     const tabContents = document.querySelectorAll('.tabcontent');
 
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remove "active" from all buttons
+        // Reset "active" state
         tabButtons.forEach(b => b.classList.remove('active'));
-        // Hide all tabcontent
-        tabContents.forEach(tc => tc.style.display = 'none');
-
-        // Activate clicked button
         btn.classList.add('active');
-        // Display the corresponding tab
+        
+        // Hide all content
+        tabContents.forEach(tc => tc.style.display = 'none');
+        
+        // Show target
         const targetId = btn.getAttribute('data-target');
         document.getElementById(targetId).style.display = 'block';
       });
     });
 
-    // --- SEARCH BAR LOGIC ---
-    const searchInput = document.getElementById('searchInput');
-    const modalityItems = document.querySelectorAll('.modality-item');
+    // A map from parent category to each .modality-grid
+    const TABS = {
+      ALL: document.querySelector("#tab-all .modality-grid"),
+      "X-Ray": document.querySelector("#tab-xray .modality-grid"),
+      MRI: document.querySelector("#tab-mri .modality-grid"),
+      NMI: document.querySelector("#tab-nmi .modality-grid"),
+      US: document.querySelector("#tab-us .modality-grid"),
+      Dental: document.querySelector("#tab-dental .modality-grid"),
+      Video: document.querySelector("#tab-video .modality-grid"),
+      CT: document.querySelector("#tab-ct .modality-grid"),
+      Genomics: document.querySelector("#tab-genomics .modality-grid"),
+      Transcriptomics: document.querySelector("#tab-transcriptomics .modality-grid"),
+      Proteomics: document.querySelector("#tab-proteomics .modality-grid")
+    };
 
-    searchInput.addEventListener('keyup', function() {
-      let query = this.value.toLowerCase();
-      modalityItems.forEach(item => {
-        // We'll match against both card text and 'data-modality' attribute
-        let text = item.innerText.toLowerCase();
-        let data = item.getAttribute('data-modality').toLowerCase();
-        if (text.includes(query) || data.includes(query)) {
+    // ---- FETCH DATA ----
+    fetch('data.json')
+      .then(res => res.json())
+      .then(modalities => {
+        modalities.forEach(m => {
+          // Create the card
+          const card = document.createElement('div');
+          card.className = 'modality-card modality-item';
+
+          // For searching: combine title + acronyms
+          const acrStr = (m.acronyms || []).join(' ').toLowerCase();
+          card.setAttribute('data-title', m.title.toLowerCase());
+          card.setAttribute('data-acronyms', acrStr);
+
+          // Insert the new "status" field as well
+          card.innerHTML = `
+            <h2>${m.title}</h2>
+            <p>${m.shortDescription}</p>
+            <p><strong>Status:</strong> ${m.status || 'N/A'}</p>
+            <a href="detail.html?id=${m.id}">View Details</a>
+          `;
+
+          // Place in ALL
+          TABS.ALL.appendChild(card);
+
+          // Clone to each parent tab
+          (m.parents || []).forEach(parent => {
+            if (TABS[parent]) {
+              const clone = card.cloneNode(true);
+              TABS[parent].appendChild(clone);
+            }
+          });
+        });
+      })
+      .catch(err => console.error("Error loading data.json:", err));
+
+    // ---- SEARCH ----
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', () => {
+      const query = searchInput.value.toLowerCase();
+      const items = document.querySelectorAll('.modality-item');
+      items.forEach(item => {
+        const title = item.getAttribute('data-title') || "";
+        const acr = item.getAttribute('data-acronyms') || "";
+        const text = item.innerText.toLowerCase();
+        // match if query in title, acr, or entire text
+        if (title.includes(query) || acr.includes(query) || text.includes(query)) {
           item.style.display = '';
         } else {
           item.style.display = 'none';
@@ -440,6 +176,5 @@
       });
     });
   </script>
-
 </body>
 </html>

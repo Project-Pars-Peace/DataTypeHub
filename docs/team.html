@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>DataTypeHub – Team</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .team-card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 6px;
+      width: 250px;
+      text-align: center;
+    }
+    .team-card img {
+      max-width: 120px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-content">
+    <img src="images/Project-pars-peace-logo.jpeg"
+         alt="Project Pars Peace Logo"
+         class="pars-logo">
+    <div class="header-text">
+      <h1>DataTypeHub</h1>
+      <p>Team &amp; Contact</p>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+  <h2>Meet Our Team</h2>
+  <p>These are the awesome people contributing to DataTypeHub.</p>
+
+  <div id="teamGrid" class="team-grid"></div>
+
+  <p><a href="index.html">&larr; Back to Main Page</a></p>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Project PARS Peace – DataTypeHub</p>
+</footer>
+
+<script>
+fetch('team.json')
+  .then(resp => resp.json())
+  .then(team => {
+    const grid = document.getElementById('teamGrid');
+    team.forEach(member => {
+      const card = document.createElement('div');
+      card.className = "team-card";
+
+      let imgHtml = "";
+      if(member.image){
+        imgHtml = `<img src="${member.image}" alt="${member.name}">`;
+      }
+
+      card.innerHTML = `
+        ${imgHtml}
+        <h3>${member.name}</h3>
+        <p><strong>Affiliation:</strong> ${member.affiliation}</p>
+        <p><strong>Email:</strong> <a href="mailto:${member.email}">${member.email}</a></p>
+        <p><strong>Contributed to:</strong> ${member.contributedTo.join(', ')}</p>
+      `;
+      grid.appendChild(card);
+    });
+  })
+  .catch(err => {
+    console.error("Error loading team.json", err);
+    document.getElementById('teamGrid').innerHTML = "<p>Failed to load team data.</p>";
+  });
+</script>
+
+</body>
+</html>
