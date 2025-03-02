@@ -57,9 +57,9 @@ function renderModalityDetail(m){
   const container = document.getElementById('detailContainer');
   container.innerHTML = `
     <h2>${m.title}</h2>
-    <p><strong>Modality Name:</strong> ${m.title}</p>
-    <p><strong>Acronyms:</strong> ${(m.acronyms || []).join(', ')}</p>
-    <p><strong>Imaging Principle:</strong> ${m.imagingPrinciple}</p>
+    <p><strong>1. Modality Name:</strong> ${m.title}</p>
+    <p><strong>2. Acronyms:</strong> ${(m.acronyms || []).join(', ')}</p>
+    <p><strong>3. Imaging Principle:</strong> ${m.imagingPrinciple}</p>
 
     <h3>4. Data Type &amp; File Format</h3>
     <ul>
