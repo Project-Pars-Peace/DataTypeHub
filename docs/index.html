@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>DataTypeHub – Landing Page</title>
+  <!-- Link to your main stylesheet -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
 
+  <!-- HEADER with logo, site title, and an optional top nav -->
+  <header class="site-header">
+    <div class="header-content">
+      <img src="images/ProjectParsLogo.png"
+           alt="Project Pars Peace Logo"
+           class="pars-logo">
+      <div class="header-text">
+        <h1>DataTypeHub</h1>
+        <p>A comprehensive hub of 100+ medical data modalities</p>
+      </div>
+    </div>
+    <!-- Example top navigation (optional) -->
+    <nav class="top-nav">
+      <!-- Add nav links if needed, e.g. "About," "Contact," etc. -->
+      <!--
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Some Page</a></li>
+        <li><a href="#">Another Page</a></li>
+      </ul>
+      -->
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="intro">
+      <p>Welcome to DataTypeHub! Below is a clickable gallery of various medical data modalities. 
+         Select one to learn more about data formats, typical resolutions, conversion methods, 
+         and clinical applications.</p>
+    </section>
+
+    <!-- Example grid of "parent" modalities -->
+    <section class="modality-grid">
+      <!-- X-Ray parent with child links -->
+      <div class="modality-card">
+        <h2>X-Ray</h2>
+        <ul>
+          <li><a href="modalities/mammography.html">Mammography</a></li>
+          <li><a href="#">XRay_Fluoroscopy</a></li>
+          <li><a href="#">XRay_DR</a></li>
+          <li><a href="#">XRay_DEXA</a></li>
+          <li><a href="#">XRay_CR</a></li>
+          <li><a href="#">Cephalometric Radiography</a></li>
+          <!-- etc. -->
+        </ul>
+      </div>
+
+      <!-- MRI parent with child links -->
+      <div class="modality-card">
+        <h2>MRI</h2>
+        <ul>
+          <li><a href="#">Standard MRI</a></li>
+          <li><a href="#">Functional MRI (fMRI)</a></li>
+          <li><a href="#">Diffusion MRI (DWI/DTI)</a></li>
+          <li><a href="#">MRA</a></li>
+          <li><a href="#">MRS</a></li>
+          <!-- etc. -->
+        </ul>
+      </div>
+
+      <!-- More parent modalities (NMI, US, Dental, etc.) -->
+      <!-- ... -->
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Project PARS Peace – DataTypeHub</p>
+  </footer>
+
+</body>
+</html>
