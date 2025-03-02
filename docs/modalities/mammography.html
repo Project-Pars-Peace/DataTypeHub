@@ -1,1 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Mammography – DataTypeHub</title>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
 
+<!-- TOP HEADER (shared site header & logo) -->
+<header class="site-header">
+  <div class="header-content">
+    <img src="../images/Project-pars-peace-logo.jpeg"
+         alt="Project Pars Peace Logo"
+         class="pars-logo">
+    <div class="header-text">
+      <h1>Mammography</h1>
+      <p>(X-Ray) – Detailed Information</p>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+
+  <!-- Link back to index -->
+  <p><a href="../index.html">&larr; Back to Main Page</a></p>
+
+  <!-- ============== SECTION 1 ============== -->
+  <section>
+    <h2>1. Modality Name</h2>
+    <p>
+      <strong>Mammography</strong> (you should cover the following modalities in this sheet; 
+      create more sheets if needed):
+    </p>
+    <ul>
+      <li>Conventional Mammography</li>
+      <li>Digital Mammography</li>
+      <li>Tomosynthesis (3D Mammography)</li>
+      <li>Contrast-enhanced Mammography (CEM)</li>
+    </ul>
+  </section>
+
+  <!-- ============== SECTION 2 ============== -->
+  <section>
+    <h2>2. Acronym</h2>
+    <p><strong>MG</strong></p>
+  </section>
+
+  <!-- ============== SECTION 3 ============== -->
+  <section>
+    <h2>3. Imaging Principle</h2>
+    <p>
+      Mammography acquires images by using low-dose X-rays 
+      to capture high-resolution images of breast tissue.
+    </p>
+  </section>
+
+  <!-- ============== SECTION 4 ============== -->
+  <section>
+    <h2>4. Data Type & File Format</h2>
+
+    <!-- 4.1 -->
+    <h3>4.1. Primary File Format(s)</h3>
+    <ul>
+      <li>DICOM (.dcm)</li>
+      <li>JPEG (.jpg, .jpeg) / JPEG 2000 (.jp2, .j2k)</li>
+      <li>TIFF (.tif, .tiff)</li>
+      <li>PNG (.png)</li>
+      <li>HDF5 (.h5)</li>
+      <li>NIfTI (.nii, .nii.gz)</li>
+    </ul>
+
+    <!-- 4.2 -->
+    <h3>4.2. Data Type</h3>
+    <ul>
+      <li>Grayscale (e.g., Standard 2D mammogram)</li>
+      <li>3D Volumetric Imaging (Digital Breast Tomosynthesis - DBT)</li>
+      <li>Time-Series (in contrast-enhanced spectral mammography (CESM))</li>
+      <li>Functional Imaging (in Molecular Breast Imaging (MBI) and Contrast-enhanced Mammography (CEM))</li>
+    </ul>
+
+    <!-- 4.3 -->
+    <h3>4.3. Related Data Types (parent type)</h3>
+    <p>Radiography</p>
+
+    <!-- 4.4 -->
+    <h3>4.4. Standard Storage Format (which one in 4.1)</h3>
+    <p>DICOM (.dcm)</p>
+
+    <!-- 4.5 -->
+    <h3>4.5. Conversion Solutions + Reference</h3>
+
+    <p><strong>JPEG (.jpg, .jpeg) / JPEG 2000 (.jp2, .j2k)</strong></p>
+    <p>
+      <em>***This solution demonstrates how to convert an image (such as PNG or BMP) into a DICOM file using Python, 
+      specifically for use in medical imaging applications...</em>
+      <br><br>
+      <strong>Tools Used:</strong> pydicom, Pillow (PIL), numpy, uuid
+      <br>
+      <strong>Process:</strong> Load the image, convert image formats if needed, prepare pixel data, create DICOM dataset, save DICOM.
+      <br><br>
+      <em>***Explanation of the Solution: Converting JPEG to DICOM in Java</em>
+      <br>
+      This Java program converts a JPEG image to a DICOM file and then updates the DICOM metadata (DICOM header) to 
+      include patient information. It uses Dcm4che, a Java-based open-source DICOM toolkit.
+      <br><br>
+      <em>***This solution converts a JPEG 2000 (JP2) image file to a DICOM file using Python libraries, referencing glymur, pydicom, numpy...</em>
+      <br><br>
+      <strong>References:</strong>
+      <ul>
+        <li><a href="https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py">JPG-to-DICOM (Python)</a></li>
+        <li><a href="https://stackoverflow.com/questions/21087778/how-to-convert-jpg-image-to-dicom-file-using-dcm4che-3-2-1?rq=3">Converting JPG to DICOM w/ dcm4che (Java)</a></li>
+        <li><a href="https://github.com/DraconPern/fmjpeg2koj">fmjpeg2koj (JPEG2000 to JPEG converter)</a></li>
+        <li><a href="https://stackoverflow.com/questions/18009896/converting-from-jpeg-2000-to-dicom-using-dcmtk">Converting from JPEG2000 to DICOM w/ DCMTK</a></li>
+      </ul>
+    </p>
+
+    <p><strong>TIFF (.tif, .tiff)</strong></p>
+    <p>
+      <em>***This solution demonstrates how to convert a TIFF image into a DICOM file by extracting pixel data 
+      and adding relevant DICOM metadata, using Python libraries (Pillow, pydicom, numpy)...</em>
+      <br><br>
+      Other tools: MATLAB’s <code>dicomwrite</code>, ImageJ with DICOM plugins, etc.
+      <br>
+      <strong>References:</strong>
+      <ul>
+        <li><a href="https://stackoverflow.com/questions/30338697/convert-tiff-to-dicom-using-matlab">Convert TIFF to DICOM using MATLAB</a></li>
+      </ul>
+    </p>
+
+    <p><strong>PNG (.png)</strong></p>
+    <p>
+      <em>***This solution demonstrates how to replace the pixel data in an existing DICOM file with pixel data 
+      from a PNG image, using pydicom and Pillow...</em>
+      <br>
+      <a href="https://github.com/pydicom/pydicom/issues/939">Reference – pydicom issue #939</a>
+    </p>
+
+    <p><strong>HDF5 (.h5)</strong></p>
+    <p>
+      Using the <strong>h5py</strong> and <strong>pydicom</strong> libraries to convert an HDF5 file to DICOM format: 
+      you read the dataset, build a DICOM object with relevant metadata, and save as <code>.dcm</code>.
+      <br>
+      <a href="https://github.com/mas-dse-greina/dicom_segmentation_mask">Example Reference</a>
+    </p>
+
+    <p><strong>NIfTI (.nii, .nii.gz)</strong></p>
+    <p>
+      <em>***Explanation of the Solution: Converting NIfTI to DICOM Using nii2dcm</em><br>
+      The <code>nii2dcm</code> tool is a Python-based solution that converts NIfTI files into DICOM. 
+      <br>
+      <a href="https://github.com/tomaroberts/nii2dcm/blob/main/README.md?plain=1">nii2dcm GitHub</a>
+    </p>
+
+  </section>
+
+  <!-- ============== SECTION 5 ============== -->
+  <section>
+    <h2>5. Typical Resolution & Image Dimensions</h2>
+
+    <!-- 5.1 -->
+    <h3>5.1. Spatial Resolution</h3>
+    <p>
+      Ranging from 5 to 10 lp/mm, range from 1024×1024 to 4096×4096 pixels.  
+      (<a href="https://ajronline.org/doi/10.2214/AJR.14.13126">Reference</a>)
+    </p>
+
+    <!-- 5.2 -->
+    <h3>5.2. Voxel Size / Pixel Spacing</h3>
+    <p>
+      Digital mammography detectors typically have pixel sizes between 50 and 100 µm. 
+      For example, a detector with a 100 µm pixel size would have a pixel spacing of 0.1 mm × 0.1 mm.  
+      (<a href="https://pubmed.ncbi.nlm.nih.gov/3623862/">Reference</a>)
+    </p>
+
+    <!-- 5.3 -->
+    <h3>5.3. Temporal Resolution (if applicable)</h3>
+    <p>Not applicable.</p>
+  </section>
+
+  <!-- ============== SECTION 6 ============== -->
+  <section>
+    <h2>6. Data Size (Storage Requirements)</h2>
+
+    <!-- 6.1 -->
+    <h3>6.1. Single Image Size</h3>
+    <p>
+      From 1 to 50 MB  
+      (<a href="https://www.researchgate.net/figure/A-Mammography-image-of-size-1024x1024-which-uses-8-bits-pixel_fig1_247919158">Reference</a>)
+    </p>
+
+    <!-- 6.2 -->
+    <h3>6.2. Typical Study Size</h3>
+    <p>
+      Four-View Screening Examination: from 30 MB to 200 MB  
+      Digital Breast Tomosynthesis (DBT): from &lt; 800 MB to ~2.6 GB  
+      (<a href="https://ajronline.org/doi/10.2214/AJR.14.12912">Reference</a>)
+    </p>
+  </section>
+
+  <!-- ============== SECTION 7 ============== -->
+  <section>
+    <h2>7. Acquisition Device & Hardware Requirements</h2>
+
+    <!-- 7.1 -->
+    <h3>7.1. Equipment Used</h3>
+    <p>
+      Mammography Units: X-ray tube, compression paddle, and image receptor; 
+      Digital Breast Tomosynthesis (DBT) Systems; Computer-Aided Detection (CAD) Systems  
+      (<a href="https://breast-cancer-research.biomedcentral.com/articles/10.1186/bcr236">Reference</a>,
+      <a href="https://breast-cancer-research.biomedcentral.com/articles/10.1186/bcr2031">Reference</a>)
+    </p>
+
+    <!-- 7.2 -->
+    <h3>7.2. Typical Manufacturers</h3>
+    <p>
+      General Electric (GE) Healthcare, Hologic, Siemens Healthineers, Philips Healthcare, 
+      Fujifilm, Agfa HealthCare  
+      (<a href="https://ajronline.org/doi/pdf/10.2214/ajr.150.3.493?download=true">Reference</a>)
+    </p>
+  </section>
+
+  <!-- ============== SECTION 8 ============== -->
+  <section>
+    <h2>8. Common Clinical Applications</h2>
+
+    <!-- 8.1 -->
+    <h3>8.1. Primary Uses</h3>
+    <p>
+      Early Detection of Breast Cancer, Diagnostic Evaluation  
+      (<a href="https://breast-cancer-research.biomedcentral.com/articles/10.1186/s13058-015-0525-z">Reference</a>,
+      <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1206809">Reference</a>)
+    </p>
+
+    <!-- 8.2 -->
+    <h3>8.2. Specialized Uses</h3>
+    <p>
+      Digital Breast Tomosynthesis (DBT), Contrast-Enhanced Spectral Mammography, Photon-Counting Mammography  
+      (<a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2822381">Reference</a>)
+    </p>
+  </section>
+
+  <!-- ============== SECTION 9 ============== -->
+  <section>
+    <h2>9. Radiation & Safety Considerations</h2>
+
+    <!-- 9.1 -->
+    <h3>9.1. Ionizing Radiation</h3>
+    <p>Yes</p>
+
+    <!-- 9.2 -->
+    <h3>9.2. Radiation Dose (if applicable)</h3>
+    <p>Approximately 0.2 mSv</p>
+
+    <!-- 9.3 -->
+    <h3>9.3. Safety Concerns</h3>
+    <p>
+      Radiation-Induced Cancer, Pregnancy, Breast Implants, Post-Surgery or Radiotherapy  
+      (<a href="https://pubmed.ncbi.nlm.nih.gov/20736332/">Reference</a>)
+    </p>
+  </section>
+
+  <!-- ============== SECTION 10 ============== -->
+  <section>
+    <h2>10. Preprocessing & Data Preparation</h2>
+
+    <!-- 10.1 -->
+    <h3>10.1. Common Preprocessing Steps</h3>
+    <p>
+      Noise Reduction, Image Enhancement, Pectoral Muscle Removal  
+      (<a href="https://openbiomedicalengineeringjournal.com/VOLUME/16/ELOCATOR/e187412072209200/FULLTEXT/">Reference</a>)
+    </p>
+
+    <!-- 10.2 -->
+    <h3>10.2. Compression Methods (if any)</h3>
+    <p>
+      Lossless Compression, Lossy Compression  
+      (<a href="https://ajronline.org/doi/10.2214/AJR.14.12912">Reference</a>)
+    </p>
+  </section>
+
+  <!-- ============== SECTION 11 ============== -->
+  <section>
+    <h2>11. Challenges & Limitations</h2>
+
+    <!-- 11.1 -->
+    <h3>11.1. Technical Challenges</h3>
+    <p>
+      Artifacts, Positioning and Compression, Dense Breast Tissue  
+      (<a href="https://ajronline.org/doi/10.2214/AJR.10.7246">Reference</a>)
+    </p>
+
+    <!-- 11.2 -->
+    <h3>11.2. Clinical Limitations</h3>
+    <p>
+      False-Negative Results, False-Positive Results, Overdiagnosis and Overtreatment, Radiation Exposure  
+      (<a href="https://eurjmedres.biomedcentral.com/articles/10.1186/s40001-015-0140-6">Reference</a>,
+      <a href="https://www.jacr.org/article/S1546-1440%2813%2900579-6/fulltext">Reference</a>)
+    </p>
+  </section>
+
+  <!-- ============== SECTION 12 ============== -->
+  <section>
+    <h2>12. References (Website, Paper, etc.)</h2>
+    <p>
+      <em>(Links to papers, GitHub repositories, tutorials, or documentation for this child data type)</em>
+    </p>
+    <ul>
+      <li><a href="https://breast-cancer-research.biomedcentral.com/articles/10.1186/bcr236">Breast Cancer Research Journal Example</a></li>
+      <li><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1206809">NEJM Mammography Study</a></li>
+      <!-- Add or repeat references as you wish -->
+    </ul>
+  </section>
+
+  <p><a href="../index.html">&larr; Back to Main Page</a></p>
+
+</main>
+
+<!-- FOOTER (shared site footer) -->
+<footer class="site-footer">
+  <p>&copy; 2025 Project PARS Peace – DataTypeHub</p>
+</footer>
+
+</body>
+</html>
