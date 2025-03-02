@@ -22,14 +22,13 @@ body {
   color: #333;
 }
 
-/* Remove default list style inside UL if you like */
 ul {
   margin: 0;
   padding-left: 1.2rem;
 }
 
 /* -------------------------------------------- */
-/*          HEADER / LOGO / FOOTER             */
+/*          HEADER / FOOTER STYLES             */
 /* -------------------------------------------- */
 .site-header {
   background: linear-gradient(to right, #1e009f, #0022d2);
@@ -53,7 +52,7 @@ ul {
   font-size: 1.8rem;
 }
 .header-text p {
-  margin: 0.2rem 0 0;
+  margin: 0.3rem 0 0;
   font-weight: 300;
 }
 
@@ -102,6 +101,7 @@ ul {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 .tablink {
   background-color: #0022d2;
@@ -117,7 +117,7 @@ ul {
   background-color: #1e009f;
 }
 .tabcontent {
-  display: none;  /* shown by script */
+  display: none;  /* controlled by JS */
   padding: 0.5rem 0;
 }
 
@@ -145,8 +145,13 @@ ul {
 
 .modality-card h2 {
   margin-top: 0;
-  color: #1e009f; /* or #0022d2 if you prefer */
+  color: #1e009f; /* Or #0022d2 if you prefer */
   font-size: 1.2rem;
+}
+
+.modality-card p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
 }
 
 .modality-card a {
@@ -154,6 +159,7 @@ ul {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.2s, border-color 0.2s;
+  font-weight: bold;
 }
 .modality-card a:hover {
   color: #d89b00;
