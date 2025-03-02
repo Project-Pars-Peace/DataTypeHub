@@ -8,10 +8,10 @@
 </head>
 <body>
 
-  <!-- ========== HEADER with LOGO & TITLE ========== -->
+  <!-- ========== HEADER ========== -->
   <header class="site-header">
     <div class="header-content">
-      <!-- Update the src if your file name is slightly different -->
+      <!-- Your actual logo file name here -->
       <img src="images/Project-pars-peace-logo.jpeg"
            alt="Project Pars Peace Logo"
            class="pars-logo">
@@ -20,69 +20,160 @@
         <p>A comprehensive hub of 100+ medical data modalities</p>
       </div>
     </div>
-
-    <!-- Optional top navigation (if needed) -->
-    <nav class="top-nav">
-      <!-- 
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      -->
-    </nav>
   </header>
 
-  <!-- ========== MAIN CONTENT AREA ========== -->
+  <!-- ========== MAIN CONTENT ========== -->
   <main class="content">
-    <section class="intro">
-      <p>
-        Welcome to DataTypeHub! Below is a clickable gallery of various 
-        medical data modalities. Select one to learn more about data formats, 
-        typical resolutions, conversion methods, and clinical applications.
-      </p>
+
+    <!-- SEARCH BAR -->
+    <section class="search-section">
+      <label for="searchInput">Search Modalities:</label>
+      <input type="text" id="searchInput" placeholder="Type to filter...">
     </section>
 
-    <!-- Parent Modality Grid -->
-    <section class="modality-grid">
+    <!-- TABS (Parent Categories) -->
+    <div class="tabs">
+      <button class="tablink active" data-target="tab-xray">X-Ray</button>
+      <button class="tablink" data-target="tab-mri">MRI</button>
+      <button class="tablink" data-target="tab-us">Ultrasound</button>
+      <!-- Add more parent categories (Dental, CT, NMI, etc.) as needed -->
+    </div>
 
-      <!-- X-Ray Group with Mammography linked -->
-      <div class="modality-card">
-        <h2>X-Ray</h2>
-        <ul>
-          <!-- Link to Mammography page -->
-          <li><a href="modalities/mammography.html">Mammography</a></li>
+    <!-- TAB CONTENT: X-Ray -->
+    <div id="tab-xray" class="tabcontent" style="display: block;">
+      <div class="modality-grid">
+        
+        <!-- Example card for Mammography -->
+        <div class="modality-card modality-item" data-modality="mammography x-ray">
+          <h2>Mammography</h2>
+          <p>Low-dose X-ray imaging for breast tissue.</p>
+          <a href="modalities/mammography.html">Go to Details</a>
+        </div>
+        
+        <!-- Placeholder child modalities for X-Ray -->
+        <div class="modality-card modality-item" data-modality="xray fluoroscopy">
+          <h2>XRay_Fluoroscopy</h2>
+          <p>Real-time moving X-ray imaging.</p>
+          <!-- Add your details/link here -->
+        </div>
+        <div class="modality-card modality-item" data-modality="xray dr">
+          <h2>XRay_DR</h2>
+          <p>Digital Radiography for direct capture.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="xray dexa">
+          <h2>XRay_DEXA</h2>
+          <p>Bone densitometry imaging.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="xray cr">
+          <h2>XRay_CR</h2>
+          <p>Computed Radiography with imaging plates.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="xray cephalometric">
+          <h2>Cephalometric Radiography</h2>
+          <p>Specialized head/neck X-ray for dentistry/orthodontics.</p>
+        </div>
 
-          <!-- Other X-Ray modalities (placeholders) -->
-          <li><a href="#">XRay_Fluoroscopy</a></li>
-          <li><a href="#">XRay_DR</a></li>
-          <li><a href="#">XRay_DEXA</a></li>
-          <li><a href="#">XRay_CR</a></li>
-          <li><a href="#">Cephalometric Radiography</a></li>
-        </ul>
       </div>
+    </div>
 
-      <!-- MRI parent with child links (example placeholders) -->
-      <div class="modality-card">
-        <h2>MRI</h2>
-        <ul>
-          <li><a href="#">Standard MRI</a></li>
-          <li><a href="#">Functional MRI (fMRI)</a></li>
-          <li><a href="#">Diffusion MRI (DWI/DTI)</a></li>
-          <li><a href="#">Magnetic Resonance Angiography (MRA)</a></li>
-          <li><a href="#">Magnetic Resonance Spectroscopy (MRS)</a></li>
-          <!-- etc. -->
-        </ul>
+    <!-- TAB CONTENT: MRI -->
+    <div id="tab-mri" class="tabcontent" style="display: none;">
+      <div class="modality-grid">
+        
+        <!-- Example MRI child modalities -->
+        <div class="modality-card modality-item" data-modality="standard mri">
+          <h2>Standard MRI</h2>
+          <p>Magnetic resonance imaging for soft tissue contrast.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="functional fmri">
+          <h2>Functional MRI (fMRI)</h2>
+          <p>Measures brain activity by detecting changes in blood flow.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="diffusion dwi dti">
+          <h2>Diffusion MRI (DWI/DTI)</h2>
+          <p>Maps diffusion of water molecules in tissue.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="mra mr-angiography">
+          <h2>Magnetic Resonance Angiography (MRA)</h2>
+          <p>Visualizes blood vessels using MRI techniques.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="mrs spectroscopy">
+          <h2>Magnetic Resonance Spectroscopy (MRS)</h2>
+          <p>Analyzes chemical composition in tissues.</p>
+        </div>
+        
+        <!-- etc. Add more as needed -->
       </div>
+    </div>
 
-      <!-- Add more cards for NMI, US, CT, Dental, Genomics, etc. -->
+    <!-- TAB CONTENT: Ultrasound -->
+    <div id="tab-us" class="tabcontent" style="display: none;">
+      <div class="modality-grid">
+        
+        <!-- Example US child modalities -->
+        <div class="modality-card modality-item" data-modality="b-mode ultrasound us">
+          <h2>B-mode (2D Ultrasound)</h2>
+          <p>Basic grayscale ultrasound imaging.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="doppler ultrasound us">
+          <h2>Doppler Ultrasound</h2>
+          <p>Measures blood flow velocity.</p>
+        </div>
+        <div class="modality-card modality-item" data-modality="ceus contrast enhanced ultrasound us">
+          <h2>Contrast-enhanced Ultrasound (CEUS)</h2>
+          <p>Uses microbubble contrast agents.</p>
+        </div>
+        <!-- etc. -->
+      </div>
+    </div>
 
-    </section> <!-- /.modality-grid -->
   </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <p>&copy; 2025 Project PARS Peace – DataTypeHub</p>
   </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // --- TABS LOGIC ---
+    const tabButtons = document.querySelectorAll('.tablink');
+    const tabContents = document.querySelectorAll('.tabcontent');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove "active" from all buttons
+        tabButtons.forEach(b => b.classList.remove('active'));
+        // Hide all tabcontent
+        tabContents.forEach(tc => tc.style.display = 'none');
+
+        // Activate clicked button
+        btn.classList.add('active');
+        // Display the corresponding tab
+        const targetId = btn.getAttribute('data-target');
+        document.getElementById(targetId).style.display = 'block';
+      });
+    });
+
+    // --- SEARCH BAR LOGIC ---
+    const searchInput = document.getElementById('searchInput');
+    const modalityItems = document.querySelectorAll('.modality-item');
+
+    searchInput.addEventListener('keyup', function() {
+      let query = this.value.toLowerCase();
+      modalityItems.forEach(item => {
+        // We'll match against both headings and 'data-modality' attribute
+        let text = item.innerText.toLowerCase();
+        let data = item.getAttribute('data-modality').toLowerCase();
+        // If either contains the query, show; otherwise hide
+        if (text.includes(query) || data.includes(query)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

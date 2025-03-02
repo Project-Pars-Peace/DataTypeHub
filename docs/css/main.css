@@ -1,65 +1,48 @@
 /* -------------------------------------------- */
-/*                 COLOR PALETTE               */
+/*             COLOR PALETTE                   */
 /* -------------------------------------------- */
 /* 
-   #1e009f  (30, 0, 159)  - Deep Blue / Purple
-   #0022d2  (0, 34, 210)  - Bright Blue
-   #ffb800  (255, 184, 0) - Gold
-   #d89b00  (216, 155, 0) - Dark Gold
-   #000000  (0,0,0)       - Black
+   #1e009f (Deep Blue/Purple)
+   #0022d2 (Bright Blue)
+   #ffb800 (Gold)
+   #d89b00 (Dark Gold)
+   #000000 (Black)
 */
 
-/* Basic color variables in CSS (for reference, 
-   not mandatory for vanilla CSS):
-:root {
-  --blue1: #1e009f;
-  --blue2: #0022d2;
-  --gold1: #ffb800;
-  --gold2: #d89b00;
-  --black: #000000;
-} */
-
 /* -------------------------------------------- */
-/*                 RESET / BASE                */
+/*                RESET / BASE                 */
 /* -------------------------------------------- */
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f7f7; /* or #ffffff */
+  background: #f7f7f7;
   color: #333;
 }
 
-/* Remove default list styling for convenience */
+/* Remove default list style inside UL if you like */
 ul {
   margin: 0;
   padding-left: 1.2rem;
 }
 
 /* -------------------------------------------- */
-/*             HEADER & NAV STYLES             */
+/*          HEADER / LOGO / FOOTER             */
 /* -------------------------------------------- */
-
 .site-header {
-  /* A gradient from #1e009f to #0022d2 */
   background: linear-gradient(to right, #1e009f, #0022d2);
   padding: 1rem;
   color: #fff;
 }
 
-/* The header-content area, containing logo + title block */
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-/* Left side: logo + site name stacked horizontally */
 .pars-logo {
-  /* Adjust the size as needed */
   width: 70px;
   height: auto;
   margin-right: 1rem;
@@ -70,107 +53,109 @@ ul {
   font-size: 1.8rem;
 }
 .header-text p {
-  margin: 0.3rem 0 0;
-  font-size: 1rem;
+  margin: 0.2rem 0 0;
   font-weight: 300;
 }
 
-/* Optional top nav container */
-.top-nav {
-  margin-top: 0.5rem;
-}
-.top-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0.5rem 0 0;
-}
-.top-nav a {
-  text-decoration: none;
+.site-footer {
+  text-align: center;
+  background: #000000;
   color: #fff;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-.top-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
 }
 
 /* -------------------------------------------- */
-/*             MAIN CONTENT STYLES             */
+/*               MAIN CONTAINER                */
 /* -------------------------------------------- */
 .content {
   max-width: 1200px;
   margin: 1rem auto;
   padding: 1rem;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
-/* Intro text area */
-.intro {
+/* -------------------------------------------- */
+/*               SEARCH SECTION                */
+/* -------------------------------------------- */
+.search-section {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.search-section label {
+  font-weight: bold;
+}
+.search-section input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* -------------------------------------------- */
+/*                    TABS                     */
+/* -------------------------------------------- */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
+.tablink {
+  background-color: #0022d2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.tablink.active, .tablink:hover {
+  background-color: #1e009f;
+}
+.tabcontent {
+  display: none;  /* shown by script */
+  padding: 0.5rem 0;
+}
 
-/* The grid that holds each “parent modality” card */
+/* -------------------------------------------- */
+/*            MODALITY GRID & CARDS            */
+/* -------------------------------------------- */
 .modality-grid {
   display: grid;
-  /* Adjust minmax to your preference */
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
 }
 
-/* Each parent modality “card” */
 .modality-card {
   background: #fafafa;
   border: 2px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 1rem;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .modality-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .modality-card h2 {
   margin-top: 0;
-  color: #1e009f; /* or #0022d2, or gold if you prefer */
+  color: #1e009f; /* or #0022d2 if you prefer */
   font-size: 1.2rem;
 }
 
-.modality-card ul {
-  margin-top: 0.5rem;
-  list-style: none;
-  padding-left: 0; /* remove bullet indentation */
-}
-
-.modality-card li {
-  margin: 0.3rem 0;
-}
-
 .modality-card a {
-  color: #0022d2; 
+  color: #0022d2;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.2s, border-color 0.2s;
 }
-
 .modality-card a:hover {
-  color: #d89b00; /* gold highlight on hover */
+  color: #d89b00;
   border-color: #d89b00;
-}
-
-/* -------------------------------------------- */
-/*             FOOTER STYLES                   */
-/* -------------------------------------------- */
-.site-footer {
-  text-align: center;
-  background: #000000; /* black or a dark blue if you prefer */
-  color: #fff;
-  padding: 1rem;
-}
-.site-footer p {
-  margin: 0;
 }
