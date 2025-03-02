@@ -8,9 +8,10 @@
 </head>
 <body>
 
-  <!-- HEADER with logo, site title, and an optional top nav -->
+  <!-- ========== HEADER with LOGO & TITLE ========== -->
   <header class="site-header">
     <div class="header-content">
+      <!-- Update the src if your file name is slightly different -->
       <img src="images/Project-pars-peace-logo.jpeg"
            alt="Project Pars Peace Logo"
            class="pars-logo">
@@ -19,61 +20,66 @@
         <p>A comprehensive hub of 100+ medical data modalities</p>
       </div>
     </div>
-    <!-- Example top navigation (optional) -->
+
+    <!-- Optional top navigation (if needed) -->
     <nav class="top-nav">
-      <!-- Add nav links if needed, e.g. "About," "Contact," etc. -->
-      <!--
+      <!-- 
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Some Page</a></li>
-        <li><a href="#">Another Page</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
       -->
     </nav>
   </header>
 
+  <!-- ========== MAIN CONTENT AREA ========== -->
   <main class="content">
     <section class="intro">
-      <p>Welcome to DataTypeHub! Below is a clickable gallery of various medical data modalities. 
-         Select one to learn more about data formats, typical resolutions, conversion methods, 
-         and clinical applications.</p>
+      <p>
+        Welcome to DataTypeHub! Below is a clickable gallery of various 
+        medical data modalities. Select one to learn more about data formats, 
+        typical resolutions, conversion methods, and clinical applications.
+      </p>
     </section>
 
-    <!-- Example grid of "parent" modalities -->
+    <!-- Parent Modality Grid -->
     <section class="modality-grid">
-      <!-- X-Ray parent with child links -->
+
+      <!-- X-Ray Group with Mammography linked -->
       <div class="modality-card">
         <h2>X-Ray</h2>
         <ul>
+          <!-- Link to Mammography page -->
           <li><a href="modalities/mammography.html">Mammography</a></li>
+
+          <!-- Other X-Ray modalities (placeholders) -->
           <li><a href="#">XRay_Fluoroscopy</a></li>
           <li><a href="#">XRay_DR</a></li>
           <li><a href="#">XRay_DEXA</a></li>
           <li><a href="#">XRay_CR</a></li>
           <li><a href="#">Cephalometric Radiography</a></li>
-          <!-- etc. -->
         </ul>
       </div>
 
-      <!-- MRI parent with child links -->
+      <!-- MRI parent with child links (example placeholders) -->
       <div class="modality-card">
         <h2>MRI</h2>
         <ul>
           <li><a href="#">Standard MRI</a></li>
           <li><a href="#">Functional MRI (fMRI)</a></li>
           <li><a href="#">Diffusion MRI (DWI/DTI)</a></li>
-          <li><a href="#">MRA</a></li>
-          <li><a href="#">MRS</a></li>
+          <li><a href="#">Magnetic Resonance Angiography (MRA)</a></li>
+          <li><a href="#">Magnetic Resonance Spectroscopy (MRS)</a></li>
           <!-- etc. -->
         </ul>
       </div>
 
-      <!-- More parent modalities (NMI, US, Dental, etc.) -->
-      <!-- ... -->
+      <!-- Add more cards for NMI, US, CT, Dental, Genomics, etc. -->
 
-    </section>
+    </section> <!-- /.modality-grid -->
   </main>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <p>&copy; 2025 Project PARS Peace – DataTypeHub</p>
   </footer>
