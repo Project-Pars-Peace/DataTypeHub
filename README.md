@@ -6,7 +6,6 @@ Welcome to the **DataTypeHub** repository! DataTypeHub is a centralized resource
 
 ---
 # Guide for Contributors
-
 Below is a  guide that explains how you should send us your contributions:
 	•	Add team info to team.json
 	•	Add brief info to data.json
@@ -36,7 +35,17 @@ Our **team page** (`team.html`) displays profiles from `team.json`. To add a new
 
 Important: Make sure each new object is separated by a comma (if you’re adding multiple members) and that the JSON syntax remains valid (no trailing commas, matching brackets, etc.).
 
-## 2. Brief Info for a New Modality
+## 2. Guide to adding a new modality
+
+You should enter the information of the modality into this graphical interface created for adding a new modality. You should download the JSON file (it will automatically name the file as the modality ID) and upload it to this location: docs/modalities/
+
+Link to JSON-generator interface: https://project-pars-peace-json-generator.streamlit.app/
+
+<details>
+	<summary>Previous deprecated guide to add data modality files </summary>
+
+
+## 2.1. Brief Info for a adding a New Modality
 
 We maintain data.json as the main reference for all modalities. Each entry here briefly describes the modality and includes:
 	•	id (unique string, also used for the JSON file name in modalities/)
@@ -63,7 +72,7 @@ To add a new modality:
 	2.	Insert a new object inside the array with the above fields.
 	3.	Avoid trailing commas and ensure each entry is properly wrapped in curly braces {}.
 
-## 3. Full Info for a Modality (in modalities/<id>.json)
+## 2.2. Full Info for a Modality (in modalities/<id>.json)
 
 For detailed data about each modality (sections 1–12, references, etc.), create or edit a JSON file in modalities/, named exactly as the id in data.json plus the .json extension.
 
@@ -136,8 +145,10 @@ You can fill in each section (1–12) with as much detail as you have. The searc
 Remember:
 	•	The fields in your detailed JSON should match the structure we discussed (i.e., imagingPrinciple, dataTypeFileFormat, challengesLimitations, etc.).
 	•	The id, parents, title, acronyms, and shortDescription should match what’s in data.json.
+ 
+</details>
 
-## 4. Verification & Pushing Changes
+## 3. Verification & Pushing Changes
 
 1.	Commit/Pull the latest repository changes to avoid merge conflicts.
 2.	Add or update the relevant JSON files:
