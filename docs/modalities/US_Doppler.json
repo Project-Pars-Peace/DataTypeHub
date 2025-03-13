@@ -1,0 +1,71 @@
+{
+    "id": "US_Doppler",
+    "parents": ["US"],
+    "title": "Doppler Ultrasound,Color Doppler,Spectral Doppler,Power Doppler",
+    "acronyms": ["DUS" , "CDU" , "SDU", "PDU"],
+    "shortDescription": "A non-invasive medical imaging technique that uses high-frequency sound waves to detect and measure the flow of blood through vessels, allowing for the diagnosis of conditions such as blood clots, varicose veins, and vascular diseases.",
+    "imagingPrinciple": "DUS: Detects and measures the change in frequency of ultrasound waves that are reflected from moving objects (e.g., red blood cells) within the body, utilizing the Doppler Effect to assess blood flow and direction. CDU: Overlay of color on conventional ultrasound images to represent the velocity and direction of blood flow through vessels, with colors typically indicating direction (e.g., red towards, blue away) and shade/saturation indicating velocity. SDU: Graphically displays the distribution of blood flow velocities over time, using a spectrum to show the range of velocities at each point in the cardiac cycle, aiding in the quantification of stenosis, flow characteristics, and more. PDU: Enhances the sensitivity to blood flow by displaying the amplitude of the Doppler signal (essentially, the power) in color, rather than velocity, making it particularly useful for detecting low-flow states or small vessels without directionality.",
+    "dataTypeFileFormat": {
+      "primaryFileFormats": ["DICOM (.dcm)"],
+      "dataType": ["DICOM" , "AVI (.avi)," , "MP4 (.mp4) ", "JPEG (.jpg)","PNG (.png) ","WAV (.wav)"],
+      "relatedDataTypes": ["US"],
+      "standardStorageFormat": "DICOM (.dcm)",
+      "conversionSolutions": [       
+        {         "conversion_from": "JPEG",         "conversion_to": "DICOM",         "conversion_description": "Use pydicom + Pillow to embed JPEG pixel data into a DICOM container.",         "conversion_links": ["https://github.com/pydicom/pydicom"]       },   
+        {         "conversion_from": "AVI",         "conversion_to": "DICOM",         "conversion_description": "Filestar enables the conversion of AVI files to DICOM through a straightforward process. Users can right-click on one or more AVI files, select 'Convert with Filestar,' search for 'convert to dicom,' and execute the conversion. ",         "conversion_links": ["https://filestar.com/skills/avi/convert-avi-to-dicom   "]       }  ,
+        {         "conversion_from": "MP4",         "conversion_to": "DICOM",         "conversion_description": "Filestar is a versatile file conversion tool that supports converting MP4 files to DICOM format.",         "conversion_links": ["https://filestar.com/skills/mp4/convert-mp4-to-dicom"]       },   
+        {         "conversion_from": "PNG",         "conversion_to": "DICOM",         "conversion_description": "GroupDocs Conversion App: This free online tool allows you to convert PNG files to DICOM format directly from your browser. Simply upload your PNG image, and the tool will handle the conversion.",         "conversion_links": ["https://products.groupdocs.app/conversion/png-to-dicom?utm_source=chatgpt.com"]       },   
+        {         "conversion_from": "WAV",         "conversion_to": "DICOM",         "conversion_description": "Read the WAV File: Use an audio processing library to read the WAV file and extract its data.Create a DICOM File: Utilize the chosen DICOM library to create a new DICOM file, populating the necessary metadata fields as specified by the Basic Voice Audio Waveform Storage SOP Class.Embed the Audio Data: Insert the audio data from the WAV file into the appropriate DICOM data elements, ensuring that the data is correctly formatted and encoded.Save the DICOM File: Finalize and save the DICOM file, ensuring it adheres to the standard's requirements.Verify the DICOM File: After conversion, use DICOM validation tools to ensure that the file complies with the DICOM standard and can be correctly interpreted by DICOM-compliant systems.",         "conversion_links": ["https://dicom.nema.org/dicom/supps/sup30_lb.pdf?utm_source=chatgpt.com"]       },   
+        {         "conversion_from": "MOV",         "conversion_to": "DICOM",         "conversion_description": "Filestar: A versatile file conversion tool that supports converting MOV files to DICOM. ",         "conversion_links": ["https://filestar.com/skills/mov/convert-mov-to-dicom"]       },   
+        {         "conversion_from": "RAW",         "conversion_to": "DICOM",         "conversion_description": "DCMTK provides a comprehensive set of tools and libraries for working with DICOM files. It allows for the creation and manipulation of DICOM files, including converting RAW data directly into DICOM format without the need to save intermediate files to disk.",         "conversion_links": ["https://forum.dcmtk.org/viewtopic.php?t=2874"]       },   
+        {         "conversion_from": "SR",         "conversion_to": "DICOM",         "conversion_description": "PixelMed offers Java-based tools and libraries for working with DICOM SR files. These tools facilitate the reading, creation, and modification of SR documents, as well as conversion to other formats. For a comprehensive understanding of DICOM SR structures and operations, refer to the DICOM Structured Reporting book by Dr. David Clunie, available through PixelMed. ",         "conversion_links": ["https://github.com/corticometrics/fs2dicom"]       },   
+        {         "conversion_from": "TIFF",         "conversion_to": "DICOM",         "conversion_description": " Python with Aspose.Imaging: Aspose.Imaging offers a Python library to handle image conversions. To convert TIFF to DICOM",         "conversion_links": ["https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/?utm_source=chatgpt.com"]       },   
+        {         "conversion_from": " VIV / VOL",         "conversion_to": "DICOM",         "conversion_description": "a MATLAB-based tool for converting 3D image volumes from NifTi format to DICOMs. This repository contains a GUI which can be used to assign values to common DICOM fields. It also contains functions which can be used in your own code to streamline workflows. This work is part of the U24 co-clinical trial of which CIVM at Duke University is a participant. This work has been funded by NIH U24CA220245.",         "conversion_links": ["https://github.com/mdholbrook/U24_DICOM_tool"]       }   
+           ]   
+    },
+    "typicalResolutionImageDims": {
+      "spatialResolution": " ranging from 0.3 to 1.0 millimeters, ",
+      "voxelSize": "The voxel size in Doppler ultrasound is influenced by the spatial resolution and the slice thickness, which is determined by the ultrasound beam width and focusing. Pixel spacing is contingent on the display settings and the region of interest but generally aligns with the spatial resolution parameters.",
+      "temporalResolution": "typically ranging from 30 to 100 frames per second. "
+    },
+    "dataSize": {
+      "singleImageSize": "ranges from 500 kilobytes to 2 megabytes.",
+      "typicalStudySize": " between 50 megabytes to 500 megabytes of storage"
+    },
+    "acquisitionHardware": {
+      "equipmentUsed": "Doppler ultrasound examinations are conducted using ultrasound machines equipped with specialized transducers capable of both standard imaging and Doppler signal detection. These machines often include functionalities for continuous wave Doppler, pulsed wave Doppler, color Doppler, and power Doppler imaging.",
+      "typicalManufacturers": ["Siemens Healthineers", "GE Healthcare", "Philips Healthcare",  "Canon Medical Systems"]
+    },
+    "commonClinicalApps": {
+      "primaryUses": ["Vascular Imaging: Assessment of blood flow in arteries and veins to detect conditions such as stenosis, occlusions, and aneurysms.","Cardiac Imaging: Evaluation of intracardiac blood flow, valve function, and detection of congenital heart defects.","Obstetric Imaging: Monitoring fetal blood flow in prenatal assessments to evaluate fetal well-being."  ],
+      "specializedUses": ["Measurement of blood flow velocities in the cerebral arteries to detect stenosis, vasospasm, or emboli.", "Assessment of myocardial tissue velocities to evaluate diastolic function and detect subtle myocardial dysfunction."]
+    },
+    "radiationSafety": {
+      "ionizingRadiation": "No",
+      "radiationDose": "No",
+      "safetyConcerns": "While Doppler ultrasound is generally safe, potential concerns include tissue heating and cavitation at high intensities. However, diagnostic ultrasound operates within established safety guidelines to minimize these risks."
+    },
+    "preprocessingData": {
+      "commonPreprocessingSteps": ["Image Enhancement: Adjustments to improve image quality, such as speckle reduction and contrast enhancement.", "Noise Reduction: Techniques to minimize artifacts and enhance signal-to-noise ratio.", "Motion Correction: Algorithms to compensate for patient or probe movement during image acquisition."],
+      "compressionMethods": ["Doppler ultrasound images are often stored in the DICOM format, which supports both lossless and lossy compression methods, such as JPEG and JPEG 2000, to reduce storage requirements while maintaining image quality."]
+    },
+    "challengesLimitations": {
+      "technicalChallenges": ["Angle Dependency: Accurate velocity measurements require the ultrasound beam to be aligned parallel to the direction of blood flow; deviations can lead to inaccuracies.","Artifact Susceptibility: Doppler ultrasound is prone to artifacts such as aliasing, especially when measuring high-velocity flows." ],
+      "clinicalLimitations": ["Limited Penetration: High-frequency transducers offer better resolution but have reduced tissue penetration, limiting their use in imaging deeper structures.","Operator Dependency: The quality and accuracy of Doppler ultrasound examinations are highly dependent on the operator's skill and experience."]
+    },
+    "references": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK580539/",
+      "https://www.mayoclinic.org/doppler-ultrasound/expert-answers/faq-20058452",
+      "https://www.amazon.com/Doppler-Ultrasound-Instrumentation-Clinical-Applications/dp/0471914894",
+      "https://fetalmedicine.org/var/uploads/web/Doppler/Doppler%20Ultrasound%20-%20Principles%20and%20practice.pdf"
+    ],
+    "preparation_meta": [
+      {
+        "prepared_by": "Mohammadreza Ghaffarzadeh-Esfahani",
+        "confirmed_by": "...",
+        "date_of_preparation": "...",
+        "planned_next_review": "...",
+        "requires_completion": "false"
+      }
+    ]
+  }

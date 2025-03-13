@@ -1,0 +1,73 @@
+{
+    "id": "XRay_DEXA/DXA",
+    "parents": ["X-Ray"],
+    "title": "Mammography",
+    "acronyms": ["DXA"],
+    "shortDescription": "A non-invasive medical imaging test that uses X-rays to measure bone mineral density (BMD) and assess bone health. It's commonly used to diagnose osteoporosis, monitor bone loss, and evaluate the risk of fractures.",
+    "imagingPrinciple": "Dual‐energy X‐ray Absorptiometry employs two low‐dose X‐ray beams at distinct energy levels. Because soft tissue and bone attenuate X‐rays differently at these energies, the system mathematically subtracts the soft tissue component from the overall attenuation, isolating the bone mineral signal. This yields quantitative measurements of areal bone mineral density (BMD) and—when whole‐body scans are acquired—provides additional body composition data (i.e., fat mass and lean soft tissue).",
+    "dataTypeFileFormat": {
+      "primaryFileFormats": ["DICOM (.dcm)"],
+      "dataType": ["Grayscale 2D Projection Imaging","Quantitative numerical data (e.g., BMD, bone mineral content, lean and fat mass)"  ],
+      "relatedDataTypes": ["X-Ray"],
+      "standardStorageFormat": "DICOM (.dcm)",
+      "conversionSolutions": [
+        {         "conversion_from": "JPEG",         "conversion_to": "DICOM",         "conversion_description": "Use pydicom + Pillow to embed JPEG pixel data into a DICOM container.",         "conversion_links": ["https://github.com/pydicom/pydicom"]       },   
+        {         "conversion_from": "TIFF",         "conversion_to": "DICOM",         "conversion_description": " Python with Aspose.Imaging: Aspose.Imaging offers a Python library to handle image conversions. To convert TIFF to DICOM",         "conversion_links": ["https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/?utm_source=chatgpt.com"]       },   
+        {         "conversion_from": "PNG",         "conversion_to": "DICOM",         "conversion_description": "GroupDocs Conversion App: This free online tool allows you to convert PNG files to DICOM format directly from your browser. Simply upload your PNG image, and the tool will handle the conversion.",         "conversion_links": ["https://products.groupdocs.app/conversion/png-to-dicom?utm_source=chatgpt.com"]       },   
+        {         "conversion_from": "BMP (.bmp)",         "conversion_to": "DICOM",         "conversion_description": "VTK (Visualization Toolkit):Description: A software system for 3D computer graphics, image processing, and visualization. The vtkBMPReader is used to read BMP files, and it also handles lookup tables if needed.",         "conversion_links": ["https://stackoverflow.com/questions/5035078/convert-bmp-image-into-dicom"]       }   
+      ]
+    },
+    "typicalResolutionImageDims": {
+      "spatialResolution": "Approximately 512 × 512 pixels",
+      "voxelSize": "~1 mm × 1 mm",
+      "temporalResolution": "Not applicable"
+    },
+    "dataSize": {
+      "singleImageSize": " ~1 MB to 10 MB per scan",
+      "typicalStudySize": "~5 MB to 20 MB per study"
+    },
+    "acquisitionHardware": {
+      "equipmentUsed": "Low‐dose X‐ray source with dual energy output ,Dual‐energy X‐ray generator and detectors , Scanning table and positioning aids ,Computer workstation with dedicated DXA analysis software ",
+      "typicalManufacturers": ["Hologic (e.g., Horizon series)",
+      "GE Healthcare (Lunar systems)",
+      "Norland (and other specialized DXA manufacturers)"]
+    },
+    "commonClinicalApps": {
+      "primaryUses": ["Bone Mineral Density (BMD) Assessment:Diagnosis of osteoporosis and fracture risk evaluation", "Body Composition Analysis:Quantification of fat mass and lean soft tissue for nutritional and metabolic assessments"],
+      "specializedUses": ["Monitoring Treatment Efficacy","Serial measurements to assess therapy response in osteoporosis","Research Applications","Studies on sarcopenia", "obesity studies",  "osteosarcopenic obesity studies"]
+    },
+    "radiationSafety": {
+      "ionizingRadiation": "Yes",
+      "radiationDose": "Less than 0.01 mSv per scan",
+      "safetyConcerns": "The dose is low; however, caution is advised in pregnant patients.Standard radiation protection protocols are observed."
+    },
+    "preprocessingData": {
+      "commonPreprocessingSteps": [
+      "Routine calibration (using phantoms) to ensure measurement accuracy",
+      "Correction for minor artifacts and noise",
+      "Identification and segmentation of regions of interest (e.g., lumbar spine, hip) for BMD calculation",
+      "Converting proprietary output to standard DICOM as needed"],
+      "compressionMethods": ["Techniques such as lossless JPEG2000 are typically employed to preserve quantitative integrity"]
+    },
+    "challengesLimitations": {
+      "technicalChallenges": ["DXA images are 2D projections, which may not capture fine anatomical detail", "Errors in patient positioning or inconsistent region-of-interest (ROI) selection can affect accuracy","Variability between different devices may necessitate cross-calibration to ensure comparability", "DXA measures areal BMD (g/cm²) and do not account for bone depth" ],
+      "clinicalLimitations": ["Limited ability to differentiate soft tissue details" , "Primarily used for bone density and not intended for detailed fracture or lesion evaluation", "Requires standardized protocols to minimize inter-operator differences"]
+    },
+    "references": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK519042/",
+      "https://www.radiologyinfo.org/en/info/dexa",
+      "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1479_web.pdf",
+      "https://en.wikipedia.org/wiki/Dual-energy_X-ray_absorptiometry",
+      "https://www.imagewisely.org/Imaging-Modalities/Fluoroscopy/Modern-Imaging-Systems"
+
+    ],
+    "preparation_meta": [
+      {
+        "prepared_by": "Mohammadreza Ghaffarzadeh-Esfahani",
+        "confirmed_by": "...",
+        "date_of_preparation": "...",
+        "planned_next_review": "...",
+        "requires_completion": "false"
+      }
+    ]
+  }
