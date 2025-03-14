@@ -12,5 +12,12 @@
         "email": "sdamirsa@ymail.com",
         "affiliation": "Research Institute for Gastroenterology and Liver Diseases, SBMU, Tehran, Iran",
         "image": ""
-      }
+      },
+     {
+        "name": "Yasamin Falahati",
+        "contributedTo": ["Template_bioinformatic"],
+        "email": "falahati.yasamin@gmail.com",
+        "affiliation": "Islamic Azad University, Tehran medical science",
+        "image": ""
+      },
   ]
