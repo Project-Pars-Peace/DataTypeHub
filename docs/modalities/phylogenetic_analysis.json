@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "phylogenetic_analysis"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Genomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Phylogenetic Analysis"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Phylogenetic Analysis infers evolutionary relationships between organisms based on their sequences"
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Genomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Phylogenetic Analysis"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Phylogenetic analysis examines DNA, RNA, or protein sequences to determine evolutionary relationships among organisms. It works by aligning sequences to identify conserved and variable regions, then constructing phylogenetic trees using distance-based (e.g., UPGMA, neighbor-joining) or character-based (e.g., maximum likelihood, Bayesian inference) methods. These approaches model evolutionary changes, considering mutation rates and genetic divergence, to infer common ancestry and evolutionary timelines."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "Newick (.nwk)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Newick files store phylogenetic trees in a plain text format. Each tree is represented using nested parentheses to indicate branching relationships, with taxa names and branch lengths separated by colons. The structure follows a hierarchical format, where internal nodes define evolutionary splits, and leaf nodes represent individual species or sequences. The file ends with a semicolon, ensuring correct parsing by phylogenetic software."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "Phylogenetic data quality is assessed using sequence alignment accuracy, branch support values, and model fit. Key metrics include bootstrap support, posterior probability, and likelihood scores, which evaluate the reliability of tree topology. Tools like RAxML, IQ-TREE, and MrBayes are commonly used to assess phylogenetic accuracy, detect long-branch attraction, and ensure proper model selection."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw phylogenetic data sizes vary based on sequence length and taxa count: multiple sequence alignments (~1-100 MB), distance matrices (~10 KB-10 MB), and phylogenetic trees in Newick format (~1-100 KB), depending on dataset complexity."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed phylogenetic data is visualized using **phylogenetic trees (FigTree, iTOL), multiple sequence alignments (AliView, Jalview), distance heatmaps (R, Python), network graphs (SplitsTree), and ancestral state reconstructions (PAUP*, RevBayes)**."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed phylogenetic data varies: multiple sequence alignments (FASTA) ~1\u2013500 MB, phylogenetic trees (Newick) ~1\u2013100 KB, distance matrices (PHYLIP) ~10 KB\u201310 MB, and Bayesian/likelihood analysis outputs (trace files) ~MBs\u2013GBs, depending on dataset complexity and taxa count."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters in phylogenetic analysis include sequence alignment length (determining resolution), number of taxa (tree complexity), substitution model (evolutionary detail), bootstrap replicates (support confidence), branch length scaling (divergence measure), and outgroup selection (rooting accuracy). These factors influence the granularity of evolutionary relationships, with higher alignment lengths and taxa counts improving resolution but increasing computational demand."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Phylogenetic analysis in bioinformatics typically addresses questions like: **- What are the evolutionary relationships among species or genes? - How do genetic sequences evolve over time? - What is the origin and spread of a particular pathogen or trait?** Typical research aims include: **- Reconstructing evolutionary trees to infer common ancestry. - Identifying patterns of molecular evolution and speciation. - Tracing the evolutionary history of genes, species, or viral outbreaks.**"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In phylogenetic analysis, preprocessing involves **aligning sequences, trimming low-quality regions, removing gaps or ambiguous bases, and filtering out poorly aligned sequences** to ensure accurate tree reconstruction. Quality control (QC) checks **sequence alignment accuracy, model fit, saturation levels, and potential long-branch attraction** to identify biases or errors before conducting evolutionary analyses."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In phylogenetic analysis, common preprocessing steps include: **1. Filtering**: Removing low-quality or highly divergent sequences that may introduce errors. **2. Trimming**: Cutting poorly aligned regions or ambiguous bases to improve alignment accuracy. **3. Multiple Sequence Alignment (MSA)**: Aligning sequences using tools like MAFFT or Clustal Omega to ensure consistency. **4. Model Selection**: Identifying the best-fit evolutionary model to correct for substitution biases. **5. Outgroup Selection**: Choosing an appropriate reference to properly root the phylogenetic tree. These steps enhance the accuracy and reliability of evolutionary inferences."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed phylogenetic data include: **1. FastQC**: Provides metrics like sequence quality scores, GC content, and adapter contamination. **2. MAFFT**: Used for multiple sequence alignment, ensuring proper alignment for tree construction. **3. Trimal**: A tool for trimming poorly aligned regions from multiple sequence alignments. **4. IQ-TREE**: Performs model selection and estimates branch support values like bootstrap replicates and likelihood scores. **5. iTOL**: Used to visualize and inspect phylogenetic trees for potential issues such as long-branch attraction. Metrics typically include alignment quality, sequence divergence, bootstrap support, model fit, and branch length consistency."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages and computational resources used for phylogenetic analysis include **RAxML** for maximum likelihood tree construction, **IQ-TREE** for efficient model selection and tree inference, and **MrBayes** for Bayesian phylogenetic analysis. **MAFFT** and **Clustal Omega** are popular tools for multiple sequence alignment, which is crucial for accurate phylogenetic analysis. For visualization, **FigTree** and **iTOL** are widely used to display and annotate phylogenetic trees. Computational resources like **Galaxy** facilitate bioinformatics workflows, while **HPC resources** and cloud platforms like **AWS** or **Google Cloud** are often employed for processing large datasets. **Docker** is commonly used to containerize workflows for reproducibility. These tools and resources ensure robust, scalable, and reproducible phylogenetic analyses."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Phylogenetic analysis is frequently used in several key research areas, including: 1. **Genomics and Evolutionary Biology**: To understand the genetic relationships and evolutionary history of species. 2. **Disease Research**: For studying the genetic basis of diseases, including tracing the origin and spread of pathogens, such as viruses and bacteria. 3. **Drug Discovery**: In identifying potential drug targets by studying the evolutionary history of genes and proteins. 4. **Agricultural Science**: To improve crop and livestock breeding by understanding genetic diversity and evolutionary relationships. 5. **Personalized Medicine**: For tailoring treatments based on an individual\u2019s genetic makeup and understanding genetic variations. 6. **Conservation Biology**: To conserve genetic diversity and study evolutionary dynamics in endangered species. 7. **Microbial Genomics**: For analyzing the genetic composition and evolutionary trends in microorganisms, including pathogens. 8. **Ecology and Metagenomics**: To study the genetic composition of environmental samples, such as soil or water, and understand microbial community structure."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Phylogenetic analysis in clinical settings is used for diagnostics, such as identifying the genetic basis of infectious diseases by tracing the origin and spread of pathogens, including viruses and bacteria. It aids in treatment selection by enabling the identification of genetic mutations or variations in diseases like cancer, allowing for the selection of targeted therapies tailored to an individual\u2019s genetic profile. Phylogenetic analysis also plays a role in prognostics by predicting disease outcomes based on the evolutionary relationships of genetic markers, helping clinicians assess the likely course of the disease and response to treatment. This approach is particularly valuable in personalized medicine, ensuring more accurate and effective healthcare strategies."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Phylogenetic analysis faces several technical challenges, including data quality issues such as sequencing errors, contamination, and missing or incomplete sequence data, which can affect the accuracy of the phylogenetic tree. Additionally, processing large datasets often requires significant computational resources, especially for genome-wide analyses, which can be costly and time-consuming. The choice of sequencing technology introduces challenges, as each platform has different error profiles, with short-read technologies potentially missing larger structural variations and long-read technologies prone to higher error rates in base calling. Furthermore, accurate alignment of divergent or highly variable sequences can be difficult, and complex or repetitive regions of the genome may hinder the resolution of phylogenetic relationships. These challenges make it difficult to achieve fully reliable and comprehensive phylogenetic trees."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Phylogenetic analysis, while a powerful tool for understanding evolutionary relationships, has several limitations related to biological interpretation and the scope of inferences that can be drawn from the data. These limitations include: 1. **Incomplete Data**: Phylogenetic trees may be based on partial or fragmented genetic data, leading to gaps in understanding evolutionary relationships, especially in poorly studied species. 2. **Error in Sequence Alignment**: Errors in sequence alignment, especially in highly divergent or variable regions, can mislead the tree-building process, resulting in incorrect phylogenetic relationships. 3. **Homoplasy**: Convergent evolution or parallel mutations can introduce homoplasy, where similar traits evolve independently in different lineages, complicating the interpretation of genetic relatedness. 4. **Limited Taxon Sampling**: Inadequate sampling of species or strains can lead to incomplete or biased phylogenies that fail to capture the full diversity of genetic relationships. 5. **Oversimplification of Evolution**: Phylogenetic trees may oversimplify complex evolutionary processes by assuming a single, linear relationship, while actual evolution may involve more complex interactions such as horizontal gene transfer or reticulate evolution. 6. **Lack of Functional Data**: While phylogenetic analysis reveals evolutionary connections, it does not provide functional insight into genes or traits, requiring integration with other data types (e.g., gene expression) for comprehensive biological interpretation. These challenges highlight the need for careful interpretation of phylogenetic results within their biological and ecological context."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and protection of sensitive data in phylogenetic analysis are critical, as genomic data often contains personal and identifiable information that can link to individuals or populations. To ensure the safety of such data, several measures are necessary: Data should be encrypted both at rest and in transit to prevent unauthorized access and interception. Access control, including role-based access and strong authentication methods such as multi-factor authentication, ensures that only authorized individuals can access sensitive data. Anonymization and de-identification of genomic data reduce privacy risks when shared for research purposes. Secure cloud storage or local storage with physical security, firewalls, and intrusion detection systems helps protect data from breaches. Compliance with regulations like HIPAA and GDPR is vital for ensuring that genomic data is handled with the required privacy protections. Data minimization and regular backup and recovery practices mitigate risks of data loss or unauthorized access. When sharing data, secure transfer methods and collaboration platforms must be used, and data integrity should be maintained through hashing algorithms. By implementing these strategies, sensitive genomic data can be safeguarded against misuse while facilitating secure research collaboration."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to genomic data are critical due to its deeply personal nature and potential for misuse. Key concerns include the risk of **re-identification**, where anonymized data can be linked back to individuals through advanced analysis or data sharing. **Data breaches** pose a significant threat, as hackers may target genomic data for identity theft or discrimination. Ensuring **informed consent** is crucial, as individuals must fully understand how their data will be used, stored, and shared, with the ability to withdraw consent at any time. The potential for **third-party sharing** raises concerns about misuse, such as for marketing or beyond the original consent. **Genetic discrimination** is another issue, where individuals could face discrimination based on their genetic information in areas like health insurance or employment. **Family implications** are also significant, as genomic data can reveal sensitive information about relatives, leading to privacy concerns for family members. The permanence of genetic data and the possibility of **long-term privacy risks** as future technologies evolve further complicate matters. Finally, there are **regulatory gaps**, as existing laws may not fully protect genomic data or address the complexities of modern genomics. Addressing these concerns through **informed consent**, **encryption**, adherence to privacy laws like **GDPR** or **HIPAA**, and **ethical sharing** practices can help safeguard genomic data privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Here are key public databases and data repositories for phylogenetic analysis, which store a variety of genomic data such as DNA sequences, genome assemblies, and related annotations: 1. **NCBI GenBank** - A primary resource for nucleotide sequences, storing complete genomes and partial sequences across diverse species ([GenBank](https://www.ncbi.nlm.nih.gov/genbank/)). 2. **Ensembl** - Provides high-quality genome assemblies with integrated functional annotations, including DNA sequences, variants, and epigenomic data ([Ensembl](https://www.ensembl.org/)). 3. **UCSC Genome Browser** - A web platform for exploring DNA sequences, genome assemblies, and functional annotations ([UCSC Genome Browser](https://genome.ucsc.edu/)). 4. **The Genome Reference Consortium (GRC)** - Offers curated reference genome assemblies for humans and other species ([GRC](https://www.ncbi.nlm.nih.gov/grc)). 5. **NCBI GEO (Gene Expression Omnibus)** - Contains genomic datasets, DNA microarrays, and genome-wide association studies, often integrating sequence data ([GEO](https://www.ncbi.nlm.nih.gov/geo/)). 6. **ArrayExpress** - Stores genomic DNA data from transcriptomics and DNA-chip experiments, including high-throughput gene expression datasets ([ArrayExpress](https://www.ebi.ac.uk/arrayexpress/)). 7. **The 1000 Genomes Project** - A resource for human genetic variation data, offering genome-wide sequence data from diverse populations ([1000 Genomes Project](https://www.internationalgenome.org/)). 8. **gnomAD (Genome Aggregation Database)** - Provides aggregated genomic data, focusing on human genetic variation and mutation frequencies across populations ([gnomAD](https://gnomad.broadinstitute.org/)). These databases are essential for conducting phylogenetic analysis, variant identification, and studying evolutionary relationships."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "There are several community standards, best-practice guidelines, and standardization efforts for genomic data, focusing on data formats, quality control, and analysis pipelines: 1. Data Formats - Common formats include FASTA for nucleotide sequences, GFF/GTF for genomic annotations, and VCF for documenting genetic variants. 2. Quality Control (QC) - Tools like QUAST for assessing assembly quality, BUSCO for genome completeness, and FASTQC for sequencing quality are widely used. 3. Best-Practice Guidelines and Pipelines - The GATK toolkit provides best practices for sequencing data processing, while NGS Pipelines offer standard workflows for assembly and variant analysis. GA4GH promotes global standards for data sharing and analysis. 4. Data Sharing and Metadata - The FAIR Principles ensure genomic data is findable, accessible, and reusable, and Dublin Core offers a standard for metadata. 5. Assembly Metrics - Metrics like N50 and L50 are used to evaluate the quality of genome assemblies. These standards are crucial for ensuring consistency, reproducibility, and proper data sharing across the genomic research community."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "Nexus (.nex), PhyloXML (.xml), Clustal (.aln), Phylip (.phy), Stockholm (.sto), XMFA (.xmfa)",
+        "Newick (.nwk)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/main/ref_converters.html"
+      ]
+    ]
+  }
+]

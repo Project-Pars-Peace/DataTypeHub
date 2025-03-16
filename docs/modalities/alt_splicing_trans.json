@@ -1,0 +1,314 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "alt_splicing_trans"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Alternative Splicing and Transcript Assembly Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Detecting and reconstructing different RNA isoforms produced from a single gene."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Alternative Splicing and Transcript Assembly Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Alternative Splicing and Transcript Assembly Formats analyze RNA sequences to reconstruct and quantify the diverse isoforms (transcript variants) produced from a single gene through alternative splicing. It works by sequencing RNA (typically via RNA-seq) using short-read (e.g., Illumina) or long-read (e.g., PacBio, ONT) technologies, aligning these reads to a reference genome or assembling them de novo with tools like StringTie or Trinity, and then identifying splice junctions and exon combinations using graph-based algorithms (e.g., splice graphs) to model and quantify transcript isoforms, revealing the complexity of gene expression regulation."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "GTF (Gene Transfer Format) (.gtf)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Alternative Splicing and Transcript Assembly Formats typically store nucleotide sequences, transcript abundance estimates, and structural annotations in formats like GTF/GFF3 or FASTA with accompanying tabular data. Each GTF/GFF3 entry includes: (1) a sequence identifier (e.g., chromosome), (2) feature type (e.g., exon, transcript), (3) start/end coordinates, (4) strand information, and (5) attributes (e.g., transcript ID, gene ID, expression levels in FPKM/TPM), while FASTA files contain assembled transcript sequences with headers linking to quantitative data in separate files (e.g., TSV with isoform counts)."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "In Alternative Splicing and Transcript Assembly Formats, raw data quality is assessed using metrics like sequencing depth, read alignment rates, splice junction saturation, and transcript coverage uniformity, with tools such as RSeQC, Qualimap, and MultiQC commonly employed to evaluate these parameters."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw data sizes for Alternative Splicing and Transcript Assembly Formats typically range from ~10-100 GB per RNA-seq experiment, depending on sequencing depth, read length (short vs. long), and the number of samples analyzed."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed data from Alternative Splicing and Transcript Assembly Formats is typically visualized using splice graphs (e.g., Sashimi plots in IGV), transcript abundance bar plots, exon usage heatmaps, isoform diversity histograms, and differential splicing scatter plots (e.g., via MAJIQ or rMATS)."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed data sizes for Alternative Splicing and Transcript Assembly Formats typically range from ~10 MB-1 GB for GTF/GFF3 annotation files and transcript sequences (FASTA), up to ~1-10 GB for comprehensive outputs including abundance estimates and splice event annotations, depending on dataset complexity."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters defining the granularity, detail, or scale of data in Alternative Splicing and Transcript Assembly Formats include sequencing depth (coverage of splice junctions), read length (short vs. long for resolving isoforms), reference genome quality, isoform detection sensitivity (e.g., minimum expression threshold), and sample number (for statistical robustness in differential splicing)."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Alternative Splicing and Transcript Assembly Formats typically address questions like: - How does alternative splicing contribute to protein diversity or disease states? - Which isoforms are differentially expressed across conditions? Typical research aims include: - Cataloging transcript isoforms. - Identifying splicing regulators. - Linking splicing changes to biological functions or pathologies."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In Alternative Splicing and Transcript Assembly Formats, preprocessing involves trimming adapters, filtering low-quality reads, and aligning RNA-seq data to a reference genome, while quality control assesses alignment rates, splice junction detection, and coverage uniformity using tools like FastQC or RSeQC. These steps ensure accurate isoform reconstruction and reliable splicing analysis. The focus is on capturing true splicing events rather than sequencing artifacts"
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In Alternative Splicing and Transcript Assembly Formats, common preprocessing steps include: 1. Filtering: Removing low-quality reads or those with ambiguous bases. 2. Trimming: Cutting adapters and poor-quality ends from RNA-seq reads. 3. Normalization: Adjusting for sequencing depth or library size (e.g., TPM). 4. Alignment: Mapping reads to a reference genome or transcriptome (e.g., STAR). 5. Error Correction: Resolving misalignments at splice junctions. These steps ensure high-quality input for accurate transcript assembly and splicing analysis."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed data in Alternative Splicing and Transcript Assembly Formats include: 1. FastQC: Assesses read quality (Phred scores), GC content, and adapter contamination. 2. RSeQC: Evaluates splice junction saturation, read distribution, and gene body coverage. 3. MultiQC: Aggregates QC metrics like alignment rates and duplication levels. 4. STAR: Reports mapping statistics and splice junction reliability. 5. BUSCO: Checks transcriptome completeness (for de novo assemblies). Metrics include alignment percentage, junction coverage, and isoform diversity."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages for Alternative Splicing and Transcript Assembly Formats include: 1. StringTie: Assembles transcripts from RNA-seq data (https://ccb.jhu.edu/software/stringtie/). 2. Trinity: De novo transcriptome assembler (https://github.com/trinityrnaseq/trinityrnaseq). 3. STAR: Aligns RNA-seq reads for splicing analysis (https://github.com/alexdobin/STAR). 4. rMATS: Detects differential splicing events (http://rnaseq-mats.sourceforge.net/). 5. MAJIQ: Quantifies splicing variations (https://majiq.biociphers.org/). 6. Salmon: Estimates transcript abundance (https://combine-lab.github.io/salmon/). These run on local servers or cloud platforms like AWS."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Alternative Splicing and Transcript Assembly Formats are frequently used in: 1. Disease Research: Studying splicing alterations in cancer or neurodegeneration. 2. Drug Discovery: Identifying splicing-related therapeutic targets. 3. Developmental Biology: Exploring isoform roles in tissue differentiation. 4. Personalized Medicine: Linking splicing profiles to patient outcomes. 5. Evolutionary Biology: Comparing splicing across species. 6. Neuroscience: Investigating splicing in brain function."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Alternative Splicing and Transcript Assembly Formats in clinical settings are used for diagnostics, prognostics, and treatment selection by identifying disease-specific splicing patterns, such as aberrant isoforms in cancer (e.g., EGFRvIII in glioblastoma) for targeted therapies, or prognostic markers (e.g., splice variants in survival prediction), integrating results into precision medicine workflows."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Alternative Splicing and Transcript Assembly Formats face challenges like incomplete isoform detection due to short-read limitations, high computational demands for long-read assembly, noisy data from low-expression transcripts, and difficulty resolving complex splicing events in repetitive regions, all complicating accurate analysis."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Limitations in Alternative Splicing and Transcript Assembly Formats include: 1. Incomplete Isoform Detection: Low-expression isoforms may be missed. 2. Assembly Errors: Misassembled transcripts can skew interpretation. 3. Complex Splicing: Highly variable regions challenge accurate modeling. 4. Technology Bias: Short-reads struggle with full-length isoforms. 5. Annotation Gaps: Poorly annotated genomes limit functional insights. 6. Overinterpretation: Significant isoforms may lack biological relevance without validation. 7. Context Specificity: Splicing varies by tissue or condition. 8. Lack of Functional Data: Expression alone doesn\u2019t confirm protein production. These restrict definitive biological conclusions without integrative data."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security for Alternative Splicing and Transcript Assembly Formats protects sensitive RNA data with: ### 1. Data Encryption: AES-256 at rest, TLS in transit. ### 2. Access Control: RBAC, MFA, and audit logs. ### 3. Anonymization: Removing patient identifiers. ### 4. Storage: Secure cloud (e.g., AWS) or local servers. ### 5. Compliance: HIPAA, GDPR adherence. ### 6. Minimization: Collecting only necessary data. ### 7. Backup: Encrypted recovery systems. ### 8. Sharing: Secure platforms like dbGaP. ### 9. Integrity: Hashing (e.g., SHA-256). These measures safeguard patient privacy."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns for Alternative Splicing and Transcript Assembly Formats include: 1. Re-identification Risk: Linking isoforms to individuals via metadata. 2. Data Breaches: Exposure risks health discrimination. 3. Informed Consent: Ensuring clear usage terms. 4. Third-Party Sharing: Potential misuse by external entities. 5. Discrimination: Splicing profiles may affect insurance. 6. Family Implications: Revealing relatives\u2019 traits. 7. Long-Term Privacy: Future analyses may uncover more. 8. Regulatory Gaps: Laws lag behind tech advances. ### Solutions: Consent, encryption, regulations, ethical sharing."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Key repositories for Alternative Splicing and Transcript Assembly Formats include: 1. NCBI GEO: RNA-seq datasets (https://www.ncbi.nlm.nih.gov/geo/). 2. Ensembl: Transcript annotations (https://www.ensembl.org/). 3. GENCODE: Comprehensive transcript data (https://www.gencodegenes.org/). 4. ArrayExpress: Expression and splicing data (https://www.ebi.ac.uk/arrayexpress/). 5. GTEx: Tissue-specific isoforms (https://gtexportal.org/). 6. TCGA: Cancer splicing profiles (https://www.cancer.gov/tcga)."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Standards for Alternative Splicing and Transcript Assembly Formats include: ### 1. Data Formats: GTF/GFF3 for annotations; FASTA for sequences. ### 2. QC: FastQC, RSeQC for read and splicing quality. ### 3. Guidelines: ENCODE RNA-seq protocols; Bioconductor workflows (e.g., StringTie). ### 4. Sharing: FAIR principles; MIAME metadata. ### 5. Metrics: PSI (Percent Spliced In), isoform abundance (TPM). These ensure reproducibility and interoperability."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "MAF (.maf)",
+        "GTF (Gene Transfer Format) (.gtf)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/FOOTER.txt"
+      ],
+      [
+        "PSL (.psl)",
+        "GTF (Gene Transfer Format) (.gtf)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/FOOTER.txt"
+      ]
+    ]
+  }
+]

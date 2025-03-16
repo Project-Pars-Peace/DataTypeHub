@@ -1,0 +1,320 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "trans_seq_data_formats"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Sequence Data Formats (Raw and Processed Sequences)"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Examining the nucleotide sequences of RNA molecules to identify patterns, variants, or functional elements."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Sequence Data Formats (Raw and Processed Sequences)"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Variant calling analyzes DNA sequences to identify genetic variations, such as single nucleotide polymorphisms (SNPs), insertions, and deletions. It works by sequencing the DNA of an organism using high-throughput technologies like short-read sequencing (e.g., Illumina) or long-read sequencing (e.g., PacBio, Oxford Nanopore). These sequences are then mapped to a reference genome using alignment algorithms (e.g., BWA, Bowtie), and variations are detected by comparing the mapped reads to the reference using variant callers (e.g., GATK, FreeBayes). The underlying technology relies on detecting differences in nucleotide bases between the sample and the reference genome, with computational tools filtering and annotating these variations for downstream analysis, such as disease association or population genetics."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "FASTA (.fasta, .fa)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "FASTA files store biological sequence data in a plain text format. Each sequence entry begins with a header line, indicated by a \">\" symbol, followed by an identifier and optional description. The sequence itself is represented on subsequent lines using single-letter nucleotide or amino acid codes, formatted in a linear structure without special characters or spaces. Multiple sequences can be included in a single file, with each entry separated by its own header. This format is widely used in bioinformatics for storing and analyzing DNA, RNA, or protein sequences due to its simplicity and compatibility with various sequence analysis tools."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "Sequence data quality is assessed using base call accuracy, sequencing depth, and error rates. Key metrics include Phred quality scores, GC content distribution, and adapter contamination rates, which evaluate read reliability and sequencing bias. Tools like FastQC, MultiQC, and PRINSEQ are commonly used to visualize quality scores, detect sequence duplications, and assess overall data integrity before downstream analysis."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw **FASTA file sizes** vary based on sequence length, genome complexity, and the number of entries. A **whole-genome FASTA** for a human sample typically ranges from **1-3 GB**, while a **single bacterial genome** is much smaller, around **1-10 MB**, due to its compact size. Protein and transcriptome FASTA files can vary widely, from **a few MBs to several GBs**, depending on dataset scope. Compressed formats like **gzip (.gz)** significantly reduce storage size without losing information, making large datasets more manageable for bioinformatics analysis."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed **sequence data** is visualized using **sequence alignment viewers (IGV for mapped reads), coverage plots (to assess sequencing depth), and nucleotide composition histograms (FastQC for base quality analysis)**. Additionally, **multiple sequence alignments (ClustalW, MAFFT) are displayed as color-coded matrices, while phylogenetic trees (RAxML, IQ-TREE) help infer evolutionary relationships**. **K-mer frequency plots** aid in genome assembly quality assessment, and **heatmaps (PCA, hierarchical clustering)** are used to analyze sequence similarity and expression patterns. **Motif logos (MEME, WebLogo)** highlight conserved sequence motifs in regulatory regions."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed **sequence data** varies in size: **aligned sequence files (FASTA, BAM) range from ~100 MB to several GBs**, depending on genome size and read depth. **Variant call files (VCF) range from ~100 MB to 50 GB**, depending on the number of variants and samples. **Consensus sequences (FASTA) are typically ~1\u2013100 MB**, while **gene expression matrices (count tables) range from ~10 MB to several GBs**. **Annotation files (GFF/GTF) are usually ~10\u2013500 MB**, and **compressed sequence alignments (CRAM) significantly reduce BAM file sizes by ~30\u201350%** while maintaining retrievability."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters in sequence data analysis include **read length (determining resolution), sequencing depth/coverage (accuracy of variant calls), and base quality scores (confidence in nucleotide identification)**. **K-mer size (for genome assembly) influences contig length and accuracy, while alignment stringency (mismatch thresholds) affects mapping precision**. **In single-cell sequencing, the number of captured cells defines dataset granularity, and in transcriptomics, TPM/RPKM normalization impacts expression quantification**. **Reference genome quality (completeness and contiguity) also affects downstream analysis, with higher coverage and longer reads improving resolution but increasing data complexity and computational requirements**."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Sequence data analysis in bioinformatics typically addresses questions like: **- What genetic variations exist within a population or species? - How do mutations affect protein function and disease susceptibility? - What are the differences between normal and diseased states at the molecular level?** Typical research aims include: **- Identifying genetic mutations linked to diseases or traits. - Analyzing gene expression patterns to understand biological pathways. - Assembling genomes to study species diversity and evolution. - Detecting pathogens and tracing their transmission in epidemiological studies.**"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In sequence data analysis, preprocessing involves **read trimming (removing adapters and low-quality bases using tools like Trimmomatic or Cutadapt), quality filtering (discarding low-quality reads based on Phred scores), and sequence deduplication (eliminating PCR duplicates to reduce bias)**. Quality control (QC) assesses **base quality scores, GC content distribution, sequence duplication levels, and adapter contamination** using tools like **FastQC, MultiQC, and PRINSEQ** to ensure high-quality input for downstream analyses. For aligned sequences, **QC includes assessing mapping quality, read coverage, and mismatch rates** to verify accurate genome alignment and variant calling."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In sequence data analysis, common preprocessing steps include: **1. Filtering**: Removing low-quality reads, adapter contamination, and sequences below a quality threshold using tools like FastQC and PRINSEQ. **2. Trimming**: Cutting low-quality bases and adapter sequences from read ends using tools like Trimmomatic or Cutadapt to improve downstream analysis. **3. Normalization**: Adjusting read counts in RNA-seq data (e.g., TPM, RPKM, or DESeq2\u2019s variance stabilizing transformation) to correct for sequencing depth differences. **4. Batch Correction**: Addressing technical variations between sequencing runs or experimental batches using methods like Combat-seq or SVA. **5. Imputation**: Estimating missing nucleotide or variant data in genotype datasets using tools like Beagle or IMPUTE2. These steps ensure cleaner, more reliable data for accurate genomic, transcriptomic, or metagenomic analysis."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed sequence data include: **1. FastQC**: Assesses sequencing quality by providing metrics like base quality scores, GC content, sequence duplication levels, and adapter contamination. **2. Trimmomatic/Cutadapt**: Reports the percentage of trimmed reads and retained high-quality bases. **3. Picard Tools**: Evaluates mapping quality, duplication rates, and insert size distribution. **4. SAMtools flagstat**: Computes alignment statistics, including the percentage of properly paired reads. **5. MultiQC**: Aggregates QC reports from multiple tools, summarizing metrics like read depth, sequence quality scores, and mapping efficiency. **6. RNA-SeQC** (for RNA-seq): Assesses transcript coverage, duplication rates, and normalization efficiency. These tools ensure data integrity and reliability before downstream genomic, transcriptomic, or metagenomic analyses."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages and computational resources used for sequence data analysis include **FastQC** for quality control of raw data, **Trimmomatic** and **Cutadapt** for read trimming, and **BWA** and **Bowtie2** for read alignment to reference genomes. **GATK** is widely used for variant discovery and quality control in genomic data, while **BCFtools** and **VCFtools** are commonly used for manipulating and analyzing VCF files. For transcriptomic data, **TopHat** and **HISAT2** are popular for RNA-seq read alignment, while **DESeq2** and **EdgeR** are used for differential expression analysis. **SAMtools** is crucial for working with SAM/BAM files, and **IGV** and **UCSC Genome Browser** are used for visualizing aligned reads and genomic data. Computational resources like **Galaxy** and **Cromwell** support workflow management, while **HPC clusters**, **AWS**, and **Google Cloud** provide scalable infrastructure for large datasets. **Docker** is frequently used to ensure reproducibility across different computational environments. These tools and resources enable efficient, scalable, and reproducible sequence data analysis."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Sequence data analysis is frequently used in several key research areas, including: 1. **Disease Research**: To identify genetic variants associated with genetic disorders, complex diseases, and traits, leading to improved diagnostic techniques and therapeutic interventions. 2. **Cancer Research**: For detecting somatic mutations, identifying cancer subtypes, and uncovering potential biomarkers for early detection, prognosis, and therapeutic targets. 3. **Personalized Medicine**: To understand individual genetic profiles, enabling customized treatments based on a person\u2019s genetic makeup and improving drug efficacy and safety. 4. **Drug Discovery**: In pharmacogenomics to uncover genetic factors influencing drug metabolism, efficacy, and adverse drug reactions. 5. **Evolutionary Biology**: To examine genetic diversity within and across species, shedding light on evolutionary processes and adaptation mechanisms. 6. **Microbial Genomics**: For studying pathogens, identifying virulence factors, and understanding microbial resistance mechanisms, contributing to better infection control and vaccine development. 7. **Agricultural Science**: To identify genetic markers in crops and livestock, aiding in breeding programs to enhance yield, disease resistance, and environmental adaptability. 8. **Metagenomics**: To explore microbial diversity in environmental and human microbiomes, offering insights into ecosystem health and microbial interactions."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Sequence data analysis in clinical settings is used for diagnostics by identifying genetic mutations linked to inherited diseases, rare conditions, and somatic mutations in cancers. It plays a critical role in personalized medicine by guiding treatment selection, such as determining the best-targeted therapies based on specific mutations, like HER2 amplification in breast cancer. Additionally, sequence data supports prognostics by assessing disease risk and predicting outcomes through genetic markers, allowing for more precise risk assessments and individualized treatment plans. In oncology, it helps identify genetic alterations that influence drug resistance, aiding in therapy optimization. This data also facilitates genetic counseling, providing patients with insights into inherited conditions and potential future health risks, and supports pharmacogenomics, ensuring drugs are tailored to a patient's genetic profile for maximum efficacy and minimal side effects."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Sequence data analysis faces several technical challenges, including data quality issues such as sequencing errors, biases in base calling, and contamination, which can affect the accuracy of variant detection and alignment. Processing large-scale datasets often requires substantial computational resources, particularly for whole-genome or transcriptomic analyses, which can be both expensive and time-consuming. Sequencing technologies each have their limitations: short-read platforms may struggle with detecting structural variants, while long-read technologies are more error-prone in base calling. Additionally, the complexity of aligning sequences from highly variable or repetitive regions can lead to misalignments or gaps in data, reducing the quality of downstream analyses. Furthermore, challenges in handling and interpreting heterogeneous or incomplete data can impact the sensitivity and specificity of variant calling, making it difficult to achieve accurate and comprehensive results across diverse populations or conditions."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Sequence data analysis, while essential for understanding genetic variation and disease mechanisms, has several limitations related to biological interpretation and the scope of inferences that can be drawn from the data. These limitations include: 1. **Incomplete Data**: Gaps in genetic data, especially from under-sampled or poorly studied populations, can limit the ability to draw comprehensive conclusions about genetic variation or disease associations. 2. **Error in Variant Calling**: Sequencing errors, biases, or misalignments can result in false-positive or false-negative variant calls, impacting the accuracy of genetic inferences. 3. **Biological Noise**: Non-genetic factors such as sample contamination, environmental influences, or phenotypic plasticity can confound the interpretation of genetic associations with traits or diseases. 4. **Lack of Functional Information**: While sequence data provides information on genetic variants, it does not directly reveal the functional consequences of these variants, limiting the ability to make definitive biological or clinical inferences without additional data, such as gene expression or proteomic analyses. 5. **Population Stratification**: Differences in genetic background among populations can lead to biased associations if not properly accounted for, potentially limiting the generalizability of findings across diverse populations. These challenges highlight the need to combine sequence data with functional studies, larger sample sizes, and careful data interpretation to draw meaningful biological conclusions."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "The security and protection of sensitive genomic data are paramount due to its personal and identifiable nature. To safeguard this data, encryption is essential, both during storage (at rest) and transmission (in transit), to prevent unauthorized access or interception. Strict access control measures, including role-based systems and strong authentication protocols, should be implemented to ensure that only authorized personnel can access the data. Audit logs should be maintained to monitor data access and modifications. Anonymization and de-identification are key techniques for reducing privacy risks when sharing genomic data. Secure storage solutions, whether cloud-based or local, must feature robust security systems, while compliance with regulations like HIPAA and GDPR ensures that data privacy is upheld. Data minimization strategies, along with regular backups and encrypted data sharing, further protect sensitive information. Additionally, employing hashing algorithms ensures data integrity, preventing any alterations. By combining these measures, sensitive genomic data can be securely managed and protected against misuse, supporting its safe use in research and clinical applications."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to genomic data are critical due to its deeply personal and sensitive nature, with potential for significant misuse. Key concerns include the risk of **re-identification**, where anonymized data can be linked back to individuals through sophisticated analysis or data sharing. **Data breaches** present a major threat, as hackers may target genomic data for identity theft or discriminatory purposes. Ensuring **informed consent** is vital, as individuals must fully understand how their data will be used, stored, and shared, with the option to withdraw consent at any time. The possibility of **third-party sharing** raises concerns about data misuse, such as for commercial purposes beyond the original consent. **Genetic discrimination** could occur if individuals are treated unfairly based on their genetic information in areas like health insurance or employment. **Family implications** are also a concern, as genomic data can reveal sensitive information about relatives, impacting their privacy. The permanence of genetic data and the **long-term privacy risks** as new technologies emerge further complicate the issue. Additionally, there are **regulatory gaps**, as existing laws may not fully protect genomic data or address the complexities of modern genomics. Mitigating these concerns requires robust **informed consent**, **encryption**, adherence to privacy regulations such as **GDPR** or **HIPAA**, and ethical data sharing practices to ensure the protection of genomic data privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Here are key public databases and data repositories for genomic analysis, which store various types of genomic data such as DNA sequences, gene annotations, and variation data: 1. **NCBI GenBank** - A primary resource for nucleotide sequences, offering complete genomes and partial sequences from a wide range of species ([GenBank](https://www.ncbi.nlm.nih.gov/genbank/)). 2. **Ensembl** - Provides high-quality genome assemblies with integrated functional annotations, including DNA sequences, variants, and epigenomic data ([Ensembl](https://www.ensembl.org/)). 3. **UCSC Genome Browser** - A web platform for exploring DNA sequences, genome assemblies, and functional annotations ([UCSC Genome Browser](https://genome.ucsc.edu/)). 4. **The Genome Reference Consortium (GRC)** - Offers curated reference genome assemblies for humans and other species ([GRC](https://www.ncbi.nlm.nih.gov/grc)). 5. **NCBI GEO (Gene Expression Omnibus)** - Stores genomic datasets, including gene expression data from microarrays and genome-wide association studies ([GEO](https://www.ncbi.nlm.nih.gov/geo/)). 6. **ArrayExpress** - Hosts genomic data from transcriptomics and DNA-chip experiments, including high-throughput gene expression datasets ([ArrayExpress](https://www.ebi.ac.uk/arrayexpress/)). 7. **The 1000 Genomes Project** - A comprehensive resource for human genetic variation, offering genome-wide sequence data from diverse populations ([1000 Genomes Project](https://www.internationalgenome.org/)). 8. **gnomAD (Genome Aggregation Database)** - Provides aggregated genomic data, focusing on human genetic variation and mutation frequencies across populations ([gnomAD](https://gnomad.broadinstitute.org/)). These repositories are crucial for conducting comprehensive genomic research, including sequence analysis, variant discovery, and evolutionary studies."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "There are several community standards, best-practice guidelines, and standardization efforts for genomic data, focusing on data formats, quality control, and analysis pipelines: 1. **Data Formats** - Standard formats include **FASTA** for nucleotide sequences, **GFF/GTF** for genomic annotations, and **VCF (Variant Call Format)** for documenting genetic variants. 2. **Quality Control (QC)** - Widely used tools include **FASTQC** for assessing sequencing quality, **QUAST** for genome assembly evaluation, and **BUSCO** for measuring genome completeness. 3. **Best-Practice Guidelines and Pipelines** - The **GATK Best Practices** provide standardized workflows for variant calling, while **NGS analysis pipelines** such as **Snakemake** and **Nextflow** streamline sequencing data processing. The **Global Alliance for Genomics and Health (GA4GH)** develops global standards for data sharing and analysis. 4. **Data Sharing and Metadata** - The **FAIR Principles** (Findable, Accessible, Interoperable, Reusable) ensure genomic data is properly shared and documented, while **Dublin Core** provides metadata standards. 5. **Assembly Metrics** - Metrics like **N50** and **L50** are essential for evaluating genome assembly quality. These standards help ensure consistency, reproducibility, and interoperability in genomic research, facilitating reliable data analysis and collaboration across the scientific community."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "FASTQ(.fastq, .fq)",
+        "FASTA (.fasta, .fa)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/dev/"
+      ],
+      [
+        "SAM (.sam), BAM (.bam), CRAM (.cram)",
+        "FASTA (.fasta, .fa)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/dev/"
+      ],
+      [
+        "GenBank (.gb, .gbk), EMBL (.embl)",
+        "FASTA (.fasta, .fa)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/dev/"
+      ]
+    ]
+  }
+]

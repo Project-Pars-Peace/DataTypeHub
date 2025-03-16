@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "variant_calls"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Genomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Variant Calls"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Variant Calls detect genetic differences like mutations"
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Genomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Variant Calls"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Variant Calls analyze **DNA sequences** to identify genetic variations, such as single nucleotide polymorphisms (SNPs), insertions, deletions, and structural variants. It works by sequencing DNA using technologies like **Illumina (short-read) or PacBio/ONT (long-read)**, then aligning these reads to a reference genome using **mapping algorithms (e.g., BWA, Bowtie2)**. Differences between the sample and reference are detected using **variant calling algorithms (e.g., GATK, FreeBayes)**, which use statistical models to distinguish true variants from sequencing errors. These variants are then annotated to determine their potential functional impact on genes and diseases."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "VCF (.vcf)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Variant Call Format (**VCF**) files store **genetic variants** and their associated metadata. Each entry consists of multiple tab-separated fields: (1) **chromosome** and **position** of the variant, (2) **reference** and **alternative alleles**, (3) **quality score** indicating confidence in the call, (4) **filter status** to flag questionable variants, and (5) **INFO and FORMAT fields** containing additional annotations like genotype likelihoods, read depth, and allele frequencies. VCF files can represent variants in a **structured matrix format**, where rows correspond to genomic positions and columns contain sample-specific genotype data, making them suitable for large-scale variant analysis."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "Variant call quality is assessed using metrics like **sequencing depth**, **mapping quality (MAPQ)**, **allele balance**, and **strand bias**. Key metrics include **depth of coverage** (how many reads support a variant), **Phred-scaled quality scores** (confidence in a variant call), **variant allele frequency (VAF)** (proportion of reads supporting the alternate allele), and **Hardy-Weinberg equilibrium deviations** (for population-based studies). Tools like **GATK\u2019s VariantEval, bcftools stats, and VCFtools** are commonly used to assess variant call quality and filter unreliable variants."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw **VCF file sizes** vary based on sequencing depth, variant density, and compression. A **whole-genome VCF** for a human sample typically ranges from **1-50 GB**, while a **whole-exome VCF** is smaller, around **100-500 MB**, due to targeted sequencing. Compressed **gVCF (genomic VCF)** files, which store reference and variant regions, can be **larger (10-100 GB)** but reduce downstream computational demands. File size depends on the number of samples, annotation depth, and whether the file is stored in **BGZF-compressed format** (e.g., using Tabix for indexing)."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed **variant call data** is visualized using **genome browsers (IGV for alignment and variant inspection), Manhattan plots (GWAS results), variant allele frequency histograms (bcftools, VCFtools), and heatmaps (population structure analysis with PCA or clustering)**. Additionally, **Circos plots** display structural variants, while **phylogenetic trees (RAxML, IQ-TREE)** help analyze evolutionary relationships. **SNP density plots** and **scatter plots** are used for assessing variant distribution and quality across genomic regions."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed **variant call data** varies in size: **VCF files** typically range from **100 MB to 50 GB**, depending on sequencing depth and genome coverage. **Compressed VCF (BGZF)** reduces storage size significantly. **gVCF files**, which store reference and variant regions, can be **10\u2013100 GB**. **Annotated variant files** (e.g., with dbNSFP or ClinVar annotations) increase in size due to additional metadata. **Population-scale VCFs**, containing thousands of samples, can exceed **terabytes**, requiring efficient indexing and storage solutions."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters include **sequencing depth (coverage), read length, variant allele frequency (VAF), mapping quality (MAPQ), genotype quality (GQ), Phred-scaled variant quality (QUAL), and reference genome build**, which collectively determine the resolution, accuracy, and reliability of variant calls."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Variant calling in bioinformatics typically addresses questions like: **What genetic variations exist within a population or an individual?** **How do variants contribute to disease susceptibility or drug response?** **What evolutionary relationships can be inferred from genomic differences?** Typical research aims include: **identifying SNPs, indels, and structural variants in individuals or populations**, **linking genetic variants to phenotypic traits or diseases**, **studying somatic mutations in cancer genomes**, and **analyzing population genetics and evolutionary divergence through comparative genomics**."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In variant calling, preprocessing involves **read trimming (removing adapters and low-quality bases), alignment to a reference genome, and duplicate removal**, while quality control (QC) assesses **mapping quality, sequencing depth, base quality scores, and allele balance** to ensure reliable variant detection."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In variant calling, common preprocessing steps include: 1. **Filtering**: Removing low-quality reads, duplicated reads, or those with low mapping quality to enhance variant accuracy. 2. **Trimming**: Cutting off adapters, low-quality bases, and sequence primers from the ends of reads. 3. **Normalization**: Adjusting sequencing depth across samples to prevent biases from overrepresented regions. 4. **Alignment**: Mapping reads to a reference genome to identify potential variants. 5. **Error correction**: Correcting sequencing errors in base calls using algorithms like **BCFtools** or **GATK's BaseRecalibrator** to improve variant detection. These preprocessing steps ensure the data's quality and reliability for accurate variant calling."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed variant call data include: 1. **FastQC**: Assesses raw sequencing data quality, providing metrics like base quality scores, GC content, and adapter contamination. 2. **Picard**: Offers tools for removing duplicates and calculating metrics such as mapping quality and read depth. 3. **GATK BaseRecalibrator**: Corrects for systematic biases in base quality scores by recalibrating them. 4. **BCFtools**: Provides metrics such as allele balance, genotype quality, and variant call accuracy. 5. **MultiQC**: Aggregates outputs from various QC tools to offer a comprehensive quality overview of the variant call data. Metrics typically include read depth, mapping quality, genotype quality (GQ), variant quality (QUAL), and allele balance."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages and computational resources for variant calling and analysis include **GATK (Genome Analysis Toolkit)** for comprehensive variant discovery and genotyping (GATK Documentation), **bcftools** for manipulating and analyzing VCF files (BCFtools Documentation), and **FreeBayes** for calling SNPs and indels (FreeBayes GitHub). **FastQC** is widely used for quality control of sequencing data, providing metrics like base quality and GC content (FastQC Documentation), while **Picard** offers tools for read processing and **MultiQC** aggregates quality results (Picard GitHub, MultiQC Documentation). **Samtools** is another key tool for handling SAM/BAM files (Samtools Documentation). For variant annotation, **ANNOVAR** (ANNOVAR Documentation) and **SnpEff** (SnpEff Documentation) predict the functional impact of variants, and **VEP (Variant Effect Predictor)** provides comprehensive annotations (VEP Documentation). Computational resources like **Galaxy** enable cloud-based, web-driven analysis (Galaxy Documentation), while **Slurm** and **AWS** support large-scale processing on clusters and cloud environments (Slurm Documentation, AWS Documentation)."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Variant calling is frequently used in several key research areas, including: 1. **Disease Research**: To identify genetic mutations linked to inherited and complex diseases, enabling better diagnosis and treatment strategies. 2. **Cancer Research**: For detecting somatic mutations, structural variations, and potential biomarkers for cancer prognosis and therapeutic targets. 3. **Personalized Medicine**: To tailor treatments based on an individual\u2019s genetic makeup, optimizing drug response and minimizing adverse effects. 4. **Drug Discovery**: In pharmacogenomics to identify genetic variants that affect drug metabolism and efficacy. 5. **Evolutionary Biology**: To study genetic variations across species, helping to uncover evolutionary relationships and the genetic basis of adaptation. 6. **Microbial Genomics**: For studying pathogens and microbial resistance, enabling better infection control and antibiotic development. 7. **Agricultural Science**: To identify genetic variations in crops and livestock, supporting breeding programs aimed at improving yield, disease resistance, and stress tolerance. 8. **Metagenomics**: In environmental microbiology to analyze microbial diversity and interactions in different ecosystems."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Variant calling in clinical settings is used for diagnostics, identifying genetic mutations, and detecting disease-causing variants. It plays a crucial role in personalized medicine by guiding treatment selection, such as identifying targeted therapies for cancer based on specific mutations. Additionally, variant data aids in prognostics by predicting disease outcomes through genetic markers, enabling more accurate risk assessments and tailored treatment plans. This data also contributes to genetic counseling, helping to inform patients about inherited conditions and potential disease risks, and supports pharmacogenomics to optimize drug therapies based on individual genetic profiles."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Variant calling faces several technical challenges, including issues with data quality such as sequencing errors, low-quality reads, and contamination, which can result in false positives or negatives in variant detection. Processing large genomic datasets requires substantial computational resources and time, especially when analyzing whole-genome sequencing (WGS) data, making it costly for large-scale studies. Different sequencing technologies introduce varying error profiles, with short-read technologies often failing to capture structural variations or large insertions/deletions, while long-read technologies may have higher error rates in base calling and result in lower accuracy for small variants. Furthermore, aligning reads to a reference genome can be difficult in regions with high sequence divergence, repetitive elements, or low complexity, leading to inaccurate variant identification. These limitations complicate the ability to achieve high accuracy and comprehensive variant calls across diverse genomes."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Variant calling, despite its critical role in understanding genetic variation, has several limitations related to biological interpretation and the scope of inferences that can be drawn from the data. These limitations include: 1. **Incomplete or Inaccurate Data**: Variants identified from sequencing data may be incomplete or incorrect due to errors in sequencing, alignment, or calling methods, which can lead to inaccurate conclusions about genetic variation. 2. **Limited Functional Insight**: Variant calls alone do not provide direct functional information, making it difficult to interpret the biological significance of a variant without additional data, such as gene expression or phenotypic information. 3. **Context Dependence**: The biological impact of variants can be context-dependent, varying based on the individual's environment, other genetic factors, or interactions with other genes, limiting the generalizability of findings. 4. **Difficulty in Interpreting Non-Coding Variants**: Variants in non-coding regions may have regulatory or other subtle effects that are difficult to interpret without further functional studies. 5. **Complexity of Variant Effects**: The effects of variants may be multifactorial, with some contributing to disease risk in combination with other genetic or environmental factors, making it hard to draw simple cause-effect relationships. These challenges highlight the need for careful integration of variant data with other biological and clinical information to draw meaningful biological conclusions."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and protection of sensitive data in variant calling are paramount due to the personal and identifiable nature of genomic information. Data encryption at rest and in transit, using protocols like HTTPS or TLS, ensures that genomic data is protected during storage and transfer. Access control mechanisms such as role-based access and multi-factor authentication help limit access to authorized individuals, while audit logs track user activity for monitoring unauthorized access. Anonymization and de-identification of data reduce privacy risks, and secure storage solutions, whether on the cloud or local servers, ensure physical and digital security. Compliance with regulations like HIPAA and GDPR ensures that genomic data is handled with privacy and security in mind. Additionally, data minimization, regular backup and recovery practices, secure collaboration tools, and data integrity checks help safeguard genomic data from breaches and misuse. By employing these measures, the sensitive nature of genomic data can be adequately protected, ensuring privacy and compliance with ethical standards."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to genomic data are significant due to its deeply personal and potentially identifiable nature. Key issues include the risk of **re-identification** through data linking or advanced analysis, **data breaches** that could lead to identity theft, discrimination, or stigmatization, and the need for **informed consent**, ensuring individuals fully understand how their data will be used, stored, and shared. **Third-party sharing** poses risks of misuse, such as for commercial purposes or beyond the original consent, while **genetic discrimination** could lead to biases in health insurance or employment. Moreover, an individual\u2019s genomic data can reveal sensitive information about their **family**, raising privacy concerns for relatives, and since genetic data is **permanent**, it poses risks with future technological advances. **Regulatory gaps** further complicate protection efforts. Solutions include ensuring informed consent, employing strong **encryption** practices, adhering to privacy regulations like **GDPR** or **HIPAA**, and promoting **ethical data-sharing** to mitigate the risks and better safeguard genomic privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Here are key public databases and repositories for variant call and genomic data: 1. **NCBI GenBank** - A primary database for nucleotide sequences, storing genome assemblies, partial sequences, and other DNA-related data. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) 2. **Ensembl** - Provides comprehensive genome assemblies with functional annotations, including DNA sequences, variants, and epigenomic data. [Ensembl](https://www.ensembl.org/) 3. **UCSC Genome Browser** - A web-based platform for exploring genomic data, including DNA sequences and functional elements. [UCSC Genome Browser](https://genome.ucsc.edu/) 4. **The Genome Reference Consortium (GRC)** - Offers curated reference genome assemblies, especially for humans, aiding in genomic mapping. [GRC](https://www.ncbi.nlm.nih.gov/grc) 5. **NCBI GEO** - Primarily for gene expression data, also includes genomic datasets like DNA microarrays and GWAS data. [GEO](https://www.ncbi.nlm.nih.gov/geo/) 6. **ArrayExpress** - Stores gene expression and DNA sequencing data, particularly in the context of transcriptomics and ChIP-seq. [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/) 7. **The 1000 Genomes Project** - A comprehensive catalog of human genetic variation, providing DNA sequence data for diverse populations. [1000 Genomes Project](https://www.internationalgenome.org/) 8. **gnomAD** - A resource aggregating genetic variant data across various populations, offering insights into mutation frequencies. [gnomAD](https://gnomad.broadinstitute.org/). These databases provide essential genomic information for variant analysis, gene expression studies, and population genomics."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Here are key community standards, best-practice guidelines, and standardization efforts for variant call data: 1. **Data Formats** - **VCF (Variant Call Format)**: The primary format for representing genetic variants, including SNPs and indels. - **BED**: Used for describing genomic regions of interest, often in variant analysis. 2. **Quality Control (QC)** - **GATK Best Practices**: Provides comprehensive guidelines for variant calling, including data preprocessing, alignment, and variant filtration. - **VQSR (Variant Quality Score Recalibration)**: A method to improve variant quality by recalibrating scores. 3. **Best-Practice Guidelines and Pipelines** - **GATK**: The Genome Analysis Toolkit offers pipelines and best practices for variant discovery and calling. - **BCFtools**: A suite of utilities for variant calling and manipulation. - **SNPnexus**: Tool for annotating and analyzing genetic variants. 4. **Data Sharing and Metadata** - **GA4GH (Global Alliance for Genomics and Health)**: Provides global standards for genomics data sharing and analysis. - **FAIR Principles**: Promote the findability, accessibility, interoperability, and reusability of genomic data. 5. **Variant Metrics** - **MAF (Minor Allele Frequency)**: A standard metric used to assess the frequency of genetic variants in a population. These standards and guidelines ensure high-quality, reproducible, and interoperable variant call data."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "BCF (.bcf), PLINK (.ped or .bed), BPLINK (.bplink)",
+        "VCF (.vcf)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/main/ref_converters.html"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,332 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "trans_gene_expr_data"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Gene Expression Data Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Measuring the activity levels of genes by quantifying RNA abundance in a sample."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Gene Expression Data Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Gene expression analysis measures RNA levels to understand gene activity in a given cell or tissue. It works by extracting RNA from a sample and converting it into complementary DNA (cDNA) using reverse transcription. High-throughput sequencing technologies, such as RNA-Seq, are then used to sequence the cDNA, producing millions of short reads. These reads are mapped to a reference genome or transcriptome using alignment tools like STAR or HISAT2. The mapped data is quantified to determine the abundance of each gene transcript, with further analysis identifying differential expression between conditions. The underlying technology leverages the ability to capture the diversity of RNA transcripts, with computational tools processing the data to provide insights into gene regulation, cellular responses, and disease mechanisms."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "TSV (.tsv, .txt)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Gene expression data, particularly in RNA-Seq, is typically stored in formats like FASTQ, SAM/BAM, or count matrices. FASTQ files store raw sequencing reads along with quality scores, where each read is represented by a four-line entry: a sequence identifier, the nucleotide sequence, a plus sign, and quality scores. SAM/BAM files store aligned sequencing reads in a text (SAM) or binary (BAM) format, with each read's position, sequence, quality, and other attributes like mapping information. Count matrices store numerical data representing gene expression levels, with rows representing genes and columns representing different samples or conditions. This data is usually stored in tabular form, often as CSV or TSV files, where each entry indicates the number of reads aligned to a particular gene in a given sample. The organization is such that each data point corresponds to a unique combination of gene and sample, enabling downstream analysis such as differential expression."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "The quality of raw RNA-Seq data is assessed using metrics such as sequencing depth, read quality, and alignment accuracy. Sequencing depth refers to the number of reads generated for each sample, with higher depth generally leading to more accurate detection of gene expression. Read quality is evaluated using the Phred score, which indicates the likelihood that each base in the read is correctly called. The signal-to-noise ratio measures the proportion of true biological signal versus background noise in the data. Alignment accuracy is assessed by the percentage of reads that align correctly to the reference genome or transcriptome. Tools like FastQC are commonly used to evaluate read quality, including base composition, GC content, and adapter contamination. Alignment quality is further assessed using tools like SAMtools and Picard to ensure proper mapping and to identify potential issues like duplicate reads or misalignments."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw gene expression data sizes typically range from 1-10 GB per sample in FASTQ format, 0.5-3 GB per sample in SAM/BAM format after alignment, and a few megabytes to several gigabytes for count matrices, depending on sequencing depth, sample count, and gene number."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed gene expression data is visualized using **heatmaps (R, Python), volcano plots (ggplot2, VolcanoR), PCA plots (R, Python), scatter plots (Matplotlib, Seaborn), differential expression plots (DESeq2, EdgeR), and gene ontology enrichment plots (Enrichr, ClusterProfiler)**."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed gene expression data varies: count matrices ~1\u2013100 MB, differential expression results ~10 KB\u201310 MB, heatmaps ~1\u201310 MB, and PCA or scatter plot data ~1\u201350 MB, depending on the number of genes, samples, and analysis complexity."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters in gene expression analysis include sequencing depth (determining coverage and sensitivity to low-abundance genes), read length (affecting the ability to accurately map and assemble transcripts), number of samples (defining experimental complexity and statistical power), number of genes (influencing dimensionality and resolution of analysis), and sequencing platform (impacting read accuracy and error rates). For single-cell RNA-Seq, the number of cells analyzed impacts the granularity of gene expression patterns at the individual cell level. These parameters influence the resolution and detail of gene expression data, with higher sequencing depth and read length improving data quality but also increasing computational demands."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Gene expression analysis in bioinformatics typically addresses questions like: **- What genes are differentially expressed between different conditions or treatments? - How do gene expression profiles vary across tissues or developmental stages? - What are the molecular mechanisms underlying diseases or phenotypic traits?** Typical research aims include: **- Identifying biomarkers for disease diagnosis or prognosis. - Understanding gene regulation and cellular responses to external stimuli. - Mapping the molecular pathways involved in health and disease, and exploring therapeutic targets.**"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In gene expression analysis, preprocessing involves **trimming low-quality reads, removing adapter sequences, filtering out low-abundance or contaminated transcripts, and normalizing the data to account for sequencing depth and other biases** to ensure reliable downstream analysis. Quality control (QC) checks **read quality (via Phred scores), sequencing depth, alignment accuracy, gene expression distribution, and potential batch effects** to identify technical issues or biases before performing differential expression analysis or other biological interpretations. These steps help ensure that the data accurately reflects biological variation and minimizes errors from sequencing or processing."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In gene expression analysis, common preprocessing steps include: **1. Filtering**: Removing low-quality reads, contaminants, or low-abundance genes that may introduce noise. **2. Trimming**: Cutting adapter sequences and low-quality bases from the ends of reads to ensure accurate downstream analysis. **3. Alignment**: Mapping the reads to a reference genome or transcriptome using alignment tools like STAR or HISAT2 to obtain accurate gene expression measurements. **4. Normalization**: Adjusting for differences in sequencing depth or gene length (e.g., TPM, RPKM, or FPKM) to enable fair comparison across samples. **5. Batch Correction**: Addressing technical variations across different batches of samples using methods like ComBat to minimize unwanted variation. These steps ensure that the gene expression data is accurate, consistent, and ready for downstream analysis."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed gene expression data include: **1. FastQC**: Provides metrics such as read quality scores (Phred), GC content, and adapter contamination. **2. STAR**: A read alignment tool that ensures accurate mapping of reads to the reference genome or transcriptome. **3. SAMtools**: Used to assess alignment quality, detect duplicates, and examine coverage. **4. DESeq2**: A tool for normalization and visualization of gene expression, also assessing the dispersion and variance across samples. **5. RSeQC**: Provides metrics on gene body coverage, sequencing depth, and read distribution across genomic features. **6. ComBat**: A batch effect correction tool that adjusts for unwanted variations between sample batches. Metrics typically include read quality, alignment rates, gene expression distribution, sequencing depth, and batch effects."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages and computational resources used for gene expression analysis include **FastQC** for assessing read quality, **STAR** and **HISAT2** for fast and accurate read alignment, **DESeq2** and **EdgeR** for differential expression analysis, and **TopHat** for RNA-Seq alignment and transcript discovery. **Cufflinks** and **StringTie** are popular for transcript assembly and quantification. For visualization, **R** (with packages like ggplot2) and **Python** (using Matplotlib, Seaborn) are widely used for plotting heatmaps, PCA plots, and volcano plots. Computational resources like **Galaxy** offer an accessible platform for RNA-Seq analysis, while **HPC resources** and cloud platforms like **AWS** and **Google Cloud** are used for handling large-scale datasets. **Docker** is commonly used to ensure reproducible and portable analysis pipelines. These tools and resources ensure efficient, reproducible, and scalable gene expression analysis."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Gene expression analysis is frequently used in several key research areas, including: 1. **Disease Research**: To identify molecular biomarkers and pathways involved in diseases like cancer, cardiovascular diseases, and neurological disorders. 2. **Drug Discovery**: In the identification of drug targets and understanding the molecular mechanisms of action and resistance. 3. **Personalized Medicine**: For tailoring treatments based on individual gene expression profiles and responses to drugs. 4. **Cancer Research**: To study gene expression changes associated with different cancer types, subtypes, and stages. 5. **Agricultural Science**: In improving crop yields and resistance by studying gene expression in plants and animals. 6. **Developmental Biology**: To investigate gene regulation and expression during different stages of organismal development. 7. **Neuroscience**: For understanding gene expression patterns in the brain and their association with behavior and neurological conditions. 8. **Immunology**: To explore immune response mechanisms at the molecular level, identifying potential therapeutic targets."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Gene expression analysis in clinical settings is used for diagnostics, such as identifying molecular biomarkers associated with diseases like cancer, cardiovascular diseases, and neurological disorders. It aids in treatment selection by revealing gene expression profiles that can predict a patient\u2019s response to specific therapies, including targeted treatments and immunotherapies. Gene expression analysis also plays a role in prognostics by assessing the expression levels of genes that are linked to disease outcomes, helping clinicians predict the progression of diseases and tailor treatments accordingly. This modality is particularly valuable in personalized medicine, offering more precise and effective strategies for managing and treating patients based on their unique molecular profiles."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Gene expression analysis faces challenges such as low sequencing depth, noise, and biases from sample preparation, which can affect data accuracy. Processing large RNA-Seq datasets requires significant computational resources, and different sequencing technologies have varying error profiles, impacting reliability. Issues like normalization and batch effects can confound results, while the complexity of gene regulation, such as alternative splicing, makes accurate quantification difficult. These factors can limit the reliability and scalability of gene expression analyses in clinical and research applications."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Gene expression analysis, while valuable for understanding cellular processes, has several limitations in biological interpretation. These include: 1. **Incomplete Data**: Gene expression datasets may be missing key information, especially for lowly expressed genes or poorly sequenced regions, limiting insights into full transcriptome activity. 2. **Technical Noise**: Variability in data caused by technical factors, such as batch effects or sequencing errors, can obscure true biological signals. 3. **Context Dependence**: Gene expression patterns are context-dependent, varying across tissue types, developmental stages, or environmental conditions, making it difficult to generalize findings. 4. **Lack of Causal Relationships**: While gene expression data shows correlations, it doesn\u2019t establish causal relationships or explain the underlying biological mechanisms. 5. **Functional Relevance**: Changes in gene expression do not always translate to functional outcomes, as regulatory mechanisms such as alternative splicing or post-transcriptional modifications may alter gene function without affecting overall expression levels. These limitations emphasize the need for cautious interpretation and integration with other biological data for a more comprehensive understanding."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and protection of sensitive data in gene expression analysis are crucial, as such data may involve personal health information or identifiable genetic data. Several strategies are necessary to ensure the security of these datasets: Data should be encrypted both at rest and during transmission to prevent unauthorized access. Access control measures, including role-based permissions and multi-factor authentication, ensure that only authorized individuals can access sensitive data. Anonymization and de-identification techniques should be applied to reduce privacy risks, particularly when sharing data for research. Secure storage options, including encrypted cloud storage or on-premise systems with physical and digital security protocols, such as firewalls and intrusion detection systems, help protect data from unauthorized access. Adherence to regulations like GDPR and HIPAA is essential to ensure compliance with privacy laws. Data minimization practices, along with regular backups, are necessary to reduce risks of data loss. When sharing data, secure transfer protocols, such as encrypted file-sharing platforms, should be used, and data integrity can be maintained through hashing algorithms. Implementing these measures will ensure that sensitive gene expression data is adequately protected while supporting collaborative research."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to gene expression data are critical due to the personal nature of genomic information and the potential for misuse. A major concern is **re-identification**, where anonymized data can be linked back to individuals through sophisticated techniques or data sharing. **Data breaches** are a significant risk, as hackers may target genomic data for identity theft or discrimination. Ensuring **informed consent** is essential, as individuals must fully understand how their data will be used, stored, and shared, with the right to withdraw consent at any time. **Third-party sharing** also raises concerns about misuse, including marketing or data use beyond the original intent. **Genetic discrimination** is a potential issue, where individuals might face bias in areas such as health insurance or employment based on their genetic information. Furthermore, **family implications** are important, as genomic data can inadvertently reveal sensitive information about relatives. The permanence of **genetic data** and its potential for **long-term privacy risks** with future advancements adds to the complexity. Additionally, existing laws may have **regulatory gaps** that fail to fully address the nuances of genomic data protection. Addressing these challenges requires **informed consent**, **encryption**, adherence to privacy regulations like **GDPR** and **HIPAA**, and **ethical data sharing** practices to safeguard privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Here are key public databases and repositories for gene expression data and related research: 1. **NCBI GEO** - A major repository for gene expression data, including RNA-seq, microarrays, and other functional genomics data. [GEO](https://www.ncbi.nlm.nih.gov/geo/) 2. **Ensembl** - Provides genome assemblies, gene annotations, and functional data for multiple species. [Ensembl](https://www.ensembl.org/) 3. **ArrayExpress** - A comprehensive archive for gene expression data, particularly from transcriptomics, ChIP-seq, and epigenomics. [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/) 4. **UCSC Genome Browser** - A widely used platform to visualize genomic data, including gene expression and functional elements. [UCSC Genome Browser](https://genome.ucsc.edu/) 5. **The Cancer Genome Atlas (TCGA)** - Offers gene expression and genetic data for cancer research, including molecular data across various cancer types. [TCGA](https://www.cancer.gov/tcga) 6. **Gene Expression Omnibus (GEO)** - Another large-scale database of gene expression studies across different biological contexts. [GEO](https://www.ncbi.nlm.nih.gov/geo/) 7. **Human Protein Atlas** - Provides protein expression data for human tissues, helping to link gene expression to protein localization and function. [Human Protein Atlas](https://www.proteinatlas.org/) These resources offer vital genomic data for gene expression analysis, enabling research in fields like cancer, developmental biology, and functional genomics."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Here are key community standards, best-practice guidelines, and standardization efforts for gene expression data: 1. **Data Formats** - **FASTA/FASTQ**: Common formats for storing nucleotide sequences, often used for sequencing data input in expression analysis. - **GTF/GFF**: Formats used for gene annotation data, defining the locations of genes and other features in the genome. 2. **Quality Control (QC)** - **RNA-seq Best Practices (e.g., GATK)**: Guidelines for RNA-seq data processing, including alignment, quantification, and normalization. - **FastQC**: A tool for assessing the quality of RNA-seq data by checking read quality, GC content, and adapter contamination. 3. **Best-Practice Guidelines and Pipelines** - **DESeq2** and **EdgeR**: Popular tools for RNA-seq differential expression analysis. - **STAR**: A highly efficient aligner for RNA-seq data. 4. **Data Sharing and Metadata** - **GA4GH (Global Alliance for Genomics and Health)**: Establishes standards for sharing genomic and gene expression data across platforms. - **FAIR Principles**: Aiming to make data findable, accessible, interoperable, and reusable. 5. **Expression Metrics** - **TPM (Transcripts Per Million)** and **FPKM (Fragments Per Kilobase of exon per Million mapped reads)**: Standard metrics for RNA-seq data normalization. These standards and guidelines help ensure that gene expression data are consistently processed, analyzed, and shared across studies."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "GTF (.gtf), GFF (.gff, .gff3)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://subread.sourceforge.net/featureCounts.html, https://ccb.jhu.edu/software/stringtie/gff.shtml#gffread"
+      ],
+      [
+        "BED (.bed), WIG (.wig, .bigWig)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://bedtools.readthedocs.io/en/latest/content/overview.html"
+      ],
+      [
+        "CSV (.csv)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://bioconvert.readthedocs.io/en/main/ref_converters.html, https://www.convertsimple.com/convert-csv-to-tsv/"
+      ],
+      [
+        "FPKM/TPM (.tsv, .csv)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://bioconvert.readthedocs.io/en/main/ref_converters.html"
+      ],
+      [
+        "HDF5 (.h5, .hdf5)",
+        "Matrix Market (.mtx)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://scanpy.readthedocs.io/en/stable/"
+      ]
+    ]
+  }
+]

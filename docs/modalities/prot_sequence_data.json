@@ -1,0 +1,314 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "prot_sequence_data"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Proteomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Sequence Data Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Examines the amino acid order in proteins to identify patterns, similarities, or functional regions."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Proteomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Sequence Data Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "In sequence data formats, protein sequences are stored in formats like FASTA or PDB, which encode amino acid sequences or 3D structures derived from X-ray crystallography, NMR, or cryo-EM."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "FASTA (.fasta, .fa)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "FASTA files (.fasta, .fa) in proteomics store protein sequences in a plain text format. Each entry starts with a header line (>identifier description), followed by the amino acid sequence in single-letter codes. Sequences are arranged line by line, making it easy to parse."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "The quality of raw data in FASTA files for proteomics is assessed using metrics like sequence accuracy, completeness, contamination, and error rates. Tools such as FASTQC, MultiQC, or custom scripts in Python/R (e.g., Biopython) are commonly used to evaluate these aspects."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "In proteomics, FASTA file sizes typically range from a few kilobytes (KB) to several megabytes (MB), depending on the number of protein sequences and their lengths. Large datasets (e.g., whole proteomes) can reach gigabytes (GB)."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed FASTA (.fasta, .fa) data in proteomics is typically visualized or represented as sequence alignments, protein structures, or phylogenetic trees, often using tools like BLAST, ClustalW, or molecular viewers like PyMOL."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed FASTA (.fasta, .fa) data size in proteomics typically remains similar to raw data, ranging from a few KB to several MB, depending on sequence length and number of entries."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Sequence length: Average amino acid count per protein Protein count: Total number of distinct protein sequences Completeness: Full vs. partial protein sequence coverage Isoform diversity: Number of protein variants represented Redundancy: Degree of sequence duplication Annotation detail: Comprehensiveness of sequence headers Taxonomic breadth: Number of species or strains represented"
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Sequence Data Formats in Proteomics typically address questions like: - What proteins are present in a sample? - How do protein levels change across conditions? Typical research aims include: - Identifying protein biomarkers. - Quantifying protein expression. - Mapping post-translational modifications (PTMs)."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In Sequence Data Formats in Proteomics, preprocessing converts raw MS spectra, filters low-quality spectra, and calibrates mass measurements, while quality control assesses spectral quality, identification rates, and reproducibility using tools like MaxQuant or OpenMS. These steps ensure reliable protein identification and quantification. The focus is on minimizing noise and false positives."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In Sequence Data Formats in Proteomics, common preprocessing steps include: 1. Filtering: Removing low-intensity or noisy spectra. 2. Conversion: Transforming raw MS data (e.g., .raw to mzML). 3. Normalization: Adjusting for instrument variability or sample loading (e.g., TIC normalization). 4. Peak Picking: Identifying peptide peaks from spectra. 5. Calibration: Correcting mass shifts for accuracy. These steps prepare data for protein identification and quantification."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Quality Control Tools and Metrics: Tools: FastQC, MultiQC, PRINSEQ, Trimmomatic, FASTX-Toolkit. Metrics: Read quality scores (Phred), GC content, sequence length distribution, adapter contamination, duplication rate."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major Software Packages and Computational Resources: Software: BLAST, Bowtie, BWA, HISAT2, TopHat. Resources: NCBI, Ensembl, UniProt, EMBL-EBI, GenBank."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Sequence Data Formats in Proteomics are frequently used in: 1. Disease Research: Identifying disease-specific proteins. 2. Drug Discovery: Finding drug targets. 3. Cancer Biology: Profiling tumor proteomes. 4. Personalized Medicine: Tailoring treatments via protein markers. 5. Microbiology: Studying pathogen proteins. 6. Systems Biology: Mapping protein networks."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Sequence Data Formats in Proteomics in clinical settings are used for diagnostics (e.g., detecting protein biomarkers like PSA for prostate cancer), prognostics (e.g., predicting disease progression via protein profiles), and treatment selection (e.g., identifying druggable proteins), translating proteomic data into clinical decision-making."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Sequence Data Formats in Proteomics face challenges like limited dynamic range (missing low-abundance proteins), high sample complexity, incomplete peptide coverage, and computational intensity for large-scale MS data, all complicating accurate protein identification and quantification."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Limitations in Sequence Data Formats in Proteomics include: 1. Incomplete Proteome: Low-abundance proteins missed. 2. Identification Errors: False positives from database matching. 3. Dynamic Range: High-abundance proteins dominate. 4. PTM Complexity: Hard to fully annotate modifications. 5. Database Dependency: Limited for non-model organisms. 6. Overinterpretation: Abundance doesn\u2019t confirm function. 7. Context Specificity: Tissue- or condition-dependent. 8. Lack of RNA Correlation: Protein levels may not match mRNA. These limit biological conclusions without further validation."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "safeguarding sensitive sequence data is crucial to prevent unauthorized access and misuse. Employing robust encryption methods, such as DNA encryption, ensures that genetic information remains confidential during storage and transmission. For instance, Cryfa combines packing, shuffling, and the AES cipher to securely store genomic data in formats like FASTA and BAM"
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns in sequence data storage arise from the potential for re-identification of individuals through their genetic information. Studies have demonstrated that, even when de-identified, genomic data can be traced back to individuals by cross-referencing with public databases and social media . To mitigate these risks, it's essential to implement stringent data protection measures and obtain informed consent for data usage."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "For proteomics sequence data, key public databases include UniProt, the Human Protein Atlas, neXtProt, and the Proteomics Identifications Database (PRIDE). These repositories offer comprehensive protein sequences and related information."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Regarding community standards, the Proteomics Standards Initiative (PSI) has developed data formats like mzML, mzIdentML, and mzTab to ensure consistency in data representation. Additionally, guidelines such as the Minimum Information About a Proteomics Experiment (MIAPE) provide best practices for data reporting and quality control."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "UniProt XML (.xml), UniProt Text (.txt),GenPept (.gp), GenBank (.gb, .gbk), Swiss-Prot (.swiss, .dat)",
+        "FASTA (.fasta, .fa)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://biopython.org/wiki/Converting_sequence_files, https://www.ebi.ac.uk/jdispatcher/sfc/emboss_seqret"
+      ],
+      [
+        "FASTQ",
+        "FASTA (.fasta, .fa)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/dev/"
+      ]
+    ]
+  }
+]

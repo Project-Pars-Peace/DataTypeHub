@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "sequence_alignments"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Genomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Sequence Alignments"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Sequence Alignments compare DNA sequences to identify similarities"
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Genomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Sequence Alignments"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Sequence alignment compares DNA, RNA, or protein sequences to identify similarities, revealing functional or evolutionary relationships. It uses algorithms like Needleman-Wunsch and Smith-Waterman, which apply scoring matrices and gap penalties to optimize alignments. Tools like BLAST enhance efficiency with heuristics for rapid database searches."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "SAM (.sam)/ BAM (.bam)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "FASTA files store DNA, RNA, or protein sequences. Each entry consists of two lines: (1) a sequence identifier, starting with a \">\" symbol, and (2) the sequence itself, represented as a string of letters (A, T, C, G for DNA; 20 amino acids for proteins). For alignment results, SAM/BAM files store sequences and their alignments, with each entry containing columns for sequence identifiers, aligned sequence, mapping quality, reference positions, and other alignment details."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "The quality of raw sequence data is assessed using metrics like sequencing depth, base call accuracy, signal-to-noise ratio, and Phred quality scores, with tools such as FastQC, Samtools, and Qualimap used to evaluate these factors and alignment quality."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw sequence alignment data sizes vary by technology: Illumina (~10-100 GB per human genome for aligned data), PacBio HiFi (~20-150 GB for aligned data), ONT (~30-150 GB for aligned data), depending on read depth, genome size, and sequencing method."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed sequence alignment data is visualized using **heatmaps (for sequence similarity), phylogenetic trees (for evolutionary relationships), alignment dot plots (for local alignments), scatter plots (for quality metrics), and genome browsers (IGV, UCSC Genome Browser) for detailed sequence visualization**."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed sequence alignment data varies: alignment files (BAM) ~10\u2013500 GB, indexed files (BAI) ~1\u201310 GB, depending on genome size, sequencing depth, and the number of samples."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters for sequence alignment include **sequencing depth (coverage)**, **read length**, **genome size**, **alignment quality (mapping score)**, **number of aligned reads**, **error rate**, and **gap penalties** (for optimal alignment)."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "empty"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "Sequence alignment typically addresses questions like how different sequences compare in terms of similarity and evolution, and what the functional or evolutionary relationships between genes, species, or proteins are. Typical research aims include identifying conserved regions or mutations, comparing sequences to understand evolutionary history, mapping data to reference genomes for annotation, and detecting genetic variations such as SNPs, indels, or structural variations."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "Standard preprocessing steps for sequence alignments in SAM/BAM files in genomics include: Quality Control: Assess read quality using tools like FastQC to identify issues such as low-quality bases or adapter contamination. Read Trimming: Remove low-quality bases, adapters, or unwanted sequences using tools like Trimmomatic or Cutadapt. Alignment: Map reads to a reference genome using aligners like BWA, Bowtie2, or STAR, generating SAM/BAM files. Conversion and Sorting: Convert SAM to BAM (binary format) for efficiency using SAMtools, then sort the BAM file by genomic coordinates. Duplicate Removal: Identify and remove PCR duplicates with tools like Picard MarkDuplicates to reduce bias. Indexing: Create an index (.bai) for the sorted BAM file using SAMtools index for faster access. Filtering: Remove low-quality or unmapped reads based on mapping quality scores or flags in the BAM file."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools for quality control of preprocessed sequence alignment data include **FastQC** (which provides metrics like read quality, GC content, and adapter contamination), **Samtools** (used for checking alignment quality, including mapping quality and coverage depth), **Qualimap** (assesses alignment quality, such as alignment rate and depth distribution), **Picard** (evaluates metrics like duplication rates and insert size distribution), and **MultiQC** (aggregates results from various QC tools for a comprehensive overview). Key metrics typically include mapping quality, read depth, coverage uniformity, and alignment rate."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "For **sequence alignment**, widely used tools include **BWA** ([Documentation](http://bio-bwa.sourceforge.net/)), a fast and efficient aligner for short reads; **Bowtie2** ([Documentation](http://bowtie-bio.sourceforge.net/bowtie2/)), optimized for aligning short DNA sequences to large genomes; and **HISAT2** ([Documentation](https://daehwankimlab.github.io/hisat2/)), a highly efficient tool for spliced alignments in RNA-Seq data. For long-read alignment, **Minimap2** ([GitHub](https://github.com/lh3/minimap2)) is a versatile tool supporting PacBio and Oxford Nanopore data. Multiple sequence alignments can be performed using **Clustal Omega** ([EMBL-EBI](https://www.ebi.ac.uk/Tools/msa/clustalo/)) and **MAFFT** ([Documentation](https://mafft.cbrc.jp/alignment/software/)). For protein and nucleotide sequence alignment, **BLAST** ([NCBI](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) remains a gold standard. Quality assessment tools like **SAMtools** ([GitHub](https://github.com/samtools/samtools)) and **Qualimap** ([Website](http://qualimap.conesalab.org/)) help analyze alignment statistics and sequencing coverage. These tools are typically run on **HPC clusters**, **AWS**, or **Google Cloud** for scalable, high-performance computing."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Sequence alignment is widely used in genomics, evolutionary biology, cancer research, microbial genomics, human health, agriculture, metagenomics, conservation biology, synthetic biology, transcriptomics, and proteomics. It enables genetic comparisons, mutation detection, pathogen analysis, disease diagnosis, crop improvement, microbial community studies, biodiversity conservation, synthetic DNA design, gene expression analysis, and protein function prediction, playing a vital role in advancing biological research and applications."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Sequence alignment in clinical settings is used for diagnosing genetic disorders, identifying disease-causing mutations, and guiding personalized treatments, such as targeted cancer therapies. It also aids in infectious disease surveillance, tracking pathogen evolution, and detecting antibiotic resistance, enabling effective treatment strategies. Additionally, it supports prenatal testing and carrier screening, improving early detection and intervention for genetic conditions."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Sequence alignment faces challenges like data quality issues (e.g., sequencing errors, low coverage), high computational demands for large datasets, and difficulties aligning repetitive or complex genomic regions. Additionally, differences in sequencing technologies and their error profiles can impact alignment accuracy and reliability."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Sequence alignment has made significant progress in recent years, but there are still several limitations related to biological interpretation and the scope of inferences that can be drawn from the data. These limitations include: 1. **Alignment Errors**: Misalignments due to sequencing errors or incorrect reference genomes can lead to false conclusions about gene content, structural variations, or evolutionary relationships. 2. **Incomplete Coverage**: Areas of the genome, particularly repetitive or low-complexity regions, may be poorly aligned or missed, limiting the ability to study these regions' biological significance. 3. **Reference Bias**: Alignment to a reference genome may introduce bias, as differences in genetic diversity between the sample and the reference can lead to misalignments and inaccurate variant calls. 4. **Inconsistent Alignment Quality**: The quality of alignment can vary depending on sequencing technology and read length, which can affect the accuracy of downstream analyses such as variant calling and functional annotation. 5. **Limited Functional Insight**: Sequence alignment provides valuable structural information, but without functional data such as expression profiles or proteomics, it\u2019s difficult to infer the biological role of specific sequences or variations. 6. **Over-Interpretation**: Drawing conclusions from alignment data without experimental validation or integration with other omics data can lead to incorrect biological interpretations. In summary, while sequence alignment is a powerful tool for understanding genetic relationships and variation, its limitations in coverage, accuracy, and functional interpretation must be considered in biological research."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and protection of sensitive data in sequence alignment are critical due to the personal and identifiable nature of genetic information. Key measures include encrypting data at rest and in transit, implementing role-based access controls and strong authentication, and maintaining audit logs to track access. Data anonymization and de-identification help reduce privacy risks, while compliance with regulations like HIPAA and GDPR ensures legal adherence. Secure storage solutions, both cloud-based and local, along with data minimization, backup, and recovery protocols, further safeguard data. Secure collaboration tools and frameworks like the Genomic Data Commons (GDC) enable safe data sharing, while hashing algorithms ensure data integrity. These measures collectively protect sequence data from unauthorized access, misuse, and breaches."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns in sequence alignment arise due to the sensitive nature of genetic data, which can reveal personal and familial information. Key issues include re-identification risks, even with anonymized data; potential data breaches leading to identity theft or discrimination; and the need for informed consent to ensure individuals understand how their data is used. Third-party sharing raises concerns about misuse, while genetic discrimination in areas like insurance or employment is a significant risk. Sequence data can also implicate family members who did not consent, and its permanence means future advancements could uncover unforeseen privacy risks. Regulatory gaps further complicate protection. Solutions include robust encryption, informed consent, adherence to privacy laws like GDPR or HIPAA, and ethical data-sharing practices to safeguard sensitive information."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Relevant public databases and data repositories for sequence alignment include **NCBI GenBank** and **RefSeq** for nucleotide and reference sequences, **SRA** for raw sequencing data, and **Ensembl** for annotated genomes and comparative genomics tools. **UniProt** provides protein sequences and functional annotations, while **PDB** offers 3D structural data for proteins and nucleic acids. **ArrayExpress** stores functional genomics data, **DDBJ** and **ENA** serve as nucleotide sequence repositories, and **KEGG** provides genomic and pathway information. These resources are essential for sequence alignment, functional annotation, and bioinformatics research."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Community standards and best-practice guidelines for sequence alignment include standardized data formats like **FASTA/FASTQ** for sequences and raw data, **SAM/BAM** for alignment data, **CRAM** for compressed alignment storage, and **VCF** for variant calls. Quality control tools like **FASTQC** and **MultiQC** are widely used to assess sequencing data quality, while pipelines such as **GATK Best Practices** provide standardized workflows for alignment and variant analysis. Efforts like **ENCODE Guidelines** and **GA4GH** further promote best practices in sequencing experiments and data sharing, ensuring consistency and reproducibility in genomic research."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "MAF (.maf), PAF (.paf)/ CRAM (.cram)",
+        "SAM (.sam)/ BAM (.bam)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/main/ref_converters.html"
+      ]
+    ]
+  }
+]

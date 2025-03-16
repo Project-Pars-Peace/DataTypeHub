@@ -1,0 +1,320 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "protein_structure_data"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Proteomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Protein Structure Data Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Analyzes the 3D conformation of proteins to understand their function and stability."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Proteomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Protein Structure Data Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "In proteomics, protein structures are analyzed using formats like PDB, mmCIF, and FASTA. Structural data is obtained through X-ray crystallography, NMR spectroscopy, or cryo-EM, which determine atomic coordinates by measuring diffraction patterns, magnetic interactions, or electron scattering, respectively."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "PDBx/mmCIF (.pdbx, .cif)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "PDBx/mmCIF (.pdbx, .cif) files in proteomics contain structured text data, primarily in key-value pair format. They store 3D atomic coordinates (numerical measurements) of biomolecular structures, along with metadata like sequences, experimental details, and annotations, organized into categorized data blocks."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "For PDBx/mmCIF files in proteomics, data quality is assessed using metrics like resolution, R-factor, stereochemical validity, and completeness of structural data. Tools such as MolProbity, PROCHECK, or PDB validation services are commonly used for quality assessment."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "The average size of a PDBx/mmCIF file in proteomics is typically 100 KB to 1 MB, depending on the structure's complexity."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed PDBx/mmCIF (.pdbx, .cif) data in proteomics is typically visualized as 3D molecular structures using software like PyMOL, Chimera, or VMD."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "The typical size of a PDBx/mmCIF (.cif) file in proteomics is usually a few kilobytes to a few megabytes, depending on the molecular structure's complexity."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "For PDBx/mmCIF files in proteomics, key resolution parameters include: Resolution (\u00c5): Clarity of electron density map R-factor/R-free: Statistical quality measures of model fit B-factors: Atomic displacement parameters indicating flexibility Occupancy: Percentage of molecules in specified conformation Clash score: Measure of steric overlaps Ramachandran outliers: Percentage of residues with unusual backbone geometry Completeness: Percentage of expected reflections measured Redundancy: Average number of observations per unique reflection"
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Scientific questions: What is the 3D structure of a protein? How do mutations affect protein folding and function? How do proteins interact with ligands or other proteins? Typical research aims: Drug design (structure-based drug discovery) Functional annotation (predicting protein roles) Mutation impact analysis (disease-related mutations) Protein engineering (designing novel proteins)"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "Preprocessing: In proteomics, preprocessing involves data cleaning, normalization, and transformation to remove noise, correct batch effects, and make data comparable. Steps include peak detection, baseline correction, intensity normalization, and missing value imputation. Quality Control (QC): QC ensures data reliability by assessing instrument performance, peptide identification confidence, reproducibility, and contamination detection. Common QC metrics include mass accuracy, retention time drift, and peptide-spectrum match (PSM) quality."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "Standard preprocessing steps in proteomics analysis related to protein structure include: Data Acquisition \u2013 Collect raw mass spectrometry (MS) or nuclear magnetic resonance (NMR) data. Noise Filtering \u2013 Remove background noise and baseline correction. Peak Detection & Alignment \u2013 Identify and align peaks across samples. Normalization \u2013 Adjust for variations in sample loading and instrument response. Deconvolution \u2013 Resolve overlapping signals to identify individual peptides/proteins. Database Searching \u2013 Match spectra to known protein sequences (e.g., using Mascot, Sequest). False Discovery Rate (FDR) Control \u2013 Validate identifications by filtering low-confidence matches. Quantification \u2013 Determine protein abundance using label-free or labeled approaches. Functional Annotation \u2013 Map identified proteins to pathways and structural databases."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Quality Control Tools and Metrics: Tools: Procheck, MolProbity, WHAT_CHECK, Verify3D, QMEAN. Metrics: Ramachandran plot, RMSD, clash score, Z-score."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major Software Packages and Computational Resources: Software: PyMOL, Chimera, Rosetta, GROMACS, VMD. Resources: PDB, SWISS-MODEL, AlphaFold, MODELLER."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Protein structure analysis is critical in understanding protein function and interactions. Its major research applications include: Drug Design: Determining protein 3D structures to develop targeted therapeutics. Disease Research: Studying misfolded proteins (e.g., in Alzheimer\u2019s or Parkinson\u2019s) to uncover disease mechanisms. Enzyme Function: Analyzing active sites to understand catalysis and improve industrial processes. Structural Biology: Mapping protein complexes to explore cellular processes like signaling or replication. Biotechnology: Engineering proteins with enhanced stability or activity for applications like biofuels or diagnostics. Evolutionary Studies: Comparing protein structures across species to trace evolutionary relationships. In short, it\u2019s used to decode protein roles in health, disease, and technology."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Protein Structure Analysis in proteomics is used in clinical settings to understand protein folding, interactions, and functions, which are critical for diagnosing and treating diseases. Techniques like X-ray crystallography, NMR, or cryo-EM reveal structural changes linked to conditions such as Alzheimer\u2019s or cystic fibrosis. Practically, it aids in drug design by identifying binding sites for targeted therapies, supports personalized medicine by correlating structural variants with patient outcomes, and enhances biomarker discovery for disease detection and monitoring."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Protein structure analysis in proteomics faces several technical challenges and limitations, including: Sample Preparation: Obtaining pure, stable, and correctly folded proteins in sufficient quantities is difficult, often requiring complex purification processes. Resolution Limits: Techniques like X-ray crystallography and NMR struggle with large, flexible, or membrane proteins, limiting high-resolution structural data. Dynamic Nature: Proteins\u2019 conformational changes and transient interactions are hard to capture, as most methods provide static snapshots. Size Constraints: NMR is less effective for large proteins (>50 kDa), while cryo-EM, though improving, requires expertise and expensive equipment. Post-Translational Modifications (PTMs): PTMs can alter structures, but their detection and integration into models remain challenging. Computational Complexity: Predicting structures (e.g., via molecular dynamics or AI tools like AlphaFold) is limited by incomplete experimental validation and force field inaccuracies. Heterogeneity: Structural variability in protein complexes or intrinsically disordered regions complicates analysis."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "In proteomic analysis related to protein structure, limitations in biological interpretation and inference scope include: Lack of Direct Structural Data: Mass Spectrometry (MS) primarily provides sequence and mass information, not detailed 3D structural insights, limiting understanding of folding, active sites, or conformational changes. Post-Translational Modifications (PTMs): While MS can detect PTMs, it struggles to map their precise structural impact or functional consequences without additional techniques like X-ray crystallography or NMR. Protein Dynamics: MS captures static snapshots, missing dynamic structural shifts (e.g., allosteric changes) critical to biological function. Complex Assemblies: Inferring quaternary structure or protein-protein interactions is indirect, relying on crosslinking or co-detection, which may not fully resolve native configurations. Sequence-to-Structure Ambiguity: Peptide-level data from MS can\u2019t always distinguish between isoforms or structurally similar proteins, complicating structural assignments. Denaturation Bias: Sample preparation (e.g., denaturation for MS) disrupts native structures, restricting inferences to primary sequence rather than higher-order organization."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security & Sensitive Data in Proteomics In proteomics, protein structure data is sensitive as it can reveal proprietary drug targets, biomarkers, or confidential research insights. Secure databases, encryption, and access control help protect this information from unauthorized access or cyber threats."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy Concerns Privacy issues arise when protein structure data is linked to human samples, potentially exposing genetic or health-related information. Proper anonymization, ethical guidelines, and compliance with data protection laws (e.g., GDPR, HIPAA) are crucial to safeguarding personal data."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "For protein structure data in proteomics, key public databases include: Protein Data Bank (PDB): Archives 3D structures of proteins and nucleic acids. CATH: Classifies protein domain structures hierarchically. UniProt: Provides comprehensive protein sequence and functional information. Ensembl: Offers genome-scale data, including protein-coding genes. AlphaFold Protein Structure Database: Provides AI-predicted protein structures."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Regarding community standards, the Worldwide Protein Data Bank (wwPDB) oversees the PDB archive and has established guidelines for data deposition, including requirements for structure factor amplitudes and NMR restraints. They also mandate the use of standardized formats like mmCIF for structural data."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "PDB (Protein Data Bank) (.pdb)",
+        "PDBx/mmCIF (.pdbx, .cif)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://mmcif.pdbj.org/converter/index.php?l=en"
+      ],
+      [
+        "MOL (.mol), SDF (Structure Data File) (.sdf)",
+        "PDBx/mmCIF (.pdbx, .cif)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://www.chemicalaid.com/tools/chemicalformatconverter.php?hl=en\n\nhttps://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html\n\nhttps://www.webqc.org/molecularformatsconverter.php"
+      ],
+      [
+        "MTZ (.mtz) , XYZ (.xyz)",
+        "PDBx/mmCIF (.pdbx, .cif)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://legacy.ccp4.ac.uk/peter/private/CIFandMTZ/mtz2cif.html"
+      ]
+    ]
+  }
+]

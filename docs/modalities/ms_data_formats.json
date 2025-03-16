@@ -1,0 +1,326 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "ms_data_formats"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Proteomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Mass Spectrometry (MS) Data Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "MS",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Measures the mass-to-charge ratio of protein fragments to determine their identity and modifications."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Proteomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Mass Spectrometry (MS) Data Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "MS"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Mass spectrometry (MS) in proteomics analyzes proteins by measuring their mass-to-charge ratio (m/z). It ionizes protein fragments, accelerates them in an electric field, and detects their mass based on travel time or deflection in a magnetic/electric field, enabling identification and quantification."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "mzML (.mzML)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "mzML (.mzML) files in proteomics contain mass spectrometry data, primarily numerical measurements (e.g., mass-to-charge ratios, intensities) and sequences (e.g., peptide identifiers). The data is organized in a structured XML format, with elements like <spectrum> for spectra and <cvParam> for metadata, often including arrays for m/z and intensity values."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "For mzML files in proteomics, raw data quality is assessed using metrics like signal-to-noise ratio, mass accuracy, peak resolution, and missing values. Tools such as OpenMS, ProteoWizard (e.g., msConvert, SeeMS), or R packages like MSnbase are commonly used for quality assessment."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "The average size of an mzML file in proteomics typically ranges from 50 MB to 500 MB, depending on the experiment's complexity and data resolution."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed mzML (.mzML) data in proteomics is typically visualized as mass spectra, chromatograms, or peptide identification maps using tools like Skyline, OpenMS, or vendor-specific software."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "The typical size of an .mzML file in proteomics ranges from a few megabytes to several gigabytes, depending on the experiment's complexity and data resolution."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key Parameters for .mzML Files in Proteomics MS Resolution: Determines mass accuracy for peak identification Scan Rate: Number of spectra collected per unit time m/z Range: Mass-to-charge ratio measurement range Ion Injection Time: Duration ions accumulate before analysis MS/MS Fragmentation Mode: Type of fragmentation method used Retention Time Resolution: Granularity of chromatographic separation Signal-to-Noise Ratio: Threshold for peak detection Dynamic Range: Range between most/least abundant detectable ions Precursor Ion Selection Window: Width of m/z window for fragmentation Number of MS Levels: Depth of MS^n acquisition"
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Mass spectrometry (MS) in proteomics addresses questions like: Protein identification: What proteins are present in a sample? Protein quantification: How do protein levels change across conditions? Post-translational modifications (PTMs): What modifications exist on proteins? Protein-protein interactions: Which proteins interact in biological pathways? Typical research aims: Biomarker discovery (disease diagnostics) Drug target identification Functional proteomics (studying protein roles) Comparative proteomics (healthy vs. diseased states)"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "Preprocessing: Raw data conversion, noise reduction, peak detection, alignment, normalization, and feature extraction. Quality Control (QC): Ensures data integrity by checking signal quality, retention time stability, mass accuracy, reproducibility, and contaminant removal."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "Raw Data Conversion \u2013 Convert MS raw files to open formats (e.g., mzML, mzXML). Noise Reduction \u2013 Remove background noise and low-intensity signals. Peak Detection \u2013 Identify and extract peaks from spectra. Mass Calibration \u2013 Correct systematic mass deviations. Baseline Correction \u2013 Adjust for signal drift and remove baseline noise. Feature Alignment \u2013 Match peaks across multiple samples. Normalization \u2013 Adjust for variations in sample loading and instrument response. Deisotoping \u2013 Remove redundant isotope peaks. Charge State Deconvolution \u2013 Determine true peptide/protein charge states. Database Searching \u2013 Match spectra to known peptides/proteins."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Quality Control Tools and Metrics: Tools: MaxQuant, Proteome Discoverer, Skyline, OpenMS, PEAKS. Metrics: Peak intensity, signal-to-noise ratio, mass accuracy, retention time stability, peptide identification FDR."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major Software Packages and Computational Resources: Software: Mascot, SEQUEST, X!Tandem, Thermo Proteome Discoverer, Spectronaut. Resources: PRIDE, PeptideAtlas, UniProt, ProteomeXchange."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Mass Spectrometry (MS) is a powerful analytical technique widely used across various fields. Its major research applications include: Proteomics: Identifying and quantifying proteins, studying their structure, and mapping interactions. Metabolomics: Analyzing small molecules (metabolites) to understand metabolic pathways and disease biomarkers. Drug Discovery: Determining drug composition, metabolism, and pharmacokinetics. Environmental Analysis: Detecting pollutants, toxins, and contaminants in air, water, and soil. Forensics: Identifying substances like drugs, explosives, or biological samples in criminal investigations. Material Science: Characterizing polymers, nanoparticles, and surface properties. In short, MS is key for analyzing molecular composition, structure, and interactions in diverse scientific domains."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Mass Spectrometry (MS) in proteomics is widely used in clinical settings to identify and quantify proteins in biological samples, aiding in disease diagnosis, monitoring, and treatment. It enables the detection of biomarkers\u2014specific proteins linked to conditions like cancer, Alzheimer\u2019s, or cardiovascular diseases\u2014by analyzing blood, tissue, or other fluids. MS helps clinicians understand disease mechanisms at a molecular level, supports personalized medicine by tailoring treatments based on a patient\u2019s protein profile, and assists in drug development by identifying therapeutic targets. Its high sensitivity and precision make it valuable for early detection and tracking disease progression in practical applications."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Mass spectrometry (MS) in proteomics faces several technical challenges and limitations, including: Sensitivity and Dynamic Range: MS struggles to detect low-abundance proteins in complex samples due to its limited dynamic range, often overshadowed by highly abundant proteins. Sample Complexity: Biological samples contain thousands of proteins with varying properties, making complete proteome coverage difficult. Ion Suppression: In complex mixtures, certain ions may suppress others, reducing detection accuracy and reproducibility. Quantification: Accurate protein quantification remains challenging due to issues with ionization efficiency and peptide detection consistency. Post-Translational Modifications (PTMs): Identifying and localizing PTMs (e.g., phosphorylation) is difficult due to their low abundance and the need for specialized enrichment techniques. Data Analysis: The vast amount of MS data requires sophisticated bioinformatics tools, and incomplete databases or errors can lead to misidentification. Instrumentation Limits: Resolution, mass accuracy, and throughput depend on the instrument, with high-end systems being costly and less accessible."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "In proteomic analysis using Mass Spectrometry (MS), several limitations affect biological interpretation and the scope of inferences drawn from the data: Protein Coverage and Detection: MS struggles to detect low-abundance proteins due to its sensitivity limits, often missing key regulatory proteins or those in complex mixtures overshadowed by high-abundance ones. Dynamic Range: Biological samples have a vast dynamic range of protein concentrations (up to 10^10), while MS typically spans a narrower range (10^4\u201310^6), leading to incomplete profiling. Post-Translational Modifications (PTMs): Identifying and quantifying PTMs (e.g., phosphorylation, glycosylation) is challenging due to their low stoichiometry, transient nature, and the need for specialized enrichment methods. Protein Inference Problem: MS identifies peptides, not intact proteins. Assigning peptides to specific protein isoforms or paralogs can be ambiguous, especially in species with high sequence homology. Quantification Accuracy: While techniques like label-free, SILAC, or iTRAQ improve quantification, issues like ion suppression, incomplete labeling, or variability in sample preparation can skew results. Biological Context: MS data provides a snapshot, not a functional narrative. Inferring protein interactions, activity, or cellular roles requires integration with other data (e.g., transcriptomics), which may not align perfectly due to post-transcriptional regulation. Sample Complexity: Complex samples (e.g., tissues, biofluids) may require extensive fractionation, risking protein loss or artifacts, and still may not fully resolve all components."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security & Data Protection: Ensure encrypted storage and secure access controls. Use anonymization for patient-related MS data. Implement robust authentication for databases."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy Concerns: Risk of patient identity exposure in clinical proteomics. Compliance with GDPR, HIPAA for sensitive data. Secure data sharing to prevent unauthorized access"
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "For mass spectrometry (MS) data formats in proteomics, several public databases and repositories are available: PRIDE (PRoteomics IDEntifications Database): A public repository for MS-based proteomics data, maintained by the European Bioinformatics Institute. PeptideAtlas: A resource that compiles tandem MS datasets, reprocessed with the Trans-Proteomic Pipeline, providing a comprehensive collection of peptides identified across multiple experiments. Human Protein Atlas: A database offering high-resolution images and data on the spatial distribution of human proteins in various tissues and cancers."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Regarding community standards and guidelines: The Proteomics Standards Initiative (PSI), a working group of the Human Proteome Organization, focuses on defining data standards for proteomics to facilitate data comparison, exchange, and verification. PSI has developed several standards, including: mzML: A format for capturing data generated by mass spectrometers, merging previous formats like mzData and mzXML. mzIdentML: Captures results of protein and peptide identifications from MS data. mzTab: A simplified format for quantitative proteomics data submission. Additionally, the Minimum Information About a Proteomics Experiment (MIAPE) guidelines, established by PSI, outline the essential metadata to report in proteomics experiments, ensuring data transparency and reproducibility."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "mzXML (.mzXML), mzData (.mzdata) ,RAW (.raw), DTA (.dta)",
+        "mzML (.mzML)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://proteowizard.sourceforge.io/tools/msconvert.html, https://mzmine.github.io/mzmine_documentation/data_conversion.html#msconvert-proteowizard-to-mzml"
+      ],
+      [
+        "MGF (Mascot Generic Format) (.mgf)",
+        "mzML (.mzML)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://openms.de/documentation/html/TOPP_FileConverter.html"
+      ],
+      [
+        "mzIdentML (.mzid), mzQuantML (.mzq)",
+        "mzML (.mzML)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://www.sciencedirect.com/science/article/abs/pii/S1874391915300531, https://openms.de/documentation/html/TOPP_FileConverter.html"
+      ],
+      [
+        "mzTab (.mztab)",
+        "mzML (.mzML)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://openms.de/documentation/html/TOPP_FileConverter.html"
+      ]
+    ]
+  }
+]

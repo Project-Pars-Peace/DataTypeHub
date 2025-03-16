@@ -1,0 +1,320 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "scrna_seq"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "scRNA-Seq",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Profiling gene expression at the individual cell level to uncover cellular heterogeneity."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "scRNA-Seq"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats measure the RNA expression profiles of individual cells to capture cellular heterogeneity and gene expression dynamics within a population. It works by isolating single cells (e.g., via microfluidics or droplet-based methods like 10x Genomics), sequencing their RNA using short-read technologies (e.g., Illumina), and then processing the data through alignment (e.g., to a reference genome) and quantification pipelines (e.g., using unique molecular identifiers, UMIs) to generate per-cell transcript counts, which are analyzed with statistical and clustering methods to reveal cell types, states, or trajectories."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "AnnData (.h5ad)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats typically store numerical measurements in sparse matrices (e.g., gene-by-cell count matrices) and metadata, organized in formats like HDF5, MTX, or CSV/TSV. Each entry includes: (1) a gene identifier, (2) a cell barcode (unique to each cell), (3) expression values (e.g., raw counts or normalized UMIs), often paired with metadata files containing cell annotations (e.g., cluster ID, sample origin) and gene annotations (e.g., Ensembl IDs), enabling high-dimensional analysis of cellular expression profiles."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "In Single-Cell RNA-Seq (scRNA-Seq) Data Formats, raw data quality is assessed using metrics like sequencing depth per cell, number of detected genes, mitochondrial gene fraction (indicating cell stress), and UMI duplication rates, with tools such as FastQC, Seurat, and Scanpy commonly employed to evaluate these parameters."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw data sizes for Single-Cell RNA-Seq (scRNA-Seq) Data Formats typically range from ~10-500 GB per experiment, depending on the number of cells (e.g., thousands to millions), sequencing depth per cell, and platform (e.g., 10x Genomics)."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed data from Single-Cell RNA-Seq (scRNA-Seq) Data Formats is typically visualized using t-SNE or UMAP scatter plots (cell clustering), heatmaps (gene expression across clusters), violin plots (expression distributions), trajectory graphs (pseudotime analysis), and feature plots (gene-specific expression)."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed data sizes for Single-Cell RNA-Seq (scRNA-Seq) Data Formats typically range from ~100 MB-10 GB for count matrices (e.g., MTX or HDF5) and annotations, depending on the number of cells, genes analyzed, and additional metadata or clustering results."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters defining the granularity, detail, or scale of data in Single-Cell RNA-Seq (scRNA-Seq) Data Formats include sequencing depth per cell (coverage), number of cells sequenced, gene detection sensitivity (e.g., UMI thresholding), cell capture efficiency, and resolution of clustering algorithms (e.g., Louvain parameters)."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats typically address questions like: - What are the distinct cell types or states in a tissue? - How do cells transition during development or disease? Typical research aims include: - Identifying rare cell populations. - Mapping cellular trajectories. - Understanding gene regulation at single-cell resolution."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In Single-Cell RNA-Seq (scRNA-Seq) Data Formats, preprocessing filters low-quality cells, normalizes UMI counts, and corrects for technical noise, while quality control evaluates metrics like gene detection rates and mitochondrial content using tools like Seurat or Scanpy. These steps ensure reliable cell identification and expression profiles. The focus is on distinguishing biological variation from technical artifacts."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In Single-Cell RNA-Seq (scRNA-Seq) Data Formats, common preprocessing steps include: 1. Filtering: Removing cells with low gene counts or high mitochondrial content. 2. Normalization: Adjusting UMI counts for sequencing depth or library size (e.g., log-normalization). 3. Denoising: Correcting for ambient RNA or doublet contamination. 4. Batch Correction: Harmonizing data across samples (e.g., using Harmony). 5. Feature Selection: Identifying highly variable genes. These steps prepare data for clustering and differential analysis."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed data in Single-Cell RNA-Seq (scRNA-Seq) Data Formats include: 1. FastQC: Checks read quality (Phred scores). 2. Seurat: Assesses gene counts, mitochondrial fraction, and UMI per cell. 3. Scanpy: Evaluates cell quality and clustering metrics. 4. MultiQC: Aggregates sequencing stats. 5. DropletUtils: Detects empty droplets or doublets. Metrics include genes per cell, UMI counts, and doublet rates."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages for Single-Cell RNA-Seq (scRNA-Seq) Data Formats include: 1. Seurat: R-based analysis and visualization (https://satijalab.org/seurat/). 2. Scanpy: Python-based scRNA-seq toolkit (https://scanpy.readthedocs.io/). 3. Cell Ranger: 10x Genomics pipeline for preprocessing (https://www.10xgenomics.com/software/). 4. Monocle: Trajectory analysis (http://cole-trapnell-lab.github.io/monocle-release/). 5. Harmony: Batch correction (https://github.com/immunogenomics/harmony). These often require high-memory servers or cloud resources (e.g., AWS)."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats are frequently used in: 1. Disease Research: Profiling tumor microenvironments. 2. Developmental Biology: Mapping cell differentiation. 3. Immunology: Characterizing immune cell diversity. 4. Neuroscience: Studying brain cell types. 5. Personalized Medicine: Tailoring treatments via cellular profiles. 6. Regenerative Medicine: Understanding stem cell dynamics."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats in clinical settings are used for diagnostics (e.g., identifying cancer cell subtypes), prognostics (e.g., predicting disease progression via rare cell signatures), and treatment selection (e.g., targeting immune cell states in immunotherapy), integrating results into precision medicine pipelines."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats face challenges like low RNA capture efficiency, high dropout rates (sparse data), computational complexity for large cell numbers, and difficulty distinguishing technical noise from biological variation, all complicating accurate analysis."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Limitations in Single-Cell RNA-Seq (scRNA-Seq) Data Formats include: 1. Dropout Events: Missing low-expression genes. 2. Sparse Data: Limits detection of subtle changes. 3. Cell Dissociation Artifacts: Alters expression profiles. 4. Resolution Limits: Rare cells may be overlooked. 5. Annotation Dependency: Relies on known markers. 6. Overinterpretation: Clusters may not reflect biology. 7. Context Specificity: Tissue-specific results. 8. Lack of Protein Data: RNA doesn\u2019t confirm translation. These constrain robust biological insights without validation."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security for Single-Cell RNA-Seq (scRNA-Seq) Data Formats protects sensitive cellular data with: ### 1. Encryption: AES-256 at rest, TLS in transit. ### 2. Access Control: RBAC, MFA, audit logs. ### 3. Anonymization: Masking patient metadata. ### 4. Storage: Secure cloud (e.g., AWS) or local servers. ### 5. Compliance: HIPAA, GDPR standards. ### 6. Minimization: Limiting data collection. ### 7. Backup: Encrypted recovery. ### 8. Sharing: Secure platforms (e.g., dbGaP). ### 9. Integrity: Hashing (SHA-256). These ensure patient confidentiality."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns for Single-Cell RNA-Seq (scRNA-Seq) Data Formats include: 1. Re-identification Risk: Linking cell profiles to individuals. 2. Data Breaches: Exposure risks discrimination. 3. Informed Consent: Clear usage disclosure needed. 4. Third-Party Sharing: Potential misuse by collaborators. 5. Discrimination: Health or employment bias. 6. Family Implications: Indirect relative profiling. 7. Long-Term Privacy: Future tech may reveal more. 8. Regulatory Gaps: Laws lag behind scRNA-seq advances. ### Solutions: Consent, encryption, regulations, ethical sharing."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Key repositories for Single-Cell RNA-Seq (scRNA-Seq) Data Formats include: 1. NCBI GEO: scRNA-seq datasets (https://www.ncbi.nlm.nih.gov/geo/). 2. ArrayExpress: Single-cell expression data (https://www.ebi.ac.uk/arrayexpress/). 3. Human Cell Atlas (HCA): Comprehensive scRNA-seq (https://www.humancellatlas.org/). 4. Single Cell Portal: Broad Institute repository (https://singlecell.broadinstitute.org/). 5. GTEx: Tissue-specific single-cell data (https://gtexportal.org/)."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Standards for Single-Cell RNA-Seq (scRNA-Seq) Data Formats include: ### 1. Data Formats: HDF5, MTX for matrices; FASTQ for raw reads. ### 2. QC: FastQC, Seurat for cell quality metrics. ### 3. Guidelines: HCA protocols; Bioconductor workflows (e.g., scRNAseq). ### 4. Sharing: FAIR principles; MINSEQE metadata. ### 5. Metrics: Genes per cell, UMI counts, cluster resolution. These ensure consistency and reproducibility."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "Seurat (.rds)",
+        "AnnData (.h5ad)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://mojaveazure.github.io/seurat-disk/articles/convert-anndata.html"
+      ],
+      [
+        "10x Genomics (.h5, .mtx, .tsv, .barcodes.tsv, .genes.tsv)",
+        "AnnData (.h5ad)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://scanpy.readthedocs.io/en/stable/"
+      ],
+      [
+        "Loom (.loom)",
+        "AnnData (.h5ad)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://scanpy.readthedocs.io/en/stable/"
+      ]
+    ]
+  }
+]

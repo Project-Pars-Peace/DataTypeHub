@@ -1,0 +1,314 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "protein_interaction_pathway"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Proteomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Protein Interaction and Pathway Data Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Studies how proteins interact with each other and participate in biological processes or signaling networks."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Proteomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Protein Interaction and Pathway Data Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Protein interaction and pathway analysis focuses on measuring proteins and their binding events. Technologies like affinity purification coupled with mass spectrometry capture protein complexes and identify their components, revealing the interaction networks that drive cellular pathways."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "PSI-MI XML (.xml)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "PSI-MI XML (.xml) files in proteomics contain structured text data in a hierarchical XML format. They store molecular interaction data, including protein sequences, numerical measurements (e.g., binding affinities), and annotations, organized into elements like interaction lists and participant details."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "For PSI-MI XML files in proteomics, data quality is assessed using metrics like interaction completeness, annotation accuracy, and data consistency. Tools such as PSI-Validator, IntAct tools, or custom XML parsers (e.g., in Python with lxml) are used for quality assessment."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "The average size of a PSI-MI XML (.xml) file in proteomics typically ranges from a few MB to tens of MB, depending on the complexity and number of molecular interactions."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed PSI-MI XML (.xml) data in proteomics is typically visualized as interaction networks or graphs using tools like Cytoscape or STRING."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "The size of processed PSI-MI XML files in proteomics varies but typically ranges from a few MBs to several GBs, depending on the dataset's complexity and interaction count."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters for PSI-MI XML (.xml) in Proteomics: Interaction count: Number of protein-protein interactions represented Confidence score: Statistical confidence measurement for each interaction Detection method: Experimental technique used to identify interactions Source database: Origin of the interaction data Participant identification: Type and specificity of protein identifiers used Interaction type: Classification of the molecular interaction Biological role: Function of each participant in the interaction Experimental role: Role of each participant in the experimental setup Interactor count: Number of proteins involved in each interaction Annotation depth: Amount of metadata describing each interaction"
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Scientific questions: How do proteins interact in a biological system? What signaling pathways are involved in a disease? How do external factors affect protein networks? Typical research aims: Pathway mapping (understanding cellular processes) Disease mechanism discovery (e.g., cancer pathways) Drug target identification (disrupting harmful interactions) Network-based biomarker discovery (multi-protein markers)"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "Preprocessing in proteomics (Protein Interaction & Pathway) involves data cleaning, normalization, transformation, and missing value imputation to ensure consistency and comparability. Quality control (QC) checks sample integrity, peptide identification accuracy, reproducibility, and batch effects to ensure reliable downstream analysis."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "Data Acquisition \u2013 Collect raw data from mass spectrometry (MS) or other sources. Quality Control (QC) \u2013 Assess data quality, remove low-quality spectra. Normalization \u2013 Adjust for systematic biases (e.g., total ion current normalization). Filtering \u2013 Remove contaminants, low-confidence peptides, or proteins. Protein Identification \u2013 Match spectra to known proteins using databases. Quantification \u2013 Measure protein abundance (label-free, SILAC, TMT, etc.). Missing Data Imputation \u2013 Handle missing values with statistical methods. Batch Effect Correction \u2013 Adjust for variations between experiments. Statistical Analysis \u2013 Identify differentially expressed proteins. Functional Annotation \u2013 Map proteins to pathways and interactions. Network Analysis \u2013 Construct protein-protein interaction (PPI) networks."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Quality Control Tools and Metrics: Tools: Cytoscape, STRING, IntAct, MINT, BioGRID. Metrics: Interaction confidence score, enrichment p-value, network density, node degree distribution, false discovery rate (FDR)."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major Software Packages and Computational Resources: Software: Cytoscape, Pathway Studio, Ingenuity Pathway Analysis (IPA), Reactome, KEGG Mapper. Resources: STRING, KEGG, Reactome, BioGRID, IntAct."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Protein interaction and pathway analysis explores how proteins work together in biological systems. Its major research applications include: Disease Mechanisms: Identifying disrupted interactions or pathways in conditions like cancer or diabetes. Drug Discovery: Targeting protein-protein interactions or key pathway nodes for new treatments. Systems Biology: Mapping networks to understand cellular processes like signaling, metabolism, or gene regulation. Biomarker Identification: Finding protein interactions linked to disease progression for diagnostics. Synthetic Biology: Designing novel pathways or interactions for engineered organisms or therapies. Functional Annotation: Assigning roles to uncharacterized proteins based on their interaction partners. In short, it\u2019s key for unraveling complex biological networks and their roles in health and innovation."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Protein Interaction and Pathway Analysis in proteomics is used in clinical settings to map how proteins interact and function within biological pathways, offering insights into disease mechanisms. It identifies dysregulated networks in conditions like cancer or diabetes, aiding diagnosis and prognosis. Practically, it guides drug development by pinpointing key protein targets, supports personalized medicine by revealing patient-specific pathway alterations, and enhances therapeutic strategies by predicting treatment responses based on interaction profiles."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Protein interaction and pathway analysis in proteomics face several technical challenges and limitations, including: Transient Interactions: Weak or fleeting protein-protein interactions are hard to detect and often missed by common methods like co-immunoprecipitation. False Positives/Negatives: High-throughput techniques (e.g., yeast two-hybrid or mass spectrometry) can produce artifacts or miss genuine interactions due to experimental noise or biases. Sample Complexity: The vast number of proteins and their dynamic interactions in vivo make it difficult to map complete interactomes or pathways accurately. Context Dependency: Interactions and pathways vary by cell type, condition, or time, limiting the generalizability of results from static assays. Detection Sensitivity: Low-abundance proteins or interactions may be undetectable without enrichment, which can introduce bias. Data Integration: Combining interaction data with pathway models requires robust bioinformatics tools, but incomplete databases and annotation errors complicate analysis. Validation: Confirming predicted interactions or pathway roles often demands time-consuming, low-throughput follow-up experiments."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Proteomic analysis, particularly in studying protein interactions and pathways, offers valuable insights into biological processes but comes with several limitations. First, the complexity of protein-protein interactions (PPIs) poses challenges: many interactions are transient, weak, or context-dependent (e.g., specific cellular conditions), making them hard to detect or validate consistently. Techniques like mass spectrometry or co-immunoprecipitation may miss low-affinity interactions or introduce false positives due to non-specific binding. Second, the scope of inferences is limited by incomplete databases and annotation gaps. Proteomic data often relies on reference libraries (e.g., UniProt, STRING) that may lack full coverage of species-specific proteins, post-translational modifications (PTMs), or novel isoforms, restricting functional interpretation. Pathway analysis also assumes well-defined networks, but biological systems are dynamic\u2014pathways can vary across cell types, tissues, or disease states, and current models may oversimplify these nuances. Third, quantitative accuracy is a hurdle. Differences in protein abundance, ionization efficiency, or sample preparation can skew results, complicating conclusions about interaction strength or pathway activity. Additionally, in vitro or high-throughput approaches might not fully reflect in vivo conditions, limiting physiological relevance. Finally, integrating proteomic data with other omics layers (e.g., genomics, metabolomics) remains challenging due to data heterogeneity and computational constraints, narrowing the ability to draw holistic biological inferences. While proteomic analysis is powerful, these factors mean it often provides a snapshot rather than a complete, definitive picture of protein interactions and pathways."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security & Sensitive Data in Protein Interaction and Pathway Proteomics data on protein interactions and pathways are sensitive, as they can reveal insights into disease mechanisms or drug development. Protecting such data requires encryption, secure storage, and restricted access to prevent unauthorized exploitation."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy Concerns Privacy concerns arise when proteomics data is linked to clinical or personal health information. Anonymization, secure data sharing protocols, and adherence to privacy regulations (e.g., GDPR, HIPAA) are vital to protect individuals' privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Several public databases provide protein interaction and pathway data: BioGRID: A curated repository of protein-protein interactions, genetic interactions, chemical interactions, and post-translational modifications. STRING: A database of known and predicted protein-protein interactions, integrating data from various sources. Reactome: A curated resource of human signal transduction pathways. NetPath: A manually curated resource of human signal transduction pathways."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Regarding community standards, the International Molecular Exchange Consortium (IMEx) promotes a non-redundant set of molecular interactions using standardized formats like PSI-MI. This consortium ensures consistent data representation and quality across multiple databases"
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "PSI-MI TAB (.tsv, .tab)",
+        "PSI-MI XML (.xml)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.1002/pmic.200900189#:~:text=Table%201.%20The%20currently%20available%20tools%20to%20convert%20raw%20data%20into%20XML%20files, https://onlinexmltools.com/convert-tsv-to-xml"
+      ],
+      [
+        "BioPAX (.owl)",
+        "SBML (Systems Biology Markup Language) (.sbml, .xml),",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/bioinformatics/article/28/20/2648/207510?login=false, http://sbml.org/software/converters/#to-sbml"
+      ]
+    ]
+  }
+]

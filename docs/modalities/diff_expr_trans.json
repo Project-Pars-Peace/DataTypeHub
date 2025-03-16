@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "diff_expr_trans"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Differential Expression and Statistical Analysis Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Identifying genes with statistically significant changes in expression between conditions."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats measure and analyze the abundance of molecular features\u2014such as RNA (transcriptomics), proteins (proteomics), or metabolites (metabolomics)\u2014to identify significant changes in expression levels across different conditions, like healthy versus diseased states. It works by first quantifying these molecules using technologies like RNA sequencing (RNA-seq), mass spectrometry, or microarrays, which generate raw data reflecting their abundance. These data are then normalized to account for technical variations (e.g., sequencing depth or batch effects) and subjected to statistical models\u2014such as t-tests, ANOVA, or more advanced methods like DESeq2 or edgeR\u2014that calculate differential expression by comparing expression levels between groups, assigning p-values and fold-changes to determine significance and magnitude of differences. The process integrates bioinformatics tools to handle high-dimensional data, ensuring robust identification of biologically relevant patterns."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "TSV (.tsv, .txt)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats typically store numerical measurements and matrices representing the abundance of molecular features (e.g., RNA, proteins, or metabolites) across samples, often accompanied by metadata and statistical results. These data are commonly organized in tabular file formats like CSV or TSV, where each row corresponds to a feature (e.g., a gene or protein) and each column contains expression values for different samples, alongside additional columns for statistical outputs such as p-values, adjusted p-values (e.g., FDR), and log-fold changes. For example, a typical output from tools like DESeq2 or edgeR includes: (1) a feature identifier (e.g., gene ID), (2) raw or normalized counts per sample, (3) statistical metrics (e.g., test statistic, p-value), and (4) annotations (e.g., gene names or pathways). This matrix-like structure facilitates downstream analysis, visualization, and interpretation in bioinformatics pipelines."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "In Differential Expression and Statistical Analysis Formats, raw data quality is assessed using metrics like sequencing depth, read alignment rates, and replicate concordance for RNA-seq, or signal-to-noise ratio and mass accuracy for proteomics/metabolomics, with tools such as RSeQC, Qualimap, and Perseus commonly employed to evaluate these parameters."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw data sizes for Differential Expression and Statistical Analysis Formats typically range from ~10-100 GB per experiment for RNA-seq (depending on sequencing depth and sample number), ~100 GB-1 TB for proteomics, and ~10-50 GB for metabolomics, influenced by the number of features, replicates, and instrument resolution."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed data from Differential Expression and Statistical Analysis Formats is typically visualized using **heatmaps (expression patterns), volcano plots (significance vs. fold-change), scatter plots (PCA for sample clustering), bar plots (top differentially expressed features), and box plots (expression distributions)**."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed data sizes for Differential Expression and Statistical Analysis Formats typically range from ~1-100 MB for tabular files (e.g., CSV/TSV with expression and stats), ~10 MB-1 GB for normalized count matrices, and up to ~1-10 GB for comprehensive outputs with annotations, depending on the number of features and samples."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters defining the granularity, detail, or scale of data in Differential Expression and Statistical Analysis Formats include sequencing depth (for RNA-seq), number of samples/replicates, feature resolution (e.g., gene- vs. transcript-level), signal detection sensitivity (e.g., counts per million or peak intensity), and statistical power (influenced by sample size and variance)."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats in bioinformatics typically address questions like: - Which genes, proteins, or metabolites are differentially expressed between conditions (e.g., disease vs. healthy)? - What biological pathways or processes are altered? Typical research aims include: - Identifying molecular biomarkers of disease. - Elucidating regulatory mechanisms. - Prioritizing targets for functional validation or therapeutic intervention."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In Differential Expression and Statistical Analysis Formats, preprocessing includes filtering low-quality reads, normalizing data for technical biases, and transforming counts, while quality control evaluates read alignment, sample reproducibility, and sequencing depth using tools like FastQC or RSeQC. These steps ensure the data is reliable and free of artifacts before identifying differentially expressed features. The goal is to isolate true biological differences for accurate statistical analysis."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In Differential Expression and Statistical Analysis Formats, common preprocessing steps include: 1. **Filtering**: Removing low-quality reads (e.g., with poor Phred scores) or features with consistently low counts across samples to reduce noise. 2. **Trimming**: Cutting adapter sequences or low-quality bases from RNA-seq reads to ensure accurate alignment. 3. **Normalization**: Adjusting raw counts for sequencing depth, library size (e.g., using TPM or DESeq2\u2019s median-of-ratios), or composition biases to enable fair comparisons across samples. 4. **Batch correction**: Correcting systematic technical variations (e.g., using ComBat or surrogate variable analysis) to minimize confounding effects. 5. **Imputation**: Estimating missing values (rarely for RNA-seq, more common in proteomics/metabolomics) to maintain dataset integrity. These steps enhance the quality and comparability of the data, ensuring that subsequent statistical analyses reflect biological differences rather than technical artifacts."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed data in Differential Expression and Statistical Analysis Formats include: 1. **FastQC**: Assesses RNA-seq read quality with metrics like per-base quality scores (Phred), GC content, and adapter contamination. 2. **RSeQC**: Evaluates alignment-specific metrics such as read distribution, gene body coverage, and junction saturation. 3. **MultiQC**: Consolidates QC results across tools, reporting metrics like sequencing depth, duplication rates, and sample consistency. 4. **DESeq2/edgeR**: Provides diagnostic metrics post-normalization, including dispersion estimates and sample-to-sample distances. 5. **Qualimap**: Analyzes BAM files for alignment rates, coverage uniformity, and insert size distribution. Metrics typically include read alignment percentage, sequencing depth, replicate correlation, low-count feature prevalence, and signal-to-noise ratio, ensuring the preprocessed data is robust for differential expression analysis."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages and computational resources commonly used for Differential Expression and Statistical Analysis Formats include: 1. **DESeq2**: A widely-used R package for differential gene expression analysis of RNA-seq data, leveraging negative binomial models (https://bioconductor.org/packages/release/bioc/html/DESeq2.html). 2. **edgeR**: Another R package for RNA-seq analysis, excelling in small sample sizes with empirical Bayes methods (https://bioconductor.org/packages/release/bioc/html/edgeR.html). 3. **limma**: An R package versatile for RNA-seq, microarray, and proteomics data, offering linear modeling and empirical Bayes moderation (https://bioconductor.org/packages/release/bioc/html/limma.html). 4. **Salmon**: A fast tool for transcript quantification from RNA-seq reads, often paired with differential analysis tools (https://combine-lab.github.io/salmon/). 5. **STAR**: An aligner for RNA-seq reads, critical for generating input data for expression analysis (https://github.com/alexdobin/STAR). 6. **Perseus**: A platform for proteomics data analysis, including differential expression and statistical testing (https://maxquant.net/perseus/). 7. **MetaboAnalyst**: A web-based tool for metabolomics, supporting normalization, differential analysis, and pathway mapping (https://www.metaboanalyst.ca/). These tools typically run on computational resources like local servers, high-performance computing clusters, or cloud platforms (e.g., AWS, Google Cloud), depending on data scale and complexity."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats are frequently used in several key research areas, including: 1. **Disease Research**: To identify molecular signatures (e.g., genes, proteins) altered in conditions like cancer, neurodegenerative disorders, or infectious diseases. 2. **Drug Discovery**: For pinpointing potential therapeutic targets and understanding drug response mechanisms through expression profiling. 3. **Personalized Medicine**: To tailor treatments based on individual molecular profiles, such as tumor-specific gene expression. 4. **Developmental Biology**: To study gene regulation and molecular changes during organism development or tissue differentiation. 5. **Immunology**: For analyzing immune responses, such as cytokine expression in infections or autoimmune diseases. 6. **Agricultural Science**: To investigate plant or livestock responses to stress, disease, or genetic modification for improved traits. 7. **Environmental Science**: To explore how organisms adapt molecularly to pollutants, climate change, or ecological shifts. 8. **Neuroscience**: To uncover expression patterns linked to brain function, behavior, or neurological disorders."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats in clinical settings are used for diagnostics, prognostics, and treatment selection by profiling molecular changes associated with diseases. For example, RNA-seq-based differential expression analysis identifies gene signatures in cancers (e.g., breast cancer subtypes) to diagnose disease states, predict patient outcomes (e.g., survival likelihood via prognostic biomarkers like PAM50), and guide treatment selection (e.g., matching therapies to overexpressed oncogenes like HER2). In practical applications, these analyses support companion diagnostics, such as identifying patients responsive to specific drugs (e.g., immunotherapy checkpoints), and are integrated into clinical workflows via platforms like MetaboAnalyst or DESeq2 outputs, aiding precision medicine by translating molecular data into actionable insights for patient care."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats face challenges such as data quality issues (e.g., low sequencing depth, technical noise, or batch effects), which can obscure biological signals and require robust preprocessing. Acquisition challenges include sample heterogeneity (e.g., mixed cell types) and low-abundance transcripts or metabolites that are hard to detect, while processing demands normalization and correction methods that may introduce biases if not carefully tuned. Analysis limitations include statistical power constraints with small sample sizes, false positives from multiple testing, and the complexity of interpreting results in highly dimensional datasets, all of which demand significant computational resources and expertise to ensure reliable conclusions."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Differential Expression and Statistical Analysis Formats have advanced molecular biology, but several limitations affect biological interpretation and the scope of inferences drawn from the data. These include: 1. **Biological Noise and Variability**: Inter-individual differences, cell-type heterogeneity, or environmental factors can confound expression patterns, making it hard to distinguish true signals from noise. 2. **Statistical Artifacts**: Multiple testing corrections may miss subtle but biologically relevant changes, while low sample sizes limit statistical power, potentially leading to false negatives. 3. **Limited Causality**: Differential expression identifies associations, not causation, so upregulated genes may be symptoms rather than drivers of a condition. 4. **Context Specificity**: Results are often condition- or tissue-specific, restricting generalizability across diseases or species without further validation. 5. **Incomplete Annotation**: Reliance on databases for gene or protein function can miss novel or poorly characterized features, especially in non-model organisms. 6. **Overinterpretation Risk**: Significant expression changes may be overemphasized without functional validation (e.g., via knockdowns or proteomics), risking misinterpretation of their biological role. 7. **Integration Challenges**: Without complementary data (e.g., epigenomics, metabolomics), inferences about regulatory mechanisms or downstream effects remain speculative. 8. **Detection Limits**: Low-abundance transcripts or metabolites may fall below detection thresholds, underrepresenting their biological importance. In summary, while this modality excels at identifying molecular differences, its interpretive power is constrained by biological complexity, statistical limitations, and the need for integrative validation to ensure robust conclusions."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and protection of sensitive data in Differential Expression and Statistical Analysis Formats are vital due to the potentially identifiable nature of molecular profiles linked to patient health or biological identity. Key considerations include: ### 1. **Data Encryption** - Encryption at rest (e.g., AES-256) and in transit (e.g., TLS) safeguards raw and processed expression data from unauthorized access or interception. ### 2. **Access Control** - Role-based access controls (RBAC), multi-factor authentication (MFA), and audit logs restrict and monitor access to authorized personnel only. ### 3. **Data Anonymization and De-Identification** - Removing or masking personal identifiers (e.g., patient IDs, clinical metadata) ensures data cannot be traced back to individuals, critical for research sharing. ### 4. **Data Storage Solutions** - Secure cloud platforms (e.g., AWS with HIPAA compliance) or local servers with firewalls and physical security protect data integrity and availability. ### 5. **Compliance with Regulations** - Adherence to HIPAA in the U.S. and GDPR in the EU mandates consent, privacy safeguards, and breach reporting for health-related expression data. ### 6. **Data Minimization** - Collecting only essential data (e.g., relevant genes or samples) limits exposure risks. ### 7. **Backup and Recovery** - Encrypted backups and recovery plans mitigate data loss from cyberattacks like ransomware. ### 8. **Collaboration and Sharing** - Secure transfer protocols (e.g., SFTP) and platforms like the NIH\u2019s dbGaP (https://www.ncbi.nlm.nih.gov/gap/) enable safe data sharing. ### 9. **Data Integrity** - Hashing (e.g., SHA-256) verifies that expression datasets remain unaltered during processing or transmission. By implementing these measures, sensitive molecular data is shielded from breaches, ensuring privacy and enabling ethical use in clinical and research applications while adapting to evolving security standards."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to Differential Expression and Statistical Analysis Formats are significant due to the sensitive nature of molecular data, which can reveal health conditions, predispositions, or biological identities. Key concerns include: 1. **Re-identification Risk**: Even anonymized expression profiles can be linked to individuals using metadata or cross-referenced datasets. 2. **Data Breaches**: High-value molecular data is vulnerable to cyberattacks, risking exposure that could lead to identity theft or misuse. 3. **Informed Consent**: Patients must be clearly informed about data usage, storage, and sharing, with explicit, revocable consent. 4. **Third-Party Sharing**: Data shared with researchers or companies could be exploited beyond original intent, such as for commercial profiling. 5. **Discrimination**: Expression patterns indicating disease risk might result in insurance or employment discrimination. 6. **Family Implications**: Molecular data may indirectly expose relatives\u2019 health risks, affecting their privacy. 7. **Long-Term Privacy**: As analytical methods advance, previously innocuous data could reveal more sensitive insights over time. 8. **Regulatory Gaps**: Current laws like GDPR or HIPAA may not fully address the unique challenges of expression data. ### Solutions: - **Informed Consent**: Provide transparent, opt-out consent processes. - **Encryption**: Use robust encryption for data security. - **Regulations**: Enforce compliance with privacy laws. - **Ethical Sharing**: Establish strict guidelines for data use and sharing. By tackling these issues, privacy in this modality can be safeguarded effectively."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Here are the key public databases and data repositories for Differential Expression and Statistical Analysis Formats, storing molecular expression data and related information: 1. **NCBI GEO (Gene Expression Omnibus)** - Stores RNA-seq, microarray, and other expression datasets with metadata for differential analysis (https://www.ncbi.nlm.nih.gov/geo/). 2. **ArrayExpress** - Hosts high-throughput expression data, including RNA-seq and proteomics, suitable for differential expression studies (https://www.ebi.ac.uk/arrayexpress/). 3. **Ensembl** - Provides transcriptomic data and annotations alongside genome assemblies, supporting expression analysis (https://www.ensembl.org/). 4. **UniProt** - Offers protein expression and functional data, often integrated with proteomics differential analysis (https://www.uniprot.org/). 5. **The Cancer Genome Atlas (TCGA)** - Contains RNA-seq and proteomics data for cancer-specific differential expression studies (https://www.cancer.gov/tcga). 6. **GTEx (Genotype-Tissue Expression)** - Stores tissue-specific RNA-seq data to explore gene expression variation (https://gtexportal.org/). 7. **PRIDE (Proteomics Identification Database)** - Archives mass spectrometry-based proteomics data for differential protein expression (https://www.ebi.ac.uk/pride/). 8. **Metabolomics Workbench** - Hosts metabolomics datasets for differential metabolite analysis (https://www.metabolomicsworkbench.org/). These repositories provide raw and processed expression data critical for studying molecular differences across conditions, diseases, and species in research and clinical applications."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Community standards, best-practice guidelines, and standardization efforts for Differential Expression and Statistical Analysis Formats enhance consistency and reproducibility: ### 1. **Data Formats** - **FASTQ**: Standard for raw RNA-seq reads with quality scores; **CSV/TSV**: Common for processed expression matrices and statistical results; **HDF5**: Used for large-scale normalized data (e.g., in single-cell RNA-seq). ### 2. **Quality Control (QC)** - **FastQC**: Evaluates raw sequencing quality; **MultiQC**: Aggregates QC metrics; **RSeQC**: Assesses RNA-seq-specific metrics like read distribution. ### 3. **Best-Practice Guidelines and Pipelines** - **Bioconductor Workflows**: Offer standardized RNA-seq analysis pipelines (e.g., DESeq2, edgeR); **ENCODE Guidelines**: Provide protocols for RNA-seq processing and QC; **GA4GH (Global Alliance for Genomics and Health)**: Promotes interoperable analysis standards (https://www.ga4gh.org/). ### 4. **Data Sharing and Metadata** - **FAIR Principles**: Ensure data is findable, accessible, interoperable, and reusable; **MIAME (Minimum Information About a Microarray Experiment)**: Metadata standard for expression experiments; **ISA-Tab**: Structured metadata format for multi-omics. ### 5. **Analysis Metrics** - **FDR (False Discovery Rate)**: Standard for statistical significance; **Log2 Fold Change**: Quantifies expression differences; **PCA/MDS**: Assesses sample clustering. These efforts, supported by communities like Bioconductor and ENCODE, ensure robust, comparable, and shareable results in differential expression studies."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "DESeq2 (.rds, .csv, .tsv) EdgeR (.txt, .csv, .tsv) Limma (.txt, .csv, .tsv)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://cran.r-project.org/web/packages/rio/vignettes/rio.html"
+      ]
+    ]
+  }
+]

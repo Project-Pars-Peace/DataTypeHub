@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "annotations"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Genomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Annotations"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Annotations assign functional information to genomic regions"
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Genomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Annotations"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Annotations analyze and label functional elements in biomolecules like DNA, RNA, proteins, or metabolites to identify their roles. This involves comparing experimental data (e.g., sequencing, mass spectrometry) with known references using computational tools and databases, mapping features such as genes, protein domains, or metabolic pathways to infer biological functions and interactions."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "GFF (.gff)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Annotations can represent various data types, including images (bounding boxes, segmentation masks), text (token-level labels, sentiment classification), audio (time-aligned transcripts), video (object tracking), graphs (knowledge relationships), and time-series data (event markers). These annotations are stored in structured formats like JSON (COCO for images, NLP data), XML (Pascal VOC for object detection), CSV (tabular labels), and specialized formats like TextGrid for speech, organizing data efficiently for retrieval and processing."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "The quality of raw data for annotations is assessed using metrics such as accuracy, consistency, inter-annotator agreement, precision, and recall. These ensure the annotations match the ground truth, are reliable, and cover all relevant information effectively."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw data sizes for annotations vary by type: text data (~few MBs to GBs depending on the number of documents and complexity), image data (~GBs to TBs for large datasets with high-resolution images), audio data (~MBs to GBs based on duration and quality), and video data (~GBs to multiple TBs for high-definition videos). Sizes depend on the project's scope, data type, and quality requirements."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Annotations can be visualized using methods like heatmaps for data intensity, phylogenetic trees for evolutionary relationships, network graphs for interactions, 3D structures for spatial data, scatter plots for variable relationships, and histograms for data distribution. Each method helps in understanding and interpreting the underlying patterns within the annotated data.\n"
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed annotation data sizes can vary, with processed image annotations ranging from ~1-500 GB and processed text annotations ranging from ~10 MB to several GBs, depending on the complexity and scope of the project."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters that define the granularity, detail, or scale of the data include sequencing depth (coverage), read length, genome size, annotation quality, number of annotated features, error rate, functional depth, and cross-reference density."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "**Genome annotation in bioinformatics** typically addresses questions such as identifying functional elements within a genome, understanding gene structures and variations, and determining the roles of newly identified genes and non-coding regions. Typical research aims include identifying and characterizing genes and regulatory elements, predicting gene functions based on sequence similarity or expression data, and annotating structural variations to assess their potential impact on gene function and phenotype."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In **genome annotation**, preprocessing involves filtering raw sequencing data to remove low-quality reads, trimming adapters, and normalizing expression levels in RNA-Seq data to improve annotation accuracy. **Quality control (QC)** assesses read mapping quality, coverage depth, and sequence biases to detect potential errors, ensuring reliable gene predictions and functional annotations."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In **genome annotation**, preprocessing steps ensure high-quality data for accurate functional predictions. **Filtering** removes low-quality reads, contaminants, and sequencing artifacts, while **trimming** eliminates adapter sequences and low-quality bases to improve mapping accuracy. **Normalization** adjusts for sequencing depth differences, ensuring reliable expression comparisons, and **batch correction** accounts for technical variations across different sequencing runs. Additionally, **imputation** fills in missing values to maintain data consistency for downstream analysis. These steps collectively enhance annotation accuracy and reliability."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Quality control (QC) tools and metrics for annotations in GFF (General Feature Format) files in genomics focus on ensuring the accuracy, consistency, and completeness of genomic annotations. Here's a short description: Tools: GFF3toolkit: Validates GFF files for syntax errors, structural issues, and adherence to GFF3 specifications. AGAT (Another GFF Analysis Toolkit): Checks and cleans GFF files, fixing formatting issues and ensuring consistency. BEDTools: Compares GFF annotations with reference datasets to assess overlaps or discrepancies. Custom Scripts (e.g., Python/BioPython): Parse GFF files to detect missing attributes, duplicate entries, or invalid coordinates. Metrics: Completeness: Percentage of expected features (e.g., genes, exons) present in the file. Accuracy: Agreement between annotated coordinates and reference genome (e.g., base-pair mismatches). Consistency: Uniformity of attribute fields (e.g., ID, Parent) across entries. Error Rate: Frequency of syntax errors, orphaned features, or invalid strand designations. Coverage: Proportion of the genome covered by annotations compared to expected."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "For **genome annotation**, key software tools include **GeneMark** ([Documentation](http://exon.gatech.edu/GeneMark/)), an automatic gene prediction tool for eukaryotic and prokaryotic genomes; **Prodigal** ([GitHub](https://github.com/hyattpd/Prodigal)), a prokaryotic gene prediction tool; **MAKER** ([Documentation](https://www.yandell-lab.org/software/maker.html)), an integrated pipeline supporting multiple sequencing technologies; and **AUGUSTUS** ([Documentation](http://bioinf.uni-greifswald.de/augustus/)), a widely used eukaryotic gene prediction tool. For functional annotation, **InterProScan** ([Documentation](https://www.ebi.ac.uk/interpro/interproscan.html)) identifies protein domains, while **Blast2GO** ([Website](https://www.blast2go.com/)) assigns gene ontology terms. Quality control and assessment tools include **BUSCO** ([Documentation](https://busco.ezlab.org/)) for completeness evaluation and **QUAST** ([Documentation](http://quast.sourceforge.net/)) for genome assembly quality. These tools, often run on **high-performance computing (HPC) clusters** or cloud platforms like **Google Cloud**, **AWS**, and **NCBI servers**, provide efficient and scalable analysis capabilities."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "**Genome annotation** is widely used in key research areas such as **genomics and evolutionary biology**, to understand genetic makeup and evolutionary relationships; **cancer research**, to identify mutations and genetic markers associated with cancer; **microbial genomics**, for studying microorganisms and pathogen identification; **human health and medicine**, particularly for personalized medicine and identifying genetic diseases; **agriculture and plant breeding**, to improve crop traits and develop GMOs; **metagenomics**, for analyzing microbial communities in environmental and ecological studies; **conservation biology**, to protect endangered species through genetic conservation; and **synthetic biology**, in designing new genetic sequences and artificial organisms for various applications. These annotations play a critical role in translating raw genetic data into meaningful insights for a wide range of scientific and practical purposes."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "**Genome annotation** in clinical settings is crucial for diagnostics, as it helps identify genetic mutations and disease-causing variants that can be linked to inherited conditions or cancers. It enables **personalized medicine** by guiding treatment selection based on an individual's genetic profile, such as identifying specific genetic mutations that allow for targeted therapies in cancer. Additionally, genome annotation is used for **prognostics**, where genetic markers are assessed to predict disease outcomes, recurrence risks, or treatment responses, improving patient care and guiding clinicians in making informed decisions about the most effective therapies."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Annotation tasks face several technical challenges, including issues with data quality such as noisy or incomplete annotations, mislabeling, and inconsistencies across datasets, which can lead to errors in model training or analysis. Processing large-scale annotated datasets requires significant computational power and storage, particularly in image and video annotation tasks, where high-resolution data and complex metadata are involved. Additionally, the diversity in annotation formats and the variability of labeling strategies across different domains can complicate integration and standardization, making it difficult to maintain consistency and accuracy. Furthermore, manual annotation can be time-consuming and prone to human error, while automated annotation systems may struggle with ambiguous cases, such as detecting fine-grained object categories or handling noisy data, ultimately affecting the quality of the results. These limitations hinder the scalability and accuracy of annotation processes across diverse applications."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Annotation tasks, while essential for training models and drawing biological conclusions, have several limitations in terms of biological interpretation and the scope of inferences that can be made from the data. These include: 1. **Incomplete or Inaccurate Annotations**: Annotations may be incomplete, erroneous, or inconsistent, leading to misinterpretations of biological phenomena or incorrect model predictions. 2. **Limited Biological Insight**: Annotations provide limited functional context, making it difficult to infer the biological relevance of certain features without additional data, such as gene expression or phenotypic correlations. 3. **Context Dependence**: The biological significance of annotations can vary depending on the organism, tissue type, or environmental conditions, limiting the generalizability of the findings. 4. **Difficulty in Annotating Complex Features**: Certain biological features, especially regulatory or non-coding regions, may be challenging to annotate accurately, and their impact often remains unclear without further experimental validation. 5. **Complexity of Biological Interactions**: Annotations may oversimplify complex biological interactions, as many biological processes involve multifactorial interactions, which are not easily captured in basic annotation tasks. These challenges highlight the need for a comprehensive approach, integrating annotations with experimental data to derive meaningful biological insights."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "The security and protection of sensitive genomic data are critical due to the personal and identifiable nature of the information. To safeguard this data, encryption is essential, both at rest and during transit, to prevent unauthorized access and interception. Access control should be enforced through role-based systems and strong authentication methods, with audit logs maintained to track data access and modifications. Anonymization and de-identification help minimize privacy risks when sharing data, while secure storage solutions, whether cloud-based or local, must include robust security measures. Compliance with regulations like HIPAA and GDPR ensures data privacy and protection, and data minimization reduces exposure risks. Regular backups and secure sharing practices, such as encrypted transfers, further protect the data. Finally, maintaining data integrity with hashing algorithms ensures the data remains unaltered. By implementing these security measures, genomic data can be protected from misuse and breaches, while supporting research and clinical applications."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to genomic data are significant due to its personal and sensitive nature, with several key issues arising from its potential misuse. These concerns include the risk of **re-identification**, where even anonymized data can be traced back to individuals through advanced analysis, and **data breaches**, which expose individuals to identity theft, discrimination, or stigmatization. **Informed consent** is crucial, as individuals must be fully aware of how their data will be used, with the ability to withdraw consent at any time. **Third-party sharing** of genomic data can lead to misuse, such as for marketing purposes, beyond the original consent. **Genetic discrimination** may occur in areas like health insurance or employment based on genetic predispositions, while **family implications** arise as genomic data may reveal sensitive information about relatives. Additionally, **long-term privacy** risks exist, as genetic data is permanent, and future technologies may uncover unforeseen risks. There are also **regulatory gaps**, as current laws may not fully protect genomic data or address rapid advancements in genomics. To mitigate these concerns, solutions like **informed consent**, **encryption**, adherence to privacy regulations such as **GDPR** or **HIPAA**, and **ethical data-sharing** practices can help safeguard genomic data privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "NCBI GenBank is a primary database for nucleotide sequences, offering complete genome assemblies, partial sequences, and genomic annotations across species. Ensembl provides genome assemblies with integrated functional annotations, including genes, non-coding regions, and epigenomic data. UCSC Genome Browser offers a platform to explore DNA sequences, annotations, and genome assemblies, along with comparative genomics information. The Genome Reference Consortium (GRC) offers high-quality reference genome assemblies, mainly for humans, to serve as standards for genomic data. NCBI GEO (Gene Expression Omnibus) focuses on gene expression data but also includes genomic datasets like DNA microarrays and GWAS data. ArrayExpress stores gene expression data and DNA-related datasets, such as ChIP-seq and DNA sequencing data. The 1000 Genomes Project provides a comprehensive catalog of human genetic variation, with DNA sequence data from diverse populations. gnomAD aggregates DNA sequence data to provide reference data on genetic variants and their frequencies across human populations. These repositories support genomic studies by providing crucial sequence data, assemblies, and annotations."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "There are several community standards, best-practice guidelines, and standardization efforts related to genome annotation: **Data Formats** include **FASTA**, a common format for nucleotide sequences; **GFF/GTF**, used for annotating genomic features; and **VCF**, a standard for documenting genetic variants. **Quality Control (QC)** tools like **QUAST** assess assembly quality, **BUSCO** measures genome completeness, and **FASTQC** evaluates raw sequencing quality. **Best-Practice Guidelines and Pipelines** include **GATK**, which offers best practices for sequencing data processing, **NGS Pipelines** for standard workflows in assembly and variant analysis, and **GA4GH**, which sets global standards for data sharing and analysis. **Data Sharing and Metadata** follow the **FAIR Principles**, ensuring data is findable, accessible, and reusable, and **Dublin Core** provides a standard framework for genome data metadata. **Assembly Metrics**, such as **N50** and **L50**, are used to evaluate the quality of genome assemblies. These standards help ensure consistency, reproducibility, and effective data sharing in genome annotation."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "GenBank (.gbk), EMBL (.embl)",
+        "GFF (.gff)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/main/ref_converters.html"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "genome_assembly"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Genomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Genome Assembly"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Genome Assembly reconstructs complete genomes from sequenced fragments"
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Genomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Genome Assembly"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Genome assembly analyzes DNA sequences to reconstruct an organism\u2019s genome. It works by sequencing fragmented DNA using short-read (Illumina) or long-read (PacBio, ONT) technologies, then assembling these fragments using graph-based (DBG, OLC) algorithms to reconstruct the complete genome."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "FASTQ(.fastq, .fq)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "FASTQ files store DNA sequences and their quality scores. Each entry has four lines: (1) sequence identifier, (2) nucleotide sequence, (3) + separator, and (4) ASCII-encoded quality scores."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "FASTQ quality is assessed using per-base quality scores (Phred scores), GC content, adapter contamination, and read length distribution. Key metrics include Q-score, N-content, and duplication levels. Tools like FastQC, MultiQC, and NanoPlot are commonly used."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw FASTQ file sizes vary by technology: Illumina (~30-300 GB per human genome), PacBio HiFi (~50-100 GB), ONT (~50-200 GB), depending on read depth and genome size."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed genome assembly data is visualized using **contig graphs (Bandage), coverage plots (IGV), quality histograms (FastQC), alignment dot plots (Mummer), and circular genome maps (Circos)**."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed genome assembly data varies: assembled genomes (FASTA) ~100 MB\u201310 GB, alignment files (BAM) ~10\u2013500 GB, variant files (VCF) ~MBs\u2013GBs, depending on genome size and sequencing depth."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters include sequencing depth (coverage), read length, genome size, N50 (contiguity), error rate, and k-mer size (for de Bruijn graph assembly)."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Genome assembly in bioinformatics typically addresses questions like: - What is the complete sequence of an organism\u2019s genome? - How do different genomes compare in terms of structure and function? Typical research aims include: - Reconstructing full genomes from sequencing data. - Identifying genetic variations (e.g., SNPs, indels). - Understanding genome evolution and function."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In genome assembly, preprocessing involves removing low-quality reads, trimming adapters, and correcting errors to ensure accurate assembly. Quality control (QC) checks the read depth, GC content, and sequencing quality to identify potential issues before proceeding with assembly."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In genome assembly, common preprocessing steps include: 1. **Filtering**: Removing low-quality reads or sequences with too many errors. 2. **Trimming**: Cutting off adapters and low-quality bases from the ends of reads. 3. **Normalization**: Reducing sequencing depth to avoid overrepresentation of certain sequences. 4. **Batch correction**: Adjusting for systematic errors introduced during sequencing. 5. **Error correction**: Identifying and correcting sequencing errors to improve read accuracy. These steps improve assembly accuracy and reliability."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed genome assembly data include: 1. **FastQC**: Provides metrics like GC content, read quality, and adapter contamination. 2. **Trimmomatic**: Used for trimming low-quality bases and adapters. 3. **Fastp**: A fast tool for filtering, trimming, and quality control. 4. **Quast**: Evaluates the quality of genome assemblies with metrics like N50, genome completeness, and contig length distribution. 5. **MultiQC**: Aggregates results from various QC tools to provide a comprehensive overview. Metrics typically include read quality scores (e.g., Phred score), GC content, adapter contamination, N50, and genome completeness."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "1. Genome Assembly Software SPAdes A popular assembler for small genomes, metagenomes, and large genomes. It works well for Illumina, PacBio, and Oxford Nanopore data. SPAdes Documentation Canu A robust assembler designed for long-read data from PacBio and Oxford Nanopore technologies. Canu Documentation Flye Flye is used for assembling long, noisy reads like those from PacBio or Nanopore. Flye GitHub Velvet One of the earlier short-read assemblers that supports both Illumina and 454 sequencing. Velvet Documentation ABySS A parallel, open-source de novo assembler designed for large genomes. ABySS Documentation MegaHIT A highly efficient assembler for large metagenomic datasets. MegaHIT GitHub SOAPdenovo A short-read assembler, suitable for large genomes (especially for Illumina sequencing). SOAPdenovo GitHub Minia A de novo assembler for large genome sequences with a focus on memory efficiency. Minia Documentation 2. Post-Assembly Tools for Refinement and Quality Check Pilon A tool for improving genome assemblies by polishing them with Illumina short reads. Pilon GitHub Quast A comprehensive quality assessment tool for evaluating the assembly. Quast Documentation Busco Assesses genome assembly completeness by searching for single-copy orthologs. Busco Documentation Purge Haplotigs Used to remove haplotigs from genome assemblies, improving the quality of heterozygous genome assemblies. Purge Haplotigs GitHub 3. Genome Annotation and Analysis GeneMark GeneMark is an automatic gene prediction tool for eukaryotic and prokaryotic genomes. GeneMark Documentation Prodigal A gene prediction tool for prokaryotic genomes that works with different sequencing platforms. Prodigal GitHub MAKER An integrated pipeline for genome annotation that supports multiple sequencing technologies. MAKER Documentation AUGUSTUS A tool for eukaryotic gene prediction and annotation of newly sequenced genomes. AUGUSTUS Documentation"
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Genome assembly is frequently used in several key research areas, including: 1. **Genomics and Evolutionary Biology**: To understand species' genetic makeup and their evolutionary relationships. 2. **Cancer Research**: For identifying mutations, structural variations, and genetic markers associated with cancer. 3. **Microbial Genomics**: To study the genomes of bacteria, viruses, and other microorganisms, including pathogen identification. 4. **Human Health and Medicine**: For personalized medicine, identifying genetic diseases, and studying drug resistance. 5. **Agriculture and Plant Breeding**: To improve crops by identifying beneficial genetic traits and creating genetically modified organisms (GMOs). 6. **Metagenomics**: In environmental and ecological studies, particularly for analyzing microbial communities. 7. **Conservation Biology**: For studying endangered species and preserving biodiversity through genetic conservation efforts. 8. **Synthetic Biology**: In designing and constructing new genetic sequences and artificial organisms for various applications."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Genome assembly in clinical settings is used for diagnostics, identifying genetic mutations, and detecting disease-causing variants. It helps in personalized medicine by enabling treatment selection based on an individual\u2019s genetic profile, such as identifying targeted therapies for cancer. Additionally, it aids in prognostics by predicting disease outcomes through genetic markers."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Genome assembly faces challenges like data quality (e.g., errors, contamination), incomplete or fragmented data, high computational demands, and difficulty in assembling repetitive or complex regions. Additionally, different sequencing technologies have varying error profiles, complicating assembly accuracy."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Genome assembly has made significant strides in recent years, but there are still several limitations related to biological interpretation and the scope of inferences that can be drawn from the data. These limitations include: 1. **Incomplete Assemblies**: Many genome assemblies, especially for complex or highly repetitive genomes, may be incomplete. This can lead to missing genes, structural variations, or regulatory elements, affecting the interpretation of biological functions or evolutionary relationships. 2. **Errors in Assembly**: Genome assembly can introduce errors such as misassemblies, incorrect sequencing, or collapsed repeats. These errors can lead to incorrect conclusions about gene content, gene structure, or the identification of variants, which may mislead downstream analyses like functional annotation or variant calling. 3. **Difficulty in Assembling Complex Genomes**: Genomes with high repeat content, such as those in plants and certain animals, can be difficult to assemble accurately. Repetitive regions are often misassembled or unresolved, which limits the ability to study these regions' biological significance. 4. **Variation in Assembly Quality**: The quality of genome assembly can vary depending on the sequencing technology used (e.g., short-read vs. long-read sequencing). Short-read assemblies often have higher accuracy but may struggle with repetitive regions, while long-read sequencing can improve assembly but may introduce higher error rates. This variability impacts the confidence in biological interpretations derived from the assembly. 5. **Limited Functional Annotation**: Genome assemblies often rely on existing databases for functional annotation, which may not include all relevant genes or pathways for a given organism, especially for less-studied species. This can limit the depth of biological insight that can be derived from the data. 6. **Over-Interpretation of Data**: There is a risk of over-interpreting genome assembly results, especially in the absence of experimental validation. Assembling a genome does not always equate to understanding its function or relevance in a biological context, and assumptions based on assembly data without further validation can lead to incorrect conclusions. 7. **Context Dependence of Data**: The biological interpretation of a genome assembly is often context-dependent, relying on the specific organism, environment, or condition under study. Generalizing findings from one study to others without considering these factors can limit the scope of inferences. 8. **Lack of Functional Data**: Genome assemblies provide sequence data, but without functional data (e.g., expression profiles, proteomics, or phenotypic data), it is difficult to draw definitive conclusions about the role of specific genes or variants. Integrating genomics with other omics data is essential for more robust biological interpretation. In summary, while genome assembly provides a foundational understanding of an organism's genetic makeup, its limitations in completeness, accuracy, and functional annotation must be carefully considered when drawing biological inferences."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and protection of sensitive data in genome assembly are critical due to the personal and potentially identifiable nature of genomic information. Genome data often contains unique identifiers that could link back to individuals, so it is important to ensure its security to prevent misuse. Below are key considerations for protecting sensitive genomic data: ### 1. **Data Encryption** - **Encryption at Rest**: Genomic data should be encrypted when stored on disk. This prevents unauthorized access to the data, even if the physical storage device is compromised. - **Encryption in Transit**: Data should also be encrypted during transmission (e.g., using protocols like HTTPS, TLS) to prevent interception when moving across networks. ### 2. **Access Control** - **Role-Based Access**: Implement role-based access controls (RBAC) to ensure only authorized users can access sensitive data. Access should be granted based on the user\u2019s role within the organization or project. - **Authentication**: Use strong authentication methods such as multi-factor authentication (MFA) to enhance security. - **Audit Logs**: Maintain audit logs to track who accessed or modified genomic data, which helps in identifying unauthorized activities. ### 3. **Data Anonymization and De-Identification** - **Anonymization**: Personal identifiers should be removed or altered so that genomic data cannot be linked to a specific individual. This is especially important when the data is being shared for research purposes. - **De-Identification**: Similarly, de-identifying data by removing information like geographical location or family-related information can reduce privacy risks. ### 4. **Data Storage Solutions** - **Secure Cloud Storage**: If genomic data is stored in the cloud, choose a cloud provider with robust security measures, including data encryption, secure access controls, and compliance with relevant data protection regulations (e.g., GDPR, HIPAA). - **Local Storage**: For sensitive data that is stored on local servers, ensure physical security (e.g., controlled access to server rooms) and implement firewalls and intrusion detection systems (IDS). ### 5. **Compliance with Regulations** - **HIPAA (Health Insurance Portability and Accountability Act)**: In the U.S., genomic data related to health must comply with HIPAA, ensuring privacy and security of personal health information. - **GDPR (General Data Protection Regulation)**: In the EU, genomic data must adhere to GDPR, which requires explicit consent from individuals for data collection and use, along with protections around data access and retention. ### 6. **Data Minimization** - Only collect and store the minimum amount of genomic data necessary for the intended purpose. This reduces the risk of exposure in case of a security breach. ### 7. **Backup and Recovery** - Regularly back up genomic data in a secure manner to ensure it is recoverable in case of accidental loss or a cyberattack (e.g., ransomware). - Ensure that backup systems are as secure as the primary data storage. ### 8. **Collaboration and Sharing** - When sharing genomic data with external collaborators or institutions, use secure file-sharing methods (e.g., encrypted data transfer, secure collaboration platforms). - Consider using data-sharing frameworks designed for genomics, such as the **Genomic Data Commons (GDC)**, that offer privacy protection while enabling research collaboration. ### 9. **Data Integrity** - Ensure data integrity by using hashing algorithms (e.g., SHA-256) to verify that data has not been altered or corrupted during storage or transmission. By implementing these security measures, sensitive genomic data can be better protected against unauthorized access, misuse, and breaches. It is essential to stay updated on emerging security technologies and regulations to maintain robust protection of genomic data."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to genomic data are significant due to its personal nature and potential for misuse. Key concerns include: 1. **Re-identification Risk**: Even anonymized data can be re-identified through data linking or advanced analysis. 2. **Data Breaches**: Genomic data is a prime target for hackers, and its exposure could lead to identity theft, discrimination, or stigmatization. 3. **Informed Consent**: Individuals must fully understand how their data will be used, stored, and shared. Consent should be explicit, with the option to withdraw. 4. **Third-Party Sharing**: Genomic data shared with researchers or companies might be misused, such as for marketing or beyond the original consent. 5. **Genetic Discrimination**: People could face discrimination in health insurance or employment based on genetic predispositions. 6. **Family Implications**: An individual's genomic data can reveal information about their relatives, raising privacy concerns for family members. 7. **Long-Term Privacy**: Genetic data is permanent, and future technological advances may uncover more than initially anticipated, creating new risks. 8. **Regulatory Gaps**: Existing laws often do not fully protect genomic data or address the challenges posed by rapid advances in genomics. ### Solutions: - **Informed Consent**: Ensure individuals are fully informed and can control how their data is used. - **Encryption**: Secure data storage and transmission. - **Regulations**: Adhere to privacy laws like GDPR or HIPAA to protect genomic data. - **Ethical Sharing**: Promote transparent data-sharing practices and avoid misuse for commercial gain. By addressing these concerns, genomic data privacy can be better protected."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Here are the key public databases and data repositories that store data specifically related to DNA, such as genome assemblies, sequence data, and related genomic information: 1. **NCBI GenBank** - **Purpose**: A primary database for nucleotide sequences, GenBank stores complete genome assemblies, partial sequences, and other DNA-related data. - **Data**: Includes raw DNA sequence data, assembled genomes, and genomic annotations for a wide variety of species. - **Link**: [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) 2. **Ensembl** - **Purpose**: Ensembl provides comprehensive genome assemblies for multiple species, including annotation of genes, non-coding regions, and regulatory elements. - **Data**: Focuses on high-quality genome assemblies with integrated functional annotation, including DNA sequences, variants, and epigenomic data. - **Link**: [Ensembl](https://www.ensembl.org/) 3. **UCSC Genome Browser** - **Purpose**: UCSC offers a web-based platform for exploring genomic data, including DNA sequences, annotations, and genome assemblies. - **Data**: Stores assemblies of various species, DNA sequence data, functional elements, and comparative genomics information. - **Link**: [UCSC Genome Browser](https://genome.ucsc.edu/) 4. **The Genome Reference Consortium (GRC)** - **Purpose**: GRC provides reference genome assemblies, primarily for humans but also for other species, to serve as standard representations for genomic data. - **Data**: Offers high-quality, curated DNA sequence data for reference genomes, which are crucial for mapping reads in genomic studies. - **Link**: [GRC](https://www.ncbi.nlm.nih.gov/grc) 5. **NCBI GEO (Gene Expression Omnibus)** - **Purpose**: While GEO primarily focuses on gene expression data, it also contains DNA-related data such as genomic datasets and DNA microarrays. - **Data**: Includes DNA microarrays, genome-wide association studies (GWAS), and other genomic datasets that may involve DNA sequence data. - **Link**: [GEO](https://www.ncbi.nlm.nih.gov/geo/) 6. **ArrayExpress** - **Purpose**: ArrayExpress stores high-throughput gene expression data, but it also includes genomic DNA data, especially in the context of transcriptomics and DNA-chip experiments. - **Data**: Contains DNA-related data like expression arrays, chromatin immunoprecipitation sequencing (ChIP-seq), and DNA sequencing datasets. - **Link**: [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/) 7. **The 1000 Genomes Project** - **Purpose**: A large-scale project focused on providing a comprehensive catalog of human genetic variation. - **Data**: Stores DNA sequence data, including genome-wide data for thousands of individuals from diverse populations. - **Link**: [1000 Genomes Project](https://www.internationalgenome.org/) 8. **gnomAD (Genome Aggregation Database)** - **Purpose**: A large public resource for DNA sequence data that aggregates genomic data from various populations. - **Data**: Focuses on genetic variants in DNA, providing reference data on mutations and their frequencies in diverse human populations. - **Link**: [gnomAD](https://gnomad.broadinstitute.org/) These repositories are pivotal for DNA-related data, including raw sequence data, assemblies, and annotations that aid in various genomic studies like variant analysis, gene expression, and comparative genomics."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Here\u2019s a shorter summary of the key standards and guidelines for genome assembly data: ### 1. **Data Formats** - **FASTA**: Common format for nucleotide sequences. - **GFF/GTF**: Used for annotating genomic features. - **VCF**: Standard for documenting genetic variants. ### 2. **Quality Control (QC)** - **QUAST**: Assesses assembly quality (e.g., N50). - **BUSCO**: Measures genome completeness. - **FASTQC**: Evaluates raw sequencing quality. ### 3. **Best-Practice Guidelines and Pipelines** - **GATK**: Provides best practices for sequencing data processing. - **NGS Pipelines**: Standard workflows for assembly and variant analysis. - **GA4GH**: Global standards for data sharing and analysis. ### 4. **Data Sharing and Metadata** - **FAIR Principles**: Ensure data is findable, accessible, and reusable. - **Dublin Core**: Standard metadata framework for genome data. ### 5. **Assembly Metrics** - **N50, L50**: Standard metrics to evaluate assembly quality. These guidelines ensure consistency, reproducibility, and proper sharing of genome assembly data."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "FastA (.fasta), ABI (.abi), SBA (.sba), SCF (.scf), CRAM (.cram), BAM (.bam).",
+        "FASTQ(.fastq, .fq)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/main/ref_converters.html"
+      ]
+    ]
+  }
+]

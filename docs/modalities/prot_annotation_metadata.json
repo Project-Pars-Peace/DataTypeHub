@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "prot_annotation_metadata"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Proteomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Annotation and Metadata Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Provides descriptive information about proteins, such as function, location, or experimental context, to enhance data interpretation."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Proteomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Annotation and Metadata Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Proteomics measures proteins using mass spectrometry, which ionizes and fragments protein molecules to generate spectral data. Annotation links these spectra to known protein sequences and functions, while metadata\u2014such as experimental conditions and instrument settings\u2014provides the essential context for accurate protein identification and analysis."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "GFF (General Feature Format) (.gff, .gff3)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "GFF (.gff, .gff3) files in proteomics contain tabular text data. They store genomic and proteomic features like sequences and annotations, with numerical measurements (e.g., coordinates), organized in a column-based format with rows representing individual features."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "For GFF/GFF3 files in proteomics, data quality is assessed using metrics like feature completeness, syntactic correctness, and annotation consistency. Tools such as GFF-Ex, GenomeTools, or custom scripts (e.g., in Python with BCBio.GFF) are used for quality assessment."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "The average size of a GFF (.gff, .gff3) file in proteomics is typically a few KB to several MB, depending on the number of features and annotations."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed GFF (.gff, .gff3) data in proteomics is typically visualized as genomic maps, feature tracks, or annotated sequences using tools like JBrowse, IGV, or genome browsers."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "The average GFF/GFF3 file size in proteomics typically ranges from 10MB to 100MB, depending on the genome complexity and annotation detail."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "For GFF (General Feature Format) in proteomics: Feature density: Number of annotated features per genomic region Annotation depth: Level of detail in feature descriptions (basic vs. comprehensive) Coordinate precision: Resolution of genomic positions (nucleotide-level vs. range) Attribute richness: Number and types of key-value pairs per feature Cross-reference density: Number of database links per feature Ontology specificity: Precision of ontology terms used in annotations Version compatibility: GFF3 supports more structured data than earlier GFF"
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Scientific questions: What are the functions of identified proteins? How are proteins classified based on ontology? What are the experimental conditions and sample details? Typical research aims: Functional annotation (GO terms, pathways) Data standardization (FAIR principles) Comparative analysis (cross-study integration) Metadata curation (improving reproducibility)"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "Preprocessing in proteomics includes noise reduction, normalization, and missing value imputation to ensure data consistency. Quality Control (QC) involves assessing reproducibility, identifying outliers, and checking for batch effects to maintain data reliability. In Annotation and Metadata, preprocessing ensures accurate feature mapping, while QC guarantees high-quality, well-annotated datasets for downstream analysis."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "Data Import & Integrity Check \u2013 Load raw data, check for missing values, duplicates, and inconsistencies. Protein/Gene Mapping \u2013 Map protein IDs to standard databases (e.g., UniProt, Ensembl). Metadata Standardization \u2013 Ensure uniform formatting (e.g., sample names, experimental conditions). Ontology Mapping \u2013 Align metadata with controlled vocabularies (e.g., GO, KEGG, Reactome). Batch Effect Correction \u2013 Normalize for experimental batch variations. Filtering \u2013 Remove low-confidence or contaminant proteins. Quality Control (QC) \u2013 Validate annotation consistency and data completeness."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Quality Control Tools and Metrics: Tools: Prokka, InterProScan, UniProtKB, Ensembl, Gene Ontology (GO) tools. Metrics: Annotation completeness, consistency, functional enrichment, GO term coverage, sequence feature accuracy."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major Software Packages and Computational Resources: Software: Blast2GO, DAVID, PANTHER, InterProScan, eggNOG-mapper. Resources: UniProt, GO, Pfam, InterPro, NCBI RefSeq."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Annotation and metadata in proteomics involve labeling and organizing data for better interpretation. Major research applications include: Protein Identification: Assigning functions, sequences, or modifications to proteins in mass spectrometry data. Database Development: Building and curating repositories (e.g., UniProt) for protein information. Comparative Proteomics: Using metadata to compare protein expression across conditions, species, or diseases. Pathway Mapping: Linking annotated proteins to biological pathways for systems-level insights. Data Integration: Combining proteomics data with genomics or metabolomics via standardized metadata. Quality Control: Ensuring reproducibility and accuracy in experiments through detailed metadata tracking. In short, it enhances data usability, enabling deeper insights into protein roles and interactions."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Annotation and Metadata Analysis in proteomics is used in clinical settings to interpret protein data by adding functional, structural, or disease-related context, improving diagnostic accuracy and research. It integrates patient metadata\u2014like age, sex, or medical history\u2014with protein profiles to identify clinically relevant patterns or biomarkers. Practically, it streamlines data management for large-scale studies, supports personalized medicine by linking annotations to individual outcomes, and enhances drug discovery by connecting protein functions to therapeutic potential."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Annotation and metadata analysis in proteomics face several technical challenges and limitations, including: Incomplete Databases: Proteomic databases often lack comprehensive annotations for less-studied proteins, species, or isoforms, leading to gaps in identification. Inconsistent Nomenclature: Variations in protein naming and functional descriptions across databases complicate data integration and comparison. Annotation Errors: Manual curation errors or outdated entries can propagate inaccuracies in protein function, localization, or pathway assignments. Metadata Variability: Inconsistent experimental metadata (e.g., sample conditions, methods) across studies hinders reproducibility and cross-study analysis. Post-Translational Modifications (PTMs): Limited annotation of PTMs and their functional impacts restricts understanding of protein variants. Scalability: High-throughput proteomics generates vast datasets, but automated annotation tools struggle with accuracy and context-specificity. Integration Challenges: Linking proteomic data with genomic, transcriptomic, or clinical metadata is complex due to format differences and missing standardization."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "In proteomic analysis, limitations tied to annotation and metadata can significantly impact biological interpretation and the scope of inferences drawn from the data. Here\u2019s a concise rundown: Incomplete or Inaccurate Annotations: Protein databases often rely on annotations that may be incomplete, outdated, or based on computational predictions rather than experimental validation. This can lead to misidentification of proteins or their functions, skewing biological interpretations. Lack of Contextual Metadata: Metadata\u2014such as sample origin, experimental conditions, or post-translational modifications\u2014provides critical context. Without it, or if it\u2019s inconsistent, it\u2019s tough to pinpoint whether observed protein changes reflect biological processes, experimental artifacts, or noise. Species-Specific Gaps: Annotations are often biased toward well-studied organisms (e.g., humans, mice). For less-studied species, poor annotation limits functional insights, reducing the generalizability of findings. Dynamic Complexity: Proteomics captures a snapshot, but protein expression, interactions, and modifications are dynamic. Static annotations may not reflect temporal or condition-specific biology, restricting causal inferences. Ambiguity in Function: Many proteins have multiple roles or unclear functions. Over-reliance on broad or vague annotations (e.g., \"binding protein\") can oversimplify interpretations, missing nuanced biological significance. Data Integration Challenges: Metadata inconsistencies across studies (e.g., differing naming conventions or missing experimental details) hinder efforts to combine datasets, limiting the depth and reliability of conclusions."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and Protecting Sensitive Data in Proteomics: Sensitive proteomics data must be protected using encryption, secure access controls, and regular audits to prevent unauthorized access, ensuring data integrity and confidentiality."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy Concern in Annotation and Metadata: Privacy concerns arise when sensitive biological information, such as genomic data, is included in metadata. Proper anonymization and adherence to data protection regulations (e.g., GDPR) are essential to safeguard individuals' privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Proteomic data is stored in various public databases, including: PRIDE (PRoteomics IDEntifications database): A repository for mass spectrometry-based proteomics data. Human Protein Atlas: Provides high-resolution images showing the spatial distribution of proteins in human tissues and cancers. neXtProt: An online knowledge platform offering comprehensive information on human proteins, including their functions and roles in diseases."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Regarding community standards, several guidelines and efforts aim to standardize data formats, quality control, and analysis pipelines in proteomics: Proteomics Standards Initiative (PSI): Develops data representation standards such as mzML, mzIdentML, and mzTab to facilitate consistent data exchange. ProteomeXchange Consortium: Ensures coordinated submission and dissemination of proteomics data across multiple repositories, promoting standardized data reporting."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "GFF2 (.gff2), GENBANK (.gb, .gbk), EMBL (.embl), FASTA (.fasta).",
+        "GFF (General Feature Format) (.gff, .gff3)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://academic.oup.com/nargab/article/5/3/lqad074/7246552#414602570, https://github.com/bioconvert/bioconvert, https://bioconvert.readthedocs.io/en/dev/"
+      ]
+    ]
+  }
+]

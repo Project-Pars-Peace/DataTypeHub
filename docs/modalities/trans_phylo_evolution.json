@@ -1,0 +1,308 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "trans_phylo_evolution"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Phylogenetic and Evolutionary Analysis Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Studying RNA sequences to infer evolutionary relationships and gene conservation across species."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Phylogenetic and Evolutionary Analysis Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Phylogenetic and Evolutionary Analysis Formats analyze DNA, RNA, or protein sequences to infer evolutionary relationships and construct phylogenetic trees or networks representing the divergence of species, populations, or genes over time. It works by aligning sequences (e.g., using multiple sequence alignment tools like MAFFT), calculating genetic distances or substitution rates with models (e.g., Jukes-Cantor, GTR), and then applying algorithms such as neighbor-joining, maximum likelihood (e.g., RAxML), or Bayesian inference (e.g., MrBayes) to build tree topologies that reflect evolutionary history, often validated with statistical measures like bootstrap support."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "Newick (.nwk, .tree)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Phylogenetic and Evolutionary Analysis Formats typically store aligned sequences and tree structures in formats like FASTA, PHYLIP, or Newick, with FASTA containing sequence identifiers and nucleotide/amino acid sequences, PHYLIP organizing aligned sequences with a header (e.g., number of taxa and sequence length), and Newick representing tree topologies as nested parentheses with branch lengths and node labels, often supplemented by metadata files (e.g., taxon names, dates) in plain text or tabular formats."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "In Phylogenetic and Evolutionary Analysis Formats, raw data quality is assessed using metrics like sequence alignment accuracy, gap frequency, base call error rates, and phylogenetic signal strength (e.g., homoplasy levels), with tools such as AliView, MEGA, and FastQC commonly employed to evaluate these parameters."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw data sizes for Phylogenetic and Evolutionary Analysis Formats typically range from ~1 MB-1 GB per dataset, depending on the number of sequences (e.g., dozens to thousands), sequence length (e.g., single genes to whole genomes), and taxa included."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed data from Phylogenetic and Evolutionary Analysis Formats is typically visualized using phylogenetic trees (e.g., via FigTree or iTOL), cladograms, network graphs (e.g., SplitsTree for reticulate evolution), heatmaps (sequence similarity), and divergence time plots (e.g., BEAST outputs)."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed data sizes for Phylogenetic and Evolutionary Analysis Formats typically range from ~1 KB-100 MB for tree files (e.g., Newick, Nexus) and alignment outputs, depending on the number of taxa, sequence length, and additional annotations like bootstrap values or divergence times."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters defining the granularity, detail, or scale of data in Phylogenetic and Evolutionary Analysis Formats include sequence length (e.g., gene vs. genome), number of taxa, alignment quality, substitution model complexity (e.g., GTR+\u0393+I), sampling density across evolutionary time, and statistical support thresholds (e.g., bootstrap or posterior probability)."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Phylogenetic and Evolutionary Analysis Formats typically address questions like: - How are species or genes evolutionarily related? - What are the rates and patterns of molecular evolution? Typical research aims include: - Reconstructing evolutionary histories. - Estimating divergence times. - Identifying selection pressures or ancestral states."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In Phylogenetic and Evolutionary Analysis Formats, preprocessing aligns sequences and removes poorly aligned regions, while quality control checks alignment consistency, sequence quality, and phylogenetic informativeness using tools like MEGA or TrimAl. These steps ensure robust evolutionary inferences. The focus is on minimizing alignment errors and ensuring sufficient signal."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In Phylogenetic and Evolutionary Analysis Formats, common preprocessing steps include: 1. Filtering: Removing low-quality or incomplete sequences. 2. Alignment: Performing multiple sequence alignment (e.g., MAFFT). 3. Trimming: Eliminating poorly aligned or gappy regions (e.g., TrimAl). 4. Model Selection: Choosing an evolutionary model (e.g., jModelTest). 5. Outlier Removal: Excluding sequences with excessive divergence. These steps optimize data for phylogenetic reconstruction."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed data in Phylogenetic and Evolutionary Analysis Formats include: 1. FastQC: Assesses raw sequence quality (Phred scores). 2. AliView: Checks alignment accuracy and gap patterns. 3. MEGA: Evaluates genetic distances and phylogenetic signal. 4. TrimAl: Measures alignment consistency. 5. PartitionFinder: Assesses model fit. Metrics include alignment gaps, substitution saturation, and tree support values."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages for Phylogenetic and Evolutionary Analysis Formats include: 1. MEGA: Tree-building and evolutionary analysis (https://www.megasoftware.net/). 2. RAxML: Maximum likelihood phylogenetics (https://github.com/stamatak/standard-RAxML). 3. MrBayes: Bayesian inference (http://nbisweden.github.io/MrBayes/). 4. BEAST: Divergence time estimation (https://beast.community/). 5. MAFFT: Sequence alignment (https://mafft.cbrc.jp/alignment/software/). These often run on local machines or clusters."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Phylogenetic and Evolutionary Analysis Formats are frequently used in: 1. Evolutionary Biology: Reconstructing species relationships. 2. Microbial Genomics: Tracking pathogen evolution. 3. Conservation Biology: Assessing biodiversity. 4. Anthropology: Studying human origins. 5. Molecular Evolution: Analyzing gene family dynamics. 6. Epidemiology: Tracing disease outbreaks."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Phylogenetic and Evolutionary Analysis Formats in clinical settings are used for diagnostics (e.g., identifying pathogen strains in outbreaks), prognostics (e.g., predicting viral evolution like SARS-CoV-2 variants), and treatment selection (e.g., tracking drug resistance in HIV), translating evolutionary insights into public health strategies."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Phylogenetic and Evolutionary Analysis Formats face challenges like incomplete taxon sampling, alignment errors in divergent sequences, computational demands for large datasets, and model misspecification, all of which can distort tree accuracy and evolutionary inferences."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Limitations in Phylogenetic and Evolutionary Analysis Formats include: 1. Incomplete Sampling: Missing taxa skew trees. 2. Alignment Errors: Misaligned regions mislead inferences. 3. Model Assumptions: Oversimplified models misrepresent evolution. 4. Horizontal Gene Transfer: Complicates tree-based models. 5. Data Sparsity: Short sequences limit resolution. 6. Overinterpretation: Trees may not reflect true history. 7. Context Dependency: Results vary by gene or region. 8. Lack of Functional Insight: Sequence-based only. These restrict robust evolutionary conclusions without additional data."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security for Phylogenetic and Evolutionary Analysis Formats protects sensitive sequence data with: ### 1. Encryption: AES-256 at rest, TLS in transit. ### 2. Access Control: RBAC, MFA, audit logs. ### 3. Anonymization: Removing sample identifiers. ### 4. Storage: Secure cloud (e.g., AWS) or local servers. ### 5. Compliance: GDPR, HIPAA if applicable. ### 6. Minimization: Limiting sequence collection. ### 7. Backup: Encrypted recovery. ### 8. Sharing: Secure platforms (e.g., GenBank). ### 9. Integrity: Hashing (SHA-256). These safeguard privacy."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns for Phylogenetic and Evolutionary Analysis Formats include: 1. Re-identification Risk: Linking sequences to individuals. 2. Data Breaches: Exposure risks misuse. 3. Informed Consent: Clear usage terms needed. 4. Third-Party Sharing: Potential unintended use. 5. Discrimination: Genetic predisposition exposure. 6. Family Implications: Relatives\u2019 data inferred. 7. Long-Term Privacy: Future tech increases risks. 8. Regulatory Gaps: Laws lag behind advances. ### Solutions: Consent, encryption, regulations, ethical sharing."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Key repositories for Phylogenetic and Evolutionary Analysis Formats include: 1. NCBI GenBank: Sequence data (https://www.ncbi.nlm.nih.gov/genbank/). 2. Ensembl: Comparative genomics (https://www.ensembl.org/). 3. TreeBASE: Phylogenetic trees (https://www.treebase.org/). 4. SILVA: rRNA sequences (https://www.arb-silva.de/). 5. Phytozome: Plant phylogenetics (https://phytozome.jgi.doe.gov/)."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Standards for Phylogenetic and Evolutionary Analysis Formats include: ### 1. Data Formats: FASTA, Newick, PHYLIP for sequences and trees. ### 2. QC: MEGA, TrimAl for alignment quality. ### 3. Guidelines: PhyloXML standards; CIPRES workflows (https://www.phylo.org/). ### 4. Sharing: FAIR principles; MIAPE metadata. ### 5. Metrics: Bootstrap values, posterior probabilities. These ensure consistency and reliability."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "NEXUS (.nex, .nxs)",
+        "Newick (.nwk, .tree)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://biopython.org/wiki/Phylo, https://bioconvert.readthedocs.io/en/main/ref_converters.html"
+      ]
+    ]
+  }
+]

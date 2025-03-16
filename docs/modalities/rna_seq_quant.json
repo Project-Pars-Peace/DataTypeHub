@@ -1,0 +1,320 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "rna_seq_quant"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "RNA-Seq Quantification and Analysis Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Using high-throughput sequencing to quantify RNA transcripts and analyze their features."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "RNA-Seq Quantification and Analysis Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "RNA-Seq quantification and analysis measure RNA transcripts to profile gene expression. It works by extracting RNA from cells or tissues, converting it into complementary DNA (cDNA), and sequencing it using short-read (Illumina) or long-read (PacBio, ONT) technologies. The resulting reads are aligned to a reference genome or assembled de novo, and transcript abundance is quantified using methods like TPM, FPKM, or RPKM. Advanced statistical models, including differential expression analysis (DESeq2, edgeR), identify significant changes across conditions, while bioinformatics tools analyze alternative splicing, isoform diversity, and pathway enrichment to reveal functional insights into cellular processes."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "TSV (.tsv, .txt)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "RNA-Seq quantification data is stored in formats like BAM, which contains aligned sequence reads with mapping quality scores; GTF/GFF, which annotates genomic features; and gene expression matrices (e.g., TSV, CSV) where rows represent genes, columns represent samples, and values indicate normalized read counts (TPM, FPKM, or raw counts)."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "RNA-Seq data quality is assessed using metrics like sequencing depth, per-base Phred quality scores, GC content, read duplication levels, and adapter contamination. Key tools include FastQC for raw read assessment, MultiQC for aggregated reports, and RNA-SeQC for transcriptome mapping quality."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw RNA-Seq data sizes vary by read depth and sequencing platform, with Illumina FASTQ files typically ranging from ~1\u201310 GB per sample, while BAM alignment files can reach ~10\u201350 GB, and gene expression matrices (e.g., CSV, TSV) are usually in the MB range."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed RNA-Seq data is visualized using **heatmaps (gene expression clustering), volcano plots (differential expression analysis), PCA plots (sample variability), coverage tracks (IGV), and pathway enrichment diagrams (KEGG, GO analysis)**."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed RNA-Seq data varies: gene expression matrices (CSV/TSV) ~10\u2013500 MB, alignment files (BAM) ~10\u201350 GB, transcript annotation files (GTF/GFF) ~MBs\u2013GBs, and count matrices (HDF5, Loom) ~100 MB\u2013a few GBs, depending on sequencing depth and sample number."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters include **sequencing depth (reads per gene), read length (e.g., 50\u2013150 bp for Illumina), number of replicates (biological/technical), mapping rate (alignment percentage), gene body coverage, and transcript diversity (isoform complexity in single-cell or bulk RNA-Seq)**."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "RNA-Seq quantification and analysis in bioinformatics typically address questions like: **Which genes are differentially expressed under specific conditions? How do transcriptomic profiles vary across tissues, cell types, or disease states? What are the alternative splicing patterns and isoform variations in a given sample?** Typical research aims include: **Characterizing gene expression changes in response to environmental or genetic factors, identifying biomarkers for diseases like cancer, uncovering regulatory networks and pathways involved in cellular functions, and studying transcriptomic heterogeneity in single-cell RNA-Seq to understand cellular diversity and development.**"
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In RNA-Seq quantification and analysis, preprocessing involves **trimming low-quality bases and adapter sequences (using tools like Trimmomatic or Cutadapt), filtering out contaminant reads, and removing rRNA sequences to improve data quality**. Quality control (QC) assesses **sequencing depth, per-base Phred quality scores, GC content, duplication levels, and adapter contamination (using FastQC, MultiQC)** to identify potential biases or artifacts before downstream analysis. Additionally, **read alignment quality (checked with STAR, HISAT2) and gene body coverage distribution (via RNA-SeQC) ensure reliable transcript quantification and differential expression analysis.**"
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In RNA-Seq quantification and analysis, common preprocessing steps include: **1. Filtering**: Removing low-quality reads, rRNA contamination, and sequencing artifacts to improve data reliability. **2. Trimming**: Cutting off adapter sequences and low-quality bases from read ends using tools like Trimmomatic or Cutadapt. **3. Normalization**: Adjusting for sequencing depth differences to enable fair comparison across samples, using methods like TPM, FPKM, or DESeq2\u2019s variance stabilizing transformation. **4. Batch correction**: Correcting for technical variations between sequencing runs or sample batches using tools like Combat or SVA. **5. Imputation**: Estimating missing values in gene expression data to prevent data loss in downstream analysis. These steps ensure accurate, unbiased transcript quantification and enhance the robustness of differential expression analysis."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed RNA-Seq data include: **1. FastQC**: Provides metrics like per-base Phred quality scores, GC content, sequence duplication levels, and adapter contamination. **2. Trimmomatic**: Used for trimming low-quality bases and adapter sequences to improve read quality. **3. Fastp**: A fast, all-in-one tool for filtering, trimming, and quality assessment. **4. RNA-SeQC**: Evaluates RNA-Seq alignment quality with metrics like gene body coverage, mapping rate, and rRNA contamination. **5. MultiQC**: Aggregates reports from various QC tools to provide an overview of sample quality. Metrics typically include **read quality scores (Phred score), sequencing depth, alignment rate, transcript coverage distribution, and batch effects**, ensuring high-quality data for downstream analysis."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "For RNA-Seq quantification and analysis, key software tools include **STAR** for splice-aware alignment, **HISAT2** for efficient RNA-Seq read mapping, and **Salmon** and **Kallisto** for alignment-free transcript quantification. For differential expression analysis, **DESeq2** and **EdgeR** are commonly used to identify gene expression changes. Data visualization is typically handled by **IGV** for viewing alignments and annotations, **CummeRbund** for visualizing Cufflinks results, and **MultiQC** for aggregating quality control metrics. **FastQC** and **Fastp** are essential for assessing raw read quality, including GC content, read length, and adapter contamination, while **RNA-SeQC** evaluates alignment and gene body coverage. These tools, along with **ggplot2** for generating plots, enable comprehensive analysis and visualization of RNA-Seq data."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "RNA-Seq quantification and analysis is frequently used in several key research areas, including: 1. **Disease Research**: To investigate gene expression changes in diseases like cancer, neurodegenerative disorders, and cardiovascular diseases. 2. **Cancer Research**: For identifying differentially expressed genes and molecular pathways that contribute to tumorigenesis and metastasis. 3. **Drug Discovery**: To uncover gene targets for therapeutic intervention and understand the molecular mechanisms underlying drug response. 4. **Personalized Medicine**: For tailoring medical treatments based on individual gene expression profiles and identifying biomarkers for precision medicine. 5. **Microbial Genomics**: To study the transcriptomes of microbes, providing insights into microbial responses to environmental stressors, antibiotics, and pathogenicity. 6. **Developmental Biology**: To explore gene expression patterns during various stages of development and differentiation. 7. **Agricultural Science**: For improving crops and livestock through the identification of genes associated with desirable traits such as yield, resistance to diseases, and stress tolerance. 8. **Environmental Science**: To analyze the impact of environmental factors on gene expression in various organisms, aiding in conservation and ecosystem health monitoring."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "RNA-Seq quantification and analysis is increasingly used in clinical settings for diagnostics, prognostics, and treatment selection. It allows for the identification of disease-associated gene expression profiles, which can help diagnose various conditions, including cancers, genetic disorders, and infections. In personalized medicine, RNA-Seq is used to determine the most effective treatment options by analyzing gene expression patterns and identifying biomarkers for drug response or resistance. It also plays a crucial role in prognostics by predicting disease progression or relapse, especially in cancer, where RNA-Seq helps stratify patients based on their tumor\u2019s molecular characteristics and informs decisions regarding targeted therapies and immunotherapies."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "RNA-Seq quantification and analysis faces several technical challenges, including issues with data quality such as sequencing errors, low-quality reads, and adapter contamination, which can lead to inaccurate gene expression measurements. The complexity of transcriptomes, with alternative splicing, isoforms, and lowly expressed genes, adds another layer of difficulty in accurately quantifying gene expression. High computational demands arise from the large volume of data generated, requiring significant storage and processing power for alignment, normalization, and downstream analysis. Additionally, discrepancies in sequencing depth across samples and batch effects can confound results, and the choice of reference genome or transcriptome can influence analysis outcomes. Variations in error profiles between different sequencing platforms also complicate data interpretation, especially when comparing results across studies."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "RNA-Seq quantification and analysis provides valuable insights into gene expression, but there are several limitations related to biological interpretation and the scope of inferences that can be drawn from the data. These include: 1. **Incomplete or Bias in Transcriptome Representation**: RNA-Seq data may not capture all transcripts, particularly lowly expressed genes or those with complex isoforms, which can lead to incomplete or biased gene expression profiles. 2. **Technical Noise and Errors**: RNA-Seq is prone to technical errors such as sequencing bias, adapter contamination, and amplification artifacts, which can introduce noise into the data and affect downstream analysis. 3. **Difficulty in Detecting Low-Expressed Genes**: Genes with low expression levels may not be detected accurately, leading to an incomplete picture of the transcriptome. 4. **Reference Genome Dependence**: The reliance on a reference genome or transcriptome can limit the discovery of novel genes or splice variants, particularly for species without a well-annotated genome. 5. **Interpretation of Differential Expression**: Differences in gene expression may not always reflect biological significance, as variations in expression can be influenced by multiple factors, including sample quality, sequencing depth, and batch effects. 6. **Lack of Functional Context**: RNA-Seq data alone does not provide direct functional information about the genes, and without complementary data (e.g., proteomics, phenotypic data), the biological relevance of expression changes can be difficult to interpret. 7. **Context Dependence**: Gene expression patterns can vary significantly depending on the biological context (e.g., tissue type, developmental stage, environmental conditions), making it difficult to generalize findings across different studies or conditions. In summary, while RNA-Seq is a powerful tool for studying gene expression, its limitations in completeness, accuracy, and context must be carefully considered when interpreting the data biologically."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security and protection of sensitive genomic data are crucial due to its personal and potentially identifiable nature. Key measures include **data encryption**, both at rest and in transit, to prevent unauthorized access and interception. **Access control** through role-based access and multi-factor authentication, along with maintaining **audit logs**, helps ensure that only authorized individuals can access the data. **Data anonymization and de-identification** techniques, such as removing personal identifiers and geographic details, mitigate privacy risks. Secure **data storage solutions**, including cloud storage with robust security or local servers with physical protection, are necessary. Adherence to **compliance regulations** like HIPAA and GDPR ensures legal protection, while **data minimization** and regular **backup and recovery** protocols reduce the risk of data breaches. When sharing data, secure methods like encrypted transfers and compliance with genomics-specific data-sharing platforms, such as the **Genomic Data Commons (GDC)**, enhance privacy. Lastly, ensuring **data integrity** through hashing algorithms prevents alterations or corruption, offering robust protection against misuse and breaches. These comprehensive strategies are essential to safeguard sensitive genomic data in both research and clinical settings."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns related to genomic data are critical due to its deeply personal nature and potential for misuse. Key concerns include **re-identification risk**, where even anonymized data can be linked back to individuals through advanced analysis or data linking. **Data breaches** pose a significant threat, as exposure of genomic data could lead to identity theft, discrimination, or stigmatization. **Informed consent** is essential, ensuring individuals understand how their data will be used, stored, and shared, with the option to withdraw consent at any time. **Third-party sharing** can lead to misuse, such as marketing or uses beyond the initial agreement. **Genetic discrimination** remains a concern, particularly in health insurance or employment. Additionally, **family implications** arise, as genomic data can reveal information about relatives, raising privacy concerns for family members. **Long-term privacy** risks are associated with the permanence of genetic data, as future advancements may reveal unforeseen insights. Lastly, **regulatory gaps** exist, as current laws often fail to fully address the complexities and rapid advancements in genomics. To address these concerns, **informed consent**, **encryption**, adherence to privacy regulations like **GDPR** and **HIPAA**, and **ethical data sharing** practices are vital for safeguarding genomic data privacy."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Here are some key public databases and data repositories for DNA-related data, including genome assemblies, sequence data, and genomic information: **NCBI GenBank** stores nucleotide sequences and complete genome assemblies for a wide variety of species ([GenBank](https://www.ncbi.nlm.nih.gov/genbank/)). **Ensembl** provides comprehensive genome assemblies and functional annotation for multiple species ([Ensembl](https://www.ensembl.org/)). The **UCSC Genome Browser** offers a platform for exploring genomic data, including DNA sequences and annotations ([UCSC Genome Browser](https://genome.ucsc.edu/)). The **Genome Reference Consortium (GRC)** provides curated reference genome assemblies, primarily for humans ([GRC](https://www.ncbi.nlm.nih.gov/grc)). **NCBI GEO** contains genomic datasets and DNA microarrays, focusing on gene expression data ([GEO](https://www.ncbi.nlm.nih.gov/geo/)). **ArrayExpress** offers high-throughput gene expression data, including DNA-related data like ChIP-seq and DNA sequencing datasets ([ArrayExpress](https://www.ebi.ac.uk/arrayexpress/)). The **1000 Genomes Project** provides a catalog of human genetic variation with genome-wide data for diverse populations ([1000 Genomes Project](https://www.internationalgenome.org/)). **gnomAD** aggregates genomic data from various populations, focusing on genetic variants and their frequencies ([gnomAD](https://gnomad.broadinstitute.org/)). These databases are essential for genomic studies, including variant analysis, gene expression, and comparative genomics."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "There are several community standards and best-practice guidelines for genome assembly data to ensure consistency, quality, and reproducibility. Common data formats include **FASTA** for nucleotide sequences, **GFF/GTF** for genomic feature annotations, and **VCF** for documenting genetic variants. For quality control (QC), tools like **QUAST** (for assembly quality), **BUSCO** (for genome completeness), and **FASTQC** (for raw sequencing quality) are widely used. Best-practice guidelines and analysis pipelines such as **GATK** (for sequencing data processing), **NGS Pipelines** (for assembly and variant analysis), and **GA4GH** (for global standards in data sharing and analysis) help ensure consistent workflows. Additionally, data sharing and metadata are guided by the **FAIR principles** (making data findable, accessible, and reusable) and the **Dublin Core** metadata framework. Key assembly metrics like **N50** and **L50** are used to evaluate assembly quality. These efforts help promote standardization in genomic data management and analysis."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "Kallisto (.tsv, .h5)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://docs.h5py.org/en/stable/high/file.html"
+      ],
+      [
+        "RSEM (.genes.results, .isoforms.results)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://pandas.pydata.org/"
+      ],
+      [
+        "Salmon (.sf, .quant.sf)",
+        "TSV (.tsv, .txt)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://bioconductor.org/packages/release/bioc/html/tximport.html"
+      ]
+    ]
+  }
+]

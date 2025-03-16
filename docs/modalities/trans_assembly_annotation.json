@@ -1,0 +1,314 @@
+[
+  
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "trans_assembly_annotation"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+        "Transcriptomics"
+      ]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Transcriptome Assembly and Annotation Formats"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Reconstructing full RNA transcripts from sequencing data and assigning functional annotations."
+    },
+    {
+      "level": "prepration-meta-data-prepared_by",
+      "title": "prepared_by",
+      "content-type": "rawtext",
+      "content": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com"
+    },
+    {
+      "level": "prepration-meta-data-confirmed_by",
+      "title": "confirmed_by",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-date_of_preparation",
+      "title": "date_of_preparation",
+      "content-type": "rawtext",
+      "content": "2025-03-17"
+    },
+    {
+      "level": "prepration-meta-data-planned_next_review",
+      "title": "planned_next_review",
+      "content-type": "rawtext",
+      "content": ""
+    },
+    {
+      "level": "prepration-meta-data-requires_completion",
+      "title": "requires_completion",
+      "content-type": "rawtext",
+      "content": "Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output"
+    }
+  ,
+  
+    {
+      "level": "1",
+      "title": "Core Modality Information",
+      "content-type": "markdown",
+      "content": "Transcriptomic"
+    },
+    {
+      "level": "1.1. ",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Transcriptome Assembly and Annotation Formats"
+    },
+    {
+      "level": "1.2. ",
+      "title": "Acronym(s)",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "1.3. ",
+      "title": "Biological Target and Underlying Principle",
+      "content-type": "markdown",
+      "content": "Transcriptome Assembly and Annotation Formats analyze RNA sequences to reconstruct and annotate the full set of transcripts (mRNA, non-coding RNA) expressed in a sample, providing insights into gene expression and transcript diversity. It works by sequencing RNA (e.g., via RNA-seq with Illumina or long-read platforms like PacBio), assembling these reads into full-length transcripts using de novo (e.g., Trinity) or reference-guided (e.g., StringTie) approaches, and annotating them with functional information (e.g., gene names, coding potential) by aligning to reference genomes or databases, leveraging algorithms like overlap-layout-consensus or graph-based methods to resolve transcript structures."
+    },
+    {
+      "level": "2",
+      "title": "Data Characteristics and Structure",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.1. ",
+      "title": "Raw Data",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "2.2. ",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "GTF (Gene Transfer Format) (.gtf)"
+    },
+    {
+      "level": "2.3. ",
+      "title": "Data Type & Structure",
+      "content-type": "markdown",
+      "content": "Transcriptome Assembly and Annotation Formats typically store nucleotide sequences and annotations in FASTA and GTF/GFF3 files, respectively, where FASTA contains transcript sequences with identifiers (e.g., transcript ID), and each GTF/GFF3 entry includes: (1) a sequence identifier (e.g., chromosome), (2) feature type (e.g., exon, CDS), (3) genomic coordinates, (4) strand, and (5) attributes (e.g., gene ID, transcript ID, expression values like FPKM), often paired with tabular files for expression quantification or functional annotations."
+    },
+    {
+      "level": "2.4. ",
+      "title": "Data Quality Metrics and Assessment",
+      "content-type": "markdown",
+      "content": "In Transcriptome Assembly and Annotation Formats, raw data quality is assessed using metrics like sequencing depth, read alignment rates, transcript completeness (e.g., BUSCO scores), and coverage uniformity, with tools such as FastQC, RSeQC, and TransRate commonly employed to evaluate these parameters."
+    },
+    {
+      "level": "2.5. ",
+      "title": "Typical Raw Data size",
+      "content-type": "markdown",
+      "content": "Raw data sizes for Transcriptome Assembly and Annotation Formats typically range from ~10-100 GB per RNA-seq experiment, depending on sequencing depth, read length (short vs. long), and sample complexity."
+    },
+    {
+      "level": "2.6.",
+      "title": " Data Representation & Visualization",
+      "content-type": "markdown",
+      "content": "Processed data from Transcriptome Assembly and Annotation Formats is typically visualized using transcript coverage plots (e.g., IGV), expression heatmaps, transcript abundance bar charts, gene ontology (GO) enrichment plots, and circular genome-transcriptome maps (e.g., Circos)."
+    },
+    {
+      "level": "2.7.",
+      "title": " Typical Processed Data size:",
+      "content-type": "markdown",
+      "content": "Processed data sizes for Transcriptome Assembly and Annotation Formats typically range from ~10 MB-1 GB for FASTA transcript sequences and GTF/GFF3 annotations, up to ~1-10 GB for outputs including expression estimates and functional annotations, depending on transcriptome size and complexity."
+    },
+    {
+      "level": "2.8.",
+      "title": " \"Resolution\" and Data Dimensions",
+      "content-type": "markdown",
+      "content": "Key parameters defining the granularity, detail, or scale of data in Transcriptome Assembly and Annotation Formats include sequencing depth (coverage), read length (short vs. long for full-length transcripts), reference genome quality, assembly contiguity (e.g., N50), annotation depth (e.g., functional categories), and sample diversity (e.g., tissues or conditions)."
+    },
+    {
+      "level": "2.9.",
+      "title": " Data Conversion and Related Types",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.10. ",
+      "title": "Conversion solutions",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "2.11. ",
+      "title": "Tool/Methodology for conversion.",
+      "content-type": "markdown",
+      "content": "In depth in the Genmic Sheet"
+    },
+    {
+      "level": "3",
+      "title": "Data Analysis Workflow & Tools",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "3.1. ",
+      "title": "Common Analysis Goals and Questions",
+      "content-type": "markdown",
+      "content": "Transcriptome Assembly and Annotation Formats typically address questions like: - What transcripts are expressed in a given condition or species? - How do transcriptomes differ across tissues or diseases? Typical research aims include: - Cataloging expressed genes and isoforms. - Annotating novel transcripts. - Investigating functional roles of RNA in biology."
+    },
+    {
+      "level": "3.2. ",
+      "title": "Preprocessing & Quality Control",
+      "content-type": "markdown",
+      "content": "In Transcriptome Assembly and Annotation Formats, preprocessing trims adapters, filters low-quality reads, and aligns or assembles RNA-seq data, while quality control evaluates read quality, assembly completeness, and annotation accuracy using tools like FastQC or BUSCO. These steps ensure reliable transcript reconstruction and annotation. The goal is to minimize artifacts and maximize biological relevance."
+    },
+    {
+      "level": "3.3. ",
+      "title": "Standard Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "In Transcriptome Assembly and Annotation Formats, common preprocessing steps include: 1. Filtering: Removing low-quality or short reads. 2. Trimming: Cutting adapters and low-quality bases. 3. Normalization: Reducing sequencing depth biases (e.g., for de novo assembly). 4. Alignment/Assembly: Mapping reads to a genome or assembling de novo (e.g., Trinity). 5. Error Correction: Fixing sequencing errors or misalignments. These steps optimize data for transcript reconstruction and annotation."
+    },
+    {
+      "level": "3.4. ",
+      "title": "Quality Control Tools & Metrics",
+      "content-type": "markdown",
+      "content": "Common software tools and metrics for quality control of preprocessed data in Transcriptome Assembly and Annotation Formats include: 1. FastQC: Assesses read quality (Phred scores). 2. RSeQC: Evaluates alignment and coverage metrics. 3. TransRate: Measures assembly quality (e.g., contig accuracy). 4. BUSCO: Checks transcriptome completeness. 5. MultiQC: Aggregates QC stats. Metrics include N50, mapped read percentage, and gene coverage."
+    },
+    {
+      "level": "3.5. ",
+      "title": "Software Packages & Resources",
+      "content-type": "markdown",
+      "content": "Major software packages for Transcriptome Assembly and Annotation Formats include: 1. Trinity: De novo assembly (https://github.com/trinityrnaseq/trinityrnaseq). 2. StringTie: Reference-guided assembly (https://ccb.jhu.edu/software/stringtie/). 3. STAR: RNA-seq alignment (https://github.com/alexdobin/STAR). 4. MAKER: Annotation pipeline (http://www.yandell-lab.org/software/maker.html). 5. Blast2GO: Functional annotation (https://www.blast2go.com/). These often run on high-performance clusters or cloud platforms (e.g., AWS)."
+    },
+    {
+      "level": "4",
+      "title": "Applications, Limitations, and Considerations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.1. ",
+      "title": "Applications",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.2. ",
+      "title": "Major Research Applications",
+      "content-type": "markdown",
+      "content": "Transcriptome Assembly and Annotation Formats are frequently used in: 1. Disease Research: Profiling disease-specific transcripts. 2. Evolutionary Biology: Comparing transcriptomes across species. 3. Agricultural Science: Enhancing crop traits via gene discovery. 4. Developmental Biology: Studying gene expression in development. 5. Environmental Science: Assessing stress responses. 6. Functional Genomics: Annotating gene roles."
+    },
+    {
+      "level": "4.3. ",
+      "title": "Clinical/Translational Applications",
+      "content-type": "markdown",
+      "content": "Transcriptome Assembly and Annotation Formats in clinical settings are used for diagnostics (e.g., identifying novel disease transcripts), prognostics (e.g., linking expression profiles to outcomes), and treatment selection (e.g., targeting overexpressed genes), translating RNA profiles into actionable clinical insights."
+    },
+    {
+      "level": "4.4. ",
+      "title": "Strengths and Limitations",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.5. ",
+      "title": "Technical Challenges & Limitations",
+      "content-type": "markdown",
+      "content": "Transcriptome Assembly and Annotation Formats face challenges like incomplete transcript reconstruction (especially with short reads), high computational demands for de novo assembly, annotation errors due to poor reference databases, and difficulty resolving lowly expressed or complex isoforms, all complicating accurate analysis."
+    },
+    {
+      "level": "4.6. ",
+      "title": "Biological & Interpretational Limitations",
+      "content-type": "markdown",
+      "content": "Limitations in Transcriptome Assembly and Annotation Formats include: 1. Incomplete Assemblies: Missing low-expression transcripts. 2. Assembly Errors: Misassembled isoforms skew results. 3. Annotation Gaps: Limited functional data for novel transcripts. 4. Short-Read Bias: Full-length transcripts hard to resolve. 5. Species Specificity: Poorly studied organisms lack references. 6. Overinterpretation: Expression doesn\u2019t ensure function. 7. Context Dependency: Tissue- or condition-specific results. 8. Lack of Protein Data: RNA doesn\u2019t confirm translation. These limit robust biological insights without validation."
+    },
+    {
+      "level": "4.7. ",
+      "title": "Ethical, Regulatory, and Security Aspects",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "4.8. ",
+      "title": "Security Concern",
+      "content-type": "markdown",
+      "content": "Security for Transcriptome Assembly and Annotation Formats protects sensitive RNA data with: ### 1. Encryption: AES-256 at rest, TLS in transit. ### 2. Access Control: RBAC, MFA, audit logs. ### 3. Anonymization: Masking patient IDs. ### 4. Storage: Secure cloud (e.g., AWS) or local servers. ### 5. Compliance: HIPAA, GDPR adherence. ### 6. Minimization: Limiting data scope. ### 7. Backup: Encrypted recovery. ### 8. Sharing: Secure platforms (e.g., SRA). ### 9. Integrity: Hashing (SHA-256). These ensure privacy."
+    },
+    {
+      "level": "4.9. ",
+      "title": "Privacy Concerns",
+      "content-type": "markdown",
+      "content": "Privacy concerns for Transcriptome Assembly and Annotation Formats include: 1. Re-identification Risk: Linking transcripts to individuals. 2. Data Breaches: Exposure risks misuse. 3. Informed Consent: Clear usage terms needed. 4. Third-Party Sharing: Potential unintended use. 5. Discrimination: Health-related bias. 6. Family Implications: Relatives\u2019 traits inferred. 7. Long-Term Privacy: Future analyses increase risks. 8. Regulatory Gaps: Laws lag behind tech. ### Solutions: Consent, encryption, regulations, ethical sharing."
+    },
+    {
+      "level": "4.10. ",
+      "title": "Other consideration",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5",
+      "title": "Resources",
+      "content-type": "markdown",
+      "content": "-"
+    },
+    {
+      "level": "5.1. ",
+      "title": "Key Databases and Repositories",
+      "content-type": "markdown",
+      "content": "Key repositories for Transcriptome Assembly and Annotation Formats include: 1. NCBI SRA: Raw RNA-seq data (https://www.ncbi.nlm.nih.gov/sra). 2. Ensembl: Transcript annotations (https://www.ensembl.org/). 3. GEO: Expression datasets (https://www.ncbi.nlm.nih.gov/geo/). 4. GENCODE: Annotated transcripts (https://www.gencodegenes.org/). 5. RNAcentral: Non-coding RNA (https://rnacentral.org/)."
+    },
+    {
+      "level": "5.2. ",
+      "title": "Standardization Efforts",
+      "content-type": "markdown",
+      "content": "Standards for Transcriptome Assembly and Annotation Formats include: ### 1. Data Formats: FASTA for sequences, GTF/GFF3 for annotations. ### 2. QC: FastQC, TransRate for assembly quality. ### 3. Guidelines: ENCODE RNA-seq protocols; Bioconductor workflows. ### 4. Sharing: FAIR principles; MIAME metadata. ### 5. Metrics: N50, transcript completeness (BUSCO). These ensure consistency and reproducibility."
+    }
+  ,
+  {
+    "level": "2.10.",
+    "title": "Conversion solutions",
+    "content-type": "table",
+    "content": [
+      [
+        "conversion_from",
+        "conversion_to",
+        "description",
+        "link to code/software"
+      ],
+      [
+        "GFF (General Feature Format)(.gff, .gff3)",
+        "GTF (Gene Transfer Format) (.gtf)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://agat.readthedocs.io/en/latest/index.html"
+      ],
+      [
+        "BED (Browser Extensible Data)(.bed)",
+        "GTF (Gene Transfer Format) (.gtf)",
+        "The resources provided in the link include solutions sourced from articles, GitHub repositories, and other platforms.",
+        "https://agat.readthedocs.io/en/latest/index.html"
+      ]
+    ]
+  }
+]
