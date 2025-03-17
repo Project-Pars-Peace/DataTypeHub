@@ -1,0 +1,311 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "Hysteroscopy"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "Video"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Hysteroscopy"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "no universal acronym ",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "The device is inserted through the cervix into the uterine cavity, where it transmits real-time video images to a monitor. This allows for direct visualization of the endometrial lining and intrauterine structures without the need for radiation or external imaging modalities\n"
+    },
+    {
+        "level": "1. ",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "Hysteroscopy"
+    },
+    {
+        "level": "2.",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "no universal acronym"
+    },
+    {
+        "level": "3. ",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "The device is inserted through the cervix into the uterine cavity, where it transmits real-time video images to a monitor. This allows for direct visualization of the endometrial lining and intrauterine structures without the need for radiation or external imaging modalities. reference:https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/hysteroscopy?utm_source=chatgpt.com"
+    },
+    {
+        "level": "4. ",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1.",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM,MP4,AVI,MOV,MPEG,WMV,MKV"
+    },
+    {
+        "level": "4.2.",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "RGB, Grayscale, 3D Volumetric, Time-Series Data"
+    },
+    {
+        "level": "4.3.",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "Video"
+    },
+    {
+        "level": "4.4.",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM"
+    },
+    {
+        "level": "4.5.",
+        "title": "Conversion Solutions",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion from",
+                "conversion to",
+                "description",
+                "links",
+                ""
+            ],
+            [
+                "mpeg/mp4",
+                "dicom",
+                "Explanation of the Code: Video to DICOM Conversion This C# code converts a video file (MP4 or MPEG4 format) into a DICOM (Digital Imaging and Communications in Medicine) file, which is commonly used in medical imaging.  Tools Used: fo-dicom (DICOM library for handling medical images and videos) System.IO (for file operations) Custom Utility Classes (e.g., VideoUtils) (to extract video metadata) Process Breakdown: Extract Video Metadata:  Uses VideoUtils.Instance.GetVideoMetaData(srcFilePath) to extract video details like: Resolution (width x height) Frame rate (FPS) Total duration (seconds) Create a DICOM Dataset:  Defines a DICOM dataset using DicomDataset from fo-dicom Assigns standard DICOM attributes such as: SOPInstanceUID, StudyInstanceUID, SeriesInstanceUID (Unique Identifiers) Number of Frames, Resolution (Columns & Rows), Bits Allocated (8-bit) Specify Video Encoding & Compression:  Defines MPEG-4 AVC/H.264 encoding using DicomTransferSyntax.MPEG4AVCH264HighProfileLevel42For2DVideo Specifies lossy compression using ISO_14496_10 standard (H.264) Uses Photometric Interpretation: YBR_PARTIAL_420 (a color encoding format) Convert Video to DICOM Pixel Data:  Calls CreateDicomVideoPixelData(metadata, dataset) to configure pixel properties Reads the video file as raw byte data using GetVideoData(srcFilePath) Stores the video bytes in MemoryByteBuffer and adds it as a frame to DICOM Save as DICOM File:  Creates a DicomFile and saves it as \"C:\\\\testvideos\\\\test.dcm\" Supported Input Formats: \u2714 MP4, MPEG4 (H.264) (Since DicomTransferSyntax.MPEG4AVCH264HighProfileLevel42For2DVideo is used)",
+                "https://github.com/pydicom/pydicom",
+                ""
+            ],
+            [
+                "mpeg",
+                "dicom",
+                "Short Description: This Java code is part of a DICOM (Digital Imaging and Communications in Medicine) conversion tool. It converts an MPEG video stream into a DICOM file, ensuring that necessary DICOM metadata and headers are included. The function writeDicomFile takes an MPEG file as input, processes its pixel data, and embeds it into a DICOM file, preserving the video format for medical imaging purposes. The updated code allows specifying an optional MPEG file length, which helps in handling undefined-length sequences in DICOM pixel data.  Key Functionalities: Reads an MPEG video stream (mpgInput) Writes DICOM headers and metadata Embeds video pixel data into the DICOM file Supports both defined and undefined length MPEG streams Tools & Libraries Used: Java I/O (java.io.File, java.io.IOException, java.util.Optional, java.util.Date) \u2013 Used for file handling and optional parameters. DICOM Toolkit (dcm4che or similar library) \u2013 Likely used for handling DICOM attributes, writing datasets, and creating metadata. DataInputStream \u2013 Reads raw MPEG data for embedding in the DICOM file. Tag & VR (Value Representation) Handling \u2013 Manages DICOM-specific pixel data and headers.",
+                "https://github.com/tomdoel/mpg2dcm/commit/f0661084457a3085f6297abf4147381789b2e29f",
+                ""
+            ],
+            [
+                "wmv",
+                "mpeg",
+                "This Python script converts a WMV (Windows Media Video) file to MPEG format using the FFmpeg library. It takes an input .wmv file, applies the MPEG-2 video codec (mpeg2video) and MP2 audio codec (mp2), and generates an output .mpeg file. The overwrite_output=True flag ensures that the script overwrites the output file if it already exists.",
+                "https://github.com/kkroening/ffmpeg-python",
+                ""
+            ],
+            [
+                "mkv",
+                "mpeg",
+                "This Python script converts an MKV video file to MPEG format using the FFmpeg library. The script takes an input .mkv file, applies the MPEG-2 video codec (mpeg2video) and MP2 audio codec (mp2), and outputs a .mpeg file. The overwrite_output=True flag ensures the output file is replaced if it already exists.  Tools Used: FFmpeg \u2013 A powerful open-source multimedia framework for handling video/audio processing and conversion. Python \u2013 The programming language used to run the script. ffmpeg-python \u2013 A Python wrapper for FFmpeg, enabling programmatic access to FFmpeg's capabilities.",
+                "https://github.com/FFmpeg/FFmpeg",
+                ""
+            ],
+            [
+                "mov",
+                "mpeg",
+                "This Python script converts a MOV file to an MPEG file using FFmpeg. It applies the MPEG-2 video codec (mpeg2video) and MP2 audio codec (mp2) for encoding. The script uses the ffmpeg-python library to call FFmpeg functions directly from Python, automating the video conversion process.  Tools Used: FFmpeg \u2013 A powerful open-source multimedia framework used for video and audio processing, including encoding, decoding, and format conversion. ffmpeg-python \u2013 A Python wrapper for FFmpeg that allows executing FFmpeg commands programmatically within Python scripts.",
+                "https://github.com/kkroening/ffmpeg-python",
+                ""
+            ],
+            [
+                "avi",
+                "mpeg",
+                "This Python script converts an AVI file to an MPEG format using the FFmpeg library. It takes an AVI file as input and outputs an MPEG file using the MPEG-2 video codec (mpeg2video) and MP2 audio codec (mp2). The script utilizes the ffmpeg-python package, which provides Python bindings for the FFmpeg multimedia framework, allowing seamless execution of FFmpeg commands within Python.",
+                "https://github.com/kkroening/ffmpeg-python",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "5.",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1.",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "1920 \u00d7 1080 pixels  to 3840 \u00d7 2160 pixels. reference:https://medical.olympusamerica.com/procedure/hysteroscopy?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.2.",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "0.01 mm \u2013 0.1 mm per pixel. reference:https://pubmed.ncbi.nlm.nih.gov/22196255/"
+    },
+    {
+        "level": "5.3.",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "30 fps to 60 fps. reference:https://pubmed.ncbi.nlm.nih.gov/8290198/"
+    },
+    {
+        "level": "6. ",
+        "title": "Data Size (Storage Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1.",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "2 MB \u2013 5 MB per frame. reference:https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2020/03/the-use-of-hysteroscopy-for-the-diagnosis-and-treatment-of-intrauterine-pathology"
+    },
+    {
+        "level": "6.2.",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "500 MB \u2013 10 GB. reference:https://www.fertstert.org/article/S0015-0282(07)00527-4/fulltext"
+    },
+    {
+        "level": "7.",
+        "title": " Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1.",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "Video hysteroscope light source camera processor monitor storage system. referene:https://medical.olympusamerica.com/procedure/hysteroscopy?utm_source=chatgpt.com"
+    },
+    {
+        "level": "7.2.",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Olympus Karl Storz Stryker Richard Wolf Hologic"
+    },
+    {
+        "level": "8. ",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1.",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Diagnosis and treatment of intrauterine conditions including polyps fibroids adhesions abnormal bleeding endometrial evaluation. reference:https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/hysteroscopy?utm_source=chatgpt.com"
+    },
+    {
+        "level": "8.2.",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Operative hysteroscopy (e.g., endometrial ablation, myomectomy, polypectomy). Fertility assessment (e.g., tubal patency evaluation). reference:https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/hysteroscopy?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9. ",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1.",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "no"
+    },
+    {
+        "level": "9.2.",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "not applicable"
+    },
+    {
+        "level": "9.3.",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Fluid overload risks (hyponatremia, pulmonary edema) from distending media. Risk of infection and uterine perforation. Thermal injury (if electrosurgical instruments are used).reference:https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/hysteroscopy?utm_source=chatgpt.com"
+    },
+    {
+        "level": "10. ",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1.",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "White balance correction noise reduction contrast enhancement DICOM conversion (if applicable). referenec:https://pubmed.ncbi.nlm.nih.gov/23504345/"
+    },
+    {
+        "level": "10.2.",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless compression (JPEG2000, PNG) for still images. H.264/H.265 lossy compression for video storage. reference:https://pmc.ncbi.nlm.nih.gov/articles/PMC5013008/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "11.",
+        "title": " Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1.",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Limited depth perception in 2D imaging. Fluid clarity issues affecting visibility. Glare and reflection from light sources.reference:https://pmc.ncbi.nlm.nih.gov/articles/PMC4925151/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "11.2.",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Limited field of view compared to MRI or ultrasound. Cannot assess pathology beyond the uterine cavity. Operator-dependent outcomes. reference:https://my.clevelandclinic.org/health/treatments/10142-hysteroscopy?utm_source=chatgpt.com"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Amirhossein Nikfarjam"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-17"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
