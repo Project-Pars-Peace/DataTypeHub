@@ -1,0 +1,298 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "xray_cr"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "X-Ray"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "XRay_CR"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "CR",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Computed radiography (CR) is a digital imaging technique that uses photostimulable phosphor (PSP) plates to capture X-ray images instead of traditional film"
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "Computed Radiography"
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "CR"
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "CR acquires images by using a photostimulable phosphor plate to capture X-ray exposure, which is then scanned with a laser to release the stored energy as light, which is subsequently converted into a digital image"
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm), JPEG (.jpg, .jpeg), JPEG2000 (.jp2, .j2k), TIFF (.tif, .tiff), PNG (.png)"
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "grayscale"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "Radiography"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "JPEG (.jpg, .jpeg)",
+                "DICOM (.dcm)",
+                "***This solution demonstrates how to convert an image (such as PNG or BMP) into a DICOM file using Python, specifically for use in medical imaging applications. The steps involved are as follows:  Tools Used: pydicom: Used to create a DICOM dataset and handle DICOM metadata. Pillow (PIL): Used to load and process the image, handling different formats and converting them to appropriate modes. numpy: Used to manipulate the image data (e.g., converting to a suitable format for DICOM storage). uuid: Generates a unique identifier for the output DICOM file. Process: Load the Image: The image is loaded using Pillow (Image.open()), and basic file information (e.g., format, size) is printed. Convert Image Formats: If the image is in PNG or BMP format, it is converted to RGB mode to standardize pixel depth. Prepare Pixel Data: The image is processed based on its mode (L, RGB, RGBA), and the pixel data is converted to a NumPy array suitable for inclusion in a DICOM file.  ***Explanation of the Solution: Converting JPEG to DICOM in Java This Java program converts a JPEG image to a DICOM file and then updates the DICOM metadata (DICOM header) to include patient information. It uses Dcm4che, a Java-based open-source DICOM toolkit.  Tools Used: Java I/O Libraries (java.io) \u2013 Used for reading and writing files. Dcm4che (org.dcm4che2) \u2013 A DICOM library for handling, modifying, and writing DICOM files. FileInputStream & FileOutputStream \u2013 Used for reading and writing image data. DicomInputStream & DicomOutputStream (Dcm4che) \u2013 Used for reading and writing DICOM file structures. DicomObject (Dcm4che) \u2013 A DICOM object representation to store metadata. BufferedOutputStream \u2013 Improves efficiency in file writing. Process Breakdown: 1. Convert JPEG to DICOM The program loads a JPEG image (AA.jpg) and converts it to DICOM (AA.dcm). The Jpg2Dcm class handles the conversion without adding metadata. 2. Anonymizing and Adding DICOM Metadata The function anonymizeDicom() updates metadata fields such as: Patient ID Patient Name Study ID This is done using the replaceTag() function, which modifies specific DICOM tags. 3. Writing the Modified DICOM File After updating metadata, the function writeDicomFile() saves the modified DICOM file as AA_FINAL.dcm. 4. Batch Processing (Directory Scanning) The getFile() function scans a directory recursively and processes multiple JPEG images, converting and updating their DICOM headers.",
+                "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py , https://stackoverflow.com/questions/21087778/how-to-convert-jpg-image-to-dicom-file-using-dcm4che-3-2-1?rq=3"
+            ],
+            [
+                "JPEG2000 (.jp2, .j2k)",
+                "DICOM (.dcm)",
+                "This solution converts a JPEG 2000 (JP2) image file to a DICOM file using Python libraries. The process involves reading the JP2 image, extracting the image data, and creating a DICOM file with the appropriate metadata.  Tools Used: pydicom: For creating and saving DICOM files, including setting up metadata and handling pixel data. glymur: A library for reading JPEG 2000 (JP2) files. numpy: For handling the image data as an array. Process: Read the JP2 Image: The glymur library is used to read the JP2 image, and the pixel data is extracted into a NumPy array. Create DICOM Dataset: A new DICOM dataset is created using pydicom, setting up necessary attributes like Rows, Columns, PhotometricInterpretation, and pixel-related settings (16-bit grayscale, unsigned integer).",
+                "https://github.com/DraconPern/fmjpeg2koj , https://stackoverflow.com/questions/18009896/converting-from-jpeg-2000-to-dicom-using-dcmtk"
+            ],
+            [
+                "TIFF (.tif, .tiff)",
+                "DICOM (.dcm)",
+                "***This solution demonstrates how to convert a TIFF image into a DICOM file by extracting pixel data, adding relevant DICOM metadata, and saving it in the DICOM format.Tools Used: Pillow (PIL):  Description: A Python Imaging Library used to open and manipulate the input TIFF image. GitHub Reference: Pillow GitHub Documentation: Pillow documentation pydicom:  Description: A Python library for working with DICOM files. It is used to create a DICOM dataset, set metadata, and save the dataset as a DICOM file. GitHub Reference: pydicom GitHub Documentation: pydicom documentation numpy:  Description: A fundamental package for numerical computing in Python, used here to convert the image to an array for easier manipulation. GitHub Reference: numpy GitHub Documentation: numpy documentation Process: Load TIFF Image: The Pillow library is used to load the input TIFF image. Convert to numpy Array: The image is converted into a numpy array to facilitate manipulation and interaction with the pixel data. Create DICOM Dataset: A new DICOM dataset is created using pydicom. The pixel data from the image is added to the dataset, and essential metadata (such as patient information and modality) is included. Save DICOM File: The DICOM dataset is saved to a .dcm file using the pydicom library.  ***To convert TIFF images to DICOM format, MATLAB:  Using MATLAB: Tool: MATLAB Process: Utilize the dicomwrite function.",
+                "https://stackoverflow.com/questions/30338697/convert-tiff-to-dicom-using-matlab"
+            ],
+            [
+                "PNG (.png)",
+                "DICOM (.dcm)",
+                "This solution demonstrates how to replace the pixel data in an existing DICOM file with pixel data from a PNG image, creating a new DICOM file with updated image content.  Tools Used: Pillow (PIL):  Description: A Python Imaging Library used for opening, manipulating, and saving image files (in this case, the PNG file). GitHub Reference: Pillow GitHub Documentation: Pillow documentation numpy:  Description: A core Python library for numerical computing, used to manipulate the image data as arrays and ensure it is in a format suitable for the DICOM file. GitHub Reference: numpy GitHub Documentation: numpy documentation pydicom:  Description: A Python library for working with DICOM files. It allows reading, modifying, and saving DICOM datasets, including setting pixel data and metadata. GitHub Reference: pydicom GitHub Documentation: pydicom documentation Process: Load Existing DICOM: The pydicom library is used to read a pre-existing DICOM file. Load PNG Image: The Pillow library loads the PNG image to be used for replacing the image data in the DICOM file.                                                                  Process Image Data: If the PNG image is in grayscale mode (L), the pixel data is extracted and set as MONOCHROME1 (1-channel grayscale). If the PNG image is in RGBA mode, the pixel data is extracted and set as RGB (3-channel color). Update DICOM Metadata: The appropriate metadata for rows, columns, pixel data type, and bit depth is updated in the DICOM file based on the image mode. Save Updated DICOM: The modified DICOM file is saved with a new name reflecting the changes. Output: The code creates two output DICOM files: one with grayscale data (0015_result_bw.dcm) and one with RGB data (0015_result_rgb.dcm), depending on the image mode.",
+                "https://github.com/pydicom/pydicom/issues/939"
+            ],
+            [
+                "BMP (.bmp)",
+                "DICOM (.dcm)",
+                "This solution demonstrates how to convert a BMP image to a DICOM file using VTK and GDCM libraries, which handle image reading and writing operations.  Tools Used: VTK (Visualization Toolkit):  Description: A software system for 3D computer graphics, image processing, and visualization. The vtkBMPReader is used to read BMP files, and it also handles lookup tables if needed. GitHub Reference: VTK GitHub Documentation: VTK documentation GDCM (Grassroots DICOM):  Description: A library for handling DICOM files. In this solution, vtkGDCMImageWriter is used to write the image data into DICOM format. GitHub Reference: GDCM GitHub Documentation: GDCM documentation Process: Read BMP Image: The vtkBMPReader is used to load the input BMP image. Handle Lookup Tables (if present): If the BMP image uses a lookup table, the Allow8BitBMPOn() method ensures that the lookup table is appropriately applied to the image. Write DICOM File: The vtkGDCMImageWriter is used to write the image data into a DICOM format (.dcm file).",
+                "https://stackoverflow.com/questions/5035078/convert-bmp-image-into-dicom"
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "ranges between 2.5 to 5 lp/mm, depending on factors such as the imaging plate's phosphor composition and the system's processing capabilities, Reference: https://ajronline.org/doi/10.2214/AJR.14.13126?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "range from 100 to 200 \u00b5m. a standard CR cassette measuring 35 \u00d7 43 cm with a matrix size of 2000 \u00d7 2500 pixels results in a pixel size of approximately 175 \u00b5m, Reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7461739/"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "not a critical parameter for this modality"
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "30 MB, Reference: https://www.dicomlibrary.com/dicom/study-structure/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "depending on the number of exposures and the resolution settings used, Reference: https://ajronline.org/doi/full/10.2214/ajr.10.5563"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "X-ray Source, Imaging Plates (IPs), CR Reader/Scanner, Workstation with Imaging Software, Reference: https://www.researchgate.net/publication/10973551_The_physics_of_computed_radiography"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Carestream Health, Agfa HealthCare, Fujifilm Corporation, Siemens Healthcare, GE Healthcare, Konica Minolta, Inc, Philips Healthcare, Reference: https://www.fujifilm.com/us/en/business/industrial-materials/non-destructive-testing/dynamix-hr2?utm_source=chatgpt.com"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Skeletal Imaging, Chest Radiography, Abdominal Imaging, Non-Destructive Testing (NDT), Reference: https://pubmed.ncbi.nlm.nih.gov/16822918/"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Pediatric Imaging, Forensic Radiography, Veterinary Medicine, Field Deployable Imaging, Reference: https://pubmed.ncbi.nlm.nih.gov/16822918/"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "Yes"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "approximately 0.02 millisieverts, Reference: https://ajronline.org/doi/10.2214/ajr.179.1.1790039?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Special considerations are warranted for sensitive populations, such as children and pregnant women, Reference: https://misuse.ncbi.nlm.nih.gov/error/abuse.shtml?utm_source=chatgpt.com"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Exposure and Image Acquisition, Artifact Reduction, Collimation and Exposure Optimization, Image Processing Enhancements, Reference: https://ajronline.org/doi/10.2214/AJR.10.5563?utm_source=chatgpt.com"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless Compression, JPEG and Wavelet Compression, Reference: https://www.mdpi.com/1424-8220/24/3/791?utm_source=chatgpt.com"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Lower Spatial Resolution, Image Artifacts, Workflow Inefficiencies, Reference: https://pubmed.ncbi.nlm.nih.gov/18546776/"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Radiation Dose Considerations, Limited Contrast Resolution, Potential for Misinterpretation, Reference: https://ajronline.org/doi/full/10.2214/ajr.10.5563?utm_source=chatgpt.com"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Negin Fathi Hafshejani"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
