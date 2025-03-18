@@ -1,0 +1,352 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "mr_urography"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Magnetic Resonance Urography"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRU",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "MR urography is a non-invasive imaging technique that uses MRI to visualize the kidneys, ureters, and bladder for evaluating urinary tract disorders.\n\n"
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "MR Urography Urinary tract evaluation "
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "MRU"
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "MR Urography (MRU) is a specialized MRI technique used to visualize the urinary tract, including the kidneys, ureters, and bladder. It works by leveraging magnetic resonance imaging (MRI) principles to generate high-contrast images of urine-filled structures. MRU is particularly effective for assessing urinary tract obstructions, stones, congenital anomalies, and functional disorders."
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "table",
+        "content": [
+            [
+                "4.1.Primary File Format(s)",
+                "DICOM (.dcm)",
+                "NIfTI (.nii, .nii.gz)",
+                "MINC (.mnc)",
+                "PAR/REC ",
+                " NRRD (.nrrd) ",
+                "",
+                ""
+            ],
+            [
+                "4.2.Data Type",
+                "Grayscale, 3D Volumetric",
+                "Grayscale, 3D Volumetric, 4D Time-Series ",
+                "Grayscale, 3D Volumetric, 4D Time-Series ",
+                "Grayscale, 3D Volumetric",
+                "Grayscale, 3D Volumetric & Multi-Dimensional Data",
+                "",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "MRI"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm) and NIfTI (.nii, .nii.gz)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "The dcm2niix tool is primarily designed for converting DICOM to NIfTI, but the reverse process (NIfTI to DICOM) requires alternative methods. One approach is using dcm2nii, an older version of dcm2niix, which allows conversion by running the command dcm2nii -4 my_nifti_file.nii.gz, generating a series of DICOM (.dcm) files. For enhanced control over metadata, Plastimatch can be used with the command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix image_, ensuring compatibility with clinical imaging systems. Additionally, in MATLAB, the dicomwrite function allows custom conversion by loading a NIfTI file, extracting slices, and saving them as DICOM while preserving metadata. Since dcm2niix itself does not directly support NIfTI to DICOM, these alternative methods provide efficient conversion solutions for integrating research data into clinical workflows.",
+                "1- https://github.com/rordenlab/dcm2niix   2- https://github.com/rordenlab/dcm2niix/blob/master/docs/source/dcm2niix.rst "
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "Plastimatch is an open-source medical imaging toolkit designed for converting imaging formats, including NIfTI (.nii, .nii.gz) to DICOM (.dcm), making it ideal for integrating Cardiac MRI research data into clinical workflows. The process begins by installing Plastimatch on Linux, macOS, or Windows, after which the conversion command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix cardiac_mri_ is executed. This generates a series of DICOM files with preserved metadata, ensuring compatibility with PACS (Picture Archiving and Communication Systems). Users can validate the output using dcmdump (from DCMTK) to inspect patient details, acquisition parameters, and scan properties. For advanced processing, Plastimatch supports voxel spacing adjustments (e.g., --output-spacing 1.25,1.25,5.0) to match clinical DICOM standards. It effectively handles 3D volumetric cardiac MRI, cine imaging, and multi-frame datasets, ensuring proper orientation and metadata retention. The converted files can then be reviewed or further refined in ITK-SNAP, 3D Slicer, or MATLAB before PACS integration. This workflow provides a seamless transition of NIfTI-based cardiac MRI into standardized DICOM format, facilitating research and clinical interoperability.",
+                "https://plastimatch.org/plastimatch.html"
+            ],
+            [
+                "PAR/REC",
+                "DICOM",
+                "Philips DICOM Export is a built-in feature in Philips MRI scanners and IntelliSpace PACS, allowing direct PAR/REC to DICOM conversion while preserving metadata such as acquisition parameters and patient details. The process can be performed via the MRI console, where users navigate to the Exam List, select a Cardiac MRI dataset, and choose the \"Export to DICOM\" option, specifying the output destination (PACS, local storage, or DICOM server). Some Philips workstations also support command-line scripting for batch conversion using a proprietary command like export_to_dicom -i input_folder -o output_folder -format DICOM. Additionally, for research applications, Philips Research API (if accessible) allows automated conversion using Python or MATLAB scripts, such as philipsdicom.convert(input_path, output_path). If Philips DICOM Export is not available, alternative tools like dcm2niix (to convert PAR/REC to NIfTI) and Plastimatch (to convert NIfTI to DICOM) can be used to ensure compatibility with clinical PACS and DICOM workflows. ",
+                "1- https://www.usa.philips.com/c-dam/b2bhc/us/support/Customer-Support/tta_2.40_dicom_conformance_statement.pdf    2- https://www.documents.philips.com/doclib/enc/8916819/DICOM_CookBook.pdf "
+            ],
+            [
+                "NRRD",
+                "DICOM",
+                "To convert NRRD to DICOM using 3D Slicer, the process involves loading the NRRD file via File > Add Data, then assigning proper DICOM metadata using the Data module before exporting the dataset through the DICOM module. Users can manually configure patient and study information to ensure compatibility with PACS (Picture Archiving and Communication Systems). For automation, Python scripting within 3D Slicer allows batch conversion using slicer.util.loadVolume('file.nrrd') followed by slicer.util.exportNode(volume_node, 'output_folder'). Additionally, tools like DCMTK\u2019s dcmdump can validate the exported DICOM files. This workflow ensures smooth integration of Cardiac MRI datasets into clinical environments while maintaining high-dimensional imaging integrity.",
+                "https://slicer.readthedocs.io/en/latest/user_guide/modules/dicom.html"
+            ],
+            [
+                "MINC",
+                "DICOM",
+                "Plastimatch is an open-source medical imaging toolkit designed for converting imaging formats, including NIfTI (.nii, .nii.gz) to DICOM (.dcm), making it ideal for integrating Cardiac MRI research data into clinical workflows. The process begins by installing Plastimatch on Linux, macOS, or Windows, after which the conversion command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix cardiac_mri_ is executed. This generates a series of DICOM files with preserved metadata, ensuring compatibility with PACS (Picture Archiving and Communication Systems). Users can validate the output using dcmdump (from DCMTK) to inspect patient details, acquisition parameters, and scan properties. For advanced processing, Plastimatch supports voxel spacing adjustments (e.g., --output-spacing 1.25,1.25,5.0) to match clinical DICOM standards. It effectively handles 3D volumetric cardiac MRI, cine imaging, and multi-frame datasets, ensuring proper orientation and metadata retention. The converted files can then be reviewed or further refined in ITK-SNAP, 3D Slicer, or MATLAB before PACS integration. This workflow provides a seamless transition of NIfTI-based cardiac MRI into standardized DICOM format, facilitating research and clinical interoperability.",
+                "https://plastimatch.org/plastimatch.html"
+            ],
+            [
+                "",
+                "",
+                "",
+                ""
+            ],
+            [
+                "",
+                "",
+                "",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "1.5T MRI",
+                "3T MRI",
+                "7T MRI"
+            ],
+            [
+                "5.1.Spatial Resolution",
+                "256 \u00d7 256 to 384 \u00d7 384",
+                "384 \u00d7 384 to 512 \u00d7 512",
+                "512 \u00d7 512 to 1024 \u00d7 1024"
+            ],
+            [
+                "5.2.Voxel Size / Pixel Spacing",
+                "0.8 \u00d7 0.8 \u00d7 3.0/ 0.8 \u00d7 0.8",
+                "0.5 \u00d7 0.5 \u00d7 2.0/ 0.5 \u00d7 0.5 ",
+                "0.3 \u00d7 0.3 \u00d7 1.5/ 0.3 \u00d7 0.3 "
+            ],
+            [
+                "",
+                "",
+                "",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "5.3",
+        "title": "5.3.Temporal Resolution (if applicable)",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "T2-Weighted MRU (Hydrographic MRU)",
+                "T1-Weighted Contrast-Enhanced MRU",
+                "ColumCine MRU (Dynamic Ureteral Imaging)n 4",
+                "4D MRU (Time-Resolved Functional Imaging)"
+            ],
+            [
+                "",
+                "1\u20133 seconds per image",
+                "10\u201315 seconds per phase",
+                "100\u2013500 ms per frame",
+                "1\u20133 seconds per volume"
+            ]
+        ]
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "table",
+        "content": [
+            [
+                "6.1.Single Image Size",
+                "Standard Clinical MRM: 300 KB \u2013 500  per image",
+                "High Resolution MRM: ~10\u201315 MB per image."
+            ],
+            [
+                "6.2.Typical Study Size",
+                "Standard Clinical MRM: ~1\u20132 GB per study",
+                "High Resolution MRM: ~3\u20135 GB per study."
+            ]
+        ]
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "MRI scanner "
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers \u2192 MAGNETOM Avanto, Vida, Skyra, Prisma, Terra 7T GE Healthcare \u2192 Signa Pioneer, Signa Premier, Artist Philips Healthcare \u2192 Ingenia, Achieva, Elition, Multiva Canon Medical (Toshiba) \u2192 Vantage Galan, Vantage Orian Hitachi Medical Systems \u2192 Echelon Oval, Oasis 1.2T (open MRI for claustrophobic patients)"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "1- Evaluation of Urinary Tract Obstructions 2- Diagnosis of Congenital Anomalies of the Urinary Tract 3-  Functional Assessment of Kidney Excretion 4- Detection of Kidney and Urothelial Tumors 5-  Evaluation of Ureteral Peristalsis and Urine Flow (Cine MRU) 6- Detection of Bladder Disorders 7- 7. Assessment of Vesicoureteral Reflux (VUR) 8- Evaluates patients after urological surgeries or treatments "
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "1- Advanced Imaging in Pediatric Urology 2- Comprehensive Assessment of the Urinary Tract 3- Evaluation of Megaureters in Pediatric Patients "
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Magnetic field risks, RF energy heating, Gadolinium contrast risks, Claustrophobia, Pregnancy concerns, Motion artifacts"
+    },
+    {
+        "level": "10",
+        "title": " Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Background Removal (Segmentation), Denoising, Resampling, Registration, Intensity Normalization, Motion Correction, Slice Timing Correctio, Smoothing"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "1. Lossless Compression Methods: Purpose: Reduce file size without any loss of original image data, ensuring that all diagnostic details are preserved.\u200b Techniques: Run-Length Encoding (RLE): Encodes consecutive identical pixels as a single value and count. Huffman Coding: Uses variable-length codes for encoding symbols based on their frequencies. Lempel-Ziv-Welch (LZW) Coding: Builds a dictionary of substrings encountered in the data stream. Application: These methods are often applied to medical images where any loss of information is unacceptable. \u200b 2. Lossy Compression Methods: Purpose: Achieve higher compression ratios by allowing some loss of image data, acceptable in scenarios where perfect accuracy is not critical.\u200b Techniques: Discrete Cosine Transform (DCT): Transforms image data into frequency components, discarding less significant ones. Discrete Wavelet Transform (DWT): Decomposes images into different frequency subbands, enabling multi-resolution analysis. Fractal Compression: Utilizes self-similar patterns within the image for compression. Application: Used when storage limitations necessitate reduced file sizes, and slight loss of detail is acceptable. \u200b 3. Region-of-Interest (ROI) Compression: Purpose: Prioritize the compression quality of diagnostically significant regions while applying higher compression to less important areas.\u200b Technique: Combines lossless compression for the ROI with lossy compression for the background.\u200b Application: Ensures critical diagnostic information is retained with high fidelity, optimizing storage efficiency. \u200b 4. Advanced Transform-Based Methods: Burrows\u2013Wheeler Transform (BWT): Description: Rearranges data to improve the efficiency of subsequent compression algorithms. Application: Enhances compression performance for medical images, outperforming traditional methods like JPEG 2000 in certain scenarios. Mojette Transform: Description: A discrete transform used for image representation and compression. Application: Applied in medical imaging for efficient data encoding and transmission. 5. Learning-Based Compression Methods: Purpose: Utilize deep learning techniques to model complex patterns in medical images for improved compression efficiency.\u200b Techniques: Gated Recurrent Convolutional Neural Networks: Capture inter-slice dependencies in volumetric images for lossless compression. Knowledge Distillation: Enhances multi-data medical image compression by transferring knowledge from complex models to simpler ones. Application: Achieve superior compression ratios while maintaining image quality, facilitating efficient storage and transmission. "
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "1-Longer Examination Times 2- Lower Spatial Resolution 3- Artifact Susceptibility"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "1-Inability to Visualize Calcifications 2- Dependence on Renal Function 3-Limited Availability and Higher Costs"
+    },
+    {
+        "level": "12",
+        "title": "References (Website, Paper, etc.)",
+        "content-type": "markdown",
+        "content": "This part include all references except of section 4.5 conversion method. 1-\thttps://pubmed.ncbi.nlm.nih.gov/18203929/ 2-\thttps://pubmed.ncbi.nlm.nih.gov/11288839/ 3-\thttps://radiopaedia.org/articles/magnetic-resonance-urography?lang=us 4-\thttps://link.springer.com/article/10.1007/s00261-019-02085-1 5-\thttps://www.frontiersin.org/journals/pediatrics/articles/10.3389/fped.2022.839128/full 6-\thttps://ajronline.org/doi/10.2214/AJR.09.4176 7-\thttps://www.radiologyinfo.org/en/info/safety-mr 8-\thttps://www.radiologyinfo.org/en/info/safety-mri-pregnancy 9-\thttps://www.radiologyinfo.org/en/info/safety-mri-pregnancy 10-\thttps://about.cmrad.com/articles/the-ultimate-guide-to-preprocessing-medical-images-techniques-tools-and-best-practices-for-enhanced-diagnosis 11-\thttps://www.mathworks.com/help/medical-imaging/ug/overview-medical-image-preprocessing.html 12-\thttps://andysbrainbook.readthedocs.io/en/stable/ML/ML_Short_Course/ML_03_Haxby_Preprocessing.html 13-\thttps://dartbrains.org/content/Preprocessing.html 14-\thttps://mlr.mlr-org.com/articles/tutorial/preproc.html 15-\thttps://faculty.uobasrah.edu.iq/uploads/publications/1619901324.pdf 16-\thttps://ieeexplore.ieee.org/document/10049063 17-\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC9323066/ 18-\thttps://ieeexplore.ieee.org/document/9170679 19-\thttps://www.nature.com/articles/s41598-021-91920-x 20-\thttps://avmajournals.avma.org/view/journals/ajvr/83/3/ajvr.21.03.0041.xml 21-\thttps://www.radiologyinfo.org/en/info/urography 22-\thttps://avmajournals.avma.org/view/journals/ajvr/83/3/ajvr.21.03.0041.xml"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Rana Hashemi"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
