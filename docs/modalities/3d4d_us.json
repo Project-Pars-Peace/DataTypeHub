@@ -1,0 +1,310 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "3d4d_us"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "US"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "3D & 4D Ultrasound"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "3DUS 4DUS",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "3D and 4D ultrasound imaging acquires volumetric data by collecting multiple 2D ultrasound planes using either mechanical sweeping transducers or electronic matrix arrays. These 2D images are spatially registered and algorithmically reconstructed into complete 3D volumes, which can be visualized through various rendering techniques (surface, maximum intensity, or realistic rendering). 4D ultrasound adds the temporal dimension by rapidly acquiring sequential 3D volumes (up to 20-30 volumes per second), enabling real-time visualization of dynamic three-dimensional structures. This technology allows clinicians to observe spatial relationships and movement patterns that cannot be fully appreciated with conventional 2D ultrasound."
+    },
+    {
+        "level": "",
+        "title": "",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "NIfTI (.nii, .nii.gz)",
+                "DICOM (.dcm)",
+                "nii2dcm is a specialized conversion tool that transforms NIfTI neuroimaging files (.nii/.nii.gz) into DICOM format, addressing a significant gap in medical imaging workflows. Built with Python as its core language, the solution leverages several powerful tools including pip for dependency management, Docker for containerization, SimpleITK for image processing, and highdicom for DICOM manipulation. The tool features a straightforward command-line interface that allows users to specify DICOM modality types during conversion (such as MR for MRI scans). For flexible deployment, nii2dcm is available both as a pip-installable package and as a pre-built Docker container. The project is actively developed with support for additional imaging modalities planned for future releases, making it a valuable resource for researchers and clinicians working with medical imaging data.",
+                "https://github.com/tomaroberts/nii2dcm"
+            ],
+            [
+                "Analyze (.hdr/.img)",
+                "DICOM (.dcm)",
+                "FSL (FMRIB Software Library) offers a comprehensive suite of command-line utilities for neuroimaging data processing and analysis. These tools collectively enable researchers to manipulate, transform, and extract valuable information from brain imaging datasets. The utility tools include format converters (fslascii2img, fsl2ascii), file type managers (fslchfiletype, fslcreatehd, fsleditHD), mathematical operators (fslmaths, fslfft), data extraction tools (fslroi, fslmeants), statistical analyzers (fslstats, fslcc), dimensional manipulators (fslmerge, fslsplit, fslslice), and header information processors (fslhd, fslinfo, fslval). Additionally, FSL provides specialized orientation tools (fslreorient2std, fslcpgeom, fslorient, fslswapdim) that ensure proper spatial alignment of brain images according to standard neuroanatomical conventions. Written primarily in C++ with Python interfaces, FSL integrates multiple computational libraries including NIfTI I/O libraries, matrix calculation tools, statistical packages, and optimization algorithms to deliver a powerful platform for neuroscientific research that maintains compatibility with major neuroimaging data formats.",
+                "https://fsl.fmrib.ox.ac.uk/fsl/docs/#/utilities/fslutils"
+            ],
+            [
+                "AVI (.avi)",
+                "DICOM (.dcm)",
+                "\"Sante DICOM Editor is a versatile and powerful tool designed for handling DICOM files, which are commonly used in medical imaging. Here are some of its key features:  DICOM File Editing: You can create, edit, and modify DICOM files, including adding or removing attributes and editing sequence attributes.  2D/3D Viewer: It provides advanced viewing capabilities for both 2D and 3D medical images.  Anonymizer: The tool can anonymize DICOM files to protect patient privacy.  Converter: It can convert various file formats (e.g., JPEG, TIFF, BMP, PNG) to DICOM and vice versa.  PACS Client and Mini PACS Server: It supports Picture Archiving and Communication System (PACS) functionalities, allowing you to store, retrieve, and manage medical images.  Patient CD/DVD Burner: You can burn patient data onto CDs or DVDs, complete with a built-in viewer.  Batch Processing: The editor supports batch processing, enabling you to modify multiple DICOM files simultaneously.  DICOM Network Services: It supports various DICOM network services, including C-FIND, C-MOVE, C-STORE, and C-ECHO.\"",
+                "https://santesoft.com/win/sante-dicom-editor/howto/movies-to-dicom.html"
+            ],
+            [
+                "MP4 (.mp4) ",
+                "DICOM (.dcm)",
+                "\"Sante DICOM Editor is a versatile and powerful tool designed for handling DICOM files, which are commonly used in medical imaging. Here are some of its key features:  DICOM File Editing: You can create, edit, and modify DICOM files, including adding or removing attributes and editing sequence attributes.  2D/3D Viewer: It provides advanced viewing capabilities for both 2D and 3D medical images.  Anonymizer: The tool can anonymize DICOM files to protect patient privacy.  Converter: It can convert various file formats (e.g., JPEG, TIFF, BMP, PNG) to DICOM and vice versa.  PACS Client and Mini PACS Server: It supports Picture Archiving and Communication System (PACS) functionalities, allowing you to store, retrieve, and manage medical images.  Patient CD/DVD Burner: You can burn patient data onto CDs or DVDs, complete with a built-in viewer.  Batch Processing: The editor supports batch processing, enabling you to modify multiple DICOM files simultaneously.  DICOM Network Services: It supports various DICOM network services, including C-FIND, C-MOVE, C-STORE, and C-ECHO.\"",
+                "https://santesoft.com/win/sante-dicom-editor/howto/movies-to-dicom.html"
+            ],
+            [
+                "JPEG (.jpg)",
+                "DICOM (.dcm)",
+                "This Python script automates the conversion of JPEG, PNG, or BMP images into DICOM files by loading the image with Pillow, handling various image modes to extract pixel data as a NumPy array, and then constructing a DICOM dataset using pydicom. It meticulously sets essential DICOM tags, including file metadata, image dimensions, photometric interpretation, pixel representation, and generates unique identifiers for the DICOM object. Finally, it saves the populated DICOM dataset as a .dcm file, ensuring compatibility with medical imaging systems by adhering to DICOM standards.",
+                "https://github.com/jwitos/JPG-to-DICOM/tree/master"
+            ],
+            [
+                "PNG (.png) ",
+                "DICOM (.dcm)",
+                "\"This Python script replaces the pixel data of an existing DICOM file with the pixel data from a PNG or JPG image. It reads a pre-existing DICOM file and a new image, then, based on the image's mode (grayscale 'L' or color 'RGBA'), it extracts the pixel data into a NumPy array, sets the appropriate DICOM tags (dimensions, photometric interpretation, samples per pixel, bit depth, and pixel representation), and replaces the original DICOM's `PixelData` with the new image's pixel data, finally saving the modified DICOM file with a new name. \"",
+                "https://github.com/amine0110/convert-images-from-jpr-or-png-into-dicom"
+            ],
+            [
+                "MPEG-2",
+                "DICOM (.dcm)",
+                "\"This code snippet is a Maven `pom.xml` file, which defines the project structure, dependencies, and metadata for a Java application named \"\"mpeg2dcm,\"\" designed to convert MPEG video files to DICOM format. It specifies project details like group ID, artifact ID, version, and licensing (MIT License), along with developer and source code management information. The file outlines the project's dependencies, including the `dcm4che-core` library for DICOM handling, logging libraries (Log4j and SLF4j), and utility libraries (commons-io and commons-cli). Crucially, it declares a dependency on the dcm4che repository, indicating that the project leverages the dcm4che library for DICOM manipulation, suggesting that the application processes MPEG video data and constructs DICOM files by utilizing the dcm4che framework's capabilities. \"",
+                "https://github.com/tomdoel/mpg2dcm/tree/main"
+            ],
+            [
+                "MOV (.MOV)",
+                "DICOM (.dcm)",
+                "\"Sante DICOM Editor is a versatile and powerful tool designed for handling DICOM files, which are commonly used in medical imaging. Here are some of its key features:  DICOM File Editing: You can create, edit, and modify DICOM files, including adding or removing attributes and editing sequence attributes.  2D/3D Viewer: It provides advanced viewing capabilities for both 2D and 3D medical images.  Anonymizer: The tool can anonymize DICOM files to protect patient privacy.  Converter: It can convert various file formats (e.g., JPEG, TIFF, BMP, PNG) to DICOM and vice versa.  PACS Client and Mini PACS Server: It supports Picture Archiving and Communication System (PACS) functionalities, allowing you to store, retrieve, and manage medical images.  Patient CD/DVD Burner: You can burn patient data onto CDs or DVDs, complete with a built-in viewer.  Batch Processing: The editor supports batch processing, enabling you to modify multiple DICOM files simultaneously.  DICOM Network Services: It supports various DICOM network services, including C-FIND, C-MOVE, C-STORE, and C-ECHO.\"",
+                "https://santesoft.com/win/sante-dicom-editor/howto/movies-to-dicom.html"
+            ],
+            [
+                "Raw data files (.RAW)",
+                "DICOM (.dcm)",
+                "\"This Python code demonstrates how to generate a synthetic 3D DICOM series from a NumPy array using the SimpleITK library, ensuring it's readable by DICOM viewers.  Here's a breakdown:  Array Generation and Image Creation:  It generates a 3D NumPy array filled with random numbers, allowing the user to specify the data type (int16 or float64). This array is then converted into a SimpleITK image, and its spacing is set. DICOM Metadata Configuration:  The code initializes a sitk.ImageFileWriter to write DICOM files. It creates a list of DICOM tag values (series_tag_values) to populate the metadata of each slice. This includes tags for series time, date, image type (DERIVED\\SECONDARY), series instance UID, image orientation, and series description. If the image data type is float64, it adds additional metadata tags related to rescale slope and intercept, bits allocated, bits stored, high bit, and pixel representation. This is crucial for correctly representing floating-point pixel values in DICOM. Slice Writing:  The writeSlices function is defined to write individual slices of the 3D image as DICOM files. For each slice, it sets the shared series tags and slice-specific tags, such as instance creation date and time, image position (patient), and instance number. The slice is then written to the specified output directory with a .dcm extension. DICOM Series Reading and Verification:  After writing the DICOM series, the code reads it back using sitk.ImageSeriesReader. It configures the reader to load all DICOM tags, including private tags. It then compares the spacing of the re-read image with the original image to verify that the DICOM series was written and read correctly. The code also handles errors if the specified directory does not contain a DICOM series. In essence, this code provides a practical example of how to create a DICOM series from a NumPy array, paying careful attention to the necessary metadata, especially when dealing with floating-point pixel values. It also demonstrates how to read the newly created DICOM series.\"",
+                "https://simpleitk.readthedocs.io/en/master/link_DicomSeriesFromArray_docs.html"
+            ],
+            [
+                "TIFF (.TIFF)",
+                "DICOM (.dcm)",
+                "\"This document describes a sophisticated process for converting Whole Slide Imaging (WSI) files (SVS, generic TIFF, and OME-TIFF) into dual-personality DICOM-TIFF files, emphasizing lossless conversion and detailed metadata management. The conversion, driven by a Bourne Shell script and the `pixelmed` toolkit's `TIFFToDicom` Java program, preserves the original compressed tile data, re-injects JPEG tables, and corrects certain TIFF defects. It generates a DICOM series with one file per pyramid layer and channel, extracting macro and label images. Metadata is gathered from various sources, including TIFF headers, SVS ImageDescription tags, OME-XML, and collection-specific spreadsheets, and is mapped to DICOM attributes via a JSON metadata file. The process handles multiple slides per subject by grouping them into a single DICOM study, ensuring consistent UIDs and dates through state files. For multichannel images, channel-specific metadata is encoded in the DICOM SpecimenPreparationSequence and OpticalPathSequence. Collection-specific clinical trial information is also included. The output DICOM files, while TIFF-compatible, contain only one layer each and may not work with tools expecting combined layers. The inclusion of offset tables (BOT or EOT) depends on the collection's conversion date. The process is illustrated with examples from TCGA and HTAN collections, highlighting the handling of metadata, compression, and specific DICOM attributes. \"",
+                "https://github.com/ImagingDataCommons/idc-wsi-conversion"
+            ]
+        ]
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)\tNIfTI (.nii, .nii.gz)\tAnalyze (.hdr/.img)\tAVI (.avi),\tMP4 (.mp4) \tJPEG (.jpg)\tPNG (.png) \tMPEG-2\t.MOV\tRaw data files (.RAW)\tTIFF (.TIFF)\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC4533211/"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "Raw RF (Radio Frequency) Data\tB-mode Volume Data\tVector/Tensor Data (for Doppler/Elastography)\t4D Temporal Sequence Data\tDerived/Processed Data\tMulti-modal Fusion Data"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "US"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "\"Reconstructed 3D volumes: 128\u00b3 to 256\u00b3 voxels High-frequency transducers: up to 1024 \u00d7 768 pixels per plane Resolution decreases with depth and in rendered volumes\"\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC9274734/"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "\"Typical range: 0.2 mm \u00d7 0.2 mm \u00d7 0.2 mm to 0.5 mm \u00d7 0.5 mm \u00d7 0.5 mm High-frequency transducers (e.g., transvaginal): 0.1-0.3 mm isotropic Abdominal imaging: 0.3-0.8 mm isotropic Resolution anisotropy common: better in-plane than elevation resolution\"\thttps://www.sciencedirect.com/science/article/pii/S0929644108600405"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "\"3D static acquisition: 0.5-2 seconds per volume 4D (real-time 3D): 15-25 volumes per second (standard quality) High-quality 4D: 5-10 volumes per second STIC (Spatio-Temporal Image Correlation): 7-15 seconds acquisition time\"\thttps://academic.oup.com/bjaed/article/11/5/186/283004"
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "\"Raw 3D volume: ~20-50 MB Processed 3D DICOM: ~10-30 MB Single 4D clip (10-second): ~50-150 MB High-definition static rendered view: ~5-10 MB\"\thttps://pubmed.ncbi.nlm.nih.gov/12796968/"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "\"Obstetric 3D/4D exam: ~300-800 MB Comprehensive fetal echocardiography: ~1-2 GB Gynecological 3D ultrasound study: ~200-400 MB Multi-gestational pregnancy exam: ~1.5-3 GB\"\thttps://pubmed.ncbi.nlm.nih.gov/16301716/"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "\"3D/4D capable ultrasound machines Specialized volumetric transducers (mechanical or electronic) High-performance computing systems for volume rendering Dedicated 3D/4D workstations for post-processing\"\thttps://pubmed.ncbi.nlm.nih.gov/16301716/"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers\t",
+        "content-type": "markdown",
+        "content": "\"GE Healthcare (Voluson series) Samsung (WS80, HERA) Philips (EPIQ, Affiniti) Siemens Healthineers (Acuson Sequoia, Juniper) Canon Medical Systems (Aplio i-series) Mindray (DC-80 with iLive) BK Medical (bk5000)\"\thttps://www.probomedical.com/learn/ultrasound-guides/3d-4d-ultrasound-machines/"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "\"Obstetric imaging (fetal anatomy assessment) Gynecological imaging (uterine anomalies, adnexal masses) Fetal echocardiography Congenital anomaly evaluation Placental assessment Volumetric measurement (organs, tumors)\"\thttps://pubmed.ncbi.nlm.nih.gov/22343249/"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "\"HDlive rendering for enhanced surface visualization STIC for fetal cardiac evaluation VOCAL (Virtual Organ Computer-aided AnaLysis) for volume calculations Multiplanar reconstruction for complex anomalies 3D folliculometry in fertility assessment Fetal facial assessment and cleft detection Skeletal dysplasia evaluation Virtual hysteroscopy/cystoscopy\"\thttps://pubmed.ncbi.nlm.nih.gov/16301716/"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No (uses non-ionizing sound waves)\thttps://pubmed.ncbi.nlm.nih.gov/26376219/"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)\t",
+        "content-type": "markdown",
+        "content": "None\thttps://pubmed.ncbi.nlm.nih.gov/26376219/"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "\"Thermal and mechanical bioeffects (minimized with appropriate settings) Extended scanning time compared to 2D ultrasound Higher acoustic output potential with 3D/4D modes ALARA principle (As Low As Reasonably Achievable) should be followed Thermal Index (TI) and Mechanical Index (MI) monitoring Potential for longer examination times leading to increased exposure\"\thttps://pubmed.ncbi.nlm.nih.gov/26376219/"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "\"Noise reduction and speckle filtering Volume alignment and registration Multiplanar reconstruction Surface rendering and enhancement Semi-automated segmentation Motion compensation and artifact reduction Volume of interest (VOI) selection Contrast enhancement\"\thttps://pubmed.ncbi.nlm.nih.gov/15708453/"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "\"Lossless compression for diagnostic volumes DICOM compression (RLE, JPEG lossless) Lossy compression for archiving and telemedicine (JPEG2000) Video compression for 4D clips (H.264, MPEG-4) Wavelet-based compression for volumetric data\"\thttps://www.umbjournal.org/article/S0301-5629(17)30277-6/fulltext"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "\"Motion artifacts (fetal movement, maternal breathing) Acoustic shadowing from bones or calcifications Limited field of view for large structures Data acquisition speed vs. quality trade-offs Rendering artifacts in surface visualization Operator dependence and learning curve Limited penetration in obese patients Processing requirements for real-time rendering\"\thttps://pubmed.ncbi.nlm.nih.gov/26376219/"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "\"Interpretation variability between operators Standardization challenges across platforms Longer examination time compared to 2D Limited accessibility of certain fetal structures Post-processing time requirements Higher equipment costs Limited soft tissue contrast compared to MRI Difficulty visualizing deep structures\"\thttps://pubmed.ncbi.nlm.nih.gov/26376219/"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Pooya Eini"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]

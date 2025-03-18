@@ -1,0 +1,286 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "mra"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Magnetic Resonance Angiography (MRA)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRA",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Magnetic Resonance Angiography (MRA) is a specialized imaging technique that leverages the principles of Magnetic Resonance Imaging (MRI) to visualize blood vessels without the need for invasive procedures or ionizing radiation. By utilizing strong magnetic fields and radiofrequency pulses, MRA detects the behavior of hydrogen nuclei in blood, producing detailed images of the vascular system. \n"
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)\tNIfTI (.nii, .nii.gz)\tPAR/REC (.par/.rec)\tAnalyze (.hdr/.img)\tMINC (.mnc)\tMGH/MGZ (.mgh/.mgz)\thttps://www.wiley.com/en-us/MRI+in+Practice%2C+5th+Edition-p-9781119392002"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "3D volumetric\tTime-series\t Diffusion Tensor Imaging\tGrayscale\thttps://www.radiologyinfo.org/en/info/angiomr?utm_source=chatgpt.com"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "MRI"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software",
+                "Column 5"
+            ],
+            [
+                "NIfTI (.nii, .nii.gz)",
+                "DICOM (.dcm)",
+                "nii2dcm is a specialized conversion tool that transforms NIfTI neuroimaging files (.nii/.nii.gz) into DICOM format, addressing a significant gap in medical imaging workflows. Built with Python as its core language, the solution leverages several powerful tools including pip for dependency management, Docker for containerization, SimpleITK for image processing, and highdicom for DICOM manipulation. The tool features a straightforward command-line interface that allows users to specify DICOM modality types during conversion (such as MR for MRI scans). For flexible deployment, nii2dcm is available both as a pip-installable package and as a pre-built Docker container. The project is actively developed with support for additional imaging modalities planned for future releases, making it a valuable resource for researchers and clinicians working with medical imaging data.",
+                "https://github.com/tomaroberts/nii2dcm",
+                ""
+            ],
+            [
+                "PAR/REC ",
+                "NIfTI (.nii, .nii.gz)",
+                "dcm2niix PARREC is a specialized conversion tool designed to transform Philips PAR/REC format medical images into NIfTI format, serving as an essential utility for neuroimaging research and clinical applications. This solution addresses the challenges in working with the aging PAR/REC format, which is gradually being replaced by enhanced DICOM and direct NIfTI exports. The tool incorporates intelligent error correction for the known \"image offcentre\" bug in V4 PAR/REC images, ensuring accurate spatial orientation in the converted files. Written primarily in C/C++, dcm2niix PARREC employs several key tools including the NIfTI library for format handling, command-line interface components for user interaction, file manipulation libraries for reading PAR/REC files, and header parsing utilities to extract crucial metadata. The solution offers flexible file naming options through argument strings and placeholders, though it has limitations with interrupted scan datasets, for which users are directed to alternative tools like dicm2nii.",
+                "https://github.com/rordenlab/dcm2niix/tree/master/PARREC",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "Analyze (.hdr/.img)",
+                "DICOM (.dcm)",
+                "FSL (FMRIB Software Library) offers a comprehensive suite of command-line utilities for neuroimaging data processing and analysis. These tools collectively enable researchers to manipulate, transform, and extract valuable information from brain imaging datasets. The utility tools include format converters (fslascii2img, fsl2ascii), file type managers (fslchfiletype, fslcreatehd, fsleditHD), mathematical operators (fslmaths, fslfft), data extraction tools (fslroi, fslmeants), statistical analyzers (fslstats, fslcc), dimensional manipulators (fslmerge, fslsplit, fslslice), and header information processors (fslhd, fslinfo, fslval). Additionally, FSL provides specialized orientation tools (fslreorient2std, fslcpgeom, fslorient, fslswapdim) that ensure proper spatial alignment of brain images according to standard neuroanatomical conventions. Written primarily in C++ with Python interfaces, FSL integrates multiple computational libraries including NIfTI I/O libraries, matrix calculation tools, statistical packages, and optimization algorithms to deliver a powerful platform for neuroscientific research that maintains compatibility with major neuroimaging data formats.",
+                "https://fsl.fmrib.ox.ac.uk/fsl/docs/#/utilities/fslutils",
+                ""
+            ],
+            [
+                "MINC (.mnc)",
+                "DICOM (.dcm)",
+                "The mnc2dcm solution is a specialized medical imaging conversion tool designed to transform MINC (Medical Imaging NetCDF) files into DICOM format, facilitating the seamless re-integration of processed research data back into clinical hospital systems. Developed by Andrew Janke, this lightweight converter is implemented primarily as a Perl script that methodically translates the spatial and metadata elements from MINC's scientific format into the clinically standardized DICOM structure. The toolset includes the core mnc2dcm converter script alongside supporting utilities like dcmdump and dcmsort for DICOM file manipulation and organization. The solution employs several fundamental technologies: Perl as the programming language, MINC library for reading the source format, DICOM toolkit for constructing valid medical images, element hashing algorithms for metadata mapping, and slice processing routines for proper 3D to 2D conversion. With command-line options for verbosity control, version information, help documentation, and dry-run capabilities, mnc2dcm serves as a critical bridge between research and clinical neuroimaging workflows.",
+                "https://github.com/andrewjanke/mnc2dcm/tree/master",
+                ""
+            ],
+            [
+                "MGH/MGZ (.mgh, .mgz) ",
+                "NIfTI (.nii, .nii.gz)",
+                "The i2nii tool is a command-line utility designed to convert various scientific and medical imaging formats into NIfTI, a widely used neuroimaging format. It does not support DICOM or TIFF conversions directly, but companion tools like dcm2niix and the Bio-Formats module of ImageJ/Fiji can handle these formats. The tool is available as precompiled executables for Linux, macOS, and Windows, and users can compile the source code using FreePascal. It offers options for setting output directories, image rotation, and compression, though some formats may have documentation limitations affecting spatial scale and orientation. Supported formats include AFNI Brik, Analyze, BrainVoyager, ECAT, FreeSurfer, ITK, MRC, MRTrix, NIfTI, and NRRD. The project is open-source under the BSD-2-Clause license.",
+                "https://github.com/rordenlab/i2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "ranging from 0.5 mm to 1.5 mm, depending on the specific imaging protocol\thttps://pubmed.ncbi.nlm.nih.gov/23712843/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "between 0.5 mm\u00b3 and 1.5 mm\u00b3\thttps://pubmed.ncbi.nlm.nih.gov/23712843/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "approximately 1 to 2 seconds per frame\thttps://pubmed.ncbi.nlm.nih.gov/23712843/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "from 5 MB to 20 MB\thttps://www.ncbi.nlm.nih.gov/books/NBK558984/"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "between 100 MB and 500 MB\thttps://www.ncbi.nlm.nih.gov/books/NBK558984/"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "MRA is performed using MRI scanners equipped with specialized software and hardware capable of vascular imaging. Some MRA procedures utilize gadolinium-based contrast agents to enhance image quality. \thttps://www.radiologyinfo.org/en/info/angiomr?utm_source=chatgpt.com"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers\t",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers, GE Healthcare, Philips Healthcare, and Canon Medical Systems.\thttps://www.radiologyinfo.org/en/info/angiomr?utm_source=chatgpt.com"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "MRA is primarily used to detect and evaluate vascular conditions such as aneurysms, stenosis, occlusions, and other abnormalities in blood vessels.\thttps://www.yalemedicine.org/clinical-keywords/magnetic-resonance-angiography?utm_source=chatgpt.com"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "MRA is utilized in pre-surgical planning, particularly for intricate vascular surgeries, and in the evaluation of congenital vascular anomalies.\thttps://www.yalemedicine.org/clinical-keywords/magnetic-resonance-angiography?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "MRA does not use ionizing radiation\thttps://www.ucsfhealth.org/medical-tests/magnetic-resonance-angiography?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)\t",
+        "content-type": "markdown",
+        "content": "Not applicable, as MRA employs magnetic fields and radio waves instead of ionizing radiation.\thttps://www.ucsfhealth.org/medical-tests/magnetic-resonance-angiography?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "certain considerations include potential allergic reactions to gadolinium-based contrast agents, though these are rare. Additionally, patients with kidney problems should inform their healthcare provider, as gadolinium can be harmful to individuals requiring dialysis.\thttps://www.ucsfhealth.org/medical-tests/magnetic-resonance-angiography?utm_source=chatgpt.com"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "image reconstruction, correction for patient motion, and enhancement techniques to improve vessel visualization.\thttps://www.ahajournals.org/doi/10.1161/circulationaha.107.187256?utm_source=chatgpt.com"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless compression techniques are preferred to maintain image integrity, especially when archiving or transmitting MRA data.\thttps://www.ahajournals.org/doi/10.1161/circulationaha.107.187256?utm_source=chatgpt.com"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "sensitivity to patient movement, which can degrade image quality, and artifacts arising from blood flow turbulence or irregular heart rhythms.\thttps://www.ahajournals.org/doi/10.1161/circulationaha.107.187256?utm_source=chatgpt.com"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "it may not visualize very small vessels as clearly as invasive angiography. Additionally, patients with certain implants or devices may be contraindicated for MRI procedures.\thttps://www.ahajournals.org/doi/10.1161/circulationaha.107.187256?utm_source=chatgpt.com"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Pooya Eini"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]

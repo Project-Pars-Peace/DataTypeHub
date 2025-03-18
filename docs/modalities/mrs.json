@@ -1,0 +1,293 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "mrs"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Magnetic Resonance Spectroscopy (MRS)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRS",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Magnetic Resonance Spectroscopy (MRS) is a non-invasive imaging technique that extends the capabilities of traditional Magnetic Resonance Imaging (MRI) by providing detailed biochemical information about tissues. MRS focuses on detecting and quantifying metabolites within the body, offering insights into metabolic processes. \n"
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)\tNIfTI (.nii, .nii.gz)\tSiemens RDA (.rda)\tPhilips (.SPAR/.SDAT)\tBruker (.2dseq / .fid)\tLCModel (.raw)\tjMRUI (.txt)\thttps://github.com/wtclarke/spec2nii"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "Spectral Data\tTime-Domain Data\tMetabolite Concentration Maps\tQuantitative Data\thttps://radiopaedia.org/articles/mr-spectroscopy-1?lang=us"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "MRI"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software",
+                "Column 5"
+            ],
+            [
+                "NIfTI (.nii, .nii.gz)",
+                "DICOM (.dcm)",
+                "nii2dcm is a specialized conversion tool that transforms NIfTI neuroimaging files (.nii/.nii.gz) into DICOM format, addressing a significant gap in medical imaging workflows. Built with Python as its core language, the solution leverages several powerful tools including pip for dependency management, Docker for containerization, SimpleITK for image processing, and highdicom for DICOM manipulation. The tool features a straightforward command-line interface that allows users to specify DICOM modality types during conversion (such as MR for MRI scans). For flexible deployment, nii2dcm is available both as a pip-installable package and as a pre-built Docker container. The project is actively developed with support for additional imaging modalities planned for future releases, making it a valuable resource for researchers and clinicians working with medical imaging data.",
+                "https://github.com/tomaroberts/nii2dcm",
+                ""
+            ],
+            [
+                "Siemens RDA (.rda) ",
+                "NIfTI (.nii, .nii.gz)",
+                "This solution describes spec2nii, a tool for converting various in vivo Magnetic Resonance Spectroscopy (MRS) data formats into NIfTI-MRS format. It was inspired by dcm2niix, a widely used tool for converting DICOM to NIfTI. The program supports multiple MRS file types, including Siemens Twix (.dat), Siemens DICOM (.dcm/.ima), Philips (.SPAR/.SDAT, .data/.list, DICOM), GE (.7), UIH DICOM, Bruker (fid, 2dseq), Varian (fid), LCModel (.RAW), and jMRUI (.txt/.mrui). The converted NIfTI-MRS files can be visualized in FSLeyes, which has a dedicated fsleyes-plugin-mrs. Installation is available through Conda or pip, and the tool includes features like automatic detection, metadata adjustments, anonymization, and header extraction.",
+                "https://github.com/wtclarke/spec2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "Philips (.SPAR/.SDAT) ",
+                "NIfTI (.nii, .nii.gz)",
+                "To convert Philips MRS data in .SPAR/.SDAT format into NIfTI-MRS format using spec2nii, first ensure you have both the .SPAR and .SDAT files, as they are used together\u2014.SPAR contains metadata, and .SDAT holds the actual spectroscopic data. Begin by installing spec2nii via Conda (conda install -c conda-forge spec2nii) or pip (pip install spec2nii). Once installed, run the conversion command spec2nii philips SDAT_FILE SPAR_FILE, replacing SDAT_FILE and SPAR_FILE with the appropriate file paths for your data. Optionally, you can use the -t option to specify dimension tags, such as DIM_COIL, or use the -s option for reshaping the data to modify how multiple transients are structured. This will create a NIfTI-MRS file from your Philips MRS data, which can be easily visualized and processed in FSLeyes or other neuroimaging tools.",
+                "https://github.com/wtclarke/spec2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "Bruker (.2dseq / .fid) ",
+                "NIfTI (.nii, .nii.gz)",
+                "To convert Bruker MRS data in .2dseq or .fid format to NIfTI-MRS using spec2nii, first ensure that you have both the .2dseq (for 2D data) and .fid (for 1D data) files from the Bruker MRS acquisition. The spec2nii tool supports conversion from both these formats. Begin by installing spec2nii via Conda (conda install -c conda-forge spec2nii) or pip (pip install spec2nii). To perform the conversion, use the following commands based on your data type: spec2nii bruker -m 2DSEQ 2DSEQ_FILE_or_DIR for 2D data or spec2nii bruker -m FID FID_FILE_or_DIR for 1D data. The -m flag specifies whether you're converting a .2dseq (for multi-dimensional 2D data) or .fid (for 1D data) file. You can also use the -d option to dump the header files (such as method and acqp for .fid, or visu_pars for .2dseq) into the header extension. After conversion, the MRS data will be stored in the NIfTI-MRS format, ready for further analysis and visualization with tools like FSLeyes.",
+                "https://github.com/wtclarke/spec2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "LCModel (.raw) ",
+                "NIfTI (.nii, .nii.gz)",
+                "To convert LCModel .raw files to NIfTI-MRS using spec2nii, you first need to have the LCModel .raw file, which contains the processed Magnetic Resonance Spectroscopy (MRS) data. spec2nii supports conversion of LCModel files, but it requires an additional step to specify the orientation information. You will need to provide an optional affine matrix file (a 4x4 matrix that contains the orientation data), which can be specified using the -a argument. To perform the conversion, run the command: spec2nii raw -a AFFINE_FILE FILE, where AFFINE_FILE is the file containing the affine matrix and FILE is the path to the .raw file. This process converts the LCModel data into the NIfTI-MRS format, which is compatible with various neuroimaging tools for further analysis. The affine matrix file ensures that the orientation and positioning of the data are preserved in the converted NIfTI-MRS file.",
+                "https://github.com/wtclarke/spec2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "jMRUI (.txt) ",
+                "NIfTI (.nii, .nii.gz)",
+                "To convert jMRUI .txt files to NIfTI-MRS format using spec2nii, you need to have the .txt file, which typically contains the processed MRS data in text format. In addition, an affine matrix file (a 4x4 matrix specifying the orientation information of the data) is required for accurate spatial transformation. You can specify the affine matrix file using the -a argument. To convert the jMRUI .txt file, you would use the following command: spec2nii jmrui -a AFFINE_FILE FILE, where AFFINE_FILE is the path to the affine matrix and FILE is the path to the .txt file. This command converts the jMRUI text data into the NIfTI-MRS format, ensuring that the orientation information is correctly applied from the affine matrix. The result is a NIfTI-MRS file that can be analyzed and visualized using neuroimaging tools like FSLeyes.",
+                "https://github.com/wtclarke/spec2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "128 \u00d7 128\t256 \u00d7 256\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC4723643/"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "range from 1 cm\u00b3 to 8 cm\u00b3\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC4723643/"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "times varying from several minutes to longer durations depending on the protocol.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC4723643/"
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "from 100 KB to a few megabytes\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC7613677/"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "between 10 MB to 100 MB\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC7613677/"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "Standard MRI scanners equipped with specialized MRS software and hardware, such as dedicated radiofrequency coils and pulse sequences, are used for MRS acquisition.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC8272438/"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers\t",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers, GE Healthcare, Philips Healthcare, and Canon Medical Systems.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC8272438/"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "MRS is primarily used to assess metabolic abnormalities in neurological conditions, such as differentiating brain tumors from other lesions, evaluating seizure disorders, and monitoring neurodegenerative diseases.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC8272438/"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Beyond neurology, MRS has applications in evaluating metabolic disorders in muscles, liver diseases, and certain psychiatric conditions by analyzing tissue biochemistry.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC8272438/"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No, MRS does not involve ionizing radiation\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC10657250/"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)\t",
+        "content-type": "markdown",
+        "content": "Not applicable, as MRS utilizes magnetic fields and radiofrequency pulses.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC10657250/"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "General MRI safety guidelines apply, including considerations for patients with metallic implants, pacemakers, or claustrophobia. Specific absorption rate (SAR) limits must be observed to prevent tissue heating.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC10657250/"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Preprocessing includes frequency and phase correction, baseline correction, and water suppression to enhance metabolite peak visibility.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC10657250/"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Due to the relatively small size of MRS data files, compression is generally unnecessary.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC10657250/"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "MRS faces challenges such as low SNR, long acquisition times, and susceptibility to motion artifacts. Accurate voxel placement is crucial to avoid contamination from adjacent tissues.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC10657250/"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Interpretation of MRS spectra requires specialized expertise, and the technique may have limited availability in some clinical settings. Variability in metabolite concentrations can complicate standardized analysis.\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC10657250/"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Pooya Eini"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]

@@ -1,0 +1,307 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "dwi_dti"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Diffusion MRI (DWI/DTI)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "DWI/DTI",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Diffusion-weighted imaging (DWI) and diffusion tensor imaging (DTI) are advanced MRI techniques that exploit the diffusion properties of water molecules to provide unique insights into tissue architecture. DWI measures the random Brownian motion of water molecules within tissues, allowing for the detection of abnormalities such as acute ischemic strokes, where diffusion is typically restricted. \n"
+    },
+    {
+        "level": "",
+        "title": "",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software",
+                "Column 5"
+            ],
+            [
+                "NIfTI (.nii, .nii.gz)",
+                "DICOM (.dcm)",
+                "nii2dcm is a specialized conversion tool that transforms NIfTI neuroimaging files (.nii/.nii.gz) into DICOM format, addressing a significant gap in medical imaging workflows. Built with Python as its core language, the solution leverages several powerful tools including pip for dependency management, Docker for containerization, SimpleITK for image processing, and highdicom for DICOM manipulation. The tool features a straightforward command-line interface that allows users to specify DICOM modality types during conversion (such as MR for MRI scans). For flexible deployment, nii2dcm is available both as a pip-installable package and as a pre-built Docker container. The project is actively developed with support for additional imaging modalities planned for future releases, making it a valuable resource for researchers and clinicians working with medical imaging data.",
+                "https://github.com/tomaroberts/nii2dcm",
+                ""
+            ],
+            [
+                "PAR/REC ",
+                "NIfTI (.nii, .nii.gz)",
+                "dcm2niix PARREC is a specialized conversion tool designed to transform Philips PAR/REC format medical images into NIfTI format, serving as an essential utility for neuroimaging research and clinical applications. This solution addresses the challenges in working with the aging PAR/REC format, which is gradually being replaced by enhanced DICOM and direct NIfTI exports. The tool incorporates intelligent error correction for the known \"image offcentre\" bug in V4 PAR/REC images, ensuring accurate spatial orientation in the converted files. Written primarily in C/C++, dcm2niix PARREC employs several key tools including the NIfTI library for format handling, command-line interface components for user interaction, file manipulation libraries for reading PAR/REC files, and header parsing utilities to extract crucial metadata. The solution offers flexible file naming options through argument strings and placeholders, though it has limitations with interrupted scan datasets, for which users are directed to alternative tools like dicm2nii.",
+                "https://github.com/rordenlab/i2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "Analyze (.hdr/.img)",
+                "DICOM (.dcm)",
+                "FSL (FMRIB Software Library) offers a comprehensive suite of command-line utilities for neuroimaging data processing and analysis. These tools collectively enable researchers to manipulate, transform, and extract valuable information from brain imaging datasets. The utility tools include format converters (fslascii2img, fsl2ascii), file type managers (fslchfiletype, fslcreatehd, fsleditHD), mathematical operators (fslmaths, fslfft), data extraction tools (fslroi, fslmeants), statistical analyzers (fslstats, fslcc), dimensional manipulators (fslmerge, fslsplit, fslslice), and header information processors (fslhd, fslinfo, fslval). Additionally, FSL provides specialized orientation tools (fslreorient2std, fslcpgeom, fslorient, fslswapdim) that ensure proper spatial alignment of brain images according to standard neuroanatomical conventions. Written primarily in C++ with Python interfaces, FSL integrates multiple computational libraries including NIfTI I/O libraries, matrix calculation tools, statistical packages, and optimization algorithms to deliver a powerful platform for neuroscientific research that maintains compatibility with major neuroimaging data formats.",
+                "https://fsl.fmrib.ox.ac.uk/fsl/docs/#/utilities/fslutils",
+                ""
+            ],
+            [
+                "MINC (.mnc)",
+                "DICOM (.dcm)",
+                "The mnc2dcm solution is a specialized medical imaging conversion tool designed to transform MINC (Medical Imaging NetCDF) files into DICOM format, facilitating the seamless re-integration of processed research data back into clinical hospital systems. Developed by Andrew Janke, this lightweight converter is implemented primarily as a Perl script that methodically translates the spatial and metadata elements from MINC's scientific format into the clinically standardized DICOM structure. The toolset includes the core mnc2dcm converter script alongside supporting utilities like dcmdump and dcmsort for DICOM file manipulation and organization. The solution employs several fundamental technologies: Perl as the programming language, MINC library for reading the source format, DICOM toolkit for constructing valid medical images, element hashing algorithms for metadata mapping, and slice processing routines for proper 3D to 2D conversion. With command-line options for verbosity control, version information, help documentation, and dry-run capabilities, mnc2dcm serves as a critical bridge between research and clinical neuroimaging workflows.",
+                "https://github.com/andrewjanke/mnc2dcm/tree/master",
+                ""
+            ],
+            [
+                "NRRD (.nrrd)",
+                "NIfTI (.nii, .nii.gz)",
+                "i2nii is a versatile command-line tool designed to convert a wide range of scientific and medical imaging formats into the NIfTI format widely used in neuroimaging analysis. Created as a complementary solution to dcm2niix (which handles DICOM conversions), i2nii addresses the need for converting non-DICOM scientific imaging formats including AFNI Brik, Analyze, BrainVoyager, ECAT, FreeSurfer, ITK, MRC, MRTrix, NRRD, and many others. Developed using FreePascal, the tool features cross-platform compatibility with compiled executables available for Windows, macOS, and Linux. The toolchain incorporates several key components: a format detection system to identify input file types, spatial transformation algorithms to handle rotation and orientation differences, compression utilities for optimizing output file size, and command-line parameter processing for options like output directory specification and help documentation. While i2nii effectively bridges the gap between diverse imaging formats and the standardized NIfTI format required by many neuroimaging applications, it acknowledges limitations stemming from poor documentation of spatial scale and orientation in some source formats.",
+                "https://github.com/rordenlab/i2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "MHA/MHD (.mha, .mhd) ",
+                "NIfTI (.nii, .nii.gz)",
+                "i2nii is a comprehensive format conversion tool designed to transform various scientific and medical imaging formats into the standardized NIfTI format used throughout the neuroimaging community. This command-line utility serves as a bridge between specialized imaging formats and neuroimaging analysis pipelines, supporting numerous file types including AFNI Brik, Analyze, BrainVoyager, ECAT, FreeSurfer, ITK, MRC, MRTrix, NRRD, and many others. The solution employs several key components: FreePascal as the programming language, a format detection engine for identifying input files, spatial transformation algorithms for handling rotation and orientation, compression utilities for optimizing storage, and command-line parameter processing for configuring conversion options. While i2nii deliberately excludes DICOM and TIFF conversion (deferring to companion tools dcm2niix and ImageJ/Fiji's Bio-Formats module), it provides cross-platform support with compiled binaries for Windows, macOS, and Linux, making it accessible to researchers regardless of their operating system. The tool's development acknowledges limitations related to spatial scale and orientation documentation in some source formats while maintaining a user-friendly interface with comprehensive command options for output directory specification, rotation settings, and compression preferences.",
+                "https://github.com/rordenlab/i2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "VTK (.vtk)",
+                "NIfTI (.nii, .nii.gz)",
+                "The i2nii tool is a command-line utility designed for converting various scientific and medical imaging formats into the NIfTI format, widely used in neuroimaging. While it does not support DICOM or TIFF conversions directly, companion tools like dcm2niix and the Bio-Formats module of ImageJ/Fiji can handle these formats. The tool is available as precompiled executables for Linux, macOS, and Windows, with the option to compile from source using FreePascal. It includes various features such as setting output directories, rotating images, and compressing files, though users should be cautious due to potential format documentation limitations. Supported formats include AFNI Brik, Analyze, BrainVoyager, ECAT, FreeSurfer, ITK, MRC, MRTrix, NIfTI, NRRD, and more. The project is open-source under the BSD-2-Clause license.",
+                "https://github.com/rordenlab/i2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ],
+            [
+                "MGH/MGZ (.mgh, .mgz)",
+                "NIfTI (.nii, .nii.gz)",
+                "The i2nii tool is a command-line utility designed to convert various scientific and medical imaging formats into NIfTI, a widely used neuroimaging format. It does not support DICOM or TIFF conversions directly, but companion tools like dcm2niix and the Bio-Formats module of ImageJ/Fiji can handle these formats. The tool is available as precompiled executables for Linux, macOS, and Windows, and users can compile the source code using FreePascal. It offers options for setting output directories, image rotation, and compression, though some formats may have documentation limitations affecting spatial scale and orientation. Supported formats include AFNI Brik, Analyze, BrainVoyager, ECAT, FreeSurfer, ITK, MRC, MRTrix, NIfTI, and NRRD. The project is open-source under the BSD-2-Clause license.",
+                "https://github.com/rordenlab/i2nii",
+                "first convert this file format to Nifti (.nii) then convert Nifti (.nii) to Dicom (.dcm) using nii2dcm"
+            ]
+        ]
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)\tNIfTI (.nii, .nii.gz)\tPAR/REC\tAnalyze (.hdr/.img)\tMINC (.mnc)\tNRRD (.nrrd)\tMHA/MHD (.mha, .mhd)\tVTK (.vtk)\tMGH/MGZ (.mgh, .mgz)\thttps://nicoleeic.github.io/Brain_and_Code/2019/09/09/filetypes.html?utm_source=chatgpt.com"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "Diffusion Tensor Imaging\t3D Volumetric Imaging\tTime-series\tVector Field Data\tScalar Maps \thttps://radiopaedia.org/articles/diffusion-tensor-imaging-and-fiber-tractography-1"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "MRI"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "128 \u00d7 128\t256 \u00d7 256\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC3366862/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "1 mm \u00d7 1 mm \u00d7 1 mm\thttps://www.frontiersin.org/10.3389/conf.fninf.2015.19.00016/event_abstract?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "Not directly applicable, but diffusion acquisitions require several minutes per scan (e.g., 5-10 minutes for DTI).\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC3366862/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "10-50 MB per DWI volume\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC9841915/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "range from 500 MB to 5 GB\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC9841915/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "MRI Scanner with diffusion-weighted imaging (DWI) capabilities.\thttps://www.ncbi.nlm.nih.gov/books/NBK537361/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers\t",
+        "content-type": "markdown",
+        "content": "Siemens, GE Healthcare, Philips, Canon, Hitachi.\thttps://www.ncbi.nlm.nih.gov/books/NBK537361/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "\"White matter integrity assessment (e.g., in multiple sclerosis, stroke, traumatic brain injury). Pre-surgical planning for brain tumor resection.\"\thttps://www.ncbi.nlm.nih.gov/books/NBK537361/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "\"Neuroscience research (brain connectivity and structural connectivity mapping). Neurodevelopmental disorders (e.g., autism, schizophrenia). Neurodegenerative diseases (e.g., Parkinson\u2019s, Alzheimer\u2019s).\"\thttps://www.ncbi.nlm.nih.gov/books/NBK537361/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No (MRI does not use ionizing radiation).\thttps://www.ncbi.nlm.nih.gov/books/NBK537361/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)\t",
+        "content-type": "markdown",
+        "content": "None (MRI is a non-ionizing modality).\thttps://www.ncbi.nlm.nih.gov/books/NBK537361/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "\"Contraindications: Metal implants, pacemakers, claustrophobia. Gadolinium contrast risks: Nephrogenic systemic fibrosis (NSF) in renal failure patients. Motion sensitivity: Head motion significantly impacts tractography quality.\"\thttps://www.ncbi.nlm.nih.gov/books/NBK537361/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "\"NIfTI to DICOM conversion (e.g., using nii2dcm). Eddy current & motion correction (e.g., FSL\u2019s eddy, MRtrix3). Gradient distortion correction. Tensor fitting & fiber tracking using DTIFIT, MRtrix3, or DSI Studio.\"\thttps://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2013.00031/full?utm_source=chatgpt.com"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "\"Lossless compression (e.g., gzip for NIfTI - .nii.gz). No standard lossy compression for diffusion MRI due to data integrity concerns.\"\thttps://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2013.00031/full?utm_source=chatgpt.com"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "\"Motion artifacts \u2013 Patient movement can distort tractography results. Susceptibility distortions \u2013 Magnetic field inhomogeneities affect diffusion data. Partial volume effects \u2013 Limited spatial resolution can cause signal mixing from different tissue types.\"\thttps://www.sciencedirect.com/science/article/abs/pii/S0895611122001215?via%3Dihub"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "\"Tractography is model-dependent \u2013 Different algorithms yield different results. Difficult to resolve crossing fibers \u2013 Standard DTI cannot differentiate complex white matter structures. Limited clinical standardization \u2013 Tractography is still not widely used in routine clinical diagnosis.\"\thttps://www.sciencedirect.com/science/article/abs/pii/S0895611122001215?via%3Dihub"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Pooya Eini"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
