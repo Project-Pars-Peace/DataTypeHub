@@ -1,0 +1,339 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "breast_mri"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Breast Magnetic Resonance Imaging"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "BMRI",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Breast MRI is a non-invasive imaging technique that uses magnetic fields and radio waves to produce detailed images of breast tissue, often used to detect cancer or assess abnormalities."
+    },
+    {
+        "level": "1",
+        "title": "Modality Name ",
+        "content-type": "markdown",
+        "content": "Breast MRI is a non-invasive imaging technique that uses magnetic fields and radio waves to produce detailed images of breast tissue, often used to detect cancer or assess abnormalities."
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "BMRI"
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "Breast MRI (BMRI) uses strong magnetic fields and radiofrequency (RF) pulses to create detailed images of breast tissue. Unlike mammography or ultrasound, it does not use ionizing radiation. The hydrogen protons in breast tissue align with the magnetic field and are then excited by RF pulses. When the protons return to their normal state, they emit signals that are detected and processed into high-resolution images. Dynamic Contrast-Enhanced MRI (DCE-MRI) is the most common technique, where gadolinium-based contrast agents highlight blood flow patterns in tumors, improving cancer detection. Additional techniques like Diffusion-Weighted Imaging (DWI) assess tissue cellularity, and Spectroscopic Imaging analyzes biochemical changes. Breast MRI is highly sensitive for detecting breast cancer, implant integrity, and high-risk screenings."
+    },
+    {
+        "level": "4",
+        "title": " Data Type & File Format",
+        "content-type": "table",
+        "content": [
+            [
+                "4.1.Primary File Format(s)",
+                "DICOM (.dcm)",
+                "NIfTI (.nii, .nii.gz)",
+                "MetaImage (.mhd, .mha)",
+                " NRRD (.nrrd)",
+                "HDF5 (.h5)",
+                "MINC (.mnc)",
+                "Analyze (.hdr, .img)"
+            ],
+            [
+                "4.2.Data Type",
+                "3D Volumetric, Time-Series, Grayscale",
+                "3D Volumetric, Time-Series, Functional Imaging, Diffusion Tensor Imaging",
+                "3D Volumetric, Functional Imaging",
+                "3D Volumetric, Diffusion Tensor Imaging (DTI)",
+                "3D Volumetric, Time-Series, Functional Imaging, Tensor Imaging",
+                "3D Volumetric, Functional Imaging, Diffusion Tensor Imaging",
+                "3D Volumetric, Time-Series"
+            ]
+        ]
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "MRI"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm) \u2013 Clinical Standard and NIfTI (.nii, .nii.gz) \u2013 Research & AI "
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "The dcm2niix tool is primarily designed for converting DICOM to NIfTI, but the reverse process (NIfTI to DICOM) requires alternative methods. One approach is using dcm2nii, an older version of dcm2niix, which allows conversion by running the command dcm2nii -4 my_nifti_file.nii.gz, generating a series of DICOM (.dcm) files. For enhanced control over metadata, Plastimatch can be used with the command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix image_, ensuring compatibility with clinical imaging systems. Additionally, in MATLAB, the dicomwrite function allows custom conversion by loading a NIfTI file, extracting slices, and saving them as DICOM while preserving metadata. Since dcm2niix itself does not directly support NIfTI to DICOM, these alternative methods provide efficient conversion solutions for integrating research data into clinical workflows.",
+                "1- https://github.com/rordenlab/dcm2niix  2- https://github.com/rordenlab/dcm2niix/blob/master/docs/source/dcm2niix.rst "
+            ],
+            [
+                "MHA",
+                "DICOM",
+                "SimpleITK is a powerful open-source library for processing medical images, including MHA (.mha, .mhd) to DICOM (.dcm) conversion. The script provided utilizes SimpleITK to load an MHA file, process the image data, and save it as a DICOM series. The line sitk.ReadImage(\"input_file.mha\") reads the MHA image, preserving voxel intensity values and spatial metadata. Next, the script creates an output directory using os.makedirs(dicom_series_dir, exist_ok=True), ensuring that DICOM slices are stored in a structured format. The ImageSeriesWriter class from SimpleITK is used to generate DICOM slices, where writer.GetGDCMSeriesFileNames(dicom_series_dir) assigns filenames for each slice. Finally, writer.Execute(mha_image) writes the DICOM series while maintaining image integrity. This method ensures compatibility with PACS (Picture Archiving and Communication Systems) and clinical workflows. The tools used include SimpleITK, which provides an interface for reading, processing, and writing medical images in various formats, and GDCM (Grassroots DICOM), which handles DICOM metadata and ensures proper image encoding. The Python script automates the conversion, making it useful for integrating MHA-based Cardiac MRI datasets into DICOM-compatible imaging systems. ",
+                "https://simpleitk.readthedocs.io/en/master/"
+            ],
+            [
+                "Analyze (.hdr, .img)",
+                "DICOM",
+                "To convert Analyze (.hdr, .img) to DICOM (.dcm) for Breast MRI, the process involves three main steps: first, converting the Analyze format to NIfTI (.nii/.nii.gz) using dcm2nii, then transforming NIfTI into a DICOM series using DCMTK\u2019s img2dcm, and finally verifying the DICOM metadata for clinical compatibility. Since Analyze 7.5 is an older format, modern imaging systems typically require conversion to NIfTI first before DICOM generation. Using dcm2nii, the command dcm2nii input.hdr converts the Analyze file into a research-friendly NIfTI format. Once in NIfTI format, img2dcm output.nii output.dcm generates a single DICOM file, or if a full volumetric dataset is required, img2dcm -v --study-from original.dcm output.nii output_series/ ensures that a complete DICOM series is created while preserving patient metadata from a reference DICOM file. Finally, to confirm metadata consistency, DCMTK\u2019s dcm2xml output.dcm > metadata.xml extracts and verifies all DICOM header information. For batch processing of multiple Analyze files, a shell script can automate the process by iterating through .hdr files, converting each to NIfTI using dcm2nii, and then to DICOM using img2dcm, with outputs stored in a structured DICOM directory. This workflow ensures that legacy Analyze-based breast MRI datasets can be seamlessly integrated into modern PACS systems and AI-driven diagnostic workflows. The tools used\u2014dcm2nii for format conversion, DCMTK\u2019s img2dcm for DICOM generation, and dcm2xml for metadata validation\u2014allow for efficient transformation and quality control. By leveraging this process, older research datasets stored in Analyze format can be modernized into clinically compatible DICOM files, making them accessible for clinical reviews, AI processing, and long-term storage in medical imaging databases. ",
+                "1- https://people.cas.sc.edu/rorden/mricron/dcm2nii.html 2- https://github.com/rordenlab 3- https://support.dcmtk.org/docs/img2dcm.html "
+            ],
+            [
+                "MINC",
+                "DICOM",
+                "To convert MINC (.mnc) to DICOM (.dcm) for Breast MRI, the process involves three main steps: first, converting MINC to NIfTI (.nii) using mnc2nii from the MINC-Toolkit, then converting NIfTI to DICOM series using DCMTK\u2019s img2dcm, and finally verifying DICOM metadata to ensure compatibility with PACS and clinical systems. Since MINC does not natively support DICOM metadata, an intermediate NIfTI conversion is required. The command mnc2nii input.mnc output.nii transforms the MINC file into a research-friendly format, while img2dcm output.nii output.dcm generates a single DICOM file from the NIfTI image. If the dataset contains multiple slices, a batch process is needed to convert the entire volume into a DICOM series, where img2dcm -v --study-from original.dcm output.nii output_series/ ensures that DICOM metadata (such as patient details and imaging parameters) are preserved from an existing reference DICOM file. This ensures data standardization across imaging platforms. Additionally, DCMTK\u2019s dcm2xml output.dcm > metadata.xml allows for validation of metadata, ensuring correct integration into PACS. For batch processing, a shell script can loop through multiple MINC files, automating the conversion for large datasets. The script iterates over all .mnc files in a directory, using mnc2nii to convert each MINC file to NIfTI and img2dcm to convert each NIfTI file to DICOM, saving the final output in a dedicated DICOM folder. This workflow ensures efficient handling of large-scale breast MRI datasets, allowing seamless integration into research and clinical workflows. The tools used\u2014MINC-Toolkit for medical image processing, DCMTK for DICOM conversion, and dcm2xml for metadata verification\u2014enable high-quality image preservation and clinical standardization. By using these tools, researchers and radiologists can easily transform breast MRI datasets from research-focused formats into clinically compatible DICOM files that are ready for PACS storage, AI-driven analysis, and diagnostic imaging.",
+                "1- https://bic-mni.github.io/ 2- https://dicom.offis.de/dcmtk.php.en 3- https://github.com/BIC-MNI/minc-toolkit-v2 4- https://discourse.slicer.org/t/minc-to-dicom-conversion "
+            ],
+            [
+                "HDF5 (.h5)",
+                "DICOM",
+                "To convert HDF5 (.h5) to DICOM (.dcm) for Cardiac MRI, tools like Python (h5py + SimpleITK) or MATLAB (h5read + dicomwrite) can be used. In Python, the h5py library extracts image data from the HDF5 structure, which is then processed as a NumPy array and converted into a DICOM series using SimpleITK.ImageSeriesWriter(). The script reads the dataset from input.h5, reshapes it if necessary, and writes the DICOM slices into an output directory. Alternatively, in MATLAB, the function h5read() loads image data from the HDF5 file, and dicomwrite() saves each cardiac MRI slice as a DICOM file while assigning metadata using dicominfo(). Both methods ensure that HDF5-based medical imaging datasets can be properly integrated into clinical PACS systems for diagnostic use. The Python approach is best for automation and research, while MATLAB is preferred for structured workflows in medical imaging labs. ",
+                "1- https://github.com/h5py/h5py  2- https://github.com/SimpleITK/SimpleITK  3- https://www.mathworks.com/help/matlab/ref/h5read.html "
+            ],
+            [
+                "NRRD",
+                "DICOM",
+                "The Python script for converting NRRD to DICOM in 3D Slicer automates the process by loading an NRRD file, setting up the DICOM export logic, and saving the converted DICOM series to a specified directory. The script first imports Slicer\u2019s Python API (import slicer) to access the medical imaging functionalities within the software. It then loads the NRRD file using slicer.util.loadVolume(input_nrrd), where input_nrrd is the path to the NRRD file. Once the volume is loaded into 3D Slicer, the script initializes the DICOM Exporter module by calling slicer.modules.dicomexporter.logic(), which provides the necessary tools for DICOM series generation. The exportSeries() function is then used to export the loaded volume as a DICOM-compliant series, with the output stored in the specified export_directory. After execution, the script prints a confirmation message to indicate successful conversion. This approach is particularly useful for batch processing multiple Breast MRI scans or automating workflows in research and clinical environments where datasets stored in NRRD need to be converted into the standardized DICOM format for PACS storage, radiological review, or AI-based image analysis.",
+                "https://github.com/ReubenDo/ReMIND  "
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "Dynamic Contrast-Enhanced MRI (DCE-MRI)",
+                "T1-Weighted MRI",
+                "T2-Weighted MRI",
+                "Diffusion-Weighted Imaging (DWI)",
+                "Spectroscopic MRI (MRSI)"
+            ],
+            [
+                "Spatial Resolution",
+                "256 \u00d7 256 to 512 \u00d7 512",
+                "256 \u00d7 256 to 320 \u00d7 320",
+                "256 \u00d7 256 to 512 \u00d7 512",
+                "128 \u00d7 128 to 192 \u00d7 192",
+                "64 \u00d7 64 to 128 \u00d7 128"
+            ],
+            [
+                "Voxel Size / Pixel Spacing",
+                "0.5 \u00d7 0.5 mm / 0.5 \u00d7 0.5 \u00d7 1 mm",
+                "0.7 \u00d7 0.7 mm / 0.7 \u00d7 0.7 \u00d7 1.5 mm",
+                "0.8 \u00d7 0.8 mm / 0.8 \u00d7 0.8 \u00d7 2 mm",
+                "1.5 \u00d7 1.5 mm / 1.5 \u00d7 1.5 \u00d7 3 mm",
+                "2.0 \u00d7 2.0 mm / 2.0 \u00d7 2.0 \u00d7 3 mm"
+            ]
+        ]
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "Dynamic Contrast-Enhanced MRI (DCE-MRI)",
+                "T1-Weighted MRI",
+                "T2-Weighted MRI",
+                "Diffusion-Weighted Imaging (DWI)",
+                "Spectroscopic MRI (MRSI)"
+            ],
+            [
+                "Single Image Size",
+                "2 \u2013 5 MB",
+                "1 \u2013 3 MB",
+                "1 \u2013 3 MB",
+                "500 KB \u2013 1.5 MB",
+                "200 KB \u2013 1 MB"
+            ],
+            [
+                "Typical Study Size",
+                "2 \u2013 6 GB",
+                "500 MB \u2013 1.5 GB",
+                "500 MB \u2013 1.5 GB",
+                "200 MB \u2013 1 GB",
+                "200 MB \u2013 500 MB"
+            ]
+        ]
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "MRI Scanner (1.5T, 3T, or 7T)"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers: MAGNETOM Aera (1.5T), MAGNETOM Vida (3T), MAGNETOM Terra (7T)/ GE Healthcare: Signa Voyager (1.5T), Signa Premier (3T) / Philips Healthcare: Ingenia Ambition (1.5T), Ingenia Elition (3T)"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "1- Breast Cancer Detection & Staging 2- High-Risk Screening (BRCA1/BRCA2 Carriers) 3- Pre-Surgical Planning (Lumpectomy, Mastectomy) 4- Monitoring Treatment Response (Neoadjuvant Chemotherapy) 5- Breast Implant Evaluation (Rupture, Leakage Detection) 6- Recurrent Breast Cancer Detection 7- Inflammatory Breast Cancer (IBC) Assessment "
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "1- Perfusion Imaging (Tumor Angiogenesis Study) 2- Radiomics & AI-Based Tumor Classification 3- Ultrafast Breast MRI 4- Functional & Metabolic Imaging in Breast MRI"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "1- Magnetic Field Risks \u2013 Strong magnetic fields (1.5T, 3T) can interfere with pacemakers, defibrillators, and metallic implants. Patients must be screened for MRI-unsafe devices. 2- Gadolinium Contrast Risks \u2013 Potential allergic reactions and kidney issues (Nephrogenic Systemic Fibrosis - NSF) in patients with low kidney function (eGFR < 30 mL/min). Safer macrocyclic contrast agents are preferred. 3-  Claustrophobia & Discomfort \u2013 Patients may feel anxious in enclosed scanners. Sedation or open-bore MRI can help, and shorter scan protocols (Abbreviated MRI) reduce discomfort. 4- Motion Artifacts & Image Quality \u2013 Breathing and movement can cause image blurring. Respiratory gating and motion correction software improve scan clarity. 5- Cost & Limited Accessibility \u2013 Breast MRI is expensive ($1,000\u2013$3,000 per scan) and not widely available compared to mammography. Insurance may only cover high-risk patients. 6- RF Heating & Metallic Tattoos \u2013 Radiofrequency (RF) waves can cause minor tissue heating, especially in 3T MRI. Patients with metallic tattoos, piercings, or certain skin patches should inform their radiologist. 7- Pregnancy Considerations \u2013 MRI is safe without contrast, but gadolinium contrast is avoided unless necessary due to potential fetal risks."
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "1- DICOM to NIfTI Conversion \u2013 Standardizes data for research & AI. Tools: dcm2niix, MRIConvert, 3D Slicer 2- Motion Correction (DCE-MRI, DWI) \u2013 Reduces patient movement artifacts. Tools: FSL MCFLIRT, ANTs, SPM  3- Noise Reduction & Denoising \u2013 Improves image quality & SNR. Tools: DIPY Non-local Means, BM4D, ANTs DenoiseImage 4- Intensity Normalization \u2013 Corrects bias field & standardizes intensity. Tools: N4ITK, FSL FAST, ANTs Normalize 5- Image Registration (Multi-Sequence Alignment) \u2013 Aligns T1, T2, DCE-MRI, and DWI. Tools: ANTs, Elastix, SPM 6-Segmentation (Lesion & Tumor Extraction) \u2013 Isolates breast structures. Tools: nnUNet, 3D Slicer, FSL FAST 7-Perfusion & Pharmacokinetic Modeling \u2013 Analyzes tumor perfusion (DCE-MRI). Tools: Tofts Model, Quantiphyse, NordicICE 8- Deep Learning-Based Preprocessing \u2013 Standardizes MRI data for AI models. Tools: PyTorch, MONAI, nnUNet, PyRadiomics"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "1. Lossless Compression (Preserves Image Quality) JPEG2000 Lossless (DICOM-JP2K) \u2013 Used for PACS storage, 2:1 \u2013 3:1 compression. Run-Length Encoding (RLE) \u2013 Efficient for segmentation masks, 2:1 \u2013 3:1. Huffman Coding \u2013 Applied in NIfTI datasets, 1.5:1 \u2013 2:1. GZIP Compression \u2013 Used for research datasets, 2:1 \u2013 3:1. 2. Lossy Compression (Higher Compression, Some Quality Loss) JPEG2000 Lossy (DICOM-JP2K) \u2013 AI & research datasets, 10:1 \u2013 30:1. H.265/HEVC Compression \u2013 Used for cine MRI motion tracking, 50:1+. Wavelet-Based Compression \u2013 Applied in radiomics & AI training, 10:1 \u2013 50:1.h"
+    },
+    {
+        "level": "11",
+        "title": " Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "1- Motion Artifacts (Breathing & Cardiac Motion) Challenge: Breast movement during Dynamic Contrast-Enhanced MRI (DCE-MRI) affects image quality. Solution: Respiratory gating, motion correction algorithms (MCFLIRT, ANTs). 2- Long Scan Time & Patient Discomfort Challenge: Standard Breast MRI scans take 30\u201360 minutes, causing discomfort & claustrophobia. Solution: Abbreviated Breast MRI (AB-MRI), AI-based acceleration, Compressed Sensing MRI. 3-High Cost & Limited Availability Challenge: Expensive (~$1,000\u2013$3,000 per scan), not widely available vs. mammography. Solution: Insurance coverage expansion, AI-driven cost reduction. 4-Metallic Implants & Safety Risks Challenge: MRI-unsafe implants (pacemakers, defibrillators) restrict eligibility. Solution: MRI-conditional devices, alternative imaging (Ultrasound, Contrast-Enhanced Mammography). 5- Low Sensitivity in Certain Breast Cancers Challenge: Lobular carcinoma & non-mass lesions are harder to detect. Solution: Multi-parametric MRI (DWI, MRSI) & AI-enhanced tumor detection. 6- Gadolinium Contrast Risks & Alternative Imaging Challenge: Gadolinium-based contrast agents (GBCAs) may cause nephrogenic systemic fibrosis (NSF) in renal patients. Solution: Diffusion-Weighted Imaging (DWI) & Arterial Spin Labeling (ASL) as contrast-free MRI. 7- Standardization Issues Across MRI Vendors Challenge: Different MRI manufacturers (Siemens, GE, Philips) use varying acquisition parameters. Solution: Harmonization tools (N4ITK, image normalization)."
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "1-High Cost & Limited Availability 2-Long Scan Time & Patient Discomfort 3-Gadolinium Contrast Risks & Nephrotoxicity 4-False Positives & Overdiagnosis 5-Limited Standardization Across MRI Vendors 6-Low Sensitivity for Certain Breast Cancer Subtypes 7-Not Suitable for Emergency or Acute Settings"
+    },
+    {
+        "level": "12",
+        "title": "References (Website, Paper, etc.)",
+        "content-type": "markdown",
+        "content": "Include all references except the ones for section 4.5 conversion methods. 1-\thttps://appliedradiology.com/articles/an-overview-of-breast-mri 2-\tDhillon GS, Bell N, Ginat DT, Levit A, Destounis S, O'Connell A. Breast MR Imaging: What the Radiologist Needs to Know. J Clin Imaging Sci. 2011;1:48. doi: 10.4103/2156-7514.85655. Epub 2011 Oct 3. PMID: 22059150; PMCID: PMC3205515. https://pmc.ncbi.nlm.nih.gov/articles/PMC3205515/ 3-\thttps://pubs.rsna.org/doi/full/10.1148/radiol.2019182947 4-\thttps://www.siemens-healthineers.com/en-us/magnetic-resonance-imaging 5-\thttps://global.medical.canon/products/magnetic-resonance 6-\thttps://www2.esaote.com/en-US/magnetic-resonance/ 7-\thttps://www.siemens-healthineers.com/en-us/molecular-imaging/pet-ct 8-\thttps://www.usa.philips.com/healthcare/solutions/advanced-molecular-imaging/pet-ct 9-\thttps://pubmed.ncbi.nlm.nih.gov/36749493/ 10-\thttps://www.radiologyinfo.org/en/info/breastmr 11-\thttps://pubs.rsna.org/doi/abs/10.1148/radiol.2019182947 12-\thttps://pubmed.ncbi.nlm.nih.gov/32755224/ 13-\thttps://pubmed.ncbi.nlm.nih.gov/37555957/ 14-\thttps://pubmed.ncbi.nlm.nih.gov/39938355/ 15-\thttps://pubmed.ncbi.nlm.nih.gov/29046262/ 16-\thttps://github.com/olmozavala/DCE_MRI_Preproc 17-\thttps://github.com/mazurowski-lab/3D-Breast-FGT-and-Blood-Vessel-Segmentation 18-\thttps://github.com/gholste/breast_mri_fusion 19-\thttps://github.com/mueller-franzes/BreastMRI-Pix2PixHD 20-\thttps://github.com/LidiaGarrucho/MAMA-MIA 21-\thttps://github.com/mazurowski-lab/3D-Breast-FGT-and-Blood-Vessel-Segmentation/blob/main/Preprocessing%20Sample.ipynb 22-\thttps://github.com/RichardObi/pre_post_synthesis 23-\thttps://pubmed.ncbi.nlm.nih.gov/14728244/?utm_source=chatgpt.com 24-\thttps://pubmed.ncbi.nlm.nih.gov/18572212/?utm_source=chatgpt.com 25-\thttps://github.com/DCMTK/dcmtk?utm_source=chatgpt.com 26-\thttps://pubmed.ncbi.nlm.nih.gov/31592734/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Rana Hashemi"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
