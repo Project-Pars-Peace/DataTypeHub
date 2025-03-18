@@ -1,0 +1,331 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "mr_myelography"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Magnetic Resonance  Myelography"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRM",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "MR myelography is a non-invasive MRI technique that visualizes the spinal cord, nerve roots, and cerebrospinal fluid without using contrast dye injected into the spinal canal.\n"
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "MR Myelography Imaging of spinal cord and nerves"
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "MRM "
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "MR Myelography (MRM) is an MRI technique that uses magnetic fields and radio waves to create high-resolution images of the spinal cord, nerve roots, and cerebrospinal fluid (CSF) pathways. It relies on T2-weighted sequences to highlight fluid-filled structures without the need for contrast agents, making it a non-invasive alternative to conventional myelography for detecting spinal abnormalities."
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "table",
+        "content": [
+            [
+                "4.1.Primary File Format(s)",
+                "DICOM (.dcm)",
+                "NIfTI (.nii, .nii.gz)",
+                " PAR/REC",
+                "Analyze 7.5 (.hdr, .img)",
+                "MINC (.mnc)",
+                "NRRD (.nrrd)",
+                "MHA/MHD (.mha, .mhd - MetaImage)"
+            ],
+            [
+                "4.2.Data Type",
+                "Grayscale, 3D Volumetric",
+                "Grayscale, 3D Volumetric, 4D Time-Series ",
+                "Grayscale, 3D Volumetric",
+                "Grayscale, 3D Volumetric",
+                "Grayscale, 3D Volumetric, 4D Time-Series ",
+                "Grayscale, 3D Volumetric & Multi-Dimensional Data",
+                "Grayscale, 3D Volumetric & Multi-Dimensional Data"
+            ]
+        ]
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "MRI"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm) and NIfTI (.nii, .nii.gz)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "The dcm2niix tool is primarily designed for converting DICOM to NIfTI, but the reverse process (NIfTI to DICOM) requires alternative methods. One approach is using dcm2nii, an older version of dcm2niix, which allows conversion by running the command dcm2nii -4 my_nifti_file.nii.gz, generating a series of DICOM (.dcm) files. For enhanced control over metadata, Plastimatch can be used with the command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix image_, ensuring compatibility with clinical imaging systems. Additionally, in MATLAB, the dicomwrite function allows custom conversion by loading a NIfTI file, extracting slices, and saving them as DICOM while preserving metadata. Since dcm2niix itself does not directly support NIfTI to DICOM, these alternative methods provide efficient conversion solutions for integrating research data into clinical workflows.",
+                "1- https://github.com/rordenlab/dcm2niix  2- https://github.com/rordenlab/dcm2niix/blob/master/docs/source/dcm2niix.rst "
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "Plastimatch is an open-source medical imaging toolkit designed for converting imaging formats, including NIfTI (.nii, .nii.gz) to DICOM (.dcm), making it ideal for integrating Cardiac MRI research data into clinical workflows. The process begins by installing Plastimatch on Linux, macOS, or Windows, after which the conversion command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix cardiac_mri_ is executed. This generates a series of DICOM files with preserved metadata, ensuring compatibility with PACS (Picture Archiving and Communication Systems). Users can validate the output using dcmdump (from DCMTK) to inspect patient details, acquisition parameters, and scan properties. For advanced processing, Plastimatch supports voxel spacing adjustments (e.g., --output-spacing 1.25,1.25,5.0) to match clinical DICOM standards. It effectively handles 3D volumetric cardiac MRI, cine imaging, and multi-frame datasets, ensuring proper orientation and metadata retention. The converted files can then be reviewed or further refined in ITK-SNAP, 3D Slicer, or MATLAB before PACS integration. This workflow provides a seamless transition of NIfTI-based cardiac MRI into standardized DICOM format, facilitating research and clinical interoperability.",
+                "https://plastimatch.org/plastimatch.html"
+            ],
+            [
+                "PAR/REC",
+                "DICOM",
+                "Philips DICOM Export is a built-in feature in Philips MRI scanners and IntelliSpace PACS, allowing direct PAR/REC to DICOM conversion while preserving metadata such as acquisition parameters and patient details. The process can be performed via the MRI console, where users navigate to the Exam List, select a Cardiac MRI dataset, and choose the \"Export to DICOM\" option, specifying the output destination (PACS, local storage, or DICOM server). Some Philips workstations also support command-line scripting for batch conversion using a proprietary command like export_to_dicom -i input_folder -o output_folder -format DICOM. Additionally, for research applications, Philips Research API (if accessible) allows automated conversion using Python or MATLAB scripts, such as philipsdicom.convert(input_path, output_path). If Philips DICOM Export is not available, alternative tools like dcm2niix (to convert PAR/REC to NIfTI) and Plastimatch (to convert NIfTI to DICOM) can be used to ensure compatibility with clinical PACS and DICOM workflows. ",
+                "1- https://www.usa.philips.com/c-dam/b2bhc/us/support/Customer-Support/tta_2.40_dicom_conformance_statement.pdf   2- https://www.documents.philips.com/doclib/enc/8916819/DICOM_CookBook.pdf "
+            ],
+            [
+                "NRRD",
+                "DICOM",
+                "To convert NRRD to DICOM using 3D Slicer, the process involves loading the NRRD file via File > Add Data, then assigning proper DICOM metadata using the Data module before exporting the dataset through the DICOM module. Users can manually configure patient and study information to ensure compatibility with PACS (Picture Archiving and Communication Systems). For automation, Python scripting within 3D Slicer allows batch conversion using slicer.util.loadVolume('file.nrrd') followed by slicer.util.exportNode(volume_node, 'output_folder'). Additionally, tools like DCMTK\u2019s dcmdump can validate the exported DICOM files. This workflow ensures smooth integration of Cardiac MRI datasets into clinical environments while maintaining high-dimensional imaging integrity.",
+                "https://slicer.readthedocs.io/en/latest/user_guide/modules/dicom.html "
+            ],
+            [
+                "MHA",
+                "DICOM",
+                "SimpleITK is a powerful open-source library for processing medical images, including MHA (.mha, .mhd) to DICOM (.dcm) conversion. The script provided utilizes SimpleITK to load an MHA file, process the image data, and save it as a DICOM series. The line sitk.ReadImage(\"input_file.mha\") reads the MHA image, preserving voxel intensity values and spatial metadata. Next, the script creates an output directory using os.makedirs(dicom_series_dir, exist_ok=True), ensuring that DICOM slices are stored in a structured format. The ImageSeriesWriter class from SimpleITK is used to generate DICOM slices, where writer.GetGDCMSeriesFileNames(dicom_series_dir) assigns filenames for each slice. Finally, writer.Execute(mha_image) writes the DICOM series while maintaining image integrity. This method ensures compatibility with PACS (Picture Archiving and Communication Systems) and clinical workflows. The tools used include SimpleITK, which provides an interface for reading, processing, and writing medical images in various formats, and GDCM (Grassroots DICOM), which handles DICOM metadata and ensures proper image encoding. The Python script automates the conversion, making it useful for integrating MHA-based Cardiac MRI datasets into DICOM-compatible imaging systems. ",
+                "1- https://github.com/rordenlab/dcm2niix   2- https://github.com/rordenlab/dcm2niix/blob/master/docs/source/dcm2niix.rst "
+            ],
+            [
+                "Analyze (.hdr, .img)",
+                "DICOM",
+                "First converting Analyze to niftii with SPM or FSL and then to DICOM using dcm2niix.  ",
+                "1- https://github.com/rordenlab/dcm2niix   2- https://github.com/rordenlab/dcm2niix/blob/master/docs/source/dcm2niix.rst "
+            ],
+            [
+                "MINC",
+                "DICOM",
+                "To convert MINC (.mnc) to DICOM (.dcm) for Breast MRI, the process involves three main steps: first, converting MINC to NIfTI (.nii) using mnc2nii from the MINC-Toolkit, then converting NIfTI to DICOM series using DCMTK\u2019s img2dcm, and finally verifying DICOM metadata to ensure compatibility with PACS and clinical systems. Since MINC does not natively support DICOM metadata, an intermediate NIfTI conversion is required. The command mnc2nii input.mnc output.nii transforms the MINC file into a research-friendly format, while img2dcm output.nii output.dcm generates a single DICOM file from the NIfTI image. If the dataset contains multiple slices, a batch process is needed to convert the entire volume into a DICOM series, where img2dcm -v --study-from original.dcm output.nii output_series/ ensures that DICOM metadata (such as patient details and imaging parameters) are preserved from an existing reference DICOM file. This ensures data standardization across imaging platforms. Additionally, DCMTK\u2019s dcm2xml output.dcm > metadata.xml allows for validation of metadata, ensuring correct integration into PACS. For batch processing, a shell script can loop through multiple MINC files, automating the conversion for large datasets. The script iterates over all .mnc files in a directory, using mnc2nii to convert each MINC file to NIfTI and img2dcm to convert each NIfTI file to DICOM, saving the final output in a dedicated DICOM folder. This workflow ensures efficient handling of large-scale breast MRI datasets, allowing seamless integration into research and clinical workflows. The tools used\u2014MINC-Toolkit for medical image processing, DCMTK for DICOM conversion, and dcm2xml for metadata verification\u2014enable high-quality image preservation and clinical standardization. By using these tools, researchers and radiologists can easily transform breast MRI datasets from research-focused formats into clinically compatible DICOM files that are ready for PACS storage, AI-driven analysis, and diagnostic imaging.",
+                "1- https://bic-mni.github.io/  2- https://dicom.offis.de/dcmtk.php.en  3- https://github.com/BIC-MNI/minc-toolkit-v2  4- https://discourse.slicer.org/t/minc-to-dicom-conversion "
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "1.5T MRI",
+                "3T MRI",
+                "7T MRI"
+            ],
+            [
+                "5.1.Spatial Resolution",
+                "256 \u00d7 256 to 384 \u00d7 384",
+                "384 \u00d7 384 to 512 \u00d7 512",
+                "512 \u00d7 512 to 1024 \u00d7 1024"
+            ],
+            [
+                "5.2.Voxel Size / Pixel Spacing",
+                "0.6 \u00d7 0.6 \u00d7 3.0/ 0.6 \u00d7 0.6 ",
+                "0.5 \u00d7 0.5 \u00d7 2.0/ 0.5 \u00d7 0.5 ",
+                "0.3 \u00d7 0.3 \u00d7 1.5/ 0.3 \u00d7 0.3 "
+            ],
+            [
+                "5.3.Temporal Resolution (if applicable)",
+                " 2\u20135 minutes per scan sequence",
+                "5\u201310 minutes per sequence",
+                "5\u201310 minutes per sequence"
+            ]
+        ]
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "table",
+        "content": [
+            [
+                "6.1.Single Image Size",
+                "Standard Clinical MRM: ~3\u20135 MB per image",
+                "High Resolution MRM: ~10\u201315 MB per image."
+            ],
+            [
+                "6.2.Typical Study Size",
+                "Standard Clinical MRM: ~1\u20132 GB per study",
+                "High Resolution MRM: ~3\u20135 GB per study."
+            ]
+        ]
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "MRI scanner "
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Siemens (MAGNETOM series: Avanto, Vida, Skyra, Prisma, Terra 7T) GE Healthcare (Signa series: Artist, Pioneer, Premier) Philips (Ingenia, Achieva, Elition series) Canon/Toshiba (Vantage series)"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Evaluation of Spinal Cord and Nerve Root Compression, Detection of Cerebrospinal Fluid (CSF) Leaks. Assessment of Spinal Tumors, Evaluation of Spinal Trauma and Post-Surgical Complications, Diagnosis of Spinal Infections and Inflammatory Conditions, Pre-Surgical Planning, Evaluation of Spinal Cord Malformations and Cysts, Assessment of Spinal Degenerative Diseases, Investigation of Unexplained Back Pain, Evaluation of Spinal Canal and Nerve Root Anatomy"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Detection of Spinal CSF Leaks and Spontaneous Intracranial Hypotension (SIH),  Evaluation of Nerve Root Avulsions in Brachial Plexus and Lumbosacral Injuries, Pre-Surgical Planning for Spinal Tumor Resection, Diagnosing Arachnoid Cysts and Post-Surgical Arachnoiditis, Assessment of CSF Flow Abnormalities in Chiari Malformation and Syringomyelia, Evaluation of Tethered Cord Syndrome,  Monitoring Spinal Shunts in Hydrocephalus and Normal Pressure Hydrocephalus (NPH), Post-Surgical Assessment of Spinal Fusion and Hardware-Related CSF Leakage"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Magnetic field risks, RF energy heating, Gadolinium contrast risks, Claustrophobia, Pregnancy concerns, Motion artifacts"
+    },
+    {
+        "level": "10",
+        "title": " Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "DICOM to NIfTI Conversion, Noise Reduction & Denoising, Motion Correction, Bias Field Correction (N4ITK), CSF Segmentation & Enhancement, Image Registration, CSF Flow Quantification (Cine MRI) "
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless or lossy compression: JPEG2000 (Lossless Mode), Run-Length Encoding (RLE), NIfTI GZIP (.nii.gz), JPEG2000 (Lossy Mode), Wavelet-Based Compression"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Motion Artifacts: Since MRM scans take longer than CT myelography, patient movement can cause motion artifacts, leading to blurring and loss of detail. This is particularly problematic in patients who have difficulty staying still due to pain, neurological disorders, or claustrophobia. Motion correction algorithms or faster sequences can help mitigate this issue. Magnetic Susceptibility Artifacts: Metal implants, such as spinal fixation devices, can distort MR images due to their interaction with the magnetic field. This limits the use of MRM in post-surgical patients who have spinal hardware, as image degradation may make diagnosis difficult. Alternative imaging techniques, like CT myelography, are often recommended in these cases. Long Scan Time: A typical MRM scan takes 20\u201340 minutes, which is significantly longer than CT myelography (~10 minutes). This increases the likelihood of patient discomfort and motion artifacts. Additionally, longer scan times limit throughput in busy clinical settings, making scheduling more challenging. Lower Spatial Resolution Compared to CT Myelography: Although MRM provides excellent soft tissue contrast, its spatial resolution is lower than that of CT myelography, which can achieve ultra-high resolution of sub-millimeter structures. This makes MRM less effective for detecting very fine nerve root abnormalities or subtle CSF leaks. Limited Availability of High-Field MRI Scanners: While 3T MRI scanners improve image quality for MRM, many facilities still rely on 1.5T systems, which may produce lower-resolution images with reduced CSF contrast. Access to 3T or higher MRI scanners is not always available, particularly in smaller hospitals or rural areas."
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Not Suitable for Patients with Implanted Medical Devices: Patients with pacemakers, defibrillators, cochlear implants, or aneurysm clips may not be eligible for MRM due to the strong magnetic field. Even MRI-compatible implants require safety verification before scanning, limiting patient eligibility. Inferior for Detecting Bone Abnormalities: MRM is optimized for soft tissue visualization (CSF, nerve roots, spinal cord) but is less effective for detailed bone imaging. CT myelography or plain CT scans are preferred for evaluating fractures, bone spurs, or spinal deformities. Gadolinium Contrast Risks (If Used): While MRM is typically performed without contrast, some cases require gadolinium-based contrast agents (GBCAs) for better visualization. However, GBCA use is limited in patients with kidney disease due to the risk of nephrogenic systemic fibrosis (NSF). Additionally, recent concerns about gadolinium retention in the brain have led to more cautious use of contrast-enhanced MRI. Claustrophobia and Patient Discomfort: Some patients experience claustrophobia or anxiety inside the MRI scanner, making it difficult to complete the scan. Open MRI machines or mild sedation can help, but these solutions are not always available. Limited Use in Emergency Situations: Due to longer scan times and the need for patient cooperation, MRM is not ideal for emergency cases, such as acute spinal trauma. In such situations, CT myelography or standard MRI is preferred for rapid diagnosis."
+    },
+    {
+        "level": "12",
+        "title": "References (Website, Paper, etc.)",
+        "content-type": "markdown",
+        "content": "This part include all references except of section 4.5 conversion method. 1-\tel Gammal T, Brooks BS, Freedy RM, Crews CE. MR myelography: imaging findings. AJR Am J Roentgenol. 1995;164(1):173-177. doi:10.2214/ajr.164.1.7998533 2-\thttps://www.radiologyinfo.org/en/info/myelography 3-\tChazen JL, Talbott JF, Lantos JE, Dillon WP. MR myelography for identification of spinal CSF leak in spontaneous intracranial hypotension. AJNR Am J Neuroradiol. 2014 Oct;35(10):2007-12. doi: 10.3174/ajnr.A3975. Epub 2014 May 22. PMID: 24852289; PMCID: PMC7966231. 4-\thttps://ajronline.org/doi/10.2214/ajr.185.3.01850768 5-\thttps://github.com/BrainLesion/preprocessing 6-\thttps://www.nature.com/articles/s41598-024-84301-7 7-\thttps://github.com/pymedphys 8-\thttps://github.com/uclouvain/openjpeg 9-\thttps://pmc.ncbi.nlm.nih.gov/articles/PMC8013253/ 10-\thttps://ajronline.org/doi/10.2214/ajr.179.2.1790515 11-\thttps://www.asnr.org/wp-content/uploads/2016/12/Myelography.pdf"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Rana Hashemi"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
