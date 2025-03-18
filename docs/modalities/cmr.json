@@ -1,0 +1,481 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "cmr"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Cardiac Magnetic Resonance Imaging "
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "CMR",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Cardiac MRI is a non-invasive imaging technique that uses magnetic fields and radio waves to create detailed pictures of the heart\u2019s structure and function."
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "Cardiac Magnetic Resonance Imaging "
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "CMR"
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "Cardiac Magnetic Resonance Imaging (CMR) utilizes strong magnetic fields and radiofrequency pulses to align hydrogen nuclei within myocardial tissues. This alignment generates detailed images of the heart's structure and function. Advanced techniques, such as cine imaging, late gadolinium enhancement, and phase-contrast imaging, are employed to assess myocardial motion, viability, and blood flow dynamics, respectively. Electrocardiographic gating is often incorporated to synchronize image acquisition with specific phases of the cardiac cycle, thereby minimizing motion artifacts and enhancing image clarity. \u200b"
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "table",
+        "content": [
+            [
+                "Column 1",
+                "Column 2",
+                "Column 3",
+                "Column 4",
+                "Column 5",
+                "Column 6",
+                "Column 7",
+                "Column 8",
+                "Column 9"
+            ],
+            [
+                "DICOM (.dcm)  \u2013 Clinical Standard",
+                "NIfTI (.nii, .nii.gz) \u2013 Research & Advanced Analysis",
+                "PAR/REC (.par, .rec) \u2013 Philips MRI format",
+                "NRRD (.nrrd) \u2013 Computational modeling & high-dimensional imaging",
+                "MHA/MHD (.mha, .mhd) \u2013 3D/4D image storage",
+                "Analyze (.hdr, .img)  \u2013 Legacy format (mostly replaced by NIfTI)",
+                "MGH/MGZ (.mgh, .mgz) \u2013 Used in FreeSurfer (brain & cardiac MRI research)",
+                "VTK (.vtk) \u2013 3D visualization & simulations",
+                "HDF5 (.h5) \u2013 Big data & machine learning applications"
+            ]
+        ]
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "table",
+        "content": [
+            [
+                "Column 1",
+                "Column 2",
+                "Column 3",
+                "Column 4",
+                "Column 5",
+                "Column 6",
+                "Column 7",
+                "Column 8",
+                "Column 9"
+            ],
+            [
+                "Grayscale, 3D Volumetric, Time-series, Functional Imaging",
+                "3D Volumetric, Time-series, Functional Imaging, Diffusion Tensor Imaging (DTI), Supports 4D datasets",
+                "Grayscale, 3D Volumetric, Time-series",
+                "3D Volumetric, Time-series, Diffusion Tensor Imaging (DTI)",
+                "3D Volumetric, Time-series",
+                "3D Volumetric, Time-series",
+                "3D Volumetric, Functional Imaging",
+                "3D Volumetric, Time-series",
+                "3D Volumetric, Time-series, Functional Imaging, Diffusion Tensor Imaging (DTI)"
+            ]
+        ]
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "MRI"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "NIfTI ",
+                "DICOM",
+                "The dcm2niix tool is primarily designed for converting DICOM to NIfTI, but the reverse process (NIfTI to DICOM) requires alternative methods. One approach is using dcm2nii, an older version of dcm2niix, which allows conversion by running the command dcm2nii -4 my_nifti_file.nii.gz, generating a series of DICOM (.dcm) files. For enhanced control over metadata, Plastimatch can be used with the command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix image_, ensuring compatibility with clinical imaging systems. Additionally, in MATLAB, the dicomwrite function allows custom conversion by loading a NIfTI file, extracting slices, and saving them as DICOM while preserving metadata. Since dcm2niix itself does not directly support NIfTI to DICOM, these alternative methods provide efficient conversion solutions for integrating research data into clinical workflows.",
+                "1- https://github.com/rordenlab/dcm2niix 2- https://github.com/rordenlab/dcm2niix/blob/master/docs/source/dcm2niix.rst "
+            ],
+            [
+                "NIfTI ",
+                "DICOM",
+                "Plastimatch is an open-source medical imaging toolkit designed for converting imaging formats, including NIfTI (.nii, .nii.gz) to DICOM (.dcm), making it ideal for integrating Cardiac MRI research data into clinical workflows. The process begins by installing Plastimatch on Linux, macOS, or Windows, after which the conversion command plastimatch convert --input my_nifti_file.nii.gz --output-dicom output_folder --prefix cardiac_mri_ is executed. This generates a series of DICOM files with preserved metadata, ensuring compatibility with PACS (Picture Archiving and Communication Systems). Users can validate the output using dcmdump (from DCMTK) to inspect patient details, acquisition parameters, and scan properties. For advanced processing, Plastimatch supports voxel spacing adjustments (e.g., --output-spacing 1.25,1.25,5.0) to match clinical DICOM standards. It effectively handles 3D volumetric cardiac MRI, cine imaging, and multi-frame datasets, ensuring proper orientation and metadata retention. The converted files can then be reviewed or further refined in ITK-SNAP, 3D Slicer, or MATLAB before PACS integration. This workflow provides a seamless transition of NIfTI-based cardiac MRI into standardized DICOM format, facilitating research and clinical interoperability.",
+                "https://plastimatch.org/plastimatch.html"
+            ],
+            [
+                "PAR/REC",
+                "DICOM",
+                "To convert Philips PAR/REC cardiac MRI images to DICOM, a two-step process is required: first, converting PAR/REC to NIfTI using dcm2niix, followed by NIfTI to DICOM using Plastimatch. dcm2niix, a widely used tool for neuro and cardiac imaging, extracts image and metadata from PAR/REC files and converts them into NIfTI (.nii, .nii.gz) format using the command dcm2niix -o output_folder -f cardiac_mri -p y -v y input_folder, where -o specifies the output directory, -f sets a file prefix, -p y retains phase information, and -v y enables verbose mode. The resulting NIfTI file maintains cardiac MRI data integrity but lacks DICOM metadata, making it necessary to convert it back to DICOM format for clinical use.To achieve this, Plastimatch, an open-source medical imaging toolkit, is used to convert NIfTI to DICOM with the command plastimatch convert --input output_folder/cardiac_mri.nii.gz --output-dicom dicom_output --prefix cardiac_mri_. This ensures proper DICOM series reconstruction and metadata formatting. Finally, validation can be performed using DCMTK (dcmdump dicom_output/cardiac_mri_0001.dcm) to inspect the metadata and confirm compatibility with PACS (Picture Archiving and Communication Systems). This workflow ensures PAR/REC-based cardiac MRI data is standardized into DICOM, making it ready for clinical integration and analysis in DICOM viewers like OsiriX, Horos, or 3D Slicer.",
+                "1- https://github.com/rordenlab/dcm2niix/blob/master/PARREC/README.md 2- https://plastimatch.org/plastimatch.html "
+            ],
+            [
+                "PAR/REC",
+                "DICOM",
+                "Philips DICOM Export is a built-in feature in Philips MRI scanners and IntelliSpace PACS, allowing direct PAR/REC to DICOM conversion while preserving metadata such as acquisition parameters and patient details. The process can be performed via the MRI console, where users navigate to the Exam List, select a Cardiac MRI dataset, and choose the \"Export to DICOM\" option, specifying the output destination (PACS, local storage, or DICOM server). Some Philips workstations also support command-line scripting for batch conversion using a proprietary command like export_to_dicom -i input_folder -o output_folder -format DICOM. Additionally, for research applications, Philips Research API (if accessible) allows automated conversion using Python or MATLAB scripts, such as philipsdicom.convert(input_path, output_path). If Philips DICOM Export is not available, alternative tools like dcm2niix (to convert PAR/REC to NIfTI) and Plastimatch (to convert NIfTI to DICOM) can be used to ensure compatibility with clinical PACS and DICOM workflows. ",
+                "1- https://www.usa.philips.com/c-dam/b2bhc/us/support/Customer-Support/tta_2.40_dicom_conformance_statement.pdf  2- https://www.documents.philips.com/doclib/enc/8916819/DICOM_CookBook.pdf "
+            ],
+            [
+                "NRRD",
+                "DICOM",
+                "To convert NRRD to DICOM for Cardiac MRI using 3D Slicer, the process involves loading the NRRD file via File > Add Data, then assigning proper DICOM metadata using the Data module before exporting the dataset through the DICOM module. Users can manually configure patient and study information to ensure compatibility with PACS (Picture Archiving and Communication Systems). For automation, Python scripting within 3D Slicer allows batch conversion using slicer.util.loadVolume('file.nrrd') followed by slicer.util.exportNode(volume_node, 'output_folder'). Additionally, tools like DCMTK\u2019s dcmdump can validate the exported DICOM files. This workflow ensures smooth integration of Cardiac MRI datasets into clinical environments while maintaining high-dimensional imaging integrity.",
+                "https://slicer.readthedocs.io/en/latest/user_guide/modules/dicom.html"
+            ],
+            [
+                "MHA",
+                "DICOM",
+                "SimpleITK is a powerful open-source library for processing medical images, including MHA (.mha, .mhd) to DICOM (.dcm) conversion. The script provided utilizes SimpleITK to load an MHA file, process the image data, and save it as a DICOM series. The line sitk.ReadImage(\"input_file.mha\") reads the MHA image, preserving voxel intensity values and spatial metadata. Next, the script creates an output directory using os.makedirs(dicom_series_dir, exist_ok=True), ensuring that DICOM slices are stored in a structured format. The ImageSeriesWriter class from SimpleITK is used to generate DICOM slices, where writer.GetGDCMSeriesFileNames(dicom_series_dir) assigns filenames for each slice. Finally, writer.Execute(mha_image) writes the DICOM series while maintaining image integrity. This method ensures compatibility with PACS (Picture Archiving and Communication Systems) and clinical workflows. The tools used include SimpleITK, which provides an interface for reading, processing, and writing medical images in various formats, and GDCM (Grassroots DICOM), which handles DICOM metadata and ensures proper image encoding. The Python script automates the conversion, making it useful for integrating MHA-based Cardiac MRI datasets into DICOM-compatible imaging systems. ",
+                "https://simpleitk.readthedocs.io/en/master/ "
+            ],
+            [
+                "Analyze (.hdr, .img)",
+                "DICOM",
+                "First converting Analyze to niftii with SPM or FSL and then to DICOM using dcm2niix.  ",
+                "1- https://github.com/rordenlab/dcm2niix  2- https://github.com/rordenlab/dcm2niix/blob/master/docs/source/dcm2niix.rst"
+            ],
+            [
+                "MAT",
+                "DICOM",
+                "The MATLAB script loads a MAT file (cardiac_mri.mat) that contains a 3D array (imageData) representing cardiac MRI slices. The script first creates an output folder (output_dicom/) to store the generated DICOM files. Next, DICOM metadata is assigned using dicominfo('template.dcm'), which extracts metadata from an existing DICOM file, ensuring consistency with DICOM standards. The script modifies key metadata fields, such as Patient Name, Patient ID, and Study Description, using metadata.PatientName.FamilyName = 'Doe'. Each MRI slice is then converted to DICOM format using a loop (for i = 1:size(imageData, 3)) and saved with a unique filename (sprintf('%s/cardiac_mri_%03d.dcm', outputFolder, i)). The dicomwrite function writes the image slice into DICOM format, embedding the assigned metadata. This method ensures that Cardiac MRI data stored in MATLAB can be standardized for clinical PACS systems. The tools used include MATLAB's Image Processing Toolbox, which provides functions for handling medical image formats, and DICOM utilities for ensuring compliance with DICOM metadata standards.",
+                "1- https://www.mathworks.com/help/images/write-data-to-dicom-files.html 2- https://www.mathworks.com/help/images/read-metadata-from-dicom-files.html "
+            ],
+            [
+                "MGH/MGZ",
+                "NIfTI ",
+                "Convert MGH/MGZ to NIfTI Using FreeSurfer. Convert NIfTI to DICOM Using SimpleITK. To convert MGH/MGZ (.mgh, .mgz) to DICOM for Cardiac MRI, the process involves first converting MGH/MGZ to NIfTI (.nii, .nii.gz) using FreeSurfer with the command mri_convert input.mgz output.nii.gz. Once in NIfTI format, the file can be converted to DICOM using either SimpleITK (Python) or 3D Slicer. In SimpleITK, the script loads the NIfTI file with sitk.ReadImage(\"output.nii.gz\"), processes it, and saves it as a DICOM series using sitk.ImageSeriesWriter(). Alternatively, 3D Slicer allows interactive conversion by importing the NIfTI file via File > Add Data, assigning metadata in the DICOM module, and exporting it as DICOM. These methods ensure that MGH/MGZ-based Cardiac MRI data is converted into DICOM for PACS compatibility. ",
+                "1- https://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert 2- https://github.com/tomaroberts/nii2dcm 3- https://github.com/SimpleITK/SimpleITK/issues/378 "
+            ],
+            [
+                "VTK (.vtk)",
+                "DICOM",
+                "To convert VTK (.vtk) to DICOM (.dcm) for Cardiac MRI, a Python-based approach using VTK and SimpleITK is employed, where the VTK file is loaded using vtkStructuredPointsReader(), converted into a NumPy array, and reshaped to match VTK\u2019s format. This array is then transformed into a SimpleITK image using sitk.GetImageFromArray(), which ensures compatibility with DICOM processing. The SimpleITK ImageSeriesWriter function is then used to generate and save a DICOM series in an output directory, preserving spatial and intensity information. The script automates the process, ensuring that cardiac MRI models stored in VTK format can be integrated into DICOM-compatible imaging systems. ",
+                "1- https://github.com/dave3d/dicom2stl 2- https://github.com/ImperialCollegeLondon/CCITK "
+            ],
+            [
+                "HDF5 (.h5)",
+                "DICOM",
+                "To convert HDF5 (.h5) to DICOM (.dcm) for Cardiac MRI, tools like Python (h5py + SimpleITK) or MATLAB (h5read + dicomwrite) can be used. In Python, the h5py library extracts image data from the HDF5 structure, which is then processed as a NumPy array and converted into a DICOM series using SimpleITK.ImageSeriesWriter(). The script reads the dataset from input.h5, reshapes it if necessary, and writes the DICOM slices into an output directory. Alternatively, in MATLAB, the function h5read() loads image data from the HDF5 file, and dicomwrite() saves each cardiac MRI slice as a DICOM file while assigning metadata using dicominfo(). Both methods ensure that HDF5-based medical imaging datasets can be properly integrated into clinical PACS systems for diagnostic use. The Python approach is best for automation and research, while MATLAB is preferred for structured workflows in medical imaging labs. ",
+                "1- https://github.com/h5py/h5py 2- https://github.com/SimpleITK/SimpleITK 3- https://www.mathworks.com/help/matlab/ref/h5read.html "
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "table",
+        "content": [
+            [
+                "Cine MRI (SSFP \u2013 Balanced Steady-State Free Precession)",
+                "Late Gadolinium Enhancement (LGE) MRI",
+                "T1 Mapping (MOLLI, ShMOLLI, SASHA)",
+                "T2 Mapping",
+                "Perfusion (First-Pass Contrast-Enhanced MRI)",
+                "4D Flow MRI"
+            ],
+            [
+                "192 \u00d7 192 to 256 \u00d7 256 pixels (~1.5 \u00d7 1.5 mm per pixel)",
+                "256 \u00d7 256 to 512 \u00d7 512 pixels (~1.0 \u00d7 1.5 mm per pixel)",
+                "192 \u00d7 192 to 256 \u00d7 256 pixels (~1.2 \u00d7 1.5 mm per pixel)",
+                "192 \u00d7 192 to 256 \u00d7 256 pixels (~1.3 \u00d7 1.5 mm per pixel)",
+                "128 \u00d7 128 to 192 \u00d7 192 pixels (~2.0 \u00d7 2.5 mm per pixel)",
+                "256 \u00d7 256 to 320 \u00d7 320 pixels (~1.5 \u00d7 1.5 mm per pixel)"
+            ]
+        ]
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing + Slice Thickness",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "Cine MRI (SSFP \u2013 Balanced Steady-State Free Precession)",
+                "Late Gadolinium Enhancement (LGE) MRI",
+                "T1 Mapping (MOLLI, ShMOLLI, SASHA)",
+                "T2 Mapping",
+                "Perfusion (First-Pass Contrast-Enhanced MRI)",
+                "4D Flow MRI"
+            ],
+            [
+                "Voxel Size / Pixel Spacing",
+                "1.5 \u00d7 1.5 \u00d7 8 mm/ 1.2 \u00d7 1.2 to 2.0 \u00d7 2.0 mm",
+                "1.0 \u00d7 1.5 \u00d7 5 mm/ 1.0 \u00d7 1.5 mm",
+                "1.2 \u00d7 1.5 \u00d7 3 mm/ 1.2 \u00d7 1.5 mm",
+                "1.3 \u00d7 1.5 \u00d7 3 mm/ 1.3 \u00d7 1.5 mm ",
+                "2.0 \u00d7 2.5 \u00d7 8 mm/ 2.0 \u00d7 2.5 mm",
+                "1.5 \u00d7 1.5 \u00d7 4 mm/ 1.5 \u00d7 1.5 mm"
+            ],
+            [
+                "Slice Thickness",
+                "6\u20138 mm",
+                "4\u20135 mm",
+                "3\u20135 mm",
+                "3\u20135 mm",
+                "6\u201310 mm",
+                "3\u20136 mm"
+            ]
+        ]
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable) and  Frames per second ",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "Cine MRI (SSFP \u2013 Balanced Steady-State Free Precession)",
+                "Late Gadolinium Enhancement (LGE) MRI",
+                "T1 Mapping (MOLLI, ShMOLLI, SASHA)",
+                "T2 Mapping",
+                "Perfusion (First-Pass Contrast-Enhanced MRI)",
+                "4D Flow MRI"
+            ],
+            [
+                "Temporal Resolution ",
+                "30\u201350 ms",
+                "Single-shot or segmented (~100 ms per segment)",
+                "Single-shot (Heartbeat-Gated)",
+                "Single-shot (Heartbeat-Gated)",
+                "100\u2013150 ms",
+                "40\u2013100 ms"
+            ],
+            [
+                "Frames per second ",
+                "20\u201333 fps",
+                "N/A (Static Imaging)",
+                "N/A (Static Imaging)",
+                "N/A (Static Imaging)",
+                "7\u201310 fps",
+                "10\u201325 fps"
+            ]
+        ]
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": " Single Image Size and Typical Study Size",
+        "content-type": "table",
+        "content": [
+            [
+                "",
+                "Cine MRI (SSFP \u2013 Balanced Steady-State Free Precession)",
+                "Late Gadolinium Enhancement (LGE) MRI",
+                "T1 Mapping (MOLLI, ShMOLLI, SASHA)",
+                "T2 Mapping",
+                "Perfusion (First-Pass Contrast-Enhanced MRI)",
+                "4D Flow MRI"
+            ],
+            [
+                " Single Image Size",
+                "0.5 \u2013 1.5 MB per slice",
+                "1 \u2013 3 MB per slice",
+                "0.5 \u2013 2 MB per slice",
+                "0.5 \u2013 2 MB per slice",
+                "0.3 \u2013 1 MB per slice",
+                "1 \u2013 3 MB per slice"
+            ],
+            [
+                "Typical Study Size",
+                "~1.5 \u2013 3 GB",
+                "~500 MB \u2013 1 GB",
+                "~200 \u2013 500 MB",
+                "~200 \u2013 500 MB",
+                "~1 \u2013 2 GB",
+                "~2 \u2013 5 GB"
+            ]
+        ]
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "1.5T MRI Scanner : Standard for routine cardiac MRI in clinical settings. 3T MRI Scanner : Higher spatial resolution, better T1/T2 mapping, but more prone to artifacts."
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers: MAGNETOM Aera (1.5T), MAGNETOM Vida (3T), MAGNETOM Terra (7T)\t/ GE Healthcare: Signa Voyager (1.5T), Signa Premier (3T)/ Philips Healthcare: Ingenia Ambition (1.5T), Ingenia Elition (3T)"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Ischemic Heart Disease & Myocardial Infarction / Cardiomyopathies (Dilated, Hypertrophic, Restrictive, ARVC) / Myocarditis & Inflammatory Heart Disease / Congenital Heart Disease (CHD) / Valvular Heart Disease / Pericardial Disease (Pericarditis, Effusion, Constriction) / Coronary Artery Disease (Non-Invasive Coronary Imaging) / Cardiac Tumors & Masses/ Right Heart Function & Pulmonary Hypertension"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Perfusion Imaging (First-Pass Stress MRI)/ 4D Flow MRI (Velocity-Encoded Imaging)/ Myocardial Strain Imaging (Feature Tracking, DENSE MRI)/ T1 and T2 Mapping (Quantitative Tissue Characterization)/ Magnetic Resonance Spectroscopy (MRS)/ Diffusion Tensor Imaging (DTI-CMR)"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "1- Magnetic Field Risks: The strong magnetic field (1.5T or 3T) can interfere with metallic implants, pacemakers, defibrillators, and aneurysm clips. Patients should be screened for MRI compatibility. 2- RF-Induced Heating (SAR - Specific Absorption Rate): The radiofrequency (RF) pulses can cause tissue heating, especially in long scans or in obese patients. Newer scanners adjust SAR levels automatically to ensure patient safety. 3-Projectile Risk: Ferromagnetic objects (e.g., scissors, oxygen tanks) can become projectiles in the MRI scanner room. Strict MRI safety protocols must be followed. 4-Noise Exposure: MRI scanners produce loud acoustic noise (~100 dB), requiring patients to wear ear protection. 5-Implant & Device Considerations\t6- Gadolinium-Based Contrast Agent (GBCA) Safety: Nephrogenic Systemic Fibrosis (NSF) / Allergic Reactions/ Contrast Retention 7-Patient-Specific Considerations: Claustrophobia / Obesity (>250 kg/550 lbs) / Pediatric & Pregnant Patients\t"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "1- DICOM to NIfTI Conversion 2- Motion Correction (For Cine MRI & Perfusion MRI) 3- Noise Reduction & Denoising 4- Intensity Normalization (For T1/T2 Mapping & LGE MRI) 5- Image Registration (Aligning Multi-Sequence Images) 6- Segmentation (Myocardium & Blood Pool Extraction) 7- Strain Analysis (For Myocardial Function Assessment) 8- Flow Analysis (For 4D Flow MRI & Phase Contrast Imaging)"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless JPEG2000 is the gold standard for clinical DICOM storage"
+    },
+    {
+        "level": "11",
+        "title": "",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "1- Motion Artifacts (Cardiac & Respiratory Motion) 2- Long Scan Time 3- Low Signal-to-Noise Ratio (SNR) in Some Sequences 4- High Computational Demand (Processing & Storage) 5-  Variability in Image Quality Across Vendors & Protocols 6- Limited Access & High Costs "
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "1- Long Scan Time & Patient Compliance Issues 2- Limited Availability & High Cost 3- Contraindications & Safety Concerns: MRI-unsafe pacemakers, defibrillators (ICDs), aneurysm clips, and metallic implants can prevent CMR scans. / Gadolinium contrast agents are contraindicated in severe kidney disease (eGFR < 30 mL/min/1.73m\u00b2) due to the risk of Nephrogenic Systemic Fibrosis (NSF). 4- Limited Use in Acute & Emergency Settings: CMR requires extensive setup and patient preparation, making it impractical for acute stroke, myocardial infarction (MI), or unstable patients. 5- Artifacts & Image Quality Challenges: Cardiac motion, respiratory motion, and flow artifacts can reduce image quality. High-field MRI (3T) suffers from B1 inhomogeneities, leading to signal variation. 6-  Limited Spatial Resolution for Small Structures: Coronary CT Angiography (CCTA) is better for coronary visualization. High-resolution cine MRI & AI-based super-resolution techniques are emerging. 7- Limited Use in Arrhythmic Patients: ECG-gated MRI sequences struggle with atrial fibrillation (AF) & frequent PVCs. Image quality is poor in tachyarrhythmias due to irregular RR intervals."
+    },
+    {
+        "level": "12",
+        "title": "References (Website, Paper, etc.)",
+        "content-type": "markdown",
+        "content": "Include all references except the ones for section 4.5 conversion methods. 1-\tStoltzfus MT, Capodarco MD, Anamika F, Gupta V, Jain R. Cardiac MRI: An Overview of Physical Principles With Highlights of Clinical Applications and Technological Advancements. Cureus. 2024 Mar 4;16(3):e55519. doi: 10.7759/cureus.55519. PMID: 38576652; PMCID: PMC10990965. / https://pmc.ncbi.nlm.nih.gov/articles/PMC10990965/ 2-\thttps://www.ahajournals.org/ 3-\thttps://www.escardio.org/ 4-\thttps://scmr.org/page/ClinicalIndications 5-\thttps://scmr.org/page/ClinicalIndications 6-\thttps://www.ncbi.nlm.nih.gov/ 7-\thttps://www.acr.org/ 8-\thttps://github.com/rordenlab/dcm2niix 9-\thttps://fsl.fmrib.ox.ac.uk/fsl/fslwiki/MCFLIRT 10-\thttps://github.com/ANTsX/ANTs 11-\thttps://github.com/MIC-DKFZ/nnUNet 12-\thttps://www.dclunie.com/medical-image-format 13-\thttps://github.com/malaterre/GDCM 14-\thttps://www.ncbi.nlm.nih.gov/ 15-\thttps://www.ismrm.org/ 16-\thttps://scmr.org/ 17-\t"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Rana Hashemi"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
