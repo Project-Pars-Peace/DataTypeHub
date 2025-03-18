@@ -34,4 +34,11 @@
         "affiliation": "Student Research Committee, Bushehr University of Medical Sciences, Bushehr, Iran ",
         "image": ""
       },
+     {
+        "name": "Pooya Eini",
+        "contributedTo": ["MRI standard", "Diffusion MRI (DWI/DTI)",  "Magnetic Resonance Angiography (MRA)", "Magnetic Resonance Spectroscopy (MRS)", "3D & 4D Ultrasound", "US elastography", "Writing"],
+        "email": "pooyaeini.pe@gmail.com",
+        "affiliation": "Excellence Center of Clinical Toxicology, Loghman Hakim Hospital, Shahid Beheshti University of Medical Sciences, Tehran, Iran",
+        "image": ""
+      }
   ]
