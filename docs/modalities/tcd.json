@@ -1,0 +1,298 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "tcd"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "US"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Transcranial Doppler (TCD)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "TCD",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "Transcranial Doppler"
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "TCD"
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "Transcranial Doppler (TCD) acquires images by emitting high-frequency sound waves through a handheld probe placed on the skull, which reflect off moving red blood cells in the brain's arteries to measure blood flow velocity and create a visual representation of the circulation."
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm), Raw (.RAW), JPEG (.jpg, .jpeg), PNG (.png), TIFF (.tif, .tiff), AVI (.avi)"
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "Time-Series"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "Ultrasound"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "Raw (.RAW)",
+                "DICOM (.dcm)",
+                "This C++ code solution demonstrates how to create, manipulate, and save a Transcranial Doppler (TCD)-related image (or similar medical imaging data) as a DICOM file using the Imebra library, a popular tool for handling medical imaging data. Below is a short explanation of the solution, naming the tools and outlining the process:  Tools Used: Imebra Library: A C++ library for reading, writing, and processing medical images, particularly in DICOM format (.dcm). Standard C++ Libraries: <iostream>: For input/output operations. <fstream>: For file stream handling. <stdlib.h>: For general utilities. <memory>: For smart pointers like std::unique_ptr. Process Explained: Image Creation: A MutableImage object (500x400 pixels, 16-bit unsigned integers, MONOCHROME2 colorspace, 15-bit depth) is created using Imebra to represent a grayscale image, which could simulate TCD spectral waveform data. Data Filling: A WritingDataHandlerNumeric object writes pixel values into the image. A nested loop iterates over each pixel (x, y), assigning a value (pixelValue, assumed defined elsewhere) to simulate TCD velocity data. Dataset Setup: A MutableDataSet is initialized with a transfer syntax (1.2.840.10008.1.2.1) and charset (ISO 2022 IR 6). The image is added to the dataset with high-quality settings. Metadata Addition: Patient name is set using setUnicodePatientName to tag 0010,0010 (PatientName), a common DICOM requirement. DICOM Saving: The CodecFactory::save function saves the dataset as a DICOM file (dicomFile.dcm) in DICOM codec format. File Reading (Partial Implementation): A stream and streamReader are created to read an existing file (imagePath), loading it into a dataSet using codecFactory::load. This suggests reading existing TCD data. Tag Modification: Tags (e.g., 0010,0010) are set with test strings (testSrt0, testSrt1), modifying metadata. External File Loading and Saving: A JPEG or raw file (care.raw) is loaded into a DataSet using a smart pointer, then saved as a new DICOM file (care.dcm).",
+                "https://stackoverflow.com/questions/60770671/how-can-i-convert-raw-image-to-dicom-image-using-imebra"
+            ],
+            [
+                "JPEG (.jpg, .jpeg)",
+                "DICOM (.dcm)",
+                "***This solution demonstrates how to convert an image (such as PNG or BMP) into a DICOM file using Python, specifically for use in medical imaging applications. The steps involved are as follows:  Tools Used: pydicom: Used to create a DICOM dataset and handle DICOM metadata. Pillow (PIL): Used to load and process the image, handling different formats and converting them to appropriate modes. numpy: Used to manipulate the image data (e.g., converting to a suitable format for DICOM storage). uuid: Generates a unique identifier for the output DICOM file. Process: Load the Image: The image is loaded using Pillow (Image.open()), and basic file information (e.g., format, size) is printed. Convert Image Formats: If the image is in PNG or BMP format, it is converted to RGB mode to standardize pixel depth. Prepare Pixel Data: The image is processed based on its mode (L, RGB, RGBA), and the pixel data is converted to a NumPy array suitable for inclusion in a DICOM file.  ***Explanation of the Solution: Converting JPEG to DICOM in Java This Java program converts a JPEG image to a DICOM file and then updates the DICOM metadata (DICOM header) to include patient information. It uses Dcm4che, a Java-based open-source DICOM toolkit.  Tools Used: Java I/O Libraries (java.io) \u2013 Used for reading and writing files. Dcm4che (org.dcm4che2) \u2013 A DICOM library for handling, modifying, and writing DICOM files. FileInputStream & FileOutputStream \u2013 Used for reading and writing image data. DicomInputStream & DicomOutputStream (Dcm4che) \u2013 Used for reading and writing DICOM file structures. DicomObject (Dcm4che) \u2013 A DICOM object representation to store metadata. BufferedOutputStream \u2013 Improves efficiency in file writing. Process Breakdown: 1. Convert JPEG to DICOM The program loads a JPEG image (AA.jpg) and converts it to DICOM (AA.dcm). The Jpg2Dcm class handles the conversion without adding metadata. 2. Anonymizing and Adding DICOM Metadata The function anonymizeDicom() updates metadata fields such as: Patient ID Patient Name Study ID This is done using the replaceTag() function, which modifies specific DICOM tags. 3. Writing the Modified DICOM File After updating metadata, the function writeDicomFile() saves the modified DICOM file as AA_FINAL.dcm. 4. Batch Processing (Directory Scanning) The getFile() function scans a directory recursively and processes multiple JPEG images, converting and updating their DICOM headers.",
+                "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py , https://stackoverflow.com/questions/21087778/how-to-convert-jpg-image-to-dicom-file-using-dcm4che-3-2-1?rq=3"
+            ],
+            [
+                "PNG (.png)",
+                "DICOM (.dcm)",
+                "This solution demonstrates how to replace the pixel data in an existing DICOM file with pixel data from a PNG image, creating a new DICOM file with updated image content.  Tools Used: Pillow (PIL):  Description: A Python Imaging Library used for opening, manipulating, and saving image files (in this case, the PNG file). GitHub Reference: Pillow GitHub Documentation: Pillow documentation numpy:  Description: A core Python library for numerical computing, used to manipulate the image data as arrays and ensure it is in a format suitable for the DICOM file. GitHub Reference: numpy GitHub Documentation: numpy documentation pydicom:  Description: A Python library for working with DICOM files. It allows reading, modifying, and saving DICOM datasets, including setting pixel data and metadata. GitHub Reference: pydicom GitHub Documentation: pydicom documentation Process: Load Existing DICOM: The pydicom library is used to read a pre-existing DICOM file. Load PNG Image: The Pillow library loads the PNG image to be used for replacing the image data in the DICOM file.                                                                  Process Image Data: If the PNG image is in grayscale mode (L), the pixel data is extracted and set as MONOCHROME1 (1-channel grayscale). If the PNG image is in RGBA mode, the pixel data is extracted and set as RGB (3-channel color). Update DICOM Metadata: The appropriate metadata for rows, columns, pixel data type, and bit depth is updated in the DICOM file based on the image mode. Save Updated DICOM: The modified DICOM file is saved with a new name reflecting the changes. Output: The code creates two output DICOM files: one with grayscale data (0015_result_bw.dcm) and one with RGB data (0015_result_rgb.dcm), depending on the image mode.",
+                "https://github.com/pydicom/pydicom/issues/939"
+            ],
+            [
+                "TIFF (.tif, .tiff)",
+                "DICOM (.dcm)",
+                "***This solution demonstrates how to convert a TIFF image into a DICOM file by extracting pixel data, adding relevant DICOM metadata, and saving it in the DICOM format.Tools Used: Pillow (PIL):  Description: A Python Imaging Library used to open and manipulate the input TIFF image. GitHub Reference: Pillow GitHub Documentation: Pillow documentation pydicom:  Description: A Python library for working with DICOM files. It is used to create a DICOM dataset, set metadata, and save the dataset as a DICOM file. GitHub Reference: pydicom GitHub Documentation: pydicom documentation numpy:  Description: A fundamental package for numerical computing in Python, used here to convert the image to an array for easier manipulation. GitHub Reference: numpy GitHub Documentation: numpy documentation Process: Load TIFF Image: The Pillow library is used to load the input TIFF image. Convert to numpy Array: The image is converted into a numpy array to facilitate manipulation and interaction with the pixel data. Create DICOM Dataset: A new DICOM dataset is created using pydicom. The pixel data from the image is added to the dataset, and essential metadata (such as patient information and modality) is included. Save DICOM File: The DICOM dataset is saved to a .dcm file using the pydicom library.  ***To convert TIFF images to DICOM format, MATLAB:  Using MATLAB: Tool: MATLAB Process: Utilize the dicomwrite function.",
+                "https://stackoverflow.com/questions/30338697/convert-tiff-to-dicom-using-matlab"
+            ],
+            [
+                "AVI (.avi)",
+                "DICOM (.dcm)",
+                "Tools Used fo-dicom Library Description: A .NET-based open-source library (available via NuGet as fo-dicom) for creating, reading, and writing DICOM files, capable of handling multi-frame data suitable for video-like sequences from AVI. OpenCV (Optional Integration) Description: A computer vision library (e.g., OpenCVSharp in .NET) for extracting individual frames from an AVI video file, often paired with fo-dicom for pixel data processing. DicomFile Class (fo-dicom) Description: A core class within fo-dicom for constructing and saving DICOM files, used to encapsulate AVI-derived frames and metadata. DicomDataset Class (fo-dicom) Description: Represents the DICOM dataset, allowing the addition of pixel data and metadata tags (e.g., Patient ID, Frame Rate) during conversion. Image Processing Libraries (e.g., System.Drawing or SixLabors.ImageSharp) Description: .NET libraries for converting AVI frames into a format (e.g., grayscale byte arrays) compatible with DICOM pixel data requirements. Steps of Conversion Load AVI File Description: Import the AVI video into the application using a library like OpenCV (e.g., VideoCapture in OpenCVSharp) to access its frame sequence. Extract Frames from AVI Description: Decompose the AVI video into individual frames, typically as bitmap or raw pixel data, using OpenCV or a similar tool, preparing them for DICOM multi-frame storage. Prepare Pixel Data Description: Convert the extracted frames into a format suitable for DICOM (e.g., 8-bit grayscale or RGB byte arrays), ensuring resolution (e.g., 512 \u00d7 512 pixels) and frame consistency, using an image processing library like SixLabors.ImageSharp. Create DicomDataset Instance Description: Initialize a new DicomDataset object via fo-dicom to serve as the container for the AVI frames and associated metadata. Add Pixel Data to DicomDataset Description: Embed the frame sequence as multi-frame pixel data into the DicomDataset using fo-dicom\u2019s AddOrUpdate method, specifying the PixelData tag (e.g., DICOM Tag 7FE0,0010) and setting the NumberOfFrames tag to match the AVI frame count. Update DICOM Metadata Description: Populate the DicomDataset with mandatory and optional DICOM tags (e.g., PatientName, StudyDate, FrameTime) using fo-dicom\u2019s tag management functions, ensuring compliance with DICOM standards like the Multi-Frame Grayscale Byte Secondary Capture Image Storage SOP Class. Generate and Save DICOM File Description: Wrap the DicomDataset in a DicomFile object and save it to disk (e.g., as \"output.dcm\") using fo-dicom\u2019s Save or SaveAsync method, completing the conversion.",
+                "https://github.com/fo-dicom/fo-dicom/issues/1007"
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "3\u201310 mm, Reference: https://pubmed.ncbi.nlm.nih.gov/23361485/"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "for non-imaging TCD, ~3\u201310 mm (axial) \u00d7 1\u20132 mm (lateral), Reference: https://pubmed.ncbi.nlm.nih.gov/7899596/ , https://pubmed.ncbi.nlm.nih.gov/19388548/"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "100\u20131000 Hz (1\u201310 ms), with practical display resolution of 20\u2013100 Hz (10\u201350 ms), Reference: https://pubmed.ncbi.nlm.nih.gov/7143059/"
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "~50\u2013200 KB for a static JPEG/PNG snapshot; ~0.5\u20132 MB for a DICOM file with one waveform or TCCS frame, Reference: https://pubmed.ncbi.nlm.nih.gov/23361485/"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "~50\u2013500 MB for a full TCD session (e.g., 10\u201330 minutes of recording), Reference: https://pubmed.ncbi.nlm.nih.gov/19388548/"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "Two main types exist: non-duplex (non-imaging) TCD, which uses a single Doppler probe (typically 2 MHz) to generate spectral waveforms of velocity over time, and duplex (imaging) TCD or transcranial color-coded sonography (TCCS), which combines B-mode imaging and color Doppler for anatomical context alongside velocity data. Modern systems often include M-mode for multi-depth flow visualization, robotic probes for automated vessel detection, and software for real-time analysis (e.g., emboli detection, vasomotor reactivity). Accessories like headframes or headsets stabilize probes for continuous monitoring, Reference: https://pubmed.ncbi.nlm.nih.gov/23361485/"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Viasonix, Rimed, DWL/Compumedics, NeuraSignal, Spencer Technologies, Philips, GE Healthcare, Siemens, Reference: https://www.semanticscholar.org/paper/Cerebrovascular-ultrasound-in-stroke-prevention-and-Alexandrov/f588fccef5b82073abeb7da76caf2d88510c3ebf"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "detection of stenosis or occlusion in cerebral arteries, monitoring of vasospasm, assessment of cerebral autoregulation, evaluation of collateral flow, Reference: https://pubmed.ncbi.nlm.nih.gov/23361485/ , https://www.researchgate.net/publication/235771214_Cerebrovascular_Ultrasound_in_Stroke_Prevention_and_Treatment"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "detection of microemboli, functional TCD (fTCD) for mapping cerebral blood flow changes during cognitive or motor tasks, confirmation of cerebral circulatory arrest, monitoring cerebral vasomotor reactivity, Reference: https://pubmed.ncbi.nlm.nih.gov/19891416/ , https://pubmed.ncbi.nlm.nih.gov/19388548/"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No, Reference: https://pubmed.ncbi.nlm.nih.gov/23361485/"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "None, Reference: https://journals.sagepub.com/doi/abs/10.1258/ult.2010.100003"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Thermal Effects, No Contraindications, Reference: https://www.researchgate.net/publication/235771214_Cerebrovascular_Ultrasound_in_Stroke_Prevention_and_Treatment , https://www.sciencedirect.com/science/article/pii/S0079610706000885"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Signal Filtering, Envelope Tracing, Baseline Correction, Data Segmentation, Format Conversion, Artifact Rejection, Normalization, Reference: https://pubmed.ncbi.nlm.nih.gov/23361485/"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless Compression, Lossy Compression, No Compression, Reference: https://www.researchgate.net/publication/235771214_Cerebrovascular_Ultrasound_in_Stroke_Prevention_and_Treatment"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Inadequate Acoustic Windows, Operator Dependence, Signal Noise and Artifacts, Limited Depth Resolution, Aliasing, Reference: https://pubmed.ncbi.nlm.nih.gov/23361485/"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Lack of Structural Imaging, Poor Specificity, Inability to Assess Small Vessels, Variable Sensitivity, Limited Applicability in Some Population, Reference: https://pubmed.ncbi.nlm.nih.gov/10460438/"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Negin Fathi Hafshejani"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
