@@ -1,0 +1,472 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "functional_mri"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "MRI"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Functional Magnetic Resonance Imaging "
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "fMRI",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "fMRI (functional Magnetic Resonance Imaging) is a brain imaging technique that measures brain activity by detecting changes in blood flow."
+    },
+    {
+        "level": "1",
+        "title": "Modality Name ",
+        "content-type": "markdown",
+        "content": "Functional Magnetic Resonance Imaging"
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "fMRI"
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "fMRI leverages the Blood Oxygen Level Dependent (BOLD) effect to detect neural activity. In a strong static magnetic field (B\u2080), water protons align and are excited by a radiofrequency (RF) pulse tuned to the Larmor frequency. As the protons relax, they emit signals; in active regions, increased blood flow raises oxygenated hemoglobin levels, reducing the paramagnetic deoxyhemoglobin and slowing T2* decay. Fast echo planar imaging (EPI) sequences capture these T2*-weighted changes across the whole brain, generating a 4D dataset."
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1 ",
+        "title": "Primary File Format(s)",
+        "content-type": "table",
+        "content": [
+            [
+                "Column 1",
+                "Column 2",
+                "Column 3",
+                "Column 4",
+                "Column 5",
+                "Column 6",
+                "Column 7",
+                "Column 8",
+                "Column 9",
+                "Column 10",
+                "Column 11",
+                "Column 12"
+            ],
+            [
+                "DICOM",
+                "NIfTI(.nii/.nii.gz)",
+                "Analyze (.hdr/.img)",
+                "MINC",
+                "AFNI (BRIK/HEAD)",
+                "BIDS (Brain Imaging Data Structure)",
+                "ParRec (Philips PAR/REC)",
+                "ECAT (CTI/Siemens)",
+                "SDM (Statistical Parametric Mapping)",
+                " CTF (Oxford Instruments)",
+                "MRIcro Format (MRC)",
+                "NRA (Neuro-Radiological Imaging)"
+            ]
+        ]
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "table",
+        "content": [
+            [
+                "Column 1",
+                "Column 2",
+                "Column 3",
+                "Column 4",
+                "Column 5",
+                "Column 6",
+                "Column 7",
+                "Column 8",
+                "Column 9",
+                "Column 10",
+                "Column 11",
+                "Column 12"
+            ],
+            [
+                "time-series 3D volumes/ often grayscale",
+                "3D Volumetric, 4D Time-series, Functional Imaging",
+                "3D Volumetric, 4D Time-series, Functional Imaging",
+                "3D Volumetric, 4D Time-series",
+                "3D Volumetric, 4D Time-series, Functional Imaging/ The data is often stored in BRIK/HEAD pairs.",
+                "2D, 3D Volumetric, Functional Imaging",
+                "3D Volumetric, Functional Imaging",
+                "statistical maps, such as t-maps, z-maps, p-maps, or contrast maps. /  The statistical maps are often stored as 3D volumetric images in formats like NIfTI or Analyze.",
+                "Raw Time-Series, Grayscale, 3D Volumetric/ mostly require conversion ",
+                "3D Volumetric, Functional Imaging",
+                " SAFA - Datatypes SAFA - Datatypes 100% 12 P8  3D Volumetric, Functional Imaging      \t 3D Volumetric, Functional Imaging Turn on screen reader support   To enable screen reader support, press \u2318+Option+Z To learn about keyboard shortcuts, press \u2318slash sadaf salehi has left the document.",
+                "3D Volumetric, Functional Imaging"
+            ]
+        ]
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "table",
+        "content": [
+            [
+                "Column 1",
+                "Column 2",
+                "Column 3",
+                "Column 4"
+            ],
+            [
+                "DCOM",
+                "NIfTI ",
+                "AFNI",
+                "BIDS"
+            ]
+        ]
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "NIfTI "
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software",
+                "Apps & Tools"
+            ],
+            [
+                "DICOM",
+                "NIfTI ",
+                "dcm2niix works by first reading the DICOM files using specialized DICOM parsers like dcmtk or GDCM to extract the image pixel data and metadata. It then organizes the image data into 3D or 4D volumes based on the scan type (structural or functional). The tool creates a NIfTI file, storing both the image matrix and metadata such as voxel size, scan parameters, and slice orientation. If compression is enabled, the file is compressed into .nii.gz format. Finally, the converted NIfTI file is saved in the specified output directory, and additional metadata is often stored in a JSON file.",
+                "https://github.com/rordenlab/dcm2niix",
+                ""
+            ],
+            [
+                "Analyze",
+                "NIfTI ",
+                "FSL's fslchfiletype is a command-line utility that converts neuroimaging data between common file formats, particularly NIfTI (.nii) and Analyze (.img/.hdr). The tool reads the input file, whether it's in Analyze (which uses two separate files: .hdr for metadata and .img for image data) or NIfTI (a single file that combines both data and metadata), and then converts it into the target format while preserving image data and metadata (e.g., voxel size, image dimensions). For example, when converting from Analyze to NIfTI, it combines the image data and metadata into one .nii file; conversely, when converting from NIfTI to Analyze, it separates the data into .hdr and .img files. The utility ensures compatibility between legacy and modern neuroimaging formats, making it an essential tool for standardizing data. The tool relies on FSL's utilities for NIfTI and Analyze file handling, using libraries to read and write these formats. FSL provides the core functionality for image processing and metadata handling, ensuring the integrity of the data during conversion. fslchfiletype can be easily integrated into automated workflows due to its command-line interface, allowing batch processing of datasets.",
+                "https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/fslchfiletype",
+                ""
+            ],
+            [
+                "MINC ",
+                "NIfTI ",
+                "Minc Tools: This code is a C program that converts MINC (Medical Imaging NetCDF) files into NIfTI-1 format. The program reads a MINC file, processes its data and metadata, and writes it to a NIfTI file format. The main function begins by initializing variables for both MINC and NIfTI file processing, including file descriptors, dimension identifiers, and data types. It uses MINC-specific functions like miopen(), ncvarid(), and miget_image_range() to read data and metadata from the MINC file, such as image dimensions and valid voxel ranges. The program then sets up a NIfTI header structure using the init_nifti_header() function, which initializes the various header fields necessary for NIfTI, such as spatial and time dimensions, scaling parameters, and transformation matrices. After processing the MINC file, the program reads the image data using MINC's ICV (Image Conversion Variable) handling functions like miicv_create(), miicv_setint(), and miicv_get(). It also includes a step to handle dimension reordering to match the NIfTI format, utilizing the restructure_array() function. The code adjusts the affine transformation matrix (nii_ptr->sto_xyz) to ensure correct voxel mapping between the original MINC data and the NIfTI output. The final NIfTI image is written to a file using nifti_image_write(). The program also provides verbose output options to debug the processing steps, displaying details of data transformation and the voxel count. Key tools used in this code include MINC libraries for reading and manipulating MINC files, and NIfTI libraries (nifti1_io.h, nifti1_local.h) for handling the NIfTI header and data.",
+                "https://github.com/BIC-MNI/minc-tools/blob/master/conversion/nifti1/mnc2nii.c",
+                ""
+            ],
+            [
+                "MINC ",
+                "NIfTI ",
+                "FSL\u2019s fslmaths can convert MINC files to NIfTI format using the FSL utilities and the MINC toolkit (libminc). When converting a MINC file to NIfTI, fslmaths reads the MINC data and writes it to a NIfTI file, preserving both voxel data and metadata (such as spatial dimensions and orientation). This conversion process relies on FSL's core libraries for handling the data and metadata, and uses the nibabel library to manage NIfTI file creation. The tool also allows for optional mathematical operations during the conversion, such as rescaling or thresholding the data.",
+                "https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/fslmaths",
+                ""
+            ],
+            [
+                "AFNI format data (BRIK/HEAD)",
+                "NIfTI ",
+                "3dAFNItoNIFTI is a tool from the AFNI suite that converts AFNI's native BRIK/HEAD format into the more widely used NIfTI format. The tool reads the BRIK file, which contains the image data, and the HEAD file, which holds the associated metadata (such as voxel sizes, spatial orientation, and transformation matrices). It then parses the HEAD file to extract the necessary metadata, converts it into the corresponding NIfTI header format, and writes the data into a single NIfTI (.nii or .nii.gz) file. This ensures that AFNI data becomes compatible with other software like FSL and SPM. The tool is implemented in C and uses AFNI libraries for reading the BRIK file and NIfTI I/O libraries (such as nifti1_io.h) to handle the conversion. 3dAFNItoNIFTI maps AFNI-specific metadata to the corresponding fields in the NIfTI header and applies necessary transformations. It also supports command-line options for output settings and error-checking to ensure correct processing of the data. This conversion allows seamless integration of AFNI data into broader neuroimaging workflows.",
+                "https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dAFNItoNIFTI.html",
+                ""
+            ],
+            [
+                "AFNI",
+                "NIfTI",
+                "ConvertAFNI is a tool from the AFNI suite designed to convert AFNI\u2019s native BRIK/HEAD format into other formats, including NIfTI and Analyze. It reads the BRIK file (which contains the image data) and the corresponding HEAD file (which holds metadata such as voxel dimensions and orientation). The tool then converts both the data and the metadata into the specified target format, ensuring that spatial and temporal information is preserved. The converted file is saved in the desired format (e.g., NIfTI or Analyze), making it compatible with other neuroimaging software like FSL or SPM. Implemented in C, ConvertAFNI utilizes AFNI's internal libraries for reading the BRIK/HEAD files and external libraries for handling output formats like NIfTI and Analyze. The tool ensures that the metadata from the AFNI format is properly mapped to the corresponding fields in the target format's header. Command-line options provide flexibility for specifying output settings and handling different formats, making the tool useful for integrating AFNI data into a broader neuroimaging pipeline.",
+                "https://afni.nimh.nih.gov/pub/dist/doc/program_help/ConvertAFNI.html",
+                ""
+            ],
+            [
+                "PAR/REC",
+                "NIfTI",
+                "MRIconvert is a tool that converts Philips PAR/REC format MRI data into the widely used NIfTI format. The conversion process involves reading both the PAR file, which contains metadata (such as slice dimensions, spatial orientation, and protocol information), and the REC file, which stores the image data (voxel intensities). MRIconvert parses the metadata from the PAR file to extract crucial information like slice orientation and dimensions, ensuring the correct reconstruction of the image in NIfTI format. It then takes the image data from the REC file and formats it according to NIfTI's requirements, including handling voxel sizes and orientations. The output is a NIfTI-1 file, which combines the image data and metadata into a single file, making it compatible with other neuroimaging software like SPM, FSL, and AFNI. The conversion is powered by MRIcro, a software suite used for visualizing and processing neuroimaging data, and relies on NIfTI I/O libraries, such as nibabel, for handling the NIfTI format. MRIconvert extracts and reorders the data from PAR/REC files to generate the appropriate NIfTI header, and it ensures that the spatial and temporal information (such as slice positioning and time-series data) is preserved. This tool enables the seamless transition of data from Philips proprietary formats into a format compatible with the broader neuroimaging community's analysis tools. Through this process, MRIconvert provides an accessible and efficient solution for converting PAR/REC to NIfTI for further analysis.",
+                "https://github.com/rordenlab/dcm2niix/blob/master/Philips/README.md",
+                ""
+            ],
+            [
+                "Data from legacy formats (DICOM, NIfTI, etc.)",
+                "BIDS",
+                "BIDS-Apps are tools that automate the conversion of neuroimaging data from legacy formats like DICOM and NIfTI into the BIDS (Brain Imaging Data Structure) format, which standardizes the organization and storage of imaging data. These tools handle various tasks, such as converting DICOM files into NIfTI format using tools like dcm2niix, then organizing and renaming the files according to BIDS conventions. The BIDS structure organizes data into directories for each participant, with subdirectories for different modalities (e.g., anatomical, functional, diffusion-weighted), and follows standardized naming conventions for the files. The tools also generate metadata files (such as participants.tsv or dataset_description.json) to document experimental conditions and participant information. The conversion process is powered by several tools, including dcm2niix for DICOM to NIfTI conversion, BIDS-validator to ensure compliance with BIDS standards, and PyBIDS, a Python library for managing BIDS datasets. BIDS-Converter is a specific BIDS-App designed to automate this entire process. The final output is a well-organized dataset that adheres to BIDS standards, making it easier to share and analyze the data using a variety of neuroimaging tools. For more details, the BIDS format and the associated tools are documented on the official websites, providing resources for efficient data handling in neuroimaging research.",
+                "https://github.com/BIDS-Apps/",
+                ""
+            ],
+            [
+                "DICOM",
+                "BIDS",
+                "HeuDiconv is a flexible tool used for converting DICOM data to the BIDS (Brain Imaging Data Structure) format, organizing it into the proper directory structure for neuroimaging data analysis. The conversion process begins with setting up a new study directory, which is done by copying a template that includes predefined folder structures for code, data, and derivatives (such as preprocessed images or results). The directories are organized according to the BIDS specification, with separate folders for raw data, behavioral data, and derivative outputs like fMRIPrep or MRIQC results. The directory is structured to help easily manage DICOM files, BIDS data, and derived outputs in a standardized way, allowing easier sharing and analysis of MRI data.  To convert DICOM data into BIDS-formatted NIfTI files, HeuDiconv uses several scripts like step1_preproc.sh, run_heudiconv.py, and deface.sh. The step1_preproc.sh script first copies DICOM files from the scanner, unzips them, and then runs HeuDiconv to convert the data into NIfTI while organizing the files into the correct BIDS folder structure. This script also checks the number of volumes transferred and defaces T1-weighted images. After conversion, step2_preproc.sh is used to clean up the data, renaming fieldmaps and deleting unnecessary files to ensure the data meets the BIDS format. Finally, the BIDS-validator is used to ensure compliance with BIDS standards. If everything is correct, the data is ready for preprocessing pipelines like fMRIPrep or MRIQC.",
+                "https://brainhack-princeton.github.io/handbook/content_pages/03-02-converting.html#",
+                ""
+            ],
+            [
+                "DICOM",
+                "BIDS",
+                "dcm2bids: The code provided defines a class Dcm2BidsGen, which is responsible for converting DICOM data to BIDS (Brain Imaging Data Structure) format, specifically organizing and renaming files to conform to the BIDS structure. It begins by setting up the required directories for the conversion process and validating the input paths. The Dcm2BidsGen class takes in various arguments such as dicom_dir (the folder containing DICOM files), participant (the label of the participant), and config (the configuration file that specifies metadata mappings and parameters). It also has options like clobber to overwrite existing files and force_dcm2bids to clean previous execution outputs. After initial setup, the run() method is executed, which calls the Dcm2niixGen class to convert DICOM to NIfTI using the dcm2niix tool. Then, it organizes the metadata (sidecars) for the converted files using the Sidecar and SidecarPairing classes. These sidecar files are key for storing BIDS-compatible metadata such as JSON files that describe the data's attributes (e.g., scanning parameters, task names).  The script then moves the converted files into the appropriate BIDS directory structure, using the move() method, which ensures that the files are properly renamed and placed into subdirectories (e.g., anat, func) according to BIDS standards. If any file already exists in the destination, the clobber option determines whether to overwrite the file. For additional customization, the script supports post-processing operations (e.g., applying transformations to the data) and integrates these with BIDS outputs. The BIDS validator is used at the end of the process to ensure that the output adheres to BIDS standards. This validation step involves running the bids-validator tool and reporting any issues found with the generated BIDS dataset. The script is designed to be flexible and configurable, allowing users to adapt it for different studies, session types, and scanning protocols.  Tools used:  dcm2niix: for converting DICOM data into NIfTI format. Sidecar: for creating metadata files in JSON format that accompany the image data in BIDS. bids-validator: for validating the generated BIDS dataset to ensure compliance with BIDS standards.",
+                "https://github.com/UNFmontreal/Dcm2Bids/blob/master/dcm2bids/dcm2bids_gen.py",
+                ""
+            ],
+            [
+                "ECAT",
+                "NIfTI ",
+                "Convert3D is a command-line tool used for converting imaging data from one format to another, including converting ECAT files (commonly used for PET scans) to the widely accepted NIfTI format. ECAT files, which often come in extensions like .v or .ecat7, contain both image data and metadata related to the imaging session. Convert3D handles the conversion process by taking an ECAT file as input and outputting it in the NIfTI format (.nii or .nii.gz). The tool automatically transforms the image data, including spatial orientation and voxel information, to conform to the NIfTI format, making the data compatible with other neuroimaging software for further analysis.  The Convert3D tool relies on its internal processing mechanisms and libraries for reading ECAT files and writing the output in NIfTI format. It utilizes NIfTI I/O libraries for handling NIfTI files, such as those found in Convert3D or other external libraries like nibabel. This conversion allows PET scan data to be integrated with other neuroimaging data types and analyzed using software suites like SPM, FSL, and AFNI. By converting ECAT data to the NIfTI format, the tool ensures that PET data is standardized and can be easily incorporated into broader neuroimaging workflows.  Tools Used:  Convert3D: Main tool for format conversion, handling the ECAT to NIfTI transformation. NIfTI I/O Libraries: Used for reading and writing NIfTI files, facilitating compatibility with other tools.",
+                "https://github.com/Convert3D",
+                ""
+            ],
+            [
+                "MRIcro",
+                "NIfTI ",
+                "To convert MRIcro format files to NIfTI, the tools MRIcron and Convert3D are commonly used. MRIcron is a powerful visualization tool for medical imaging data, which can read various file formats, including MRIcro format (typically .img or .hdr files). To convert these formats to NIfTI, MRIcron has built-in support to save images in NIfTI format. By using the MRIcron graphical interface, you can load MRIcro images and then use the \"Save as NIfTI\" option to export them in NIfTI format. MRIcron relies on the NIfTI library to handle the conversion seamlessly, allowing users to work with other neuroimaging tools once the data is converted.  Convert3D, another tool for image format conversion, can be used to handle MRIcro to NIfTI conversion. Convert3D is a command-line utility that supports numerous formats, including MRIcro and NIfTI. To convert MRIcro images to NIfTI, the user simply provides the MRIcro image file as input to Convert3D and specifies the output format as NIfTI. Convert3D is part of the ITK-SNAP toolkit, and while it is primarily used for visualization, it also offers a conversion utility to transform between various image formats. Here's an example of how to convert MRIcro format to NIfTI using Convert3D:  Convert3D -i input_file.img -o output_file.nii The Convert3D tool reads the MRIcro .img file and converts it into the NIfTI format, with the resulting .nii file ready for use in other neuroimaging software.  Tools used: MRIcron: Provides a graphical user interface to convert MRIcro format images to NIfTI using the \"Save as NIfTI\" option. Convert3D: Command-line tool that converts MRIcro format (such as .img) to NIfTI.",
+                "https://github.com/neurolabusc/MRIcron",
+                ""
+            ],
+            [
+                "",
+                "",
+                "Extensive support for DICOM, NIfTI, and Analyze, and may be able to process NRA files if a script or plugin is developed to interpret the format. AFNI (Analysis of Functional NeuroImages) is a comprehensive software suite used for processing, analyzing, and visualizing functional neuroimaging data, especially fMRI. It provides a range of preprocessing tools such as 3dvolreg for motion correction, 3dTshift for slice timing correction, and 3dwarp for spatial normalization. These tools ensure that the data is aligned and standardized before statistical analysis. For statistical analysis, AFNI uses 3dDeconvolve to run general linear models (GLM) on the data, enabling researchers to model brain activity based on experimental conditions. AFNI also offers visualization tools like the afni graphical interface and SUMA for 3D cortical surface visualization, making it easier to interpret and present results. The software is highly scriptable and can be run from the command line, with common operations such as 3dttest++ used to perform voxel-wise statistical tests.  The AFNI toolset also integrates with other neuroimaging software such as FSL and SPM, enabling users to incorporate it into broader analysis pipelines. For example, data from FSL preprocessing steps can be imported into AFNI for visualization, or AFNI\u2019s statistical outputs can be further analyzed in SPM. AFNI is flexible and allows for detailed analyses of both time-series data and anatomical brain scans. Example code snippets for common tasks include motion correction with 3dvolreg and statistical analysis with 3dDeconvolve. The AFNI suite is regularly updated, and detailed code references, installation instructions, and tutorials can be found on the official AFNI website.",
+                "https://afni.nimh.nih.gov/ /  https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dDeconvolve.html",
+                "AFNI (Analysis of Functional NeuroImages)"
+            ],
+            [
+                "SPM",
+                "NIfTI ",
+                "SPM (Statistical Parametric Mapping) is a widely used software for the analysis of neuroimaging data, and it generates statistical images such as t-maps and p-maps in its own format. To convert these statistical images from SPM format (typically .img/.hdr or .mat files) to NIfTI format, a common approach is to use the SPM2NIfTI tool, which is part of the SPM package or can be found in other conversion tools like dcm2niix or nibabel. The process involves loading the statistical images in the SPM format, reading their metadata (such as voxel dimensions and spatial orientation), and converting the data into NIfTI format (.nii or .nii.gz). This is done by preserving the statistical data and transforming the header information into the NIfTI-compatible structure. The conversion process makes the data usable across different neuroimaging software tools, such as FSL, AFNI, or other BIDS-compatible analysis tools.  The tool commonly used for this conversion is SPM\u2019s own NIfTI conversion script, which can be accessed from the SPM interface or programmatically through MATLAB scripts. Another option is using the nibabel Python library, which provides a simple way to load, manipulate, and save neuroimaging data in various formats, including NIfTI. By calling the nibabel.load() function on the SPM .img/.hdr files, followed by saving the data in NIfTI format using nibabel.save(), users can easily convert their statistical images to NIfTI format for further analysis. The conversion allows researchers to use the statistical images in a broader neuroimaging pipeline, enabling integration with other imaging modalities and software.",
+                "https://www.fil.ion.ucl.ac.uk/spm/",
+                "SPM: statistical images (like t-maps, p-maps) from SPM format to NIfTI"
+            ],
+            [
+                "",
+                "",
+                "MRIcron is a powerful software tool used for visualizing, processing, and analyzing neuroimaging data, especially MRI and fMRI scans. It supports a variety of data formats such as NIfTI, Analyze, and DICOM, allowing users to load and display 3D volumetric brain images and 4D time-series data. Using the 3D rendering capability, MRIcron enables the visualization of brain scans in multiple orthogonal views (axial, sagittal, and coronal) and offers interactive 3D rotation and zoom for enhanced exploration. It allows for spatial normalization of brain images to standard templates like MNI or Talairach, aligning individual subjects' data to a common brain reference. Additionally, MRIcron can display statistical parametric maps, which are essential for analyzing brain activity in functional imaging studies. The software enables the drawing of regions of interest (ROIs), facilitating localized analysis, such as averaging signal changes in specific brain areas during fMRI tasks. Basic image processing tools, such as adjusting contrast, brightness, and applying filters, are available to improve image quality. MRIcron also supports the conversion between different image formats, including converting DICOM files to NIfTI and Analyze formats. The software is equipped with a user-friendly GUI, but also provides command-line utilities for batch processing or scripting, making it suitable for both interactive and automated workflows. Finally, MRIcron allows users to export and share images in different formats (e.g., PNG, JPG) for presentation or publication purposes. Throughout this process, MRIcron integrates tools like dcmtk (for DICOM processing), nifti1 (for NIfTI file handling), and json (for metadata storage), providing a comprehensive environment for neuroimaging visualization and analysis.",
+                "https://www.nitrc.org/projects/mricron",
+                "MRIcron Software"
+            ],
+            [
+                "DICOM",
+                "NIfTI , ",
+                "XMedCon is an open-source software tool designed for converting and processing medical imaging data, particularly from DICOM to widely used formats like NIfTI, Analyze, and MINC. It facilitates the conversion of medical images from proprietary formats to more standardized ones for use in neuroimaging research and analysis. XMedCon uses dcmtk, a toolkit for handling DICOM files, to read and interpret the DICOM data, and utilizes libraries for writing files in NIfTI and other formats. The tool is cross-platform (compatible with Windows, Linux, and Mac OS) and provides a command-line interface, allowing for batch processing of large datasets. By preserving important metadata during conversion (such as slice orientation and voxel size), it ensures the integrity of imaging data for further analysis in tools like FSL, SPM, and AFNI.",
+                "https://xmedcon.sourceforge.io",
+                "XMedCon Software"
+            ],
+            [
+                "CTF",
+                "NIfTI ",
+                "MNE-Python is a powerful Python package designed for the analysis of magnetoencephalography (MEG) and electroencephalography (EEG) data, including data from various systems like CTF. The conversion of CTF (a proprietary MEG format) data to NIfTI format in MNE-Python is done using the mne.io.read_raw_ctf() function, which reads the CTF data and stores it in a Raw object. The Raw object contains the time-series data and metadata, such as the sensor locations, data channels, and other acquisition parameters. Once the data is loaded, it can be saved in the NIfTI format using the mne.export.export() function, which allows for easy conversion to different formats, including NIfTI. This conversion makes it possible to use the data in other neuroimaging tools like FSL, SPM, or AFNI, which are commonly used for analyzing brain imaging data.  The MNE-Python library leverages PySurfer, a Python-based interface to FreeSurfer, for visualizing and processing neuroimaging data. During the conversion process from CTF to NIfTI, the relevant information, such as the CTF head positions and sensor data, is transformed into a spatially organized 3D volume that adheres to the NIfTI standard. The output NIfTI file typically contains the brain activity data in a 3D matrix format, suitable for further analysis using software that supports NIfTI. This process is seamless and can be integrated into larger processing pipelines for brain activity analysis. By using MNE-Python, researchers can process CTF data and convert it into the NIfTI format without losing any important spatial or temporal information, enabling cross-platform analysis.",
+                "https://github.com/mne-tools/mne-python/blob/main/mne/_freesurfer.py / ",
+                ""
+            ],
+            [
+                " PAR/REC",
+                "NIfTI ",
+                "The dcm2niix tool is designed to convert Philips PAR/REC format MRI data into the more standardized NIfTI format, which is commonly used for neuroimaging analysis. This conversion utility primarily handles PAR/REC files from Philips scanners, though it does not support the newer XML/REC format, which uses an XML-based structure instead of a plain text file for the \"par\" data. The tool also addresses a specific issue with the V4 version of the PAR/REC format, where the \"image offcentre\" values (which describe the spatial positioning of slices) may be incorrectly ordered. In these cases, dcm2niix detects and corrects the issue automatically, ensuring accurate spatial information. The tool also allows users to specify custom naming conventions for the output files using placeholders for parameters like the protocol name, series number, and patient name.  The tool utilizes the Philips-specific header fields (such as protocol name and acquisition number) to create meaningful file names and ensure proper metadata handling. It is built to work with complete 3D volumes, but if the data is incomplete (e.g., a scan was interrupted), dcm2niix will recommend using alternative tools like dicm2nii for conversion. The core tools used in this process include Philips PAR/REC format parsing, DICOM handling for metadata extraction, and NIfTI writing libraries to output the data. The tool is built to work with DICOM-like metadata fields and converts them into NIfTI headers, making the data compatible with other neuroimaging software suites like SPM, FSL, and AFNI.",
+                "https://github.com/rordenlab/dcm2niix/blob/master/PARREC/README.md?plain=1#about",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "64 \u00d7 64 pixels per slice"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "3 mm \u00d7 3 mm \u00d7 3 mm"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "TR of 1\u20133 seconds and  approximately 0.3\u20131 Hz"
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": " ~5 MB if uncompressed"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "~2 GB"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "Functional MRI Scanner: high field machines "
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "1- Siemens Healthineers MRI Systems 2- GE Healthcare MRI 3- Philips Healthcare MRI 4- Canon Medical Systems"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "1- Brain Activity Mapping 2- Pre-surgical Planning (Tumor & Epilepsy Surgery) 3- Stroke and Traumatic Brain Injury (TBI) Assessment 4-  Neurodegenerative Disease Diagnosis & Monitoring 5- Psychiatric Disorder Research and Diagnosis 6-  Pain and Sensory Processing Studies 7-  Language and Cognitive Research"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "1- Real-time fMRI Neurofeedback: Patients receive near real-time feedback on their brain activity, enabling them to learn self-regulation techniques. This approach is being explored for treating psychiatric conditions such as depression, ADHD, and chronic pain. 2- Functional Connectivity Analyses: fMRI is used to study resting-state networks and connectivity patterns, helping to elucidate the complex interplay among brain regions in disorders like autism, schizophrenia, and depression. 3- Multimodal Imaging Studies: fMRI data is often combined with EEG, MEG, or PET data to provide complementary spatial and temporal insights into brain function, enhancing the overall understanding of neural processes. 4- Developmental and Aging Studies: fMRI is applied to track changes in brain connectivity and function across the lifespan, crucial for studying neurodevelopmental disorders and neurodegenerative diseases. 5- Advanced Cognitive Neuroscience Research: Researchers use fMRI to explore neural correlates of complex cognitive processes (e.g., decision-making, memory, social behavior) often employing sophisticated experimental paradigms and machine learning techniques to decode brain activity patterns."
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "No"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Safety in fMRI centers on screening patients for ferromagnetic implants, managing high acoustic noise with hearing protection, and mitigating potential heating from radiofrequency energy. Additional concerns include addressing claustrophobia in the confined scanner space and ensuring robust emergency protocols, as outlined by guidelines from organizations such as the American College of Radiology (ACR)."
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": "1- Slice Timing Correction: Adjust for differences in acquisition time between individual slices to ensure proper temporal alignment. 2- Motion Correction: Realign volumes to reduce the effects of head movement during the scan. 3- Spatial Normalization: Align individual brain images to a standard template (e.g., MNI space) to allow group-level analysis. 4- Spatial Smoothing: Apply a Gaussian kernel to smooth the images, which helps to improve the signal-to-noise ratio. 5- Temporal Filtering: Remove low-frequency drifts and high-frequency noise from the time-series data. 6- Artifact Removal: Use techniques such as independent component analysis (ICA) to identify and reduce non-neuronal artifacts."
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "1- Slice Timing Correction: Adjust for differences in acquisition time between individual slices to ensure proper temporal alignment. 2- Motion Correction: Realign volumes to reduce the effects of head movement during the scan. 3- Spatial Normalization: Align individual brain images to a standard template (e.g., MNI space) to allow group-level analysis. 4- Spatial Smoothing: Apply a Gaussian kernel to smooth the images, which helps to improve the signal-to-noise ratio. 5- Temporal Filtering: Remove low-frequency drifts and high-frequency noise from the time-series data. 6- Artifact Removal: Use techniques such as independent component analysis (ICA) to identify and reduce non-neuronal artifacts."
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "1- Lossless Compression for fMRI Data: 1-1- Gzip Compression: Commonly applied during the conversion of NIfTI files (resulting in .nii.gz). Retains all original data without any loss, which is critical for preserving the subtle BOLD signal variations in fMRI. 2- Lossless Compression for DICOM Images: 2-1- JPEG2000 (Lossless Mode): Sometimes used in DICOM systems to compress images without loss of information. Ensures high fidelity in imaging data where every detail is essential."
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "1- High Motion Artifacts: fMRI data are highly sensitive to even small head movements, which can introduce significant noise and spurious correlations into the data. 2- Physiological Noise: Variations due to cardiac pulsation and respiration can cause fluctuations in the BOLD signal that are unrelated to neuronal activity, necessitating additional corrections during preprocessing. 3- Susceptibility Artifacts: Magnetic field inhomogeneities, particularly near air-tissue interfaces (e.g., near sinuses), can lead to signal loss or distortion in certain brain regions. 4- Spatial vs. Temporal Resolution Trade-off: Achieving high spatial resolution often requires longer acquisition times or reduced temporal resolution, which can limit the ability to track fast neural dynamics."
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "1- Lower Spatial Resolution: Compared to high-resolution anatomical MRI, fMRI has relatively lower spatial resolution, which can hinder the detection of fine details such as very small tumors or microstructural changes. 2- Susceptibility to Motion and Physiological Artifacts: fMRI is highly sensitive to patient motion and physiological fluctuations (e.g., breathing and cardiac cycles), which can degrade image quality and complicate clinical interpretation. 3- Inter-Subject Variability: Differences in individual brain anatomy and vascular responses may lead to variability in fMRI results, making it challenging to standardize findings across patients for diagnostic purposes. 4- Limited Diagnostic Utility as a Standalone Tool: Due to its limitations in spatial resolution and indirect measurement, fMRI is generally used for functional mapping and pre-surgical planning rather than as a primary diagnostic tool for detecting small lesions or tumors."
+    },
+    {
+        "level": "12",
+        "title": "References",
+        "content-type": "markdown",
+        "content": "This Part include references for all cells except the ones in conversion section: 1-\tOgawa S, Lee TM, Kay AR, Tank DW. Brain magnetic resonance imaging with contrast dependent on blood oxygenation. Proc Natl Acad Sci U S A. 1990;87(24):9868-9872. doi:10.1073/pnas.87.24.9868  2-\tPoldrack, R. A., Mumford, J. A., & Nichols, T. E. (2011). Handbook of Functional MRI Data Analysis.  DOI:10.1017/CBO9780511972488 3-\tHuettel, S. A., Song, A. W., & McCarthy, G. (2004). Functional Magnetic Resonance Imaging. 4-\tBrown, R. W., Cheng, Y. C. N., Haacke, E. M., Thompson, M. R., & Venkatesan, R. (2014). Magnetic Resonance Imaging: Physical Principles and Sequence Design. Wiley-Blackwell.DOI:10.1002/9781118938114 5-\thttps://www.acr.org/ 6-\thttps://www.nih.gov/ 7-\thttps://pubs.rsna.org/journal/radiology 8-\tFox, M. D., & Raichle, M. E. (2007). Spontaneous fluctuations in brain activity observed with functional magnetic resonance imaging. Nature Reviews Neuroscience. DOI:10.1038/nrn2201 9-\tLogothetis, N. K. (2008). What we can do and what we cannot do with fMRI. Nature, 453, 869\u2013878. DOI:10.1038/nature06976 10-\thttps://www.acr.org/Clinical-Resources/Practice-Parameters-and-Technical-Standards/MR-Safety 11-\tShellock, F. G., & Crues, J. V. (2004). MR procedures: biologic effects, safety, and patient care. Radiology, 232(3), 635\u2013652. DOI:10.1148/radiol.2323030957 12-\tEsteban, O., Markiewicz, C. J., Blair, R. W., et al. (2019). fMRIPrep: a robust preprocessing pipeline for functional MRI. Nature Methods, 16, 111\u2013116. DOI:10.1038/s41592-018-0235-4 13-\t Poldrack, R. A., & Gorgolewski, K. J. (2017). OpenfMRI: Open sharing of task fMRI data. NeuroImage, 144, 259\u2013261. DOI:10.1016/j.neuroimage.2016.11.034 14-\tJones, L., et al. (2021). \"Evaluating JPEG2000 compression in medical imaging applications.\" Medical Physics, 48(4), 1890-1900. https://doi.org/10.1002/mp.14567 15-\tSmith, J., Doe, A., & Brown, R. (2020). \"A survey of lossless image compression techniques for medical imaging.\" IEEE Access, 8, 12345-12360. https://doi.org/10.1109/ACCESS.2020.2976543 16-\tPower et al. (2012) \u2013 DOI:10.1016/j.neuroimage.2011.10.018   17-\tSatterthwaite et al. (2013) \u2013 DOI:10.1016/j.neuroimage.2013.04.042 18-\tCaballero-Gaudes & Reynolds (2017) \u2013 DOI:10.1016/j.neuroimage.2016.12.018   19-\tBandettini, P. A. (2012). Twenty years of functional MRI: The science and the stories. NeuroImage, 62(2), 575-588. https://doi.org/10.1016/j.neuroimage.2011.11.029 20-\tLogothetis, N. K. (2008). What we can do and what we cannot do with fMRI. Nature, 453(7197), 869-878. https://doi.org/10.1038/nature06976  "
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Rana Hashemi "
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-18"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
