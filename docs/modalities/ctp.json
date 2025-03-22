@@ -1,0 +1,324 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "ctp"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "CT"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "CT Perfusion"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "CTP",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "CT perfusion (CTP) uses a CT scanner and contrast to assess brain blood flow, aiding stroke diagnosis with X-ray imaging."
+    },
+    {
+        "level": "4.",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": " "
+    },
+    {
+        "level": "4.1.",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm):\t.nii - NIfTI\t.img/.hdr - Analyze 7.5\t.raw - RAW\t.tiff - TIFF\t.png - PNG\t.jpg - JPEG\t.mnc - MINC\t.h5 - HDF5\t.par/.rec"
+    },
+    {
+        "level": "4.2.",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "3D volumetric data - time-series"
+    },
+    {
+        "level": "4.3.",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "CT"
+    },
+    {
+        "level": "4.4.",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5.",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "Methodology",
+                "Tools and Libraries Used",
+                " How the Code Works",
+                "Reference"
+            ],
+            [
+                "nii - NIfTI",
+                "DICOM (.dcm)",
+                "This script provides a command-line interface (CLI) for converting NIfTI (Neuroimaging Informatics Technology Initiative) files into DICOM (Digital Imaging and Communications in Medicine) format using the nii2dcm library. It follows these key steps:  Parses command-line arguments for input NIfTI files, output directories, and optional parameters. Checks for the existence and validity of input/output files. Optionally allows specifying a reference DICOM file to transfer attributes. Calls the run_nii2dcm function to perform the actual conversion. Exits with an appropriate message if any errors occur. The script ensures flexibility by allowing different DICOM types and reference DICOM files, making it useful for medical imaging workflows.",
+                "\"The script utilizes the following Python standard libraries and external modules:  Standard Libraries sys \u2013 Handles command-line arguments and exits the program when errors occur. argparse \u2013 Provides an easy way to parse and handle command-line arguments. pathlib \u2013 Manages file paths and ensures correct file and directory handling. External Modules nii2dcm.run \u2013 Contains the run_nii2dcm function that performs the actual NIfTI-to-DICOM conversion. nii2dcm._version \u2013 Stores the version of the nii2dcm package. These tools allow the script to provide an easy-to-use CLI utility for medical image conversion. \"",
+                "\"1. Define the cli function python Copy Edit def cli(args=None): Defines the function cli, which serves as the entry point for the command-line execution. If no arguments are provided (args=None), it defaults to using command-line arguments (sys.argv[1:]). 2. Create an Argument Parser python Copy Edit parser = argparse.ArgumentParser(     prog=\"\"nii2dcm\"\",     description=\"\"nii2dcm - NIfTI file to DICOM conversion\"\" ) Uses argparse.ArgumentParser to define a CLI program named \"\"nii2dcm\"\", with a brief description of its function. 3. Define Command-Line Arguments python Copy Edit parser.add_argument(\"\"input_file\"\", type=str, help=\"\"[.nii/.nii.gz] input NIfTI file\"\") parser.add_argument(\"\"output_dir\"\", type=str, help=\"\"[directory] output DICOM path\"\") parser.add_argument(\"\"-d\"\", \"\"--dicom_type\"\", type=str, help=\"\"[string] type of DICOM. Available types: MR, SVR.\"\") parser.add_argument(\"\"-r\"\", \"\"--ref_dicom\"\", type=str, help=\"\"[.dcm] Reference DICOM file for Attribute transfer\"\") parser.add_argument(\"\"-v\"\", \"\"--version\"\", action=\"\"version\"\", version=__version__) input_file: Required argument specifying the input NIfTI file (.nii or .nii.gz). output_dir: Required argument specifying the output directory for DICOM files. -d / --dicom_type: (Optional) Specifies the type of DICOM output (e.g., MR, SVR). -r / --ref_dicom: (Optional) Specifies a reference DICOM file to transfer attributes. -v / --version: Displays the current version of the software. 4. Parse Arguments python Copy Edit args = parser.parse_args() Parses the command-line arguments and stores them in args. 5. Convert Input Paths to Path Objects python Copy Edit input_file = Path(args.input_file)   output_dir = Path(args.output_dir)   Converts the input and output paths into Path objects for easier file operations. 6. Validate Input and Output Paths python Copy Edit if not input_file.exists():     print(f\"\"Input file '{input_file}' not found\"\")     raise SystemExit(1)  if not output_dir.exists():     print(f\"\"Output directory '{output_dir}' does not exist\"\")     raise SystemExit(1) Checks if the input file exists; if not, it prints an error message and exits. Checks if the output directory exists; if not, it prints an error message and exits. 7. Handle Optional Arguments python Copy Edit if args.dicom_type is not None:     dicom_type = args.dicom_type  # TODO: add check that supplied dicom_type is permitted else:     dicom_type = None If a DICOM type is provided, it stores the value; otherwise, it sets dicom_type = None. python Copy Edit if args.ref_dicom is not None:     ref_dicom_file = Path(args.ref_dicom)   # TODO: add check that file is DICOM else:     ref_dicom_file = None If a reference DICOM file is provided, it converts it to a Path object; otherwise, it sets ref_dicom_file = None. 8. Execute the Conversion python Copy Edit run_nii2dcm(     input_file,     output_dir,     dicom_type,     ref_dicom_file ) Calls the run_nii2dcm function with the provided arguments to perform the actual NIfTI-to-DICOM conversion. 9. Define the Script Entry Point python Copy Edit if __name__ == \"\"__main__\"\":     sys.exit(cli()) Ensures the script runs the cli() function only if executed directly, not if imported as a module. Uses sys.exit(cli()) to ensure a clean exit after execution.\"",
+                "https://github.com/tomaroberts/nii2dcm/blob/main/nii2dcm/__main__.py"
+            ],
+            [
+                ".img/.hdr - Analyze 7.5",
+                "DICOM (.dcm)",
+                "\"First, you should convert .hdr format into .jpeg  , then you can convert .jpeg format into DICOM  .hdr 2 .jpeg This code is designed to convert .hdr files (hyperspectral image format) into .jpg format for easier visualization. The methodology follows these key steps:  Directory Scanning: The script iterates through the files in the specified folder ('a/') to locate .hdr files.  Image Reading: Using the spectral library, each .hdr file is read and stored as a hyperspectral image object.  Image Conversion: The save_rgb() function is employed to save the hyperspectral image as a .jpg file, using specific band indices ([29, 19, 9]) to map the RGB channels.  Output Generation: The generated .jpg files are saved in the same directory as the executing script. jpeg 2 dicom The code follows these steps:  Load an Image: The script loads an image file (e.g., PNG, BMP) using the Pillow library.  Convert Image Formats: If the image is in PNG or BMP format, it is converted to RGB format to ensure compatibility.  Convert Image Modes: The image is processed based on its pixel mode (e.g., grayscale, RGB, RGBA) and converted into a NumPy array.  Create DICOM Metadata: A DICOM dataset is created from scratch, and metadata (e.g., patient name, image dimensions, pixel data) is added to the dataset.  Save as DICOM: The final DICOM file is saved with a unique filename.  \"",
+                "\".hdr 2 .jpeg fnmatch: For matching filename patterns (specifically .hdr files).  os: For directory navigation and file path handling.  spectral: For reading .hdr files and converting hyperspectral images to RGB.  spectral.io.envi: A submodule for handling ENVI-format hyperspectral data.  .jpeg to dicom: The following Python libraries are used in this script:  pydicom:  A library for working with DICOM files.  Used to create and manipulate DICOM datasets and metadata.  Key functionalities: Creating DICOM files, setting metadata, and saving files.  Pillow (PIL):  A Python Imaging Library used for opening, manipulating, and saving image files.  Used to load the input image, convert formats, and extract pixel data.  numpy:  A library for numerical computing in Python.  Used to convert image pixel data into a NumPy array for processing.  uuid:  A library for generating unique identifiers.  Used to create a unique filename for the output DICOM file. \"",
+                "\".hdr 2 .jpeg import fnmatch import os from spectral import * import spectral.io.envi as envi  #spectral images will be the library to convert .hdr to .jpg #a/ is the directory of the hdr file is and saves the .jpg file in the location of the code  for file in os.listdir('a/'):         if fnmatch.fnmatch('a/'+ file, '*.hdr'):             print ('a/'+file)             img = open_image('a/'+file)             save_rgb(file+'.jpg', img, [29, 19, 9]) Import Libraries: Imports fnmatch, os, and spectral for file handling and hyperspectral image processing.  Iterate Through Directory: The os.listdir() function retrieves all files in the 'a/' folder.  File Matching: The fnmatch.fnmatch() function identifies files that end with .hdr.  Image Reading: For each matched file, open_image() reads the .hdr file into a hyperspectral image object.  Image Conversion: The save_rgb() function maps the hyperspectral data to RGB using specified bands and saves the output in .jpg format.  Output Path: The converted .jpg file is saved in the same folder where the script is executed.  .jpeg 2 dicom Here\u2019s a step-by-step breakdown of the code:  Step 1: Load the Input Image python Copy img = Image.open(INPUT_FILE) width, height = img.size print(\"\"File format is {} and size: {}, {}\"\".format(img.format, width, height)) The input image is loaded using Pillow's Image.open() method.  The image format (e.g., PNG, BMP) and dimensions (width, height) are printed.  Step 2: Convert Image Formats python Copy if img.format == 'PNG' or img.format == 'BMP':     img = img.convert('RGB') If the image is in PNG or BMP format, it is converted to RGB format using img.convert('RGB').  Step 3: Convert Image Modes python Copy if img.mode == 'L':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width))     ds.PixelData = np_frame.tobytes() elif img.mode == 'RGBA' or img.mode == 'RGB':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width, -1)) else:     print(\"\"Unknown image mode\"\")     return The image mode (e.g., grayscale, RGB, RGBA) is checked.  For grayscale (L mode), the image is converted to a 2D NumPy array.  For RGB or RGBA modes, the image is converted to a 3D NumPy array.  The pixel data is reshaped to match the image dimensions.  Step 4: Create DICOM Metadata python Copy ds = Dataset() ds.file_meta = Dataset() ds.file_meta.TransferSyntaxUID = pydicom.uid.ExplicitVRLittleEndian ds.file_meta.MediaStorageSOPClassUID = '1.2.840.10008.5.1.4.1.1.1.1' ds.file_meta.MediaStorageSOPInstanceUID = \"\"1.2.3\"\" ds.file_meta.ImplementationClassUID = \"\"1.2.3.4\"\"  ds.PatientName = 'Created'  ds.Rows = img.height ds.Columns = img.width ds.PhotometricInterpretation = \"\"YBR_FULL_422\"\" if np_frame.shape[1] == 3:     ds.SamplesPerPixel = 3 else:     ds.SamplesPerPixel = 1 ds.BitsStored = 8 ds.BitsAllocated = 8 ds.HighBit = 7 ds.PixelRepresentation = 0 ds.PlanarConfiguration = 0 ds.NumberOfFrames = 1  ds.SOPClassUID = generate_uid() ds.SOPInstanceUID = generate_uid() ds.StudyInstanceUID = generate_uid() ds.SeriesInstanceUID = generate_uid()  ds.PixelData = np_frame A new DICOM dataset (ds) is created using pydicom.  Metadata is added to the dataset, including:  Transfer syntax, SOP class, and instance UIDs.  Patient name (set to 'Created').  Image dimensions (rows and columns).  Photometric interpretation (e.g., YBR_FULL_422 for color images).  Pixel data properties (e.g., bits stored, bits allocated).  Unique identifiers (UIDs) are generated for the SOP class, instance, study, and series.  Step 5: Save as DICOM python Copy ds.is_little_endian = True ds.is_implicit_VR = False  ds.save_as(dicomized_filename, write_like_original=False) The dataset is configured to use little-endian byte order and explicit VR (Value Representation).  The DICOM file is saved with a unique filename generated using uuid.uuid4()\"",
+                "https://github.com/anupiyan/image-converter-from-hrd-to-jpg/blob/master/converter.py , https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py"
+            ],
+            [
+                " RAW .raw",
+                "DICOM (.dcm)",
+                "\"The code follows these steps:  Load Image Formats: The script identifies supported input and output image formats.  Process Conversion: For each input format, the script attempts to convert it into all supported output formats.  Save Output: The converted files are saved, and temporary files are deleted if specified.  Handle Vector and Raster Images: The script distinguishes between vector and raster images and applies appropriate conversion options.  \"",
+                "\"Step1: Convert .raw format to .png Link rawpy:  A Python library for reading and processing RAW image files. Used here for reading .RW2, .CR2, and other raw formats and converting them to sRGB color space. imageio:  Handles saving processed images in different formats (e.g., .TIFF, .JPG, .PNG). Provides control over image quality for .JPG. os:  Provides directory navigation, file handling, and command execution. exiftool (via os.system command):  Copies metadata from the original raw file to the converted image file.  Step 2: Convert .png format to DICOM format: Link \"\"The following tools and libraries are used in this script:  Aspose.Imaging:  A powerful library for image processing and conversion.  Supports a wide range of formats, including TIFF, PNG, BMP, JPEG, DICOM, and more.  Used for loading, converting, and saving images.  os:  A Python standard library for interacting with the operating system.  Used for file path manipulation and checking file existence.  Environment Variables:  The script uses environment variables (TEMPLATE_DIR and SAVE_OUTPUT) to configure the input/output directories and whether to delete output files.  \"\"\"",
+                "\"Step1: Convert .raw format to .png Link  Prepare the Environment:  Ensure rawpy, imageio, and exiftool are installed: bash Copy Edit pip install rawpy imageio sudo apt-get install exiftool  # For Linux brew install exiftool          # For macOS Directory Setup:  Create two directories in the same folder as the script: lua Copy Edit /pyin/  --> Place your raw image files here. /pyout/ --> Converted images will be saved here. Running the Script:  Run the script in your terminal or IDE. Follow the prompts: Select the input file format (e.g., .RW2, .CR2, or custom). Choose the output format (e.g., .TIFF, .JPG, .PNG, or custom). For .JPG, specify the desired quality (1-100). Conversion Process:  The script will iterate through the /pyin/ directory, convert each matching file, and save the result in /pyout/. Metadata Handling:  After conversion, metadata will be copied from the original file to the new file using exiftool. Any duplicate metadata files will be deleted. Output Confirmation:  The console will display messages confirming each step of the process.   Step 2: Convert .png format to DICOM format: Link  Here\u2019s a step-by-step breakdown of the code:  Step 1: Load the Input Image python Copy img = Image.open(INPUT_FILE) width, height = img.size print(\"\"File format is {} and size: {}, {}\"\".format(img.format, width, height)) The input image is loaded using Pillow's Image.open() method.  The image format (e.g., PNG, BMP) and dimensions (width, height) are printed.  Step 2: Convert Image Formats python Copy if img.format == 'PNG' or img.format == 'BMP':     img = img.convert('RGB') If the image is in PNG or BMP format, it is converted to RGB format using img.convert('RGB').  Step 3: Convert Image Modes python Copy if img.mode == 'L':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width))     ds.PixelData = np_frame.tobytes() elif img.mode == 'RGBA' or img.mode == 'RGB':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width, -1)) else:     print(\"\"Unknown image mode\"\")     return The image mode (e.g., grayscale, RGB, RGBA) is checked.  For grayscale (L mode), the image is converted to a 2D NumPy array.  For RGB or RGBA modes, the image is converted to a 3D NumPy array.  The pixel data is reshaped to match the image dimensions.  Step 4: Create DICOM Metadata python Copy ds = Dataset() ds.file_meta = Dataset() ds.file_meta.TransferSyntaxUID = pydicom.uid.ExplicitVRLittleEndian ds.file_meta.MediaStorageSOPClassUID = '1.2.840.10008.5.1.4.1.1.1.1' ds.file_meta.MediaStorageSOPInstanceUID = \"\"1.2.3\"\" ds.file_meta.ImplementationClassUID = \"\"1.2.3.4\"\"  ds.PatientName = 'Created'  ds.Rows = img.height ds.Columns = img.width ds.PhotometricInterpretation = \"\"YBR_FULL_422\"\" if np_frame.shape[1] == 3:     ds.SamplesPerPixel = 3 else:     ds.SamplesPerPixel = 1 ds.BitsStored = 8 ds.BitsAllocated = 8 ds.HighBit = 7 ds.PixelRepresentation = 0 ds.PlanarConfiguration = 0 ds.NumberOfFrames = 1  ds.SOPClassUID = generate_uid() ds.SOPInstanceUID = generate_uid() ds.StudyInstanceUID = generate_uid() ds.SeriesInstanceUID = generate_uid()  ds.PixelData = np_frame A new DICOM dataset (ds) is created using pydicom.  Metadata is added to the dataset, including:  Transfer syntax, SOP class, and instance UIDs.  Patient name (set to 'Created').  Image dimensions (rows and columns).  Photometric interpretation (e.g., YBR_FULL_422 for color images).  Pixel data properties (e.g., bits stored, bits allocated).  Unique identifiers (UIDs) are generated for the SOP class, instance, study, and series.  Step 5: Save as DICOM python Copy ds.is_little_endian = True ds.is_implicit_VR = False  ds.save_as(dicomized_filename, write_like_original=False) The dataset is configured to use little-endian byte order and explicit VR (Value Representation).  The DICOM file is saved with a unique filename generated using uuid.uuid4()\"",
+                "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py , https://github.com/CrebboElodie/raw-image-converter/blob/main/raw-img-conv_1-2.py"
+            ],
+            [
+                ".tiff - TIFF",
+                "DICOM (.dcm)",
+                "\"The code follows these steps:  Load Image Formats: The script identifies supported input and output image formats.  Process Conversion: For each input format, the script attempts to convert it into all supported output formats.  Save Output: The converted files are saved, and temporary files are deleted if specified.  Handle Vector and Raster Images: The script distinguishes between vector and raster images and applies appropriate conversion options.  \"",
+                "\"The following tools and libraries are used in this script:  Aspose.Imaging:  A powerful library for image processing and conversion.  Supports a wide range of formats, including TIFF, PNG, BMP, JPEG, DICOM, and more.  Used for loading, converting, and saving images.  os:  A Python standard library for interacting with the operating system.  Used for file path manipulation and checking file existence.  Environment Variables:  The script uses environment variables (TEMPLATE_DIR and SAVE_OUTPUT) to configure the input/output directories and whether to delete output files.  \"",
+                "Here\u2019s a step-by-step breakdown of the code:  Step 1: Set Up Directories python Copy if 'TEMPLATE_DIR' in os.environ:     templates_folder = os.environ['TEMPLATE_DIR'] else:     templates_folder = r\"C:\\Users\\USER\\Downloads\\templates\"  delete_output = 'SAVE_OUTPUT' not in os.environ The script checks if the TEMPLATE_DIR environment variable is set. If not, it defaults to a local directory (C:\\Users\\USER\\Downloads\\templates).  The delete_output flag determines whether to delete the output files after conversion (based on the SAVE_OUTPUT environment variable).  Step 2: Define Conversion Function python Copy def process_convertion():     import_formats, export_formats = get_available_image_formats()          for import_key, import_value in import_formats.items():         format_ext = import_key         input_file = os.path.join(templates_folder, f\"template.{format_ext}\")                  if not os.path.exists(input_file):             continue                  for export_key, export_value in export_formats.items():             output_file = os.path.join(templates_folder, f\"convert-{format_ext}-to-{export_key}.{export_key}\")             print(\"Processing conversion:\" + output_file)             with Image.load(input_file) as image:                 export_options = export_value.clone()                 if is_assignable(image, VectorImage):                     rasterization_options = import_value                     rasterization_options.page_width = float(image.width)                     rasterization_options.page_height = float(image.height)                     export_options.vector_rasterization_options = rasterization_options                  image.save(output_file, export_options)              if delete_output:                 os.remove(output_file) The process_convertion() function performs the actual conversion.  It retrieves the available input and output formats using get_available_image_formats().  For each input format, it checks if a corresponding template file exists (e.g., template.tiff).  For each output format, it creates an output file (e.g., convert-tiff-to-dicom.dicom).  The image is loaded using Image.load(), and conversion options are applied.  If the image is a vector image, rasterization options are configured.  The converted image is saved, and the output file is deleted if delete_output is True.  Step 3: Define Supported Formats python Copy def get_available_image_formats():     obj_init = Jpeg2000Options()     obj_init.codec = Jpeg2000Codec.J2K     obj_init2 = Jpeg2000Options()     obj_init2.codec = Jpeg2000Codec.JP2     obj_init3 = PngOptions()     obj_init3.color_type = PngColorType.TRUECOLOR_WITH_ALPHA     obj_init4 = {}     obj_init4[\"bmp\"] = BmpOptions()     obj_init4[\"gif\"] = GifOptions()     obj_init4[\"dicom\"] = DicomOptions()     obj_init4[\"jpg\"] = JpegOptions()     obj_init4[\"jpeg\"] = JpegOptions()     obj_init4[\"jpeg2000\"] = Jpeg2000Options()     obj_init4[\"j2k\"] = obj_init     obj_init4[\"jp2\"] = obj_init2     obj_init4[\"png\"] = obj_init3     obj_init4[\"apng\"] = ApngOptions()     obj_init4[\"tiff\"] = TiffOptions(TiffExpectedFormat.DEFAULT)     obj_init4[\"tif\"] = TiffOptions(TiffExpectedFormat.DEFAULT)     obj_init4[\"tga\"] = TgaOptions()     obj_init4[\"webp\"] = WebPOptions()     obj_init4[\"ico\"] = IcoOptions(FileFormat.PNG, 24)     raster_formats_that_support_export_and_import = obj_init4          obj_init5 = EmfOptions()     obj_init5.compress = True     obj_init6 = WmfOptions()     obj_init6.compress = True     obj_init7 = SvgOptions()     obj_init7.compress = True     obj_init8 = {}     obj_init8[\"emf\"] = (EmfOptions(), EmfRasterizationOptions())     obj_init8[\"svg\"] = (SvgOptions(), SvgRasterizationOptions())     obj_init8[\"wmf\"] = (WmfOptions(), WmfRasterizationOptions())     obj_init8[\"emz\"] = (obj_init5, EmfRasterizationOptions())     obj_init8[\"wmz\"] = (obj_init6, WmfRasterizationOptions())     obj_init8[\"svgz\"] = (obj_init7, SvgRasterizationOptions())     vector_formats_that_support_export_and_import = obj_init8          obj_init9 = DxfOptions()     obj_init9.text_as_lines = True     obj_init9.convert_text_beziers = True     obj_init10 = {}     obj_init10[\"psd\"] = PsdOptions()     obj_init10[\"dxf\"] = obj_init9     obj_init10[\"pdf\"] = PdfOptions()     obj_init10[\"html\"] = Html5CanvasOptions()     formats_only_for_export = obj_init10          obj_init11 = {}     obj_init11[\"djvu\"] = None     obj_init11[\"dng\"] = None     obj_init11[\"dib\"] = None     formats_only_for_import = obj_init11          obj_init12 = {}     obj_init12[\"eps\"] = EpsRasterizationOptions()     obj_init12[\"cdr\"] = CdrRasterizationOptions()     obj_init12[\"cmx\"] = CmxRasterizationOptions()     obj_init12[\"otg\"] = OtgRasterizationOptions()     obj_init12[\"odg\"] = OdgRasterizationOptions()     vector_formats_only_for_import = obj_init12          # Get total set of formats to what we can export images     export_formats = {k: v[0] for k, v in vector_formats_that_support_export_and_import.items()}     export_formats.update(formats_only_for_export)     export_formats.update(raster_formats_that_support_export_and_import)          # Get total set of formats that can be loaded     import_formats = {k : VectorRasterizationOptions() for k in formats_only_for_import}     import_formats.update(vector_formats_only_for_import)     import_formats.update({k : v[1] for k, v in vector_formats_that_support_export_and_import.items()})          return import_formats, export_formats The get_available_image_formats() function defines the supported input and output formats.  It categorizes formats into raster, vector, and special formats (e.g., PDF, HTML).  It returns two dictionaries: import_formats (formats that can be loaded) and export_formats (formats that can be saved).  Step 4: Run the Conversion python Copy # run process_convertion() The script executes the process_convertion() function to perform the conversions.",
+                "https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/"
+            ],
+            [
+                ".png - PNG",
+                "DICOM (.dcm)",
+                "\"The code follows these steps:  Load an Image: The script loads an image file (e.g., PNG, BMP) using the Pillow library.  Convert Image Formats: If the image is in PNG or BMP format, it is converted to RGB format to ensure compatibility.  Convert Image Modes: The image is processed based on its pixel mode (e.g., grayscale, RGB, RGBA) and converted into a NumPy array.  Create DICOM Metadata: A DICOM dataset is created from scratch, and metadata (e.g., patient name, image dimensions, pixel data) is added to the dataset.  Save as DICOM: The final DICOM file is saved with a unique filename.  \"",
+                "\"The\"The following Python libraries are used in this script:  pydicom:  A library for working with DICOM files.  Used to create and manipulate DICOM datasets and metadata.  Key functionalities: Creating DICOM files, setting metadata, and saving files.  Pillow (PIL):  A Python Imaging Library used for opening, manipulating, and saving image files.  Used to load the input image, convert formats, and extract pixel data.  numpy:  A library for numerical computing in Python.  Used to convert image pixel data into a NumPy array for processing.  uuid:  A library for generating unique identifiers.  Used to create a unique filename for the output DICOM file.\" following tools and libraries are used in this script:  Aspose.Imaging:  A powerful library for image processing and conversion.  Supports a wide range of formats, including TIFF, PNG, BMP, JPEG, DICOM, and more.  Used for loading, converting, and saving images.  os:  A Python standard library for interacting with the operating system.  Used for file path manipulation and checking file existence.  Environment Variables:  The script uses environment variables (TEMPLATE_DIR and SAVE_OUTPUT) to configure the input/output directories and whether to delete output files.  \"",
+                "\"Here\u2019s a step-by-step breakdown of the code:  Step 1: Load the Input Image python Copy img = Image.open(INPUT_FILE) width, height = img.size print(\"\"File format is {} and size: {}, {}\"\".format(img.format, width, height)) The input image is loaded using Pillow's Image.open() method.  The image format (e.g., PNG, BMP) and dimensions (width, height) are printed.  Step 2: Convert Image Formats python Copy if img.format == 'PNG' or img.format == 'BMP':     img = img.convert('RGB') If the image is in PNG or BMP format, it is converted to RGB format using img.convert('RGB').  Step 3: Convert Image Modes python Copy if img.mode == 'L':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width))     ds.PixelData = np_frame.tobytes() elif img.mode == 'RGBA' or img.mode == 'RGB':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width, -1)) else:     print(\"\"Unknown image mode\"\")     return The image mode (e.g., grayscale, RGB, RGBA) is checked.  For grayscale (L mode), the image is converted to a 2D NumPy array.  For RGB or RGBA modes, the image is converted to a 3D NumPy array.  The pixel data is reshaped to match the image dimensions.  Step 4: Create DICOM Metadata python Copy ds = Dataset() ds.file_meta = Dataset() ds.file_meta.TransferSyntaxUID = pydicom.uid.ExplicitVRLittleEndian ds.file_meta.MediaStorageSOPClassUID = '1.2.840.10008.5.1.4.1.1.1.1' ds.file_meta.MediaStorageSOPInstanceUID = \"\"1.2.3\"\" ds.file_meta.ImplementationClassUID = \"\"1.2.3.4\"\"  ds.PatientName = 'Created'  ds.Rows = img.height ds.Columns = img.width ds.PhotometricInterpretation = \"\"YBR_FULL_422\"\" if np_frame.shape[1] == 3:     ds.SamplesPerPixel = 3 else:     ds.SamplesPerPixel = 1 ds.BitsStored = 8 ds.BitsAllocated = 8 ds.HighBit = 7 ds.PixelRepresentation = 0 ds.PlanarConfiguration = 0 ds.NumberOfFrames = 1  ds.SOPClassUID = generate_uid() ds.SOPInstanceUID = generate_uid() ds.StudyInstanceUID = generate_uid() ds.SeriesInstanceUID = generate_uid()  ds.PixelData = np_frame A new DICOM dataset (ds) is created using pydicom.  Metadata is added to the dataset, including:  Transfer syntax, SOP class, and instance UIDs.  Patient name (set to 'Created').  Image dimensions (rows and columns).  Photometric interpretation (e.g., YBR_FULL_422 for color images).  Pixel data properties (e.g., bits stored, bits allocated).  Unique identifiers (UIDs) are generated for the SOP class, instance, study, and series.  Step 5: Save as DICOM python Copy ds.is_little_endian = True ds.is_implicit_VR = False  ds.save_as(dicomized_filename, write_like_original=False) The dataset is configured to use little-endian byte order and explicit VR (Value Representation).  The DICOM file is saved with a unique filename generated using uuid.uuid4()\"",
+                "https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/"
+            ],
+            [
+                ".jpg - JPEG",
+                "DICOM (.dcm)",
+                "\"The code follows these steps:  Load an Image: The script loads an image file (e.g., PNG, BMP) using the Pillow library.  Convert Image Formats: If the image is in PNG or BMP format, it is converted to RGB format to ensure compatibility.  Convert Image Modes: The image is processed based on its pixel mode (e.g., grayscale, RGB, RGBA) and converted into a NumPy array.  Create DICOM Metadata: A DICOM dataset is created from scratch, and metadata (e.g., patient name, image dimensions, pixel data) is added to the dataset.  Save as DICOM: The final DICOM file is saved with a unique filename.  \"",
+                "\"The following Python libraries are used in this script:  pydicom:  A library for working with DICOM files.  Used to create and manipulate DICOM datasets and metadata.  Key functionalities: Creating DICOM files, setting metadata, and saving files.  Pillow (PIL):  A Python Imaging Library used for opening, manipulating, and saving image files.  Used to load the input image, convert formats, and extract pixel data.  numpy:  A library for numerical computing in Python.  Used to convert image pixel data into a NumPy array for processing.  uuid:  A library for generating unique identifiers.  Used to create a unique filename for the output DICOM file.\"",
+                "\"Here\u2019s a step-by-step breakdown of the code:  Step 1: Load the Input Image python Copy img = Image.open(INPUT_FILE) width, height = img.size print(\"\"File format is {} and size: {}, {}\"\".format(img.format, width, height)) The input image is loaded using Pillow's Image.open() method.  The image format (e.g., PNG, BMP) and dimensions (width, height) are printed.  Step 2: Convert Image Formats python Copy if img.format == 'PNG' or img.format == 'BMP':     img = img.convert('RGB') If the image is in PNG or BMP format, it is converted to RGB format using img.convert('RGB').  Step 3: Convert Image Modes python Copy if img.mode == 'L':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width))     ds.PixelData = np_frame.tobytes() elif img.mode == 'RGBA' or img.mode == 'RGB':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width, -1)) else:     print(\"\"Unknown image mode\"\")     return The image mode (e.g., grayscale, RGB, RGBA) is checked.  For grayscale (L mode), the image is converted to a 2D NumPy array.  For RGB or RGBA modes, the image is converted to a 3D NumPy array.  The pixel data is reshaped to match the image dimensions.  Step 4: Create DICOM Metadata python Copy ds = Dataset() ds.file_meta = Dataset() ds.file_meta.TransferSyntaxUID = pydicom.uid.ExplicitVRLittleEndian ds.file_meta.MediaStorageSOPClassUID = '1.2.840.10008.5.1.4.1.1.1.1' ds.file_meta.MediaStorageSOPInstanceUID = \"\"1.2.3\"\" ds.file_meta.ImplementationClassUID = \"\"1.2.3.4\"\"  ds.PatientName = 'Created'  ds.Rows = img.height ds.Columns = img.width ds.PhotometricInterpretation = \"\"YBR_FULL_422\"\" if np_frame.shape[1] == 3:     ds.SamplesPerPixel = 3 else:     ds.SamplesPerPixel = 1 ds.BitsStored = 8 ds.BitsAllocated = 8 ds.HighBit = 7 ds.PixelRepresentation = 0 ds.PlanarConfiguration = 0 ds.NumberOfFrames = 1  ds.SOPClassUID = generate_uid() ds.SOPInstanceUID = generate_uid() ds.StudyInstanceUID = generate_uid() ds.SeriesInstanceUID = generate_uid()  ds.PixelData = np_frame A new DICOM dataset (ds) is created using pydicom.  Metadata is added to the dataset, including:  Transfer syntax, SOP class, and instance UIDs.  Patient name (set to 'Created').  Image dimensions (rows and columns).  Photometric interpretation (e.g., YBR_FULL_422 for color images).  Pixel data properties (e.g., bits stored, bits allocated).  Unique identifiers (UIDs) are generated for the SOP class, instance, study, and series.  Step 5: Save as DICOM python Copy ds.is_little_endian = True ds.is_implicit_VR = False  ds.save_as(dicomized_filename, write_like_original=False) The dataset is configured to use little-endian byte order and explicit VR (Value Representation).  The DICOM file is saved with a unique filename generated using uuid.uuid4()\"",
+                "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py"
+            ],
+            [
+                ".mnc - MINC",
+                "DICOM (.dcm)",
+                "\"This code is a Perl script that converts MINC (Medical Imaging NetCDF) format files to DICOM (Digital Imaging and Communications in Medicine) format. The script reads a MINC file, extracts relevant information, and creates a series of DICOM files, one for each slice of the 3D volume. It follows these main steps:  Parse command-line arguments  Reshape the input MINC file  Create DICOM data structure and populate it with metadata  Iterate through slices, creating a DICOM file for each  Write DICOM files to the specified output directory  \"",
+                "\"Perl programming language  Perl modules:  Getopt::Long (for parsing command-line options)  Pod::Usage (for generating help/usage information)  File::Basename (for file path manipulation)  File::Temp (for creating temporary directories)  Time::HiRes (for high-resolution time functions)  Cwd (for working with current directory)  DICOM (for DICOM file manipulation)  External tools:  mincreshape (for reshaping MINC files)  mincinfo (for extracting MINC file information)  mincextract (for extracting slice data from MINC files)\"",
+                "\"a. Parse command-line arguments and set up options b. Check for input file existence and create output directory if needed c. Reshape input MINC file to standardized orientation (zyx) d. Create DICOM object and populate metadata:  File metadata (group 0x0002)  Patient information (group 0x0010)  Study and series information (groups 0x0008, 0x0020)  Image-specific metadata (groups 0x0018, 0x0028) e. Extract image dimensions and other properties from MINC file f. Iterate through each slice of the MINC volume:  Update slice-specific metadata (e.g., SOPInstanceUID, ImagePositionPatient)  Extract slice data using mincextract  Set pixel data in DICOM object  Write DICOM file for the current slice g. Provide utility functions for hashing and size calculation  The script uses a combination of MINC tools and DICOM libraries to perform the conversion, ensuring that relevant metadata is transferred and the resulting DICOM files conform to the standard as much as possible.  Related What are the key methodologies used in this code Which tools and libraries are essential for this code Can you break down the step-by-step execution of this code \"",
+                "https://github.com/andrewjanke/mnc2dcm/blob/master/mnc2dcm"
+            ],
+            [
+                " .h5 - HDF5",
+                "DICOM (.dcm)",
+                "\"Step1: Convert .h5 format to .jpeg This code extracts image data from an HDF5 (.h5) file, converts it into a standard image format, and displays or saves the resulting image. The methodology involves:  Data Reading: The code uses the h5py library to read .h5 files and access the dataset containing the image data.  Array Conversion: The dataset values are extracted as a NumPy array, which is cast to an unsigned 8-bit integer type for compatibility with image data.  Image Creation: The PIL library is used to convert the NumPy array into an RGB image object.  Image Saving and Display: The created image is saved in .thumbnail format (a .JPEG variant) and displayed for visualization.  Step2: Convert .jpeg to dicom format The code follows these steps:  Load an Image: The script loads an image file (e.g., PNG, BMP) using the Pillow library.  Convert Image Formats: If the image is in PNG or BMP format, it is converted to RGB format to ensure compatibility.  Convert Image Modes: The image is processed based on its pixel mode (e.g., grayscale, RGB, RGBA) and converted into a NumPy array.  Create DICOM Metadata: A DICOM dataset is created from scratch, and metadata (e.g., patient name, image dimensions, pixel data) is added to the dataset.  Save as DICOM: The final DICOM file is saved with a unique filename.  \"",
+                "\"Step1: Convert .h5 format to .jpeg h5py: For reading and manipulating .h5 files.  numpy: For handling and processing numerical data in array format.  PIL** (Python Imaging Library)**: Specifically, the Image module is used to convert arrays into images and save/display them.   Step2: Convert .jpeg to dicom format  The following Python libraries are used in this script: pydicom:  A library for working with DICOM files.  Used to create and manipulate DICOM datasets and metadata.  Key functionalities: Creating DICOM files, setting metadata, and saving files.  Pillow (PIL):  A Python Imaging Library used for opening, manipulating, and saving image files.  Used to load the input image, convert formats, and extract pixel data.  numpy:  A library for numerical computing in Python.  Used to convert image pixel data into a NumPy array for processing.  uuid:  A library for generating unique identifiers.  Used to create a unique filename for the output DICOM file.\"",
+                "\"Step1: Convert .h5 format to .jpeg Import Libraries: The code imports h5py, numpy, and PIL.Image.  Open HDF5 File: The file \"\"Sample.h5\"\" is opened in read mode using h5py.File().  Access Image Data: The code retrieves the dataset labeled \"\"Photos/Image 1\"\" and reads its contents as a NumPy array.  Array Conversion: The data is converted to the uint8 type to ensure proper image format compatibility.  Image Creation: Image.fromarray() creates an RGB image object from the array.  Image Saving: The image is saved as \"\"yourimage.thumbnail\"\" in JPEG format.  Image Display: The img.show() function opens the image for immediate visualization.   Step2: Convert .jpeg to dicom format Here\u2019s a step-by-step breakdown of the code:  Step 1: Load the Input Image python Copy img = Image.open(INPUT_FILE) width, height = img.size print(\"\"File format is {} and size: {}, {}\"\".format(img.format, width, height)) The input image is loaded using Pillow's Image.open() method.  The image format (e.g., PNG, BMP) and dimensions (width, height) are printed.  Step 2: Convert Image Formats python Copy if img.format == 'PNG' or img.format == 'BMP':     img = img.convert('RGB') If the image is in PNG or BMP format, it is converted to RGB format using img.convert('RGB').  Step 3: Convert Image Modes python Copy if img.mode == 'L':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width))     ds.PixelData = np_frame.tobytes() elif img.mode == 'RGBA' or img.mode == 'RGB':     np_frame = numpy.array(img.getdata(), dtype=numpy.uint8)     np_frame = np_frame.reshape((height, width, -1)) else:     print(\"\"Unknown image mode\"\")     return The image mode (e.g., grayscale, RGB, RGBA) is checked.  For grayscale (L mode), the image is converted to a 2D NumPy array.  For RGB or RGBA modes, the image is converted to a 3D NumPy array.  The pixel data is reshaped to match the image dimensions.  Step 4: Create DICOM Metadata python Copy ds = Dataset() ds.file_meta = Dataset() ds.file_meta.TransferSyntaxUID = pydicom.uid.ExplicitVRLittleEndian ds.file_meta.MediaStorageSOPClassUID = '1.2.840.10008.5.1.4.1.1.1.1' ds.file_meta.MediaStorageSOPInstanceUID = \"\"1.2.3\"\" ds.file_meta.ImplementationClassUID = \"\"1.2.3.4\"\"  ds.PatientName = 'Created'  ds.Rows = img.height ds.Columns = img.width ds.PhotometricInterpretation = \"\"YBR_FULL_422\"\" if np_frame.shape[1] == 3:     ds.SamplesPerPixel = 3 else:     ds.SamplesPerPixel = 1 ds.BitsStored = 8 ds.BitsAllocated = 8 ds.HighBit = 7 ds.PixelRepresentation = 0 ds.PlanarConfiguration = 0 ds.NumberOfFrames = 1  ds.SOPClassUID = generate_uid() ds.SOPInstanceUID = generate_uid() ds.StudyInstanceUID = generate_uid() ds.SeriesInstanceUID = generate_uid()  ds.PixelData = np_frame A new DICOM dataset (ds) is created using pydicom.  Metadata is added to the dataset, including:  Transfer syntax, SOP class, and instance UIDs.  Patient name (set to 'Created').  Image dimensions (rows and columns).  Photometric interpretation (e.g., YBR_FULL_422 for color images).  Pixel data properties (e.g., bits stored, bits allocated).  Unique identifiers (UIDs) are generated for the SOP class, instance, study, and series.  Step 5: Save as DICOM python Copy ds.is_little_endian = True ds.is_implicit_VR = False  ds.save_as(dicomized_filename, write_like_original=False) The dataset is configured to use little-endian byte order and explicit VR (Value Representation).  The DICOM file is saved with a unique filename generated using uuid.uuid4()\"",
+                "https://stackoverflow.com/questions/52394252/convert-h5-file-to-jpg-with-python , https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py"
+            ],
+            [
+                ".PAR/.REC",
+                "DICOM (.dcm)",
+                "\"Step1: Convert .par/.rec format to .nifti It takes two command-line arguments: img_dir (input directory containing .par files) out_dir (output directory for converted .nii.gz files). It searches for .par files (both lowercase and uppercase .PAR). Each .par file is loaded using NiBabel (nibabel.load()). The file is then converted to NIfTI format (nib.Nifti1Image()). Finally, the converted file is saved as .nii.gz in the specified output directory. The script follows a functional approach, encapsulating logic inside functions (arg_parser(), split_filename(), main()) and using exception handling to manage errors.   Step2: Convert .nifti format to dicom This script provides a command-line interface (CLI) for converting NIfTI (Neuroimaging Informatics Technology Initiative) files into DICOM (Digital Imaging and Communications in Medicine) format using the nii2dcm library. It follows these key steps:  Parses command-line arguments for input NIfTI files, output directories, and optional parameters. Checks for the existence and validity of input/output files. Optionally allows specifying a reference DICOM file to transfer attributes. Calls the run_nii2dcm function to perform the actual conversion. Exits with an appropriate message if any errors occur. The script ensures flexibility by allowing different DICOM types and reference DICOM files, making it useful for medical imaging workflows.\"",
+                "\"Step1: Convert .par/.rec format to .nifti The script utilizes the following built-in and third-party Python libraries:  Library\tUsage argparse\tParses command-line arguments (img_dir, out_dir) glob\tFinds all .par/.PAR files in the specified directory os\tHandles file paths (os.path.join(), os.path.splitext()) sys\tHandles script execution (sys.exit()) nibabel\tLoads .par files and converts them to .nii.gz format The key dependency is NiBabel, a powerful library for working with neuroimaging data formats (NIfTI, Analyze, MINC, etc.).   Step2: Convert .nifti format to dicom The script utilizes the following Python standard libraries and external modules:  Standard Libraries sys \u2013 Handles command-line arguments and exits the program when errors occur. argparse \u2013 Provides an easy way to parse and handle command-line arguments. pathlib \u2013 Manages file paths and ensures correct file and directory handling. External Modules nii2dcm.run \u2013 Contains the run_nii2dcm function that performs the actual NIfTI-to-DICOM conversion. nii2dcm._version \u2013 Stores the version of the nii2dcm package. These tools allow the script to provide an easy-to-use CLI utility for medical image conversion. \"",
+                "\"Step1: Convert .par/.rec format to .nifti Step 1: Parse Command-Line Arguments The script starts by defining arg_parser(), which: Creates an argument parser using argparse.ArgumentParser() Defines two required arguments: img_dir (input directory) and out_dir (output directory). Returns the parser object. Step 2: Locate .par Files In main(), the script retrieves the input arguments using arg_parser().parse_args(). It searches for .par files in img_dir using glob(). If no .par files are found, it searches for .PAR files. If still no files are found, it raises an exception. Step 3: Process Each .par File The script iterates over all found .par files. For each file: It prints a message: \"\"Converting image: <filename>\"\". It loads the .par file using nib.load(fn). Extracts the filename without extension using split_filename(). Creates an output file path <out_dir>/<filename>.nii.gz. Converts the loaded image into a Nifti1Image object. Sets the data type to <f4> (float32). Saves the converted .nii.gz file. Prints \"\"Saved to: <output file>\"\". Step 4: Handle Errors If an error occurs (e.g., no .par files found, invalid input), it prints the error message and returns 1. Step 5: Execute the Script If the script is run directly (__name__ == \"\"__main__\"\"), it calls main(). It exits the script using sys.exit(main()), returning 0 for success or 1 for failure.    Step2: Convert .nifti format to dicom 1. Define the cli function python Copy Edit def cli(args=None): Defines the function cli, which serves as the entry point for the command-line execution. If no arguments are provided (args=None), it defaults to using command-line arguments (sys.argv[1:]). 2. Create an Argument Parser python Copy Edit parser = argparse.ArgumentParser(     prog=\"\"nii2dcm\"\",     description=\"\"nii2dcm - NIfTI file to DICOM conversion\"\" ) Uses argparse.ArgumentParser to define a CLI program named \"\"nii2dcm\"\", with a brief description of its function. 3. Define Command-Line Arguments python Copy Edit parser.add_argument(\"\"input_file\"\", type=str, help=\"\"[.nii/.nii.gz] input NIfTI file\"\") parser.add_argument(\"\"output_dir\"\", type=str, help=\"\"[directory] output DICOM path\"\") parser.add_argument(\"\"-d\"\", \"\"--dicom_type\"\", type=str, help=\"\"[string] type of DICOM. Available types: MR, SVR.\"\") parser.add_argument(\"\"-r\"\", \"\"--ref_dicom\"\", type=str, help=\"\"[.dcm] Reference DICOM file for Attribute transfer\"\") parser.add_argument(\"\"-v\"\", \"\"--version\"\", action=\"\"version\"\", version=__version__) input_file: Required argument specifying the input NIfTI file (.nii or .nii.gz). output_dir: Required argument specifying the output directory for DICOM files. -d / --dicom_type: (Optional) Specifies the type of DICOM output (e.g., MR, SVR). -r / --ref_dicom: (Optional) Specifies a reference DICOM file to transfer attributes. -v / --version: Displays the current version of the software. 4. Parse Arguments python Copy Edit args = parser.parse_args() Parses the command-line arguments and stores them in args. 5. Convert Input Paths to Path Objects python Copy Edit input_file = Path(args.input_file)   output_dir = Path(args.output_dir)   Converts the input and output paths into Path objects for easier file operations. 6. Validate Input and Output Paths python Copy Edit if not input_file.exists():     print(f\"\"Input file '{input_file}' not found\"\")     raise SystemExit(1)  if not output_dir.exists():     print(f\"\"Output directory '{output_dir}' does not exist\"\")     raise SystemExit(1) Checks if the input file exists; if not, it prints an error message and exits. Checks if the output directory exists; if not, it prints an error message and exits. 7. Handle Optional Arguments python Copy Edit if args.dicom_type is not None:     dicom_type = args.dicom_type  # TODO: add check that supplied dicom_type is permitted else:     dicom_type = None If a DICOM type is provided, it stores the value; otherwise, it sets dicom_type = None. python Copy Edit if args.ref_dicom is not None:     ref_dicom_file = Path(args.ref_dicom)   # TODO: add check that file is DICOM else:     ref_dicom_file = None If a reference DICOM file is provided, it converts it to a Path object; otherwise, it sets ref_dicom_file = None. 8. Execute the Conversion python Copy Edit run_nii2dcm(     input_file,     output_dir,     dicom_type,     ref_dicom_file ) Calls the run_nii2dcm function with the provided arguments to perform the actual NIfTI-to-DICOM conversion. 9. Define the Script Entry Point python Copy Edit if __name__ == \"\"__main__\"\":     sys.exit(cli()) Ensures the script runs the cli() function only if executed directly, not if imported as a module. Uses sys.exit(cli()) to ensure a clean exit after execution.\"",
+                "https://gist.github.com/jcreinhold/fdd701211191450284c5718502eabbd4 , https://github.com/tomaroberts/nii2dcm/blob/main/nii2dcm/__main__.py"
+            ]
+        ]
+    },
+    {
+        "level": "5.",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1.",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "512 \u00d7 512 pixels per slice , REF:https://pmc.ncbi.nlm.nih.gov/articles/PMC7965399/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.2.",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "1 \u00d7 1 \u00d7 1 mm\u00b3, REF:https://radiologykey.com/ct-perfusion-imaging-principles/?utm_source=chatgpt.com"
+    },
+    {
+        "level": "5.3.",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "1-2 seconds per scan (dynamic imaging for perfusion) , REF:https://link.springer.com/chapter/10.1007/978-3-540-33125-4_1"
+    },
+    {
+        "level": "6.",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1.",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "Typically around 0.5 MB to 2 MB per slice, depending on the scanner and image resolution, REF:https://www.researchgate.net/figure/File-sizes-of-images-from-different-imaging-modalities_tbl1_26831435"
+    },
+    {
+        "level": "6.2.",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "Varies widely, but generally around 200-800 MB per full volume for brain perfusion studies, depending on FOV and voxel size, REF:https://www.corhealthontario.ca/Frequently-Asked-Questions-Automated-CT-Perfusion-Imaging.pdf"
+    },
+    {
+        "level": "7.",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1.",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "1-  Modern multi-detector CT (MDCT) scanners, 2- Perfusion Analysis Software: Specialized software is crucial for processing and interpreting CT perfusion data 3-Quality Assurance Tools, REF: https://www.rapidai.com/rapid-ctp?utm_source=chatgpt.com , https://www.sunnuclear.com/products/ct-perfusion-phantom?utm_source=chatgpt.com ,https://www.usa.philips.com/healthcare/product/HCAPP008/-ct-brain-perfusion-?utm_source=chatgpt.com ,https://global.medical.canon/products/healthcare_it/clinical_application/ct_brain_perfusion?utm_source=chatgpt.com https://global.medical.canon/products/healthcare_it/clinical_application/ct_brain_perfusion?utm_source=chatgpt.com ,https://www.gehealthcare.com/products/advanced-visualization/all-applications/ct-perfusion-4d-neuro?srsltid=AfmBOopiquAM2AxRUkdA9mCVuyhaYjsSNGFFMld_Va2KzUW9BW8PFeE8&utm_source=chatgpt.com"
+    },
+    {
+        "level": "7.2.",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "GE HealthCare, Canon Medical Systems, Philips Healthcare, Siemens Healthineers, Neusoft Medical Systems , Sunnuclear,     REF: https://www.gehealthcare.com/, https://global.medical.canon/ , https://www.philips.com/healthcare , https://www.siemens-healthineers.com/ ,https://www.neusoftmedical.com/ ,https://www.united-imaging.com/"
+    },
+    {
+        "level": "8.",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1.",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Acute Ischemic Stroke Assessment, REF: https://pubmed.ncbi.nlm.nih.gov/20422406/"
+    },
+    {
+        "level": "8.2.",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Cardiac Imaging , Tumor Vascularity Evaluation, REF:https://www.amazon.com/Perfusion-Imaging-Clinical-Practice-Multimodality/dp/1451193165"
+    },
+    {
+        "level": "9.",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1.",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "YES, REF: https://www.ajnr.org/content/30/4/662"
+    },
+    {
+        "level": "9.2.",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "3.5-6.5 mSv for brain perfusion CT (3500-6500 \u00b5Sv) , REF: https://www.ajnr.org/content/30/4/662"
+    },
+    {
+        "level": "9.3.",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Cumulative radiation exposure risks, contrast-induced nephropathy, extravasation risk, thermal injury potenti , REF: https://www.ajnr.org/content/30/4/662"
+    },
+    {
+        "level": "10.",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1.",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Temporal motion correction, noise reduction using iterative reconstruction, beam hardening correction, contrast enhancement through histogram matching, and deconvolution analysis for hemodynamic parameter calculation, REF: https://www.ajronline.org/doi/10.2214/AJR.21.26139"
+    },
+    {
+        "level": "10.2.",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "JPEG-LS lossless compression for perfusion time-series data; limited lossy compression due to critical temporal resolution requirements , REF:https://dicom.nema.org/medical/dicom/current/output/html/part05.html"
+    },
+    {
+        "level": "11.",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1.",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Motion artifacts from long acquisition times (60-90s), partial volume effects in small vessels, computational complexity of tracer kinetic modeling, and temporal resolution vs. spatial resolution tradeoffs, REF: https://www.ajronline.org/doi/10.2214/AJR.21.26139"
+    },
+    {
+        "level": "11.2.",
+        "title": "",
+        "content-type": "markdown",
+        "content": "Limited anatomical coverage (typically 8-16cm), contrast timing challenges in patients with cardiac dysfunction, radiation dose constraints for repeat studies, and variability in perfusion parameter quantification across platforms, REF: https://www.ajronline.org/doi/10.2214/AJR.21.26139"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Arman Gharehbaghi"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-22"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
