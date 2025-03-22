@@ -47,5 +47,12 @@
         "email": "ranahashemi@yahoo.com",
         "affiliation": "Shahid Beheshti University of Medical Sciences, Tehran, Iran",
         "image": ""
-      }
+      },
+    {
+      "name": "Arman Gharehbaghi",
+      "contributedTo": ["CT_CTP", "CT_CBCT", "CT_Colonography", "Dental_OPG", "Dental_CBCT", "Dental_CR"],
+      "email": "armangharehbaghi2003@gmail.com",
+      "affiliation": "Student Research Committee, Urmia University of Medical Sciences, Urmia, IRAN",
+      "image": ""
+    }
   ]
