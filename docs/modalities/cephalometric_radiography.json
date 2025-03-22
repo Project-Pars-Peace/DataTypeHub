@@ -1,0 +1,482 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "cephalometric_radiography"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "X-Ray"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "cephalometric_radiography"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "CEPH",
+            "Ceph X-ray",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Specialized head/neck radiograph for orthodontic evaluation."
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "Cephalometric Radiography"
+    },
+    {
+        "level": "1",
+        "title": "NIfTI to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare NIFTI",
+                " Image editing software",
+                "Ensure the NIFTI image is high quality and properly aligned to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality)."
+            ],
+            [
+                "Convert to DICOM",
+                "dcm2niix, pydicom",
+                "Use tools like dcm2niix (in reverse) or write a custom script to convert NIFTI to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                " OsiriX, RadiAnt  ",
+                "Verify the DICOM file\u2019s integrity, metadata, and compatibility with PACS."
+            ],
+            [
+                "Integrate ",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "CEPH, Ceph X-ray"
+    },
+    {
+        "level": "2",
+        "title": "TIFF to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare TIFF",
+                "Image editing software",
+                "Ensure the TIFF image is high quality and properly cropped to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality)."
+            ],
+            [
+                "Convert to DICOM",
+                "DCMTK, pydicom",
+                "Use tools like img2dcm or write a custom script to convert TIFF to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                "OsiriX, RadiAnt ",
+                "Verify the DICOM file\u2019s integrity, metadata, and compatibility with PACS."
+            ],
+            [
+                "Integrate",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "Projection radiography with a collimated X-ray beam and a detector"
+    },
+    {
+        "level": "3",
+        "title": "JPEG to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare JPEG",
+                "Image editing software",
+                "Crop and enhance the JPEG image."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata."
+            ],
+            [
+                "Convert to DICOM",
+                "DCMTK, pydicom",
+                "Use tools like img2dcm or write a custom script."
+            ],
+            [
+                "Validate DICOM",
+                "OsiriX, RadiAnt",
+                "Verify the DICOM file\u2019s integrity and metadata."
+            ],
+            [
+                "",
+                "",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4",
+        "title": "PNG to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare PNG",
+                "Image editing software",
+                "Ensure the PNG image is high quality and properly cropped to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality)."
+            ],
+            [
+                "Convert to DICOM ",
+                "DCMTK, pydicom",
+                "Use tools like img2dcm or write a custom script to convert PNG to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                "OsiriX, RadiAnt",
+                "Verify the DICOM file\u2019s integrity, metadata, and compatibility with PACS."
+            ],
+            [
+                "Integrate",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm) TIFF\tJPEG\tPNG"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "16-bit grayscale data, metadata (patient and scan details)"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "X-ray"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "GitHub / Stack",
+                "Other useful",
+                "Youtube",
+                "Slicer",
+                "Online Converter",
+                "Articles"
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "https://github.com/tomaroberts/nii2dcm",
+                "https://pypi.org/project/nifti2dicom/",
+                "https://www.youtube.com/watch?v=xJ27jQVnh1M",
+                "https://discourse.slicer.org/t/convert-ct-nifti-file-to-dicom-using-slicer-modules-createdicomseries/31921",
+                "",
+                ""
+            ],
+            [
+                "TIFF",
+                "DICOM",
+                "https://stackoverflow.com/questions/30338697/convert-tiff-to-dicom-using-matlab",
+                "\"https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/  https://products.groupdocs.cloud/conversion/android/tiff-to-dicom/  https://products.aspose.com/imaging/net/conversion/tiff-to-dicom/  https://www.mathworks.com/matlabcentral/answers/1853738-convert-tiff-to-dicom-using-a-metadata-file  https://filestar.com/skills/tif/convert-tif-to-dicom  https://filestar.com/skills/tiff/convert-tiff-to-dicom  https://forum.image.sc/t/converting-16-bit-tif-to-dicom-with-header-infor/3129\"",
+                "",
+                "https://discourse.slicer.org/t/error-in-exporting-tiff-images-to-dicom/15378",
+                "\"https://products.groupdocs.app/conversion/tif-to-dicom  https://www.rasteredge.com/software/tiff-dicom-converter/  https://products.aspose.app/imaging/conversion/tif-to-dcm   \"",
+                ""
+            ],
+            [
+                "JPEG",
+                "DICOM",
+                "",
+                "\"https://www.microdicom.com/microdicom-viewer-documentation/convert-jpeg-to-dicom.html  https://www.microdicom.com/microdicom-viewer-documentation/convert-jpeg-to-dicom.html#google_vignette  https://docs.md.ai/libraries/python/guides-convert-dcm/  \"",
+                "\"https://www.youtube.com/watch?v=5RXAEffP_DU  https://www.youtube.com/watch?v=qDBYQjiIDNI  https://www.youtube.com/watch?v=FFn7Uldyy5w \"",
+                "https://discourse.slicer.org/t/creating-a-dicom-from-a-jpeg/38104",
+                "\"https://products.aspose.app/imaging/conversion/jpg-to-dicom   https://www.onlineconverter.com/jpg-to-dicom   https://products.groupdocs.app/conversion/jpg-to-dicom     https://jpeg-to-dicom.en.softonic.com/ \"",
+                "\"http://radiologycpdcourses.co.uk/assets/files/converting-files.pdf   https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/54646ab4-1985-408c-9f96-699bf44b499f/content \""
+            ],
+            [
+                "PNG",
+                "DICOM",
+                "https://github.com/amine0110/convert-images-from-jpr-or-png-into-dicom",
+                "\"https://discourse.slicer.org/t/how-to-convert-png-images-to-dicom-files-in-a-batch/1768  https://pycad.co/convert-jpg-or-png-images-into-dicom/  https://filestar.com/skills/png/convert-png-to-dicom\"",
+                "",
+                "https://discourse.slicer.org/t/how-to-convert-png-images-to-dicom-files-in-a-batch/1768",
+                "\"https://products.aspose.app/imaging/conversion/png-to-dicom  https://products.convertise.app/png-to-dicom/\"",
+                ""
+            ],
+            [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "2 to 5 lp/mm (0.1 mm to 0.2 mm/pixel)"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "Pixel Spacing:0.1 mm to 0.2 mm"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "8 MB to 18 MB"
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "16 MB to 36 MB"
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "X-ray Generator, Cephalostat (Cephalometer), Image Receptor, Collimator, Software for Image Analysis"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Planmeca, Carestream,\tVatech,\tSirona,\tKavo"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Orthodontic Diagnosis and Treatment Planning,\tAssessment of Craniofacial Anomalies,\tPre-Surgical Planning for Orthognathic Surgery,\tEvaluation of Airway and Sleep Apnea"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Temporomandibular Joint (TMJ) Analysis\tImplantology and Prosthodontics\tForensic Dentistry\tResearch and Academic Studies\tPediatric Dentistry"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "Yes"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "2 to 5 microsieverts (\u03bcSv)"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "ALARA Principle: stands for As Low As Reasonably Achievable.\tPatient Protection: Lead Aprons and Thyroid Collars, pregnancy\tOperator Protection: distance, shielding, monitoring\tEquipment Safety: Regular maintenance, proper collimation"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Image Enhancement,\tOrientation and Alignment,\tLandmark Identification,\tArtifact Reduction,\tCalibration"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless (e.g., JPEG-LS), lossy (e.g., JPEG 2000), DICOM Compression"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": "Image Quality:Artifacts, Noise, Distortion\tReproducibility:Slight variations in patient positioning\tRadiation Exposure: Although the dose is low, repeated exposures (e.g., for growth monitoring) can accumulate over time\t2D Limitations:overlapping structures and loss of depth information\tSoftware Dependency"
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Image Quality:Artifacts, Noise, Distortion\tReproducibility:Slight variations in patient positioning\tRadiation Exposure: Although the dose is low, repeated exposures (e.g., for growth monitoring) can accumulate over time\t2D Limitations:overlapping structures and loss of depth information\tSoftware Dependency"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Subjectivity in Analysis,\tGrowth Prediction limitation,\tSoft Tissue Visualization limitation,\tCost and Accessibility"
+    },
+    {
+        "level": "12",
+        "title": "References (Website, Paper, etc.)",
+        "content-type": "markdown",
+        "content": "https://academic.oup.com/ejo/article-abstract/29/6/660/626977?redirectedFrom=fulltext\thttps://shop.elsevier.com/books/contemporary-orthodontics/proffit/978-0-323-54387-3#full-description"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Shahrzad Shahrokhi Nejad"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-23"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
