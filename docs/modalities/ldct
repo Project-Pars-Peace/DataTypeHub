@@ -1,0 +1,375 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "ldct"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "CT"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Low-dose CT (LDCT)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "LDCT"
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Reduced radiation-dose CT often for lung cancer screening."
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "Low-dose CT (LDCT) "
+    },
+    {
+        "level": "4.5.1",
+        "title": "NIfTI to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare NIFTI",
+                " Image editing software",
+                "Ensure the NIFTI image is high quality and properly aligned to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality)."
+            ],
+            [
+                "Convert to DICOM",
+                "dcm2niix, pydicom",
+                "Use tools like dcm2niix (in reverse) or write a custom script to convert NIFTI to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                " OsiriX, RadiAnt  ",
+                "Verify the DICOM file\u2019s integrity, metadata, and compatibility with PACS."
+            ],
+            [
+                "Integrate ",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "LDCT"
+    },
+    {
+        "level": "4.5.2",
+        "title": "Raw Data to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare RAW",
+                "Image editing software",
+                "Ensure the RAW data is high quality and properly aligned to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality, Slice Thickness)."
+            ],
+            [
+                "Convert to DICOM",
+                "ITK-SNAP, pydicom",
+                "Use tools like ITK-SNAP or write a custom script to convert RAW to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                "OsiriX, RadiAnt ",
+                "Verify the DICOM file\u2019s integrity, metadata, and compatibility with PACS."
+            ],
+            [
+                "Integrate",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "the imaging principle of LDCT is rooted in traditional CT physics\u2014X-ray attenuation and tomographic reconstruction\u2014but is adapted with lower mAs, optimized kVp, and advanced reconstruction techniques to achieve diagnostic images at a fraction of the radiation dose. It\u2019s a tailored solution for specific clinical needs, like lung cancer detection, where sensitivity to high-contrast abnormalities outweighs the need for universal tissue detail."
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "\"DICOM  \"\tNIfTI\t"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "\"16-bit Grayscale (Hounsfield Units) \"\t3D Volumetric\t"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "CT"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "GitHub / Stack",
+                "Other useful",
+                "Youtube",
+                "Slicer",
+                "Online Converter",
+                "Articles"
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "https://github.com/tomaroberts/nii2dcm",
+                "https://pypi.org/project/nifti2dicom/",
+                "https://www.youtube.com/watch?v=xJ27jQVnh1M",
+                "https://discourse.slicer.org/t/convert-ct-nifti-file-to-dicom-using-slicer-modules-createdicomseries/31921",
+                "",
+                ""
+            ],
+            [
+                "RAW",
+                "DICOM",
+                "Primarily handled by vendor software (automatic) or manual console reconstruction, with third-party tools for research.",
+                "",
+                "",
+                "",
+                "",
+                "https://ieeexplore.ieee.org/document/10054206"
+            ],
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "512 x 512 or 1024 x 1024 pixels"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "Voxel Size 0.5 mm x 0.5 mm x 1 mm to 1 mm x 1 mm x 2 mm/ Pixel Spacing 0.5 mm to 1 mm"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "\"0.5 MB to 2 MB \""
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "\"50 MB to 500 MB \""
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "CT Scanner: A multi-detector CT (MDCT) scanner with advanced dose-reduction technologies\tIterative Reconstruction Software: To maintain image quality at lower radiation doses\tAutomatic Exposure Control (AEC): Adjusts radiation dose based on patient size and anatomy\tWorkstation: For image analysis and post-processing\tLung Cancer Screening Protocols (if applicable): Tailored for low-dose imaging of the chest\t"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers\tGE Healthcare\tPhilips Healthcare\tCanon Medical Systems (formerly Toshiba Medical Systems)\tHitachi Medical"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Lung cancer screening in high-risk patients\tEvaluation of lung nodules\tLong-term monitoring of lung conditions\t"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Coronary artery calcium scoring\tPediatric imaging\tOccupational lung disease screening\tvirtual colonoscopy\tfollow-up imaging"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "Yes"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "1 to 2 mSv "
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Small cancer risk with repeated exposure"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Noise Reduction:Iterative reconstruction, spatial filtering.\tArtifact Correction:Beam hardening correction, ring artifact correction.\tImage Normalization:Hounsfield Unit (HU) calibration.\tMotion Correction:Respiratory gating, registration algorithms.\tContrast Enhancement:Histogram equalization.\t"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless (JPEG-LS, PNG)\t Lossy (JPEG 2000, Wavelet)\tDICOM compression"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Increased noise\t reduced spatial resolution\tartifacts\tcomputational demands"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Cumulative radiation risk\tdiagnostic accuracy issues\tlimited patient selection\tcost/accessibility\tcontrast limitations"
+    },
+    {
+        "level": "12",
+        "title": "References (Website, Paper, etc.)",
+        "content-type": "markdown",
+        "content": "https://www.academicradiology.org/article/S1076-6332(08)00526-6/abstract"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Shahrzad Shahrokhi Nejad"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-27"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
