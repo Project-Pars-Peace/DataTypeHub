@@ -1,0 +1,422 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "cta"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "CT"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "CT Angiography (CTA)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "CTA"
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Contrast-enhanced CT for vascular imaging of arteries and veins."
+    },
+    {
+        "level": "1",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "CT Angiography "
+    },
+    {
+        "level": "4.5.1",
+        "title": "NIfTI to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare NIFTI",
+                " Image editing software",
+                "Ensure the NIFTI image is high quality and properly aligned to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality)."
+            ],
+            [
+                "Convert to DICOM",
+                "dcm2niix, pydicom",
+                "Use tools like dcm2niix (in reverse) or write a custom script to convert NIFTI to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                " OsiriX, RadiAnt  ",
+                "Verify the DICOM file\u2019s integrity, metadata, and compatibility with PACS."
+            ],
+            [
+                "Integrate ",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "2",
+        "title": "Acronym",
+        "content-type": "markdown",
+        "content": "CTA"
+    },
+    {
+        "level": "4.5.2",
+        "title": "TIFF to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare TIFF",
+                "Image editing software",
+                "Ensure the TIFF image is high quality and properly cropped to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality)."
+            ],
+            [
+                "Convert to DICOM",
+                "DCMTK, pydicom",
+                "Use tools like img2dcm or write a custom script to convert TIFF to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                "OsiriX, RadiAnt ",
+                "Verify the DICOM file\u2019s integrity, metadata, and compatibility with PACS."
+            ],
+            [
+                "Integrate",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "3",
+        "title": "Imaging Principle",
+        "content-type": "markdown",
+        "content": "The imaging principle of CTA combines CT technology with iodinated contrast material to visualize blood vessels in high detail. Key steps include CT scanning, contrast enhancement, precise timing of contrast administration, rapid image acquisition using multidetector CT, and advanced post-processing techniques like MIP and VR.  https://www.wolterskluwer.com/en/solutions/ovid/ct-and-mr-angiography-comprehensive-vascular-assessment-3480"
+    },
+    {
+        "level": "4.5.3",
+        "title": "HDR/ IMG to DICOM",
+        "content-type": "table",
+        "content": [
+            [
+                "step",
+                "Tool/Software",
+                "Description"
+            ],
+            [
+                "Prepare HDR/ IMG",
+                "Image editing software",
+                "Ensure the HDR/IMG files are high quality and properly aligned to the region of interest."
+            ],
+            [
+                "Add Metadata",
+                "pydicom, DCMTK",
+                "Add patient, study, and image metadata (e.g., PatientName, PatientID, Modality, Slice Thickness)."
+            ],
+            [
+                "Convert to DICOM",
+                "ITK-SNAP, pydicom",
+                "Use tools like ITK-SNAP or write a custom script to convert HDR/IMG to DICOM."
+            ],
+            [
+                "Validate DICOM",
+                "OsiriX, RadiAnt",
+                "Verify the DICOM file\u2019s integrity and metadata and compatibility with PACS."
+            ],
+            [
+                "Integrate",
+                "PACS",
+                "Upload the DICOM file to your medical imaging system for clinical use."
+            ]
+        ]
+    },
+    {
+        "level": "4",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "\"DICOM (.dcm) \"\tNIfTI\tTIFF\tAnalyze (.hdr/.img)"
+    },
+    {
+        "level": "4.2",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "\"16-bit Grayscale (Hounsfield Units) \"\t3D Volumetric\t"
+    },
+    {
+        "level": "4.3",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "CT"
+    },
+    {
+        "level": "4.4",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "GitHub / Stack",
+                "Other useful",
+                "Youtube",
+                "Slicer",
+                "Online Converter",
+                "Articles"
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "https://github.com/tomaroberts/nii2dcm",
+                "https://pypi.org/project/nifti2dicom/",
+                "https://www.youtube.com/watch?v=xJ27jQVnh1M",
+                "https://discourse.slicer.org/t/convert-ct-nifti-file-to-dicom-using-slicer-modules-createdicomseries/31921",
+                "",
+                ""
+            ],
+            [
+                "TIFF",
+                "DICOM",
+                "https://stackoverflow.com/questions/30338697/convert-tiff-to-dicom-using-matlab",
+                "\"https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/  https://products.groupdocs.cloud/conversion/android/tiff-to-dicom/  https://products.aspose.com/imaging/net/conversion/tiff-to-dicom/  https://www.mathworks.com/matlabcentral/answers/1853738-convert-tiff-to-dicom-using-a-metadata-file  https://filestar.com/skills/tif/convert-tif-to-dicom  https://filestar.com/skills/tiff/convert-tiff-to-dicom  https://forum.image.sc/t/converting-16-bit-tif-to-dicom-with-header-infor/3129\"",
+                "",
+                "https://discourse.slicer.org/t/error-in-exporting-tiff-images-to-dicom/15378",
+                "\"https://products.groupdocs.app/conversion/tif-to-dicom  https://www.rasteredge.com/software/tiff-dicom-converter/  https://products.aspose.app/imaging/conversion/tif-to-dcm   \"",
+                ""
+            ],
+            [
+                "HDR/ IMG",
+                "DICOM",
+                "https://fsl.fmrib.ox.ac.uk/fsl/docs/#/utilities/fslutils",
+                "\"https://www.xinapse.com/Manual/ToDICOM.html https://insight-users.itk.narkive.com/ddluEaok/convert-hdr-image-to-dicom-image \"",
+                "",
+                "",
+                "",
+                ""
+            ],
+        ]
+    },
+    {
+        "level": "5",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "512 x 512 or 1024 x 1024 pixels"
+    },
+    {
+        "level": "5.2",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "Voxel Size 0.25 mm x 0.25 mm x 0.5 mm to 0.5 mm x 0.5 mm x 1 mm/ Pixel Spacing~0.25 mm to 0.5 mm"
+    },
+    {
+        "level": "5.3",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "\"0.5 MB to 2 MB \""
+    },
+    {
+        "level": "6.2",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "CT Scanner: A multi-detector CT (MDCT) scanner with at least 64 slices (modern systems often use 128, 256, or 320 slices)\tHigh-Powered X-ray Tube: To support fast scanning and high-resolution imaging\tContrast Injector: For precise delivery of iodinated contrast material to enhance blood vessels\tWorkstation: Advanced software for 3D reconstruction, vessel analysis, and post-processing (e.g., MIP, MPR, VRT)\tECG Gating (for cardiac CTA): To synchronize imaging with the cardiac cycle and reduce motion artifacts\t"
+    },
+    {
+        "level": "7.2",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers\tGE Healthcare\tPhilips Healthcare\tCanon Medical Systems (formerly Toshiba Medical Systems)\tHitachi Medical"
+    },
+    {
+        "level": "8",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Coronary artery disease, aortic aneurysm\tStroke evaluation, carotid stenosis\tPeripheral artery disease, renal stenosis\tTumor vasculature assessment\t"
+    },
+    {
+        "level": "8.2",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Pre-surgical planning, trauma imaging\tCongenital vascular anomalies\tPulmonary embolism (CTPA)\tTreatment planning (embolization, radiation therapy)\t\t"
+    },
+    {
+        "level": "9",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "Yes"
+    },
+    {
+        "level": "9.2",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "3-15 mSv"
+    },
+    {
+        "level": "9.3",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Small cancer risk with repeated exposure"
+    },
+    {
+        "level": "10",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Noise Reduction:Iterative reconstruction, spatial filtering\tArtifact Correction:Beam hardening correction, motion artifact correction (ECG/respiratory gating)\tImage Normalization:Hounsfield Unit (HU) calibration\tContrast Enhancement:Histogram equalization, Maximum Intensity Projection (MIP)\tSegmentation & 3D Reconstruction:Vessel segmentation, volume rendering\t"
+    },
+    {
+        "level": "10.2",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless (JPEG-LS, PNG)\tLossy (JPEG 2000, Wavelet)\tDICOM compression"
+    },
+    {
+        "level": "11",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Motion artifacts\tbeam hardening\tcontrast timing\tspatial resolution\tradiation dose"
+    },
+    {
+        "level": "11.2",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Radiation exposure\tcontrast agent risks\tlimited soft tissue contrast\t cost/accessibility\t false positives/negatives"
+    },
+    {
+        "level": "12",
+        "title": "References (Website, Paper, etc.)",
+        "content-type": "markdown",
+        "content": "https://www.sciencedirect.com/science/article/pii/S0735109708026090?via%3Dihub"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Shahrzad Shahrokhi Nejad"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-03-27"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": "conversion table, table "
+    }
+]
