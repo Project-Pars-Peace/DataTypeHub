@@ -40,7 +40,14 @@
         "email": "pooyaeini.pe@gmail.com",
         "affiliation": "Excellence Center of Clinical Toxicology, Loghman Hakim Hospital, Shahid Beheshti University of Medical Sciences, Tehran, Iran",
         "image": ""
-      }
+      },
+     {
+        "name": "Pardis Jofaei",
+        "contributedTo": ["MIBG Scan", "Lymphoscintigraphy", "Whole-body MRI", "MR Enterography (MRE)",],
+        "email": "p.jolfaei76@gmail.com",
+        "affiliation": "Shahid Beheshti University of Medical Sciences, Tehran, Iran",
+        "image": ""
+      },
     {
         "name": "Rana Hashemi",
         "contributedTo": ["fMRI", "Breast MRI",  "Cardiac MRI", "Magnetic Resonance Urography", "Magnetic Resonance Myelography", "Writing related modalities manuscript"],
@@ -61,7 +68,7 @@
       "email": "shery.1375.sh@gmail.com",
       "affiliation": "Shahid Beheshti University of Medical Sciences, Tehran, Iran",
       "image": ""
-    }
+    },
     {
       "name": "Negin Fathi Hafshejani",
       "contributedTo": ["XRay_DR", "XRay_CR", "Mammography", "B-mode (2D Ultrasound)", "Transcranial Doppler (TCD)", " Intravascular Ultrasound (IVUS)"],
