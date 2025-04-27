@@ -161,7 +161,7 @@
             <p>${m.shortDescription}</p>
             <p><strong>Status:</strong> ${m.status || 'N/A'}</p>
             ${preparedInfo}
-            <a href="detail.html?id=${m.id}">View Details</a>
+            <a href="detail.html?id=${encodeURIComponent(m.id)}">View Details</a>
           `;
 
           // Place in ALL
