@@ -153,12 +153,18 @@
           if (m.acronyms && m.acronyms.length > 0) {
             acronymsDisplay = `<p class="acronyms"><strong>Acronyms:</strong> ${m.acronyms.join(', ')}</p>`;
           }
+          
+          // Truncate description if longer than 80 characters
+          let description = m.shortDescription || '';
+          const truncatedDescription = description.length > 80 
+            ? description.substring(0, 80) + '...' 
+            : description;
 
           // Insert all available information from data.json
           card.innerHTML = `
             <h2>${m.title}</h2>
             ${acronymsDisplay}
-            <p>${m.shortDescription}</p>
+            <p>${truncatedDescription}</p>
             <p><strong>Status:</strong> ${m.status || 'N/A'}</p>
             ${preparedInfo}
             <a href="detail.html?id=${encodeURIComponent(m.id)}">View Details</a>
