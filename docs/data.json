@@ -1,579 +1,643 @@
 [
-    {
-      "id": "xray_fluoroscopy",
-      "parents": ["X-Ray"],
-      "title": "XRay_Fluoroscopy",
-      "acronyms": [],
-      "shortDescription": "Real-time moving X-ray imaging for diagnostic or interventional procedures.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "xray_dr",
-      "parents": ["X-Ray"],
-      "title": "XRay_DR",
-      "acronyms": [],
-      "shortDescription": "Digital radiography capturing X-rays directly on a digital detector.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "xray_dexa",
-      "parents": ["X-Ray"],
-      "title": "XRay_DEXA/DXA",
-      "acronyms": [],
-      "shortDescription": "Bone densitometry to measure bone mineral density.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "xray_cr",
-      "parents": ["X-Ray"],
-      "title": "XRay_CR",
-      "acronyms": [],
-      "shortDescription": "Computed Radiography using phosphor plates to capture X-rays.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "mammography",
-      "parents": ["X-Ray"],
-      "title": "Mammography",
-      "acronyms": ["MG"],
-      "shortDescription": "Low-dose X-ray imaging of breast tissue for screening.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "cephalometric_radiography",
-      "parents": ["X-Ray"],
-      "title": "Cephalometric Radiography",
-      "acronyms": [],
-      "shortDescription": "Specialized head/neck radiograph for orthodontic evaluation.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "standard_mri",
-      "parents": ["MRI"],
-      "title": "Standard MRI",
-      "acronyms": [],
-      "shortDescription": "General-purpose MRI for soft tissue contrast.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "functional_mri",
-      "parents": ["MRI"],
-      "title": "Functional MRI (fMRI)",
-      "acronyms": ["fMRI"],
-      "shortDescription": "Captures changes in blood oxygen to map brain activity.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "dwi_dti",
-      "parents": ["MRI"],
-      "title": "Diffusion MRI (DWI/DTI)",
-      "acronyms": ["DWI", "DTI"],
-      "shortDescription": "Maps water diffusion in tissue for microstructure details.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "mra",
-      "parents": ["MRI"],
-      "title": "Magnetic Resonance Angiography (MRA)",
-      "acronyms": ["MRA"],
-      "shortDescription": "Visualizes blood vessels using MRI contrast or flow methods.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "mrs",
-      "parents": ["MRI"],
-      "title": "Magnetic Resonance Spectroscopy (MRS)",
-      "acronyms": ["MRS"],
-      "shortDescription": "Analyzes metabolic composition of tissues by MRI.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "cmr",
-      "parents": ["MRI"],
-      "title": "Cardiac MRI (CMR)",
-      "acronyms": ["CMR"],
-      "shortDescription": "Specialized MRI to assess heart structure and function.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "breast_mri",
-      "parents": ["MRI"],
-      "title": "Breast MRI",
-      "acronyms": [],
-      "shortDescription": "MRI protocol specifically for detailed breast imaging.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "whole_body_mri",
-      "parents": ["MRI"],
-      "title": "Whole-body MRI",
-      "acronyms": [],
-      "shortDescription": "Covers most of the body with MRI for screening or metastasis.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "mr_enterography",
-      "parents": ["MRI"],
-      "title": "MR Enterography (MRE)",
-      "acronyms": ["MRE"],
-      "shortDescription": "MRI protocol for small bowel imaging (e.g. Crohn's).",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "mr_myelography",
-      "parents": ["MRI"],
-      "title": "MR Myelography",
-      "acronyms": [],
-      "shortDescription": "Noninvasive imaging of the spinal subarachnoid space by MRI.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "mr_urography",
-      "parents": ["MRI"],
-      "title": "MR Urography",
-      "acronyms": [],
-      "shortDescription": "MRI-based evaluation of kidneys, ureters, and bladder.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "pet",
-      "parents": ["NMI"],
-      "title": "Positron Emission Tomography (PET)",
-      "acronyms": [],
-      "shortDescription": "Functional imaging using radioactive tracers (e.g. FDG).",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "spect",
-      "parents": ["NMI"],
-      "title": "Single Photon Emission Computed Tomography (SPECT)",
-      "acronyms": [],
-      "shortDescription": "Functional imaging with gamma-emitting tracers in 3D.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "scintigraphy",
-      "parents": ["NMI"],
-      "title": "Scintigraphy",
-      "acronyms": [],
-      "shortDescription": "2D planar gamma imaging for various organs (thyroid, bone, etc.).",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "gallium_scan",
-      "parents": ["NMI"],
-      "title": "Gallium Scan",
-      "acronyms": [],
-      "shortDescription": "Uses gallium-67 for tumor/infection detection.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "mibg_scan",
-      "parents": ["NMI"],
-      "title": "MIBG Scan",
-      "acronyms": [],
-      "shortDescription": "I-123 or I-131 MIBG for imaging neuroendocrine tumors.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "lymphoscintigraphy",
-      "parents": ["NMI"],
-      "title": "Lymphoscintigraphy",
-      "acronyms": [],
-      "shortDescription": "Maps lymphatic drainage with gamma camera imaging.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "bmode_us",
-      "parents": ["US"],
-      "title": "B-mode (2D Ultrasound)",
-      "acronyms": [],
-      "shortDescription": "Basic grayscale ultrasound imaging in real-time.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "doppler_us",
-      "parents": ["US"],
-      "title": "Doppler Ultrasound",
-      "acronyms": [],
-      "shortDescription": "Measures blood flow velocity and direction via Doppler effect.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "ceus",
-      "parents": ["US"],
-      "title": "Contrast-enhanced Ultrasound (CEUS)",
-      "acronyms": [],
-      "shortDescription": "Uses microbubble contrast agents for vascular imaging.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "elastography_us",
-      "parents": ["US"],
-      "title": "Elastography",
-      "acronyms": [],
-      "shortDescription": "Ultrasound-based measurement of tissue stiffness.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "3d4d_us",
-      "parents": ["US"],
-      "title": "3D & 4D Ultrasound",
-      "acronyms": [],
-      "shortDescription": "Volumetric and real-time volumetric ultrasound imaging.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "tcd",
-      "parents": ["US"],
-      "title": "Transcranial Doppler (TCD)",
-      "acronyms": [],
-      "shortDescription": "Evaluates intracranial blood flow via ultrasound through temporal bone.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "ivus",
-      "parents": ["US"],
-      "title": "Intravascular Ultrasound (IVUS)",
-      "acronyms": ["IVUS"],
-      "shortDescription": "Ultrasound catheter imaging inside blood vessels.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "eus",
-      "parents": ["US"],
-      "title": "Endoscopic Ultrasound (EUS)",
-      "acronyms": ["EUS"],
-      "shortDescription": "Combines endoscopy and ultrasound for GI tract imaging.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "obstetric_us",
-      "parents": ["US"],
-      "title": "Obstetric Ultrasound",
-      "acronyms": [],
-      "shortDescription": "Ultrasound specialized for fetal imaging during pregnancy.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "dental_opg",
-      "parents": ["Dental"],
-      "title": "Dental_OPG / Panoramic Radiography (OPG)",
-      "acronyms": [],
-      "shortDescription": "Panoramic X-ray of upper and lower jaws in one image.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "dental_cbct",
-      "parents": ["Dental"],
-      "title": "Dental_CBCT / Cone Beam CT (CBCT)",
-      "acronyms": ["CBCT"],
-      "shortDescription": "Cone-beam CT scanning for 3D dental/maxillofacial imaging.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "dental_cr",
-      "parents": ["Dental"],
-      "title": "Dental_CR",
-      "acronyms": [],
-      "shortDescription": "Computed Radiography for dental imaging plates.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "laryngoscopy",
-      "parents": ["Video"],
-      "title": "Laryngoscopy",
-      "acronyms": [],
-      "shortDescription": "Video-based inspection of the larynx.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "bronchoscopy",
-      "parents": ["Video"],
-      "title": "Bronchoscopy",
-      "acronyms": [],
-      "shortDescription": "Endoscopic video of the airways.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "egd",
-      "parents": ["Video"],
-      "title": "Esophagogastroduodenoscopy (EGD)",
-      "acronyms": ["EGD"],
-      "shortDescription": "Video endoscopic exam of esophagus, stomach, and duodenum.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "colonoscopy",
-      "parents": ["Video"],
-      "title": "Colonoscopy",
-      "acronyms": [],
-      "shortDescription": "Endoscopic video inspection of the colon.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "cystoscopy",
-      "parents": ["Video"],
-      "title": "Cystoscopy",
-      "acronyms": [],
-      "shortDescription": "Video-based inspection of the bladder via a cystoscope.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "hysteroscopy",
-      "parents": ["Video"],
-      "title": "Hysteroscopy",
-      "acronyms": [],
-      "shortDescription": "Endoscopic viewing of the uterine cavity.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "ophthalmic_imaging",
-      "parents": ["Video"],
-      "title": "Ophthalmic Imaging",
-      "acronyms": [],
-      "shortDescription": "Video or photographic imaging of the eye (retina, anterior).",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "confocal_microscopy",
-      "parents": ["Video"],
-      "title": "Confocal Microscopy",
-      "acronyms": [],
-      "shortDescription": "High-resolution optical imaging with increased depth selectivity.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "fluorescence_imaging",
-      "parents": ["Video"],
-      "title": "Fluorescence Imaging",
-      "acronyms": [],
-      "shortDescription": "Uses fluorescent markers to visualize structures in real-time or photos.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "conventional_ct",
-      "parents": ["CT"],
-      "title": "Conventional CT",
-      "acronyms": [],
-      "shortDescription": "Standard computed tomography using rotating X-ray source.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "hrct",
-      "parents": ["CT"],
-      "title": "High-resolution CT (HRCT)",
-      "acronyms": ["HRCT"],
-      "shortDescription": "Thin-slice CT typically for detailed lung imaging.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "ldct",
-      "parents": ["CT"],
-      "title": "Low-dose CT (LDCT)",
-      "acronyms": ["LDCT"],
-      "shortDescription": "Reduced radiation-dose CT often for lung cancer screening.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "cta",
-      "parents": ["CT"],
-      "title": "CT Angiography (CTA)",
-      "acronyms": ["CTA"],
-      "shortDescription": "Contrast-enhanced CT for vascular imaging of arteries and veins.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "ctp",
-      "parents": ["CT"],
-      "title": "CT Perfusion (CTP)",
-      "acronyms": ["CTP"],
-      "shortDescription": "Dynamic CT measuring tissue perfusion over time.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "ct_colonography",
-      "parents": ["CT"],
-      "title": "CT Colonography (Virtual Colonoscopy)",
-      "acronyms": [],
-      "shortDescription": "Noninvasive colon exam using CT scans and 3D reconstructions.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "dect",
-      "parents": ["CT"],
-      "title": "Dual-energy CT (DECT)",
-      "acronyms": ["DECT"],
-      "shortDescription": "CT acquisition at two X-ray energy levels for material decomposition.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "cone_beam_ct",
-      "parents": ["CT"],
-      "title": "Cone Beam CT (CBCT)",
-      "acronyms": ["CBCT"],
-      "shortDescription": "Cone-shaped beam for 3D volumetric imaging, often in dental/ortho.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "4d_ct",
-      "parents": ["CT"],
-      "title": "4D CT",
-      "acronyms": [],
-      "shortDescription": "Captures motion over time for dynamic CT (respiratory, cardiac gating).",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "genome_assembly",
-      "parents": ["Genomics"],
-      "title": "Genome Assembly",
-      "acronyms": [],
-      "shortDescription": "Combining short/long reads into a consensus genome.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "sequence_alignments",
-      "parents": ["Genomics"],
-      "title": "Sequence Alignments",
-      "acronyms": [],
-      "shortDescription": "Aligning DNA/RNA reads to references or each other.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "annotations",
-      "parents": ["Genomics"],
-      "title": "Annotations",
-      "acronyms": [],
-      "shortDescription": "Identifying genes, features, and functional elements in genomic data.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "variant_calls",
-      "parents": ["Genomics"],
-      "title": "Variant Calls",
-      "acronyms": [],
-      "shortDescription": "SNP, Indel, and structural variant detection from sequence data.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "phylogenetic_analysis",
-      "parents": ["Genomics"],
-      "title": "Phylogenetic Analysis",
-      "acronyms": [],
-      "shortDescription": "Determining evolutionary relationships among organisms or sequences.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "trans_seq_data_formats",
-      "parents": ["Transcriptomics"],
-      "title": "Sequence Data Formats (Raw and Processed Sequences)",
-      "acronyms": [],
-      "shortDescription": "Raw FASTQ and processed alignments or counts for transcriptomes.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "trans_gene_expr_data",
-      "parents": ["Transcriptomics"],
-      "title": "Gene Expression Data Formats",
-      "acronyms": [],
-      "shortDescription": "Counts, FPKM, TPM data for expression profiling.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "rna_seq_quant",
-      "parents": ["Transcriptomics"],
-      "title": "RNA-Seq Quantification and Analysis Formats",
-      "acronyms": [],
-      "shortDescription": "Outputs from SALMON, KALLISTO or other quantifiers.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "diff_expr_trans",
-      "parents": ["Transcriptomics"],
-      "title": "Differential Expression and Statistical Analysis Formats",
-      "acronyms": [],
-      "shortDescription": "DESeq2, edgeR, limma results for differential expression.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "alt_splicing_trans",
-      "parents": ["Transcriptomics"],
-      "title": "Alternative Splicing and Transcript Assembly Formats",
-      "acronyms": [],
-      "shortDescription": "GTF/GFF for splicing isoforms, transcript assemblies.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "scrna_seq",
-      "parents": ["Transcriptomics"],
-      "title": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats",
-      "acronyms": ["scRNA-Seq"],
-      "shortDescription": "Cell-level expression data from droplet or plate-based scRNA-Seq.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "trans_phylo_evolution",
-      "parents": ["Transcriptomics"],
-      "title": "Phylogenetic and Evolutionary Analysis Formats",
-      "acronyms": [],
-      "shortDescription": "Transcriptome-level evolutionary analysis with alignments, trees.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "trans_assembly_annotation",
-      "parents": ["Transcriptomics"],
-      "title": "Transcriptome Assembly and Annotation Formats",
-      "acronyms": [],
-      "shortDescription": "Trinity outputs or GTF describing transcriptome builds.",
-      "status": "planned: March 2025"
-    },
-  
-    {
-      "id": "prot_sequence_data",
-      "parents": ["Proteomics"],
-      "title": "Sequence Data Formats",
-      "acronyms": [],
-      "shortDescription": "Protein or peptide sequence files (FASTA, etc.).",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "ms_data_formats",
-      "parents": ["Proteomics"],
-      "title": "Mass Spectrometry (MS) Data Formats",
-      "acronyms": ["MS"],
-      "shortDescription": "mzML, mzXML, vendor RAW for proteomics mass spectrometry.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "protein_structure_data",
-      "parents": ["Proteomics"],
-      "title": "Protein Structure Data Formats",
-      "acronyms": [],
-      "shortDescription": "3D coordinates of proteins in PDB, mmCIF, etc.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "protein_interaction_pathway",
-      "parents": ["Proteomics"],
-      "title": "Protein Interaction and Pathway Data Formats",
-      "acronyms": [],
-      "shortDescription": "BIOPAX, PSI-MI describing protein-protein interactions, pathways.",
-      "status": "planned: March 2025"
-    },
-    {
-      "id": "prot_annotation_metadata",
-      "parents": ["Proteomics"],
-      "title": "Annotation and Metadata Formats",
-      "acronyms": [],
-      "shortDescription": "UniProt, GO data describing protein function or metadata.",
-      "status": "planned: March 2025"
-    }
-  ]
+  {
+    "id": "3d4d_us",
+    "parents": [
+      "US"
+    ],
+    "title": "3D & 4D Ultrasound",
+    "acronyms": [
+      "3DUS 4DUS"
+    ],
+    "shortDescription": "3D and 4D ultrasound imaging acquires volumetric data by collecting multiple 2D ultrasound planes using either mechanical sweeping transducers or electronic matrix arrays. These 2D images are spatially registered and algorithmically reconstructed into complete 3D volumes, which can be visualized through various rendering techniques (surface, maximum intensity, or realistic rendering). 4D ultrasound adds the temporal dimension by rapidly acquiring sequential 3D volumes (up to 20-30 volumes per second), enabling real-time visualization of dynamic three-dimensional structures. This technology allows clinicians to observe spatial relationships and movement patterns that cannot be fully appreciated with conventional 2D ultrasound.",
+    "status": "complete",
+    "prepared_by": "Pooya Eini",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "4d_ct",
+    "parents": [
+      "CT"
+    ],
+    "title": "4D CT",
+    "acronyms": [
+      "4D CT"
+    ],
+    "shortDescription": "Captures motion over time for dynamic CT (respiratory, cardiac gating).",
+    "status": "complete",
+    "prepared_by": "Shahrzad Shahrokhi Nejad",
+    "date_of_preparation": "2025-03-28"
+  },
+  {
+    "id": "Cystoscopy",
+    "parents": [
+      "Video"
+    ],
+    "title": "Cystoscopy",
+    "acronyms": [
+      "no universal acronym (but V-CYS)"
+    ],
+    "shortDescription": "The cystoscope is inserted through the urethra into the bladder, where it captures real-time video footage of the bladder lining and urethra",
+    "status": "complete",
+    "prepared_by": "Amirhossein Nikfarjam",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "Hysteroscopy",
+    "parents": [
+      "Video"
+    ],
+    "title": "Hysteroscopy",
+    "acronyms": [
+      "no universal acronym "
+    ],
+    "shortDescription": "The device is inserted through the cervix into the uterine cavity, where it transmits real-time video images to a monitor. This allows for direct visualization of the endometrial lining and intrauterine structures without the need for radiation or external imaging modalities\n",
+    "status": "complete",
+    "prepared_by": "Amirhossein Nikfarjam",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "alt_splicing_trans",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "Alternative Splicing and Transcript Assembly Formats",
+    "acronyms": [],
+    "shortDescription": "Detecting and reconstructing different RNA isoforms produced from a single gene.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "annotations",
+    "parents": [
+      "Genomics"
+    ],
+    "title": "Annotations",
+    "acronyms": [],
+    "shortDescription": "Annotations assign functional information to genomic regions",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "bmode_us",
+    "parents": [
+      "US"
+    ],
+    "title": "B-mode (2D Ultrasound)",
+    "acronyms": [
+      "B-mode"
+    ],
+    "shortDescription": "Brightness Mode Ultrasound, or B-Mode Ultrasound (2D Ultrasound), is a widely used medical imaging technique that produces two-dimensional images of internal structures using high-frequency sound waves",
+    "status": "complete",
+    "prepared_by": "Negin Fathi Hafshejani",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "breast_mri",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Breast Magnetic Resonance Imaging",
+    "acronyms": [
+      "BMRI"
+    ],
+    "shortDescription": "Breast MRI is a non-invasive imaging technique that uses magnetic fields and radio waves to produce detailed images of breast tissue, often used to detect cancer or assess abnormalities.",
+    "status": "complete",
+    "prepared_by": "Rana Hashemi",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "bronchoscopy",
+    "parents": [
+      "Video"
+    ],
+    "title": "Bronchoscopy",
+    "acronyms": [
+      "without a standardized acronym"
+    ],
+    "shortDescription": "Video bronchoscopy acquires images using a fiber-optic or video-based flexible bronchoscope equipped with a miniature CCD (Charge-Coupled Device) or CMOS (Complementary Metal-Oxide-Semiconductor) camera at its distal tip\n",
+    "status": "complete",
+    "prepared_by": "Amirhossein Nikfarjam",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "cephalometric_radiography",
+    "parents": [
+      "X-Ray"
+    ],
+    "title": "cephalometric_radiography",
+    "acronyms": [
+      "CEPH",
+      "Ceph X-ray"
+    ],
+    "shortDescription": "Specialized head/neck radiograph for orthodontic evaluation.",
+    "status": "complete",
+    "prepared_by": "Shahrzad Shahrokhi Nejad",
+    "date_of_preparation": "2025-03-23"
+  },
+  {
+    "id": "cmr",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Cardiac Magnetic Resonance Imaging ",
+    "acronyms": [
+      "CMR"
+    ],
+    "shortDescription": "Cardiac MRI is a non-invasive imaging technique that uses magnetic fields and radio waves to create detailed pictures of the heart\u2019s structure and function.",
+    "status": "complete",
+    "prepared_by": "Rana Hashemi",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "conventional_ct",
+    "parents": [
+      "CT"
+    ],
+    "title": "Conventional CT",
+    "acronyms": [
+      "CT"
+    ],
+    "shortDescription": "Standard computed tomography using rotating X-ray source.",
+    "status": "complete",
+    "prepared_by": "Shahrzad Shahrokhi Nejad",
+    "date_of_preparation": "2025-03-23"
+  },
+  {
+    "id": "ct_colonography",
+    "parents": [
+      "CT"
+    ],
+    "title": "CT Colonography (Virtual Colonoscopy)",
+    "acronyms": [
+      "CTC https://radiopaedia.org/articles/ct-colonography-protocol"
+    ],
+    "shortDescription": "CT Colonography (CTC), also known as virtual colonoscopy, combines X-ray computed tomography (CT) with advanced 3D reconstruction software to visualize the colon\u2019s interior noninvasively.\n",
+    "status": "complete",
+    "prepared_by": "Arman Gharehbahi",
+    "date_of_preparation": "2025-03-19"
+  },
+  {
+    "id": "ctp",
+    "parents": [
+      "CT"
+    ],
+    "title": "CT Perfusion",
+    "acronyms": [
+      "CTP"
+    ],
+    "shortDescription": "CT perfusion (CTP) uses a CT scanner and contrast to assess brain blood flow, aiding stroke diagnosis with X-ray imaging.",
+    "status": "complete",
+    "prepared_by": "Arman Gharehbaghi",
+    "date_of_preparation": "2025-03-22"
+  },
+  {
+    "id": "dect",
+    "parents": [
+      "CT"
+    ],
+    "title": "Dual-energy CT (DECT)",
+    "acronyms": [
+      "DECT"
+    ],
+    "shortDescription": "CT acquisition at two X-ray energy levels for material decomposition.",
+    "status": "complete",
+    "prepared_by": "Shahrzad Shahrokhi Nejad",
+    "date_of_preparation": "2025-03-28"
+  },
+  {
+    "id": "dental_cbct",
+    "parents": [
+      "CT"
+    ],
+    "title": "Cone Beam CT",
+    "acronyms": [
+      "CBCT"
+    ],
+    "shortDescription": "CBCT captures 2D projections with a cone-shaped X-ray, reconstructing them into a detailed 3D image with lower radiation than CT.",
+    "status": "complete",
+    "prepared_by": "Arman Gharehbahi",
+    "date_of_preparation": "2025-03-19"
+  },
+  {
+    "id": "dental_cr",
+    "parents": [
+      "X-Ray"
+    ],
+    "title": "Cephalometric Radiography",
+    "acronyms": [
+      "Ceph"
+    ],
+    "shortDescription": "Cephalometric Radiography (Ceph) uses a parallel X-ray beam and cephalostat to capture 2D craniofacial images for orthodontic planning, taken at 5 feet to reduce distortion",
+    "status": "complete",
+    "prepared_by": "Arman Gharehbahi",
+    "date_of_preparation": "2025-03-19"
+  },
+  {
+    "id": "dental_opg",
+    "parents": [
+      "X-Ray"
+    ],
+    "title": "Panoramic Radiography",
+    "acronyms": [
+      "OPG"
+    ],
+    "shortDescription": "OPG imaging uses a rotating X-ray beam and a synchronized film or sensor to capture a panoramic 2D view of the entire oral and maxillofacial region in a single scan.\n",
+    "status": "complete",
+    "prepared_by": "Arman Gharehbahi",
+    "date_of_preparation": "2025-03-19"
+  },
+  {
+    "id": "diff_expr_trans",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "Differential Expression and Statistical Analysis Formats",
+    "acronyms": [],
+    "shortDescription": "Identifying genes with statistically significant changes in expression between conditions.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "dwi_dti",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Diffusion MRI (DWI/DTI)",
+    "acronyms": [
+      "DWI/DTI"
+    ],
+    "shortDescription": "Diffusion-weighted imaging (DWI) and diffusion tensor imaging (DTI) are advanced MRI techniques that exploit the diffusion properties of water molecules to provide unique insights into tissue architecture. DWI measures the random Brownian motion of water molecules within tissues, allowing for the detection of abnormalities such as acute ischemic strokes, where diffusion is typically restricted. \n",
+    "status": "complete",
+    "prepared_by": "Pooya Eini",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "elastography_us",
+    "parents": [
+      "US"
+    ],
+    "title": "Elastography",
+    "acronyms": [
+      "US elastography"
+    ],
+    "shortDescription": "Elastography measures tissue stiffness by assessing mechanical properties such as elasticity and viscosity. It uses ultrasound (Shear Wave Elastography, Acoustic Radiation Force Impulse Imaging) or MRI (Magnetic Resonance Elastography) to track the propagation of mechanical waves through the tissue. The speed of these waves correlates with tissue stiffness, which helps evaluate liver fibrosis severity.",
+    "status": "complete",
+    "prepared_by": "Pooya Eini",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "functional_mri",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Functional Magnetic Resonance Imaging ",
+    "acronyms": [
+      "fMRI"
+    ],
+    "shortDescription": "fMRI (functional Magnetic Resonance Imaging) is a brain imaging technique that measures brain activity by detecting changes in blood flow.",
+    "status": "complete",
+    "prepared_by": "Rana Hashemi ",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "genome_assembly",
+    "parents": [
+      "Genomics"
+    ],
+    "title": "Genome Assembly",
+    "acronyms": [],
+    "shortDescription": "Genome Assembly reconstructs complete genomes from sequenced fragments",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "hrct",
+    "parents": [
+      "CT"
+    ],
+    "title": "High-resolution CT (HRCT)",
+    "acronyms": [
+      "HRCT"
+    ],
+    "shortDescription": "Thin-slice CT typically for detailed lung imaging.",
+    "status": "complete",
+    "prepared_by": "Shahrzad Shahrokhi Nejad",
+    "date_of_preparation": "2025-03-27"
+  },
+  {
+    "id": "ivus",
+    "parents": [
+      "US"
+    ],
+    "title": "Intravascular Ultrasound (IVUS)",
+    "acronyms": [
+      "IVUS"
+    ],
+    "shortDescription": "Intravascular Ultrasound (IVUS) is an invasive imaging technique that uses a miniature ultrasound probe mounted on a catheter to visualize the interior of blood vessels, particularly coronary arteries",
+    "status": "complete",
+    "prepared_by": "Negin Fathi Hafshejani",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "laryngoscopy",
+    "parents": [
+      "Video"
+    ],
+    "title": "Video laryngoscopy",
+    "acronyms": [
+      "VL"
+    ],
+    "shortDescription": "Video laryngoscopy (VL) acquires images using a high-resolution camera mounted on a laryngoscope blade, which transmits real-time video of the airway and vocal cords to an external monitor",
+    "status": "complete",
+    "prepared_by": "Amirhossein Nikfarjam",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "mr_myelography",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Magnetic Resonance  Myelography",
+    "acronyms": [
+      "MRM"
+    ],
+    "shortDescription": "MR myelography is a non-invasive MRI technique that visualizes the spinal cord, nerve roots, and cerebrospinal fluid without using contrast dye injected into the spinal canal.\n",
+    "status": "complete",
+    "prepared_by": "Rana Hashemi",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "mr_urography",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Magnetic Resonance Urography",
+    "acronyms": [
+      "MRU"
+    ],
+    "shortDescription": "MR urography is a non-invasive imaging technique that uses MRI to visualize the kidneys, ureters, and bladder for evaluating urinary tract disorders.\n\n",
+    "status": "complete",
+    "prepared_by": "Rana Hashemi",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "mra",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Magnetic Resonance Angiography (MRA)",
+    "acronyms": [
+      "MRA"
+    ],
+    "shortDescription": "Magnetic Resonance Angiography (MRA) is a specialized imaging technique that leverages the principles of Magnetic Resonance Imaging (MRI) to visualize blood vessels without the need for invasive procedures or ionizing radiation. By utilizing strong magnetic fields and radiofrequency pulses, MRA detects the behavior of hydrogen nuclei in blood, producing detailed images of the vascular system. \n",
+    "status": "complete",
+    "prepared_by": "Pooya Eini",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "mrs",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Magnetic Resonance Spectroscopy (MRS)",
+    "acronyms": [
+      "MRS"
+    ],
+    "shortDescription": "Magnetic Resonance Spectroscopy (MRS) is a non-invasive imaging technique that extends the capabilities of traditional Magnetic Resonance Imaging (MRI) by providing detailed biochemical information about tissues. MRS focuses on detecting and quantifying metabolites within the body, offering insights into metabolic processes. \n",
+    "status": "complete",
+    "prepared_by": "Pooya Eini",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "ms_data_formats",
+    "parents": [
+      "Proteomics"
+    ],
+    "title": "Mass Spectrometry (MS) Data Formats",
+    "acronyms": [
+      "MS"
+    ],
+    "shortDescription": "Measures the mass-to-charge ratio of protein fragments to determine their identity and modifications.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "phylogenetic_analysis",
+    "parents": [
+      "Genomics"
+    ],
+    "title": "Phylogenetic Analysis",
+    "acronyms": [],
+    "shortDescription": "Phylogenetic Analysis infers evolutionary relationships between organisms based on their sequences",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "prot_annotation_metadata",
+    "parents": [
+      "Proteomics"
+    ],
+    "title": "Annotation and Metadata Formats",
+    "acronyms": [],
+    "shortDescription": "Provides descriptive information about proteins, such as function, location, or experimental context, to enhance data interpretation.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "prot_sequence_data",
+    "parents": [
+      "Proteomics"
+    ],
+    "title": "Sequence Data Formats",
+    "acronyms": [],
+    "shortDescription": "Examines the amino acid order in proteins to identify patterns, similarities, or functional regions.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "protein_interaction_pathway",
+    "parents": [
+      "Proteomics"
+    ],
+    "title": "Protein Interaction and Pathway Data Formats",
+    "acronyms": [],
+    "shortDescription": "Studies how proteins interact with each other and participate in biological processes or signaling networks.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "protein_structure_data",
+    "parents": [
+      "Proteomics"
+    ],
+    "title": "Protein Structure Data Formats",
+    "acronyms": [],
+    "shortDescription": "Analyzes the 3D conformation of proteins to understand their function and stability.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "rna_seq_quant",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "RNA-Seq Quantification and Analysis Formats",
+    "acronyms": [],
+    "shortDescription": "Using high-throughput sequencing to quantify RNA transcripts and analyze their features.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "scrna_seq",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "Single-Cell RNA-Seq (scRNA-Seq) Data Formats",
+    "acronyms": [
+      "scRNA-Seq"
+    ],
+    "shortDescription": "Profiling gene expression at the individual cell level to uncover cellular heterogeneity.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "sequence_alignments",
+    "parents": [
+      "Genomics"
+    ],
+    "title": "Sequence Alignments",
+    "acronyms": [],
+    "shortDescription": "Sequence Alignments compare DNA sequences to identify similarities",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "standard_mri",
+    "parents": [
+      "MRI"
+    ],
+    "title": "Standard MRI",
+    "acronyms": [
+      "MRI"
+    ],
+    "shortDescription": "MRI uses strong magnetic fields and radio waves to generate detailed images of the body's internal structures. It detects hydrogen atoms' response to magnetic fields, allowing high-resolution visualization of soft tissues.",
+    "status": "complete",
+    "prepared_by": "Pooya Eini",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "tcd",
+    "parents": [
+      "US"
+    ],
+    "title": "Transcranial Doppler (TCD)",
+    "acronyms": [
+      "TCD"
+    ],
+    "shortDescription": "Transcranial Doppler (TCD) is a non-invasive ultrasound technique that measures blood flow velocity in the major arteries of the brain, particularly within the Circle of Willis",
+    "status": "complete",
+    "prepared_by": "Negin Fathi Hafshejani",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "trans_assembly_annotation",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "Transcriptome Assembly and Annotation Formats",
+    "acronyms": [],
+    "shortDescription": "Reconstructing full RNA transcripts from sequencing data and assigning functional annotations.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "trans_gene_expr_data",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "Gene Expression Data Formats",
+    "acronyms": [],
+    "shortDescription": "Measuring the activity levels of genes by quantifying RNA abundance in a sample.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "trans_phylo_evolution",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "Phylogenetic and Evolutionary Analysis Formats",
+    "acronyms": [],
+    "shortDescription": "Studying RNA sequences to infer evolutionary relationships and gene conservation across species.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "trans_seq_data_formats",
+    "parents": [
+      "Transcriptomics"
+    ],
+    "title": "Sequence Data Formats (Raw and Processed Sequences)",
+    "acronyms": [],
+    "shortDescription": "Examining the nucleotide sequences of RNA molecules to identify patterns, variants, or functional elements.",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "variant_calls",
+    "parents": [
+      "Genomics"
+    ],
+    "title": "Variant Calls",
+    "acronyms": [],
+    "shortDescription": "Variant Calls detect genetic differences like mutations",
+    "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
+    "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
+    "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "xray_cr",
+    "parents": [
+      "X-Ray"
+    ],
+    "title": "XRay_CR",
+    "acronyms": [
+      "CR"
+    ],
+    "shortDescription": "Computed radiography (CR) is a digital imaging technique that uses photostimulable phosphor (PSP) plates to capture X-ray images instead of traditional film",
+    "status": "complete",
+    "prepared_by": "Negin Fathi Hafshejani",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "xray_dr",
+    "parents": [
+      "X-Ray"
+    ],
+    "title": "XRay_DR",
+    "acronyms": [
+      "DR"
+    ],
+    "shortDescription": "Digital radiography is an advanced imaging technique that uses digital X-ray sensors instead of traditional photographic film to capture and store radiographic images",
+    "status": "complete",
+    "prepared_by": "Negin Fathi Hafshejani",
+    "date_of_preparation": "2025-03-18"
+  }
+]

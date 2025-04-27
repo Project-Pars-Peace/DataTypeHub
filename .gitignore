@@ -171,3 +171,5 @@ cython_debug/
 .pypirc
 
 streamlit_venv/
+docs/.DS_Store
+SAFA - Datatypes.xlsx

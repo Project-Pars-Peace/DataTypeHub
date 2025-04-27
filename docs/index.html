@@ -138,11 +138,29 @@
           card.setAttribute('data-title', m.title.toLowerCase());
           card.setAttribute('data-acronyms', acrStr);
 
-          // Insert the new "status" field as well
+          // Format the prepared info if available
+          let preparedInfo = '';
+          if (m.prepared_by) {
+            preparedInfo = `<p class="prepared-info">Prepared by: ${m.prepared_by}`;
+            if (m.date_of_preparation) {
+              preparedInfo += ` (${m.date_of_preparation})`;
+            }
+            preparedInfo += '</p>';
+          }
+
+          // Format acronyms if available
+          let acronymsDisplay = '';
+          if (m.acronyms && m.acronyms.length > 0) {
+            acronymsDisplay = `<p class="acronyms"><strong>Acronyms:</strong> ${m.acronyms.join(', ')}</p>`;
+          }
+
+          // Insert all available information from data.json
           card.innerHTML = `
             <h2>${m.title}</h2>
+            ${acronymsDisplay}
             <p>${m.shortDescription}</p>
             <p><strong>Status:</strong> ${m.status || 'N/A'}</p>
+            ${preparedInfo}
             <a href="detail.html?id=${m.id}">View Details</a>
           `;
 
@@ -178,5 +196,30 @@
       });
     });
   </script>
+
+  <style>
+    /* Additional styles for the new information */
+    .prepared-info {
+      font-size: 0.8rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+    
+    .acronyms {
+      font-size: 0.9rem;
+      margin: 0.3rem 0;
+    }
+    
+    .modality-card {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .modality-card a {
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+  </style>
 </body>
 </html>
