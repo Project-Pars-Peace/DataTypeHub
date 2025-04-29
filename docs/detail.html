@@ -49,129 +49,250 @@
     if(!resp.ok) {
       throw new Error(`Failed to load modalities/${modId}.json`);
     }
-    const modality = await resp.json();
+    const modalityData = await resp.json();
 
-    renderModalityDetail(modality);
+    renderStructuredModalityDetail(modalityData);
   } catch(e) {
     console.error(e);
-    document.getElementById('detailContainer').innerHTML = `<p>${modId}: is under prepration</p>`;
+    document.getElementById('detailContainer').innerHTML = `<p>${modId}: is under preparation</p>`;
   }
 })();
 
-function renderModalityDetail(m){
+function renderStructuredModalityDetail(modalityData) {
   const container = document.getElementById('detailContainer');
-  container.innerHTML = `
-    <h2>${m.title}</h2>
-    <p><strong>1. Modality Name:</strong> ${m.title}</p>
-    <p><strong>2. Acronyms:</strong> ${(m.acronyms || []).join(', ')}</p>
-    <p><strong>3. Imaging Principle:</strong> ${m.imagingPrinciple}</p>
-
-    <h3>4. Data Type &amp; File Format</h3>
-    <ul>
-      <li><strong>4.1. Primary File Format(s):</strong> ${(m.dataTypeFileFormat.primaryFileFormats||[]).join(', ')}</li>
-      <li><strong>4.2. Data Type:</strong> ${(m.dataTypeFileFormat.dataType||[]).join(', ')}</li>
-      <li><strong>4.3. Related Data Types (parent type):</strong> ${(m.dataTypeFileFormat.relatedDataTypes||[]).join(', ')}</li>
-      <li><strong>4.4. Standard Storage Format:</strong> ${m.dataTypeFileFormat.standardStorageFormat||''}</li>
-      <li><strong>4.5. Conversion Solutions + Reference:</strong>
-        ${renderConversionTable(m.dataTypeFileFormat.conversionSolutions||[])}
-      </li>
-    </ul>
-
-    <h3>5. Typical Resolution &amp; Image Dimensions</h3>
-    <ul>
-      <li><strong>5.1. Spatial Resolution:</strong> ${m.typicalResolutionImageDims.spatialResolution||''}</li>
-      <li><strong>5.2. Voxel Size / Pixel Spacing:</strong> ${m.typicalResolutionImageDims.voxelSize||''}</li>
-      <li><strong>5.3. Temporal Resolution:</strong> ${m.typicalResolutionImageDims.temporalResolution||''}</li>
-    </ul>
-
-    <h3>6. Data Size (Storage Requirements)</h3>
-    <ul>
-      <li><strong>6.1. Single Image Size:</strong> ${m.dataSize.singleImageSize||''}</li>
-      <li><strong>6.2. Typical Study Size:</strong> ${m.dataSize.typicalStudySize||''}</li>
-    </ul>
-
-    <h3>7. Acquisition Device &amp; Hardware Requirements</h3>
-    <ul>
-      <li><strong>7.1. Equipment Used:</strong> ${nl2br(m.acquisitionHardware.equipmentUsed||'')}</li>
-      <li><strong>7.2. Typical Manufacturers:</strong> ${(m.acquisitionHardware.typicalManufacturers||[]).join(', ')}</li>
-    </ul>
-
-    <h3>8. Common Clinical Applications</h3>
-    <ul>
-      <li><strong>8.1. Primary Uses:</strong> ${(m.commonClinicalApps.primaryUses||[]).join(', ')}</li>
-      <li><strong>8.2. Specialized Uses:</strong> ${(m.commonClinicalApps.specializedUses||[]).join(', ')}</li>
-    </ul>
-
-    <h3>9. Radiation &amp; Safety Considerations</h3>
-    <ul>
-      <li><strong>9.1. Ionizing Radiation:</strong> ${m.radiationSafety.ionizingRadiation||''}</li>
-      <li><strong>9.2. Radiation Dose:</strong> ${m.radiationSafety.radiationDose||''}</li>
-      <li><strong>9.3. Safety Concerns:</strong> ${m.radiationSafety.safetyConcerns||''}</li>
-    </ul>
-
-    <h3>10. Preprocessing &amp; Data Preparation</h3>
-    <ul>
-      <li><strong>10.1. Common Preprocessing Steps:</strong> ${(m.preprocessingData.commonPreprocessingSteps||[]).join('; ')}</li>
-      <li><strong>10.2. Compression Methods:</strong> ${(m.preprocessingData.compressionMethods||[]).join('; ')}</li>
-    </ul>
-
-    <h3>11. Challenges &amp; Limitations</h3>
-    <ul>
-      <li><strong>11.1. Technical Challenges:</strong> ${(m.challengesLimitations.technicalChallenges||[]).join('; ')}</li>
-      <li><strong>11.2. Clinical Limitations:</strong> ${(m.challengesLimitations.clinicalLimitations||[]).join('; ')}</li>
-    </ul>
-
-    <h3>12. References</h3>
-    <ul>
-      ${ (m.references||[]).map(r => `<li><a href="${r}" target="_blank">${r}</a></li>`).join('') }
-    </ul>
-
-    <h4>Preparation Meta</h4>
-    ${renderPreparationMeta(m.preparation_meta||[])}
-
-    <p><a href="index.html">&larr; Back to Main Page</a></p>
+  
+  // Extract metadata
+  const metadata = {};
+  const preparationMeta = [];
+  
+  modalityData.forEach(item => {
+    if (item.level.startsWith('meta-data-')) {
+      metadata[item.level.replace('meta-data-', '')] = item.content;
+    } else if (item.level.startsWith('prepration-meta-data-')) {
+      preparationMeta.push({
+        field: item.level.replace('prepration-meta-data-', ''),
+        value: item.content
+      });
+    }
+  });
+  
+  // Group data by section (first part of level before the dot)
+  const sectionsMap = {};
+  modalityData.forEach(item => {
+    // Skip metadata items
+    if (item.level.startsWith('meta-data-') || item.level.startsWith('prepration-meta-data-')) {
+      return;
+    }
+    
+    // Get section number
+    const sectionMatch = item.level.match(/^(\d+)(?:\.\d+)?$/);
+    if (sectionMatch) {
+      const sectionNum = sectionMatch[1];
+      if (!sectionsMap[sectionNum]) {
+        sectionsMap[sectionNum] = [];
+      }
+      sectionsMap[sectionNum].push(item);
+    }
+  });
+  
+  // Build HTML
+  let html = `
+    <h1>${metadata.title || 'Untitled Modality'}</h1>
+    
+    <div class="modality-summary">
+      <p><strong>Acronyms:</strong> ${(metadata.acronyms || []).filter(a => a).join(', ') || 'None'}</p>
+      <p><strong>Description:</strong> ${metadata.shortDescription || 'No description available'}</p>
+    </div>
   `;
-}
-
-// Renders a small HTML table for conversion solutions
-function renderConversionTable(solutions){
-  if(!solutions.length) return "<p>No conversion solutions listed.</p>";
-  let html = "<table border='1' cellpadding='5' style='border-collapse:collapse;'><tr><th>From</th><th>To</th><th>Description</th><th>Links</th></tr>";
-  solutions.forEach(s => {
-    let links = (s.conversion_links||[]).map(l => `<a href="${l}" target="_blank">${l}</a>`).join(', ');
+  
+  // Process each section
+  Object.keys(sectionsMap).sort((a, b) => parseInt(a) - parseInt(b)).forEach(sectionNum => {
+    const sectionItems = sectionsMap[sectionNum].sort((a, b) => {
+      return a.level.localeCompare(b.level, undefined, { numeric: true, sensitivity: 'base' });
+    });
+    
+    // Section header - use the item with exact section number
+    const sectionHeader = sectionItems.find(item => item.level === sectionNum);
+    
+    if (sectionHeader) {
+      html += `<h2>${sectionNum}. ${sectionHeader.title}</h2>`;
+      
+      if (sectionHeader.content && sectionHeader.content.trim()) {
+        html += `<p>${renderContent(sectionHeader)}</p>`;
+      }
+      
+      // Render subsections
+      const subsections = sectionItems.filter(item => item.level !== sectionNum);
+      if (subsections.length > 0) {
+        html += '<div class="subsections">';
+        subsections.forEach(subsection => {
+          html += `
+            <div class="subsection">
+              <h3>${subsection.level} ${subsection.title}</h3>
+              ${renderContent(subsection)}
+            </div>
+          `;
+        });
+        html += '</div>';
+      }
+    }
+  });
+  
+  // Add preparation metadata at the end
+  if (preparationMeta.length > 0) {
+    html += '<div class="preparation-metadata">';
+    html += '<h2>Preparation Metadata</h2>';
+    
+    // Group metadata into a nice display
+    const metaObj = {};
+    preparationMeta.forEach(meta => {
+      metaObj[meta.field] = meta.value;
+    });
+    
     html += `
-      <tr>
-        <td>${s.conversion_from}</td>
-        <td>${s.conversion_to}</td>
-        <td>${s.conversion_description}</td>
-        <td>${links}</td>
-      </tr>
+      <table class="meta-table">
+        <tr><td><strong>Prepared By:</strong></td><td>${metaObj.prepared_by || 'Unknown'}</td></tr>
+        <tr><td><strong>Confirmed By:</strong></td><td>${metaObj.confirmed_by || 'Not confirmed'}</td></tr>
+        <tr><td><strong>Date of Preparation:</strong></td><td>${metaObj.date_of_preparation || 'Unknown'}</td></tr>
+        <tr><td><strong>Planned Next Review:</strong></td><td>${metaObj.planned_next_review || 'Not scheduled'}</td></tr>
+        ${metaObj.requires_completion ? `<tr><td><strong>Requires Completion:</strong></td><td>${metaObj.requires_completion}</td></tr>` : ''}
+      </table>
     `;
-  });
-  html += "</table>";
-  return html;
+    
+    html += '</div>';
+  }
+  
+  html += `<p><a href="index.html">&larr; Back to Main Page</a></p>`;
+  
+  container.innerHTML = html;
 }
 
-function renderPreparationMeta(metas){
-  if(!metas.length) return "<p>No meta information available.</p>";
-  let out = "";
-  metas.forEach(meta => {
-    out += `
-      <div style="border:1px solid #ddd; margin-bottom:1rem; padding:0.5rem;">
-        <p><strong>Prepared By:</strong> ${meta.prepared_by}</p>
-        <p><strong>Confirmed By:</strong> ${meta.confirmed_by}</p>
-        <p><strong>Date of Preparation:</strong> ${meta.date_of_preparation}</p>
-        <p><strong>Planned Next Review:</strong> ${meta.planned_next_review}</p>
-        <p><strong>Requires Completion:</strong> ${meta.requires_completion}</p>
-      </div>
-    `;
-  });
-  return out;
+function renderContent(item) {
+  if (!item.content || item.content === "") return "<p>No content available</p>";
+  
+  switch(item['content-type']) {
+    case 'markdown':
+      return `<p>${nl2br(item.content)}</p>`;
+      
+    case 'rawtext':
+      return `<p>${item.content}</p>`;
+      
+    case 'list_of_strings':
+      if (!Array.isArray(item.content) || item.content.length === 0) {
+        return "<p>No items</p>";
+      }
+      return `<ul>${item.content.filter(i => i.trim()).map(i => `<li>${i}</li>`).join('')}</ul>`;
+      
+    case 'table':
+      if (!Array.isArray(item.content) || item.content.length < 2) {
+        return "<p>No table data available</p>";
+      }
+      
+      const headers = item.content[0];
+      const rows = item.content.slice(1);
+      
+      let tableHtml = '<table class="data-table">';
+      
+      // Table headers
+      tableHtml += '<thead><tr>';
+      headers.forEach(header => {
+        tableHtml += `<th>${header}</th>`;
+      });
+      tableHtml += '</tr></thead>';
+      
+      // Table body
+      tableHtml += '<tbody>';
+      rows.forEach(row => {
+        tableHtml += '<tr>';
+        row.forEach((cell, index) => {
+          // For the description column, which is typically longer
+          const isDescription = headers[index]?.toLowerCase().includes('description');
+          tableHtml += `<td${isDescription ? ' class="description-cell"' : ''}>${nl2br(cell)}</td>`;
+        });
+        tableHtml += '</tr>';
+      });
+      tableHtml += '</tbody></table>';
+      
+      return tableHtml;
+      
+    default:
+      return `<p>${item.content}</p>`;
+  }
 }
 
-function nl2br(str){
-  return (str||"").replace(/\n/g, "<br>");
+function nl2br(str) {
+  return (str || "").replace(/\n/g, "<br>");
 }
 </script>
+
+<style>
+/* Additional styles for the detail page */
+.modality-summary {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #0022d2;
+}
+
+.subsections {
+  margin-left: 1rem;
+  border-left: 2px solid #eee;
+  padding-left: 1rem;
+}
+
+.subsection {
+  margin-bottom: 1rem;
+}
+
+.preparation-metadata {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.meta-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.meta-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.data-table th, .data-table td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+}
+
+.data-table .description-cell {
+  max-width: 400px;
+}
+
+h2 {
+  color: #0022d2;
+  margin-top: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: #444;
+  margin-top: 1.5rem;
+}
+</style>
 </body>
 </html>
