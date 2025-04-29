@@ -21,6 +21,13 @@
         "image": ""
       },
       {
+        "name": "Fatemeh Zolfaghari",
+        "contributedTo": ["Conversion table of Waveform modalities"],
+        "email": "fatemehzolfaghari.sbmu@gmail.com",
+        "affiliation": "Medical student at Shahid Beheshti Medical University, Tehran, Iran.",
+        "image": ""
+      },
+      {
         "name": "Alireza Hekmati",
         "contributedTo": ["Project Administration","Genomic & Molecular Data (3 parts)","Template_bioinformatic"],
         "email": "AlirezaHekmati80@gmail.com",
@@ -43,7 +50,7 @@
       },
      {
         "name": "Pardis Jofaei",
-        "contributedTo": ["MIBG Scan", "Lymphoscintigraphy", "Whole-body MRI", "MR Enterography (MRE)",],
+        "contributedTo": ["MIBG Scan", "Lymphoscintigraphy", "Whole-body MRI", "MR Enterography (MRE)"],
         "email": "p.jolfaei76@gmail.com",
         "affiliation": "Shahid Beheshti University of Medical Sciences, Tehran, Iran",
         "image": ""

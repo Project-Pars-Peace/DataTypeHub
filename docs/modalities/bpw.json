@@ -1,0 +1,358 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "bpw"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "Cardiological Monitoring",
+            "Biomedical Signal Processing"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Blood Pressure Waveform (BPW)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "BPW",
+            "ABP",
+            "NBP"
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Blood Pressure Waveform (BPW) represents the continuous variation of arterial pressure over time, measured invasively (arterial line) or non-invasively (finger cuff, tonometry), important for hemodynamic monitoring and cardiovascular assessment."
+    },
+    {
+        "level": "1.",
+        "title": "Core Modality Information",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "1.1.",
+        "title": "Modality Name",
+        "content-type": "markdown",
+        "content": "Blood Pressure Waveform (BPW)"
+    },
+    {
+        "level": "1.2.",
+        "title": "Primary Use",
+        "content-type": "markdown",
+        "content": "Continuous blood pressure monitoring (arterial line), cardiovascular health assessment, beat-to-beat hemodynamic analysis"
+    },
+    {
+        "level": "1.3.",
+        "title": "Signal Type",
+        "content-type": "markdown",
+        "content": "Continuous, time-series pressure signal (mmHg units)"
+    },
+    {
+        "level": "1.4.",
+        "title": "Sampling Frequency (Hz)",
+        "content-type": "markdown",
+        "content": "Typically 100 Hz to 500 Hz for invasive BP; non-invasive devices 50–250 Hz"
+    },
+    {
+        "level": "1.5.",
+        "title": "Acquisition Device",
+        "content-type": "markdown",
+        "content": "Arterial catheters (A-lines), Finapres systems, volume clamp finger cuffs, tonometric devices"
+    },
+    {
+        "level": "1.6.",
+        "title": "Number of Channels",
+        "content-type": "markdown",
+        "content": "1 channel (systolic-diastolic tracing); optionally multiple channels for invasive multi-site monitoring (e.g., radial vs femoral)"
+    },
+    {
+        "level": "1.7.",
+        "title": "File Formats",
+        "content-type": "markdown",
+        "content": ".csv, .txt, .edf, .acq, .mat, .xdf"
+    },
+    {
+        "level": "1.8.",
+        "title": "Amplifier Specifications",
+        "content-type": "markdown",
+        "content": "High-fidelity pressure transducers with low drift (<2 mmHg), high sampling precision, fast response time (<5 ms)"
+    },
+    {
+        "level": "1.9.",
+        "title": "Electrode Type",
+        "content-type": "markdown",
+        "content": "Pressure transducers connected to arterial catheter or external finger cuff (no electrode)"
+    },
+    {
+        "level": "1.10.",
+        "title": "Placement Protocol",
+        "content-type": "markdown",
+        "content": "Arterial catheter inserted into radial or femoral artery; non-invasive devices on finger/wrist; correct height referencing to the heart level (phlebostatic axis)"
+    },
+    {
+        "level": "2.",
+        "title": "Data Characteristics and Structure",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "2.1.",
+        "title": "Data Structure",
+        "content-type": "markdown",
+        "content": "Time-series of arterial pressure (mmHg) over time; single or multiple channel streams"
+    },
+    {
+        "level": "2.2.",
+        "title": "Time Duration",
+        "content-type": "markdown",
+        "content": "Short-term (minutes) to long-term (hours to days) depending on monitoring needs"
+    },
+    {
+        "level": "2.3.",
+        "title": "Preprocessing Required",
+        "content-type": "markdown",
+        "content": "Baseline drift correction, artifact removal (e.g., flush artifact, damping correction), filtering (0.5–40 Hz bandpass)"
+    },
+    {
+        "level": "2.4.",
+        "title": "Artifacts & Noise Sources",
+        "content-type": "markdown",
+        "content": "Catheter whip artifacts, air bubbles, damping, patient movement artifacts, low perfusion signal loss"
+    },
+    {
+        "level": "2.5.",
+        "title": "Labels/Annotations",
+        "content-type": "markdown",
+        "content": "Systolic/diastolic events, mean arterial pressure (MAP) segments, respiratory variations"
+    },
+    {
+        "level": "2.6.",
+        "title": "Signal Amplitude Range",
+        "content-type": "markdown",
+        "content": "Typical arterial pressures: 60–140 mmHg (MAP usually 70–105 mmHg)"
+    },
+    {
+        "level": "2.7.",
+        "title": "Frequency Bands",
+        "content-type": "markdown",
+        "content": "Main heart rate component 0.8–2 Hz (48–120 bpm); low-frequency respiratory-induced oscillations (0.2–0.3 Hz)"
+    },
+    {
+        "level": "2.8.",
+        "title": "Data Compression",
+        "content-type": "markdown",
+        "content": "Lossless compression recommended; e.g., zlib, custom binary formats used in medical monitoring systems"
+    },
+    {
+        "level": "2.9.",
+        "title": "Synchronization",
+        "content-type": "markdown",
+        "content": "Often synchronized with ECG, PPG, respiration waveforms for full hemodynamic monitoring"
+    },
+    {
+        "level": "2.10.",
+        "title": "Storage Requirements",
+        "content-type": "markdown",
+        "content": "~2–10 MB per hour (100 Hz sampling, single channel uncompressed)"
+    },
+    {
+        "level": "3.1.",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "BDF",
+                "EDF",
+                "Load the BDF file using EEGLAB (File->Import data -> using BIOSIG) and export as EDF",
+                "Delorme, A., & Makeig, S., 2004. EEGLAB: an open source toolbox for analysis of single-trial EEG dynamics. Journal of Neuroscience Methods."
+            ],
+            [
+                "BDF",
+                "EDF",
+                "EDFbrowser: Open BDF file and use the \"Save As\" option to export to EDF.",
+                "https://www.teuniz.net/edfbrowser/"
+            ],
+            [
+                "BDF",
+                "EDF",
+                "BIOSIG Toolbox (MATLAB/Octave): Load BDF file with sopen, save using swrite.",
+                "Schlögl, A., et al., 2010. Biosig: Computational Intelligence and Neuroscience."
+            ],
+            [
+                "BDF",
+                "EDF",
+                "MNE-Python: Load BDF file with mne.io.read_raw_bdf and export to EDF.",
+                "Gramfort, A., et al., 2013. Frontiers in Neuroscience"
+            ],
+            [
+                "BDF",
+                "EDF",
+                "pyEDFlib: Load BDF data manually and write into EDF.",
+                "https://github.com/holgern/pyedflib"
+            ],
+            [
+                "BDF",
+                "EDF",
+                "Specialized scripting: parse BDF header/data, convert 24-bit to 16-bit.",
+                "Kemp, B., Värri, A., Rosa, A. C., Nielsen, K. D., & Gade, J. (1992). DOI: 10.1016/0013-4694(92)90009-7"
+            ],
+            [
+                "GDF",
+                "EDF",
+                "EDFbrowser: Load GDF files, export as EDF.",
+                "https://www.teuniz.net/edfbrowser/"
+            ],
+            [
+                "GDF",
+                "EDF",
+                "Biosig (MATLAB): Load GDF files with sload, export with swrite.",
+                "https://biosig.sourceforge.net/"
+            ],
+            [
+                "GDF",
+                "EDF",
+                "Python (MNE-Python and pyEDFlib): Load GDF files and export to EDF.",
+                "https://mne.tools/, https://github.com/holgern/pyedflib"
+            ],
+            [
+                "GDF",
+                "EDF",
+                "Manual scripting: parse GDF headers/data, map fields to EDF.",
+                "Kemp, B., et al. (1992). DOI: 10.1016/0013-4694(92)90009-7"
+            ],
+            [
+                "GDF",
+                "EDF",
+                "Online converters: convert GDF to EDF.",
+                "https://docpose.com/edf-converter-online"
+            ],
+            [
+                "GDF",
+                "EDF",
+                "Video tutorials: Convert GDF to EDF via tutorials on YouTube.",
+                "YouTube link"
+            ],
+            [
+                ".VHDR/.VMRK/.EEG",
+                "EDF",
+                "MNE-Python: Import BrainVision, export to EDF.",
+                "https://mne.tools/stable/index.html"
+            ],
+            [
+                ".VHDR/.VMRK/.EEG",
+                "EDF",
+                "EEGLAB: Import .vhdr via BVA-io plugin, export as EDF.",
+                "https://mne.tools/stable/generated/mne.export.export_raw.html"
+            ],
+            [
+                ".set",
+                "EDF",
+                "MNE-Python: Read .set file, export as EDF.",
+                "https://mne.tools/stable/generated/mne.io.read_raw_eeglab.html"
+            ],
+            [
+                ".MFF",
+                "EDF",
+                "EEGLAB: Import via mffMatlabIO plugin, export with BIOSIG.",
+                "https://eeglab.org"
+            ],
+            [
+                ".CNT",
+                "EDF",
+                "EEGLAB: Import CNT via BIOSIG, export as EDF.",
+                "https://eeglab.org"
+            ],
+            [
+                ".SCP-ECG",
+                "EDF",
+                "BioSig Toolbox: Load SCP-ECG, export as EDF.",
+                "https://biosig.sourceforge.net/"
+            ],
+            [
+                ".HL7 aECG",
+                "EDF",
+                "BioSig Library: Convert HL7 aECG to EDF.",
+                "https://doi.org/10.1109/MC.2008.407"
+            ],
+            [
+                ".ACQ",
+                "EDF",
+                "BioSig Toolbox: Load .acq files, save as EDF.",
+                "https://biosig.sourceforge.io/"
+            ],
+            [
+                ".XML",
+                "EDF",
+                "Python (pyedflib): Parse XML, export to EDF.",
+                "https://biosig.sourceforge.net/, https://doi.org/10.1016/j.compbiomed.2003.09.002"
+            ],
+            [
+                ".WAV",
+                "EDF",
+                "Python (pyedflib/scipy): Convert WAV to EDF.",
+                "https://github.com/holgern/pyedflib"
+            ],
+            [
+                ".TXT/.CSV",
+                "EDF",
+                "Python (pandas/pyedflib): Load CSV/TXT, export EDF.",
+                "https://biosig.sourceforge.net/"
+            ],
+            [
+                ".xdf/.xdfz",
+                "EDF",
+                "EEGLAB: Load XDF, export EDF using plugins.",
+                "https://github.com/xdf-modules/xdf-EEGLAB"
+            ]
+        ]
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Hossein Toreyhi"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-04-26"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": "Conversion table (section 3.1.) should be updated by Farhan!"
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": "Conversion table revised by F.Zolfaghari"
+    }
+]
