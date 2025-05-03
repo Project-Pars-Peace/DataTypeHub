@@ -56,6 +56,51 @@
     "date_of_preparation": "2025-03-17"
   },
   {
+    "id": "US_CEUS",
+    "parents": [
+      "Ultrasound"
+    ],
+    "title": "Contrast-enhanced Ultrasound",
+    "acronyms": [
+      "CEUS"
+    ],
+    "shortDescription": "CEUS utilizes microbubble contrast agents to enhance ultrasound imaging, providing improved visualization of vascular structures and blood flow.",
+    "status": "complete",
+    "prepared_by": "Negin Fathi Hafshejani",
+    "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "US_Doppler",
+    "parents": [
+      "US"
+    ],
+    "title": "Doppler Ultrasound,Color Doppler,Spectral Doppler,Power Doppler",
+    "acronyms": [
+      "DUS",
+      "CDU",
+      "SDU",
+      "PDU"
+    ],
+    "shortDescription": "A non-invasive medical imaging technique that uses high-frequency sound waves to detect and measure the flow of blood through vessels, allowing for the diagnosis of conditions such as blood clots, varicose veins, and vascular diseases.",
+    "status": "in progress: false",
+    "prepared_by": "Mohammadreza Ghaffarzadeh-Esfahani",
+    "date_of_preparation": "..."
+  },
+  {
+    "id": "XRay_DEXA",
+    "parents": [
+      "X-Ray"
+    ],
+    "title": "Mammography",
+    "acronyms": [
+      "DXA"
+    ],
+    "shortDescription": "A non-invasive medical imaging test that uses X-rays to measure bone mineral density (BMD) and assess bone health. It's commonly used to diagnose osteoporosis, monitor bone loss, and evaluate the risk of fractures.",
+    "status": "in progress: false",
+    "prepared_by": "Mohammadreza Ghaffarzadeh-Esfahani",
+    "date_of_preparation": "..."
+  },
+  {
     "id": "alt_splicing_trans",
     "parents": [
       "Transcriptomics"
@@ -80,6 +125,21 @@
     "date_of_preparation": "2025-03-17"
   },
   {
+    "id": "bcg",
+    "parents": [
+      "Cardiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Ballistocardiography (BCG)",
+    "acronyms": [
+      "BCG"
+    ],
+    "shortDescription": "Ballistocardiography (BCG) records the mechanical recoil of the body caused by the ejection of blood with each heartbeat, offering insights into cardiovascular health and cardiac function through non-invasive motion sensing.",
+    "status": "in progress: Conversion table revised by F.Zolfaghari",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
     "id": "bmode_us",
     "parents": [
       "US"
@@ -92,6 +152,23 @@
     "status": "complete",
     "prepared_by": "Negin Fathi Hafshejani",
     "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "bpw",
+    "parents": [
+      "Cardiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Blood Pressure Waveform (BPW)",
+    "acronyms": [
+      "BPW",
+      "ABP",
+      "NBP"
+    ],
+    "shortDescription": "Blood Pressure Waveform (BPW) represents the continuous variation of arterial pressure over time, measured invasively (arterial line) or non-invasively (finger cuff, tonometry), important for hemodynamic monitoring and cardiovascular assessment.",
+    "status": "in progress: Conversion table revised by F.Zolfaghari",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
   },
   {
     "id": "breast_mri",
@@ -120,6 +197,22 @@
     "status": "complete",
     "prepared_by": "Amirhossein Nikfarjam",
     "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "capnography",
+    "parents": [
+      "Pulmonary Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Respiratory Waveform (Capnography - EtCO\u2082)",
+    "acronyms": [
+      "EtCO\u2082",
+      "Capnography"
+    ],
+    "shortDescription": "Capnography measures the concentration of exhaled carbon dioxide (CO\u2082) over time, providing a respiratory waveform (capnogram) that is crucial for monitoring ventilation, airway status, and metabolic activity.",
+    "status": "in progress: Conversion table (section 3.1.) should be updated by Farhan!",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
   },
   {
     "id": "cephalometric_radiography",
@@ -177,6 +270,20 @@
     "status": "complete",
     "prepared_by": "Arman Gharehbahi",
     "date_of_preparation": "2025-03-19"
+  },
+  {
+    "id": "cta",
+    "parents": [
+      "CT"
+    ],
+    "title": "CT Angiography (CTA)",
+    "acronyms": [
+      "CTA"
+    ],
+    "shortDescription": "Contrast-enhanced CT for vascular imaging of arteries and veins.",
+    "status": "in progress: conversion table, table ",
+    "prepared_by": "Shahrzad Shahrokhi Nejad",
+    "date_of_preparation": "2025-03-27"
   },
   {
     "id": "ctp",
@@ -275,6 +382,37 @@
     "date_of_preparation": "2025-03-18"
   },
   {
+    "id": "eeg",
+    "parents": [
+      "Neurophysiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Electroencephalography (EEG)",
+    "acronyms": [
+      "EEG"
+    ],
+    "shortDescription": "EEG (Electroencephalography) captures electrical brain activity through electrodes placed on the scalp, producing continuous time-series signals critical for diagnosing neurological conditions and conducting brain research.",
+    "status": "in progress: Conversion table revised by F.Zolfaghari",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
+    "id": "ekg",
+    "parents": [
+      "Cardiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Electrocardiography (EKG/ECG)",
+    "acronyms": [
+      "EKG",
+      "ECG"
+    ],
+    "shortDescription": "EKG (Electrocardiography) records the electrical activity of the heart over time using electrodes placed on the body, crucial for diagnosing cardiac abnormalities such as arrhythmias, myocardial infarction, and other heart-related conditions.",
+    "status": "in progress: Conversion table revised by F.Zolfaghari",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
     "id": "elastography_us",
     "parents": [
       "US"
@@ -289,6 +427,21 @@
     "date_of_preparation": "2025-03-18"
   },
   {
+    "id": "emg",
+    "parents": [
+      "Neurophysiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Electromyography (EMG)",
+    "acronyms": [
+      "EMG"
+    ],
+    "shortDescription": "EMG (Electromyography) measures the electrical activity produced by skeletal muscles using electrodes, critical for diagnosing neuromuscular disorders and evaluating muscle function during movement and rehabilitation.",
+    "status": "in progress: Conversion table revised by F.Zolfaghari",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
     "id": "functional_mri",
     "parents": [
       "MRI"
@@ -301,6 +454,18 @@
     "status": "complete",
     "prepared_by": "Rana Hashemi ",
     "date_of_preparation": "2025-03-18"
+  },
+  {
+    "id": "gallium_scan",
+    "parents": [
+      "Nuclear Medicine Imaging"
+    ],
+    "title": "Gallium Scan",
+    "acronyms": [],
+    "shortDescription": "Gallium scans detect infection, inflammation, and tumors by using injected gallium radiotracers (Gallium-67 or Gallium-68) that accumulate in active tissue, imaged with gamma cameras or PET scanners after a delay.",
+    "status": "in progress: confirmed by H.T.",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
   },
   {
     "id": "genome_assembly",
@@ -355,6 +520,65 @@
     "status": "complete",
     "prepared_by": "Amirhossein Nikfarjam",
     "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "ldct",
+    "parents": [
+      "CT"
+    ],
+    "title": "Low-dose CT (LDCT)",
+    "acronyms": [
+      "LDCT"
+    ],
+    "shortDescription": "Reduced radiation-dose CT often for lung cancer screening.",
+    "status": "complete",
+    "prepared_by": "Shahrzad Shahrokhi Nejad",
+    "date_of_preparation": "2025-03-27"
+  },
+  {
+    "id": "lymphoscintigraphy",
+    "parents": [
+      "Nuclear Medicine Imaging",
+      "SPECT"
+    ],
+    "title": "Lymphoscintigraphy",
+    "acronyms": [
+      "LSG"
+    ],
+    "shortDescription": "Lymphoscintigraphy uses technetium-99m-labeled radiotracers to visualize lymphatic flow and map sentinel lymph nodes using gamma or SPECT imaging, aiding in cancer staging and evaluation of lymphatic disorders.",
+    "status": "in progress: confirmed by H.T.",
+    "prepared_by": "Pardis Jolfaei",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
+    "id": "mammography",
+    "parents": [
+      "Radiography"
+    ],
+    "title": "Mammography (Conventional, Digital, Tomosynthesis, Contrast-enhanced)",
+    "acronyms": [
+      "MG"
+    ],
+    "shortDescription": "Mammography uses low-dose X-rays to acquire high-resolution images of breast tissue for cancer screening, diagnosis, and disease monitoring.",
+    "status": "in progress: confirmed by H.T.",
+    "prepared_by": "Pardis Jolfaei",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
+    "id": "mibg-scan",
+    "parents": [
+      "Nuclear Medicine Imaging",
+      "SPECT"
+    ],
+    "title": "MIBG Scan",
+    "acronyms": [
+      "MIBG",
+      "Metaiodobenzylguanidine Scan"
+    ],
+    "shortDescription": "MIBG scans use radioactive metaiodobenzylguanidine tagged with iodine isotopes, detected by a gamma camera or SPECT system, to visualize neuroendocrine tumors such as neuroblastoma and pheochromocytoma.",
+    "status": "in progress: confirmed by H.T.",
+    "prepared_by": "Pardis Jolfaei",
+    "date_of_preparation": "2025-04-26"
   },
   {
     "id": "mr_myelography",
@@ -427,6 +651,21 @@
     "date_of_preparation": "2025-03-17"
   },
   {
+    "id": "pcg",
+    "parents": [
+      "Cardiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Phonocardiography (PCG)",
+    "acronyms": [
+      "PCG"
+    ],
+    "shortDescription": "Phonocardiography (PCG) is a technique that records the acoustic signals produced by the heart, capturing heart sounds and murmurs as time-series audio signals, widely used for cardiac diagnostics and heart sound analysis.",
+    "status": "in progress: Conversion table (section 3.1.) should be updated by Farhan!",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
     "id": "phylogenetic_analysis",
     "parents": [
       "Genomics"
@@ -437,6 +676,42 @@
     "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
     "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
     "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "positron-emission-tomography-pet",
+    "parents": [
+      "Nuclear Medicine Imaging",
+      "Hybrid Imaging"
+    ],
+    "title": "Positron Emission Tomography (PET), PET-CT, PET-MRI",
+    "acronyms": [
+      "PET",
+      "Positron Emission Tomography",
+      "PET-CT",
+      "Positron Emission Tomography - Computed Tomography",
+      "PET-MRI",
+      "Positron Emission Tomography - Magnetic Resonance Imaging"
+    ],
+    "shortDescription": "PET imaging uses positron-emitting radiotracers to visualize metabolic processes. PET-CT fuses functional and anatomical data, while PET-MRI combines molecular imaging with detailed soft tissue contrast, aiding oncology, neurology, and cardiology diagnostics.",
+    "status": "in progress: confirmed by H.T.",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
+    "id": "ppg",
+    "parents": [
+      "Cardiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Pulse Oximetry (Photoplethysmography - PPG)",
+    "acronyms": [
+      "PPG",
+      "SpO2"
+    ],
+    "shortDescription": "PPG (Photoplethysmography) is an optical technique that measures blood volume changes in the microvascular bed of tissue, widely used in pulse oximetry for monitoring heart rate and oxygen saturation (SpO\u2082).",
+    "status": "in progress: Conversion table revised by F.Zolfaghari",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
   },
   {
     "id": "prot_annotation_metadata",
@@ -499,6 +774,33 @@
     "date_of_preparation": "2025-03-17"
   },
   {
+    "id": "scg",
+    "parents": [
+      "Cardiological Monitoring",
+      "Biomedical Signal Processing"
+    ],
+    "title": "Seismocardiography (SCG)",
+    "acronyms": [
+      "SCG"
+    ],
+    "shortDescription": "Seismocardiography (SCG) captures chest wall vibrations induced by cardiac activity using accelerometers, offering a non-invasive assessment of cardiac mechanics such as heart valve movements, myocardial contractility, and timing of cardiac events.",
+    "status": "in progress: Conversion table revised by F.Zolfaghari",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
+    "id": "scintigraphy",
+    "parents": [
+      "Nuclear Medicine Imaging"
+    ],
+    "title": "Scintigraphy (Bone, Thyroid, Myocardial Perfusion)",
+    "acronyms": [],
+    "shortDescription": "Scintigraphy uses gamma-emitting radiopharmaceuticals to create 2D images of targeted organ or tissue function, detected via external gamma cameras, often employed in bone, thyroid, and cardiac imaging.",
+    "status": "in progress: confirmed by H.T.",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
+  },
+  {
     "id": "scrna_seq",
     "parents": [
       "Transcriptomics"
@@ -523,6 +825,20 @@
     "status": "in progress: Combining the solutions and integerating them in one code solution that dynamicly decide to choose the logic base on the type of input data to produce standard data type as output",
     "prepared_by": "alirezahekmati80@gmail.com falahati.yasamin@gmail.com",
     "date_of_preparation": "2025-03-17"
+  },
+  {
+    "id": "single-photon-emission-computed-tomography-spect",
+    "parents": [
+      "Nuclear Medicine Imaging"
+    ],
+    "title": "Single Photon Emission Computed Tomography (SPECT)",
+    "acronyms": [
+      "SPECT"
+    ],
+    "shortDescription": "SPECT uses rotating gamma cameras to reconstruct 3D images of radionuclide distribution in the body, offering functional imaging capabilities for diverse clinical applications like brain, cardiac, and bone disorders.",
+    "status": "in progress: confirmed by H.T.",
+    "prepared_by": "Hossein Toreyhi",
+    "date_of_preparation": "2025-04-26"
   },
   {
     "id": "standard_mri",

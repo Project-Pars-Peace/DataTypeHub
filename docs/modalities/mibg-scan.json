@@ -3,57 +3,61 @@
         "level": "meta-data-id",
         "title": "id",
         "content-type": "rawtext",
-        "content": "gallium_scan"
+        "content": "mibg-scan"
     },
     {
         "level": "meta-data-parents",
         "title": "parents",
         "content-type": "list_of_strings",
         "content": [
-            "Nuclear Medicine Imaging"
+            "Nuclear Medicine Imaging",
+            "SPECT"
         ]
     },
     {
         "level": "meta-data-title",
         "title": "title",
         "content-type": "rawtext",
-        "content": "Gallium Scan"
+        "content": "MIBG Scan"
     },
     {
         "level": "meta-data-acronyms",
         "title": "acronyms",
         "content-type": "list_of_strings",
-        "content": []
+        "content": [
+            "MIBG",
+            "Metaiodobenzylguanidine Scan"
+        ]
     },
     {
         "level": "meta-data-shortDescription",
         "title": "shortDescription",
         "content-type": "rawtext",
-        "content": "Gallium scans detect infection, inflammation, and tumors by using injected gallium radiotracers (Gallium-67 or Gallium-68) that accumulate in active tissue, imaged with gamma cameras or PET scanners after a delay."
+        "content": "MIBG scans use radioactive metaiodobenzylguanidine tagged with iodine isotopes, detected by a gamma camera or SPECT system, to visualize neuroendocrine tumors such as neuroblastoma and pheochromocytoma."
     },
     {
         "level": "4.",
         "title": "Data Type & File Format",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "4.1.",
         "title": "Primary File Format(s)",
         "content-type": "markdown",
-        "content": "DICOM (.dcm), TIFF, JPEG, BMP (.bmp), PNG, DICOM-RT, OME-TIFF"
+        "content": "DICOM (.dcm)"
     },
     {
         "level": "4.2.",
         "title": "Data Type",
         "content-type": "markdown",
-        "content": "3D volumetric data, grayscale imaging, time-series data (especially for dynamic PET)"
+        "content": "Grayscale Imaging; 3D Volumetric Data (for SPECT); Time-series imaging if dynamic studies are performed"
     },
     {
         "level": "4.3.",
         "title": "Related Data Types (parent type)",
         "content-type": "markdown",
-        "content": "Nuclear Medicine Imaging (NMI)"
+        "content": "Nuclear Medicine Imaging, SPECT"
     },
     {
         "level": "4.4.",
@@ -75,67 +79,67 @@
             [
                 "Interfile",
                 "DICOM",
-                "Python-based intf2dicom tool with pydicom; module importation, cloning repository, direct conversion to DICOM",
-                "https://github.com/qurit/intf2dicom_dosimetry/blob/master/README.md, https://xmedcon.sourceforge.io/utm_source=chatgpt.com"
+                "Uses pydicom and sys modules; clones a GitHub repo; module importation; conversion between Interfile and DICOM",
+                "https://github.com/qurit/intf2dicom_dosimetry/blob/master/README.md, https://xmedcon.sourceforge.io/?utm_source=chatgpt.com"
             ],
             [
                 "TIFF",
                 "DICOM",
-                "Batch image conversion using Aspose.Imaging library with predefined mappings and format-specific optimizations",
+                "Batch conversion using Aspose.Imaging; detects input/output formats dynamically; applies rasterization options for vectors; maintains quality; optional auto-delete of output files",
                 "https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/, https://products.groupdocs.app/conversion/tiff-to-dicom"
             ],
             [
                 "JPEG",
                 "DICOM",
-                "Using Pillow and pydicom libraries to create a new DICOM dataset and embed JPEG byte array",
+                "Loads image, creates a new DICOM dataset, converts image data to byte array, saves as DICOM",
                 "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py, https://products.aspose.app/imaging/conversion/jpg-to-dicom"
             ],
             [
                 "BMP",
                 "DICOM",
-                "VTK and GDCM libraries read BMP images and convert them into DICOM with 8-bit handling",
+                "Using VTK and GDCM libraries; loads BMP image; updates and converts to DICOM; handles 8-bit images",
                 "https://stackoverflow.com/questions/5035078/convert-bmp-image-into-dicom, https://products.groupdocs.app/conversion/bmp-to-dicom"
             ],
             [
                 "PNG",
                 "DICOM",
-                "Aspose.Imaging library reads PNG, applies options, and converts to DICOM using mapping",
+                "Aspose.Imaging library; maps PNG to DICOM using predefined tuples; loads, converts, and saves image",
                 "https://products.aspose.com/imaging/python-net/conversion/png-to-dicom/, https://products.groupdocs.app/conversion/png-to-dicom"
             ],
             [
                 "DICOM-RT",
                 "DICOM",
-                "SlicerRT extension and Quantitative Reporting module allow exporting RT structure sets into standard DICOM",
+                "Using SlicerRT extension and Quantitative Reporting extension in 3D Slicer to export DICOM-RT structures into standard DICOM",
                 "https://discourse.slicer.org/t/convert-dicom-rtss-to-dicom-segmentation/19738"
             ],
             [
-                "OME-TIFF",
+                "OME-TIF",
                 "DICOM",
-                "Handled like conventional TIFF using standard conversion libraries; no special tool available",
+                "No specific tool; treated like conventional TIFF for conversion",
                 ""
             ],
             [
                 "NIfTI",
                 "DICOM",
-                "Extraction of 3D voxel data from NIfTI, conversion slice-by-slice using pydicom, metadata adaptation",
+                "Extracts 3D voxel data with Nibabel; slices converted into DICOM using pydicom; metadata updated from template; batch processing enabled",
                 "https://pycad.co/nifti2dicom/, https://github.com/amine0110/nifti2dicom"
             ],
             [
                 "Analyze",
                 "DICOM",
-                "No direct converter; manual export from 3D slicer or reconstruction",
+                "No direct conversion tool; usually extracted manually or via 3D Slicer and reconstructed into DICOM",
                 ""
             ],
             [
                 "ECAT",
                 "DICOM",
-                "Two-step conversion: ECAT to NIfTI (PET2BIDS) then to DICOM",
+                "Indirect method: ECAT to NIfTI using PET2BIDS, then NIfTI to DICOM conversion",
                 "https://github.com/openneuropet/PET2BIDS?utm_source=chatgpt.com, https://carimas.fi/?utm_source=chatgpt.com"
             ],
             [
                 ".mat (MATLAB)",
                 "DICOM",
-                "Manual method using extracted matrix data to generate DICOM slices; community scripts available",
+                "Code available in forums; manual loading and DICOM writing based on matrices",
                 "https://de.mathworks.com/matlabcentral/answers/321634-converting-mat-file-to-dicom-file"
             ]
         ]
@@ -150,19 +154,19 @@
         "level": "5.1.",
         "title": "Spatial Resolution",
         "content-type": "markdown",
-        "content": "64×64 or 128×128 pixels; FWHM 10–15 mm for Gallium-67 SPECT; 2.4 mm FWHM for Gallium-68 PET"
+        "content": "Planar Imaging: ~128 × 128 pixels to 256 × 256 pixels; SPECT Imaging: ~64 × 64 pixels or 128 × 128 pixels per slice"
     },
     {
         "level": "5.2.",
         "title": "Voxel Size / Pixel Spacing",
         "content-type": "markdown",
-        "content": "Gallium-67 SPECT: 3–4 mm pixels, 6–15 mm slice thickness; Gallium-68 PET: 2–4 mm voxel size"
+        "content": "~4 mm × 4 mm × 4 mm (varies with system and settings)"
     },
     {
         "level": "5.3.",
         "title": "Temporal Resolution (if applicable)",
         "content-type": "markdown",
-        "content": "Gallium-67: 10 cm/min for WB, 25 seconds/view for SPECT; Gallium-68: imaging within 1 hour post-injection"
+        "content": "Static imaging; Dynamic studies (rare): ~30-60 seconds per frame"
     },
     {
         "level": "6.",
@@ -174,13 +178,13 @@
         "level": "6.1.",
         "title": "Single Image Size",
         "content-type": "markdown",
-        "content": "Gallium-67: 2–4 MB per slice; Gallium-68: 4–8 MB per slice"
+        "content": "Planar: ~0.5–1 MB; SPECT volume: ~5–20 MB"
     },
     {
         "level": "6.2.",
         "title": "Typical Study Size",
         "content-type": "markdown",
-        "content": "Gallium-67: 100–200 MB per complete study; Gallium-68: 200–400 MB"
+        "content": "Planar only: ~5–10 MB; SPECT + Planar: ~50–100 MB"
     },
     {
         "level": "7.",
@@ -192,13 +196,13 @@
         "level": "7.1.",
         "title": "Equipment Used",
         "content-type": "markdown",
-        "content": "Gamma camera, SPECT/CT scanner, PET, PET/CT scanners"
+        "content": "Gamma Camera; SPECT Camera"
     },
     {
         "level": "7.2.",
         "title": "Typical Manufacturers",
         "content-type": "markdown",
-        "content": "Siemens, GE Healthcare, Philips, Canon Medical Systems, Telix Pharmaceuticals, Eckert & Ziegler"
+        "content": "Siemens Healthineers, GE Healthcare, Philips Healthcare, Canon Medical Systems"
     },
     {
         "level": "8.",
@@ -210,13 +214,13 @@
         "level": "8.1.",
         "title": "Primary Uses",
         "content-type": "markdown",
-        "content": "Tumor localization, infection detection, fever of unknown origin workup, lymphoma treatment monitoring, lung damage detection"
+        "content": "Detection and staging of neuroblastoma; Evaluation of pheochromocytoma and paragangliomas"
     },
     {
         "level": "8.2.",
         "title": "Specialized Uses",
         "content-type": "markdown",
-        "content": "Prostate cancer imaging, Neuroendocrine tumors"
+        "content": "Follow-up for treatment response; Detection of metastases in neuroendocrine tumors"
     },
     {
         "level": "9.",
@@ -234,13 +238,13 @@
         "level": "9.2.",
         "title": "Radiation Dose (if applicable)",
         "content-type": "markdown",
-        "content": "Gallium-67: typically 20 mSv (some cases 6–12 mSv); Gallium-68: 3–4.2 mSv"
+        "content": "Iodine-123 MIBG: ~3–7 mSv; Iodine-131 MIBG: ~15–20 mSv"
     },
     {
         "level": "9.3.",
         "title": "Safety Concerns",
         "content-type": "markdown",
-        "content": "Contraindicated during pregnancy, breastfeeding precautions, rare allergic reactions, radiation exposure management, caution in liver disease, drug interactions"
+        "content": "Thyroid protection needed (potassium iodide); rare allergic reactions; radiation exposure management"
     },
     {
         "level": "10.",
@@ -252,13 +256,13 @@
         "level": "10.1.",
         "title": "Common Preprocessing Steps",
         "content-type": "markdown",
-        "content": "Motion correction, attenuation correction, image co-registration, denoising, volume delineation, partial volume correction, kinetic modeling"
+        "content": "DICOM import/anonymization; Image smoothing/filtering; Attenuation correction (for SPECT); Registration with CT (if hybrid available)"
     },
     {
         "level": "10.2.",
         "title": "Compression Methods (if any)",
         "content-type": "markdown",
-        "content": "Lossless and lossy compression, ROI-based compression, Run Length Encoding, Huffman Encoding"
+        "content": "Lossless JPEG2000 compression or raw DICOM storage"
     },
     {
         "level": "11.",
@@ -270,25 +274,25 @@
         "level": "11.1.",
         "title": "Technical Challenges",
         "content-type": "markdown",
-        "content": "Motion artifacts, low spatial resolution, attenuation and scatter issues, low count statistics, contamination"
+        "content": "Low spatial resolution; Motion artifacts; Limited sensitivity for small lesions"
     },
     {
         "level": "11.2.",
         "title": "Clinical Limitations",
         "content-type": "markdown",
-        "content": "Difficulty detecting small tumors, limited specificity, challenges in image interpretation, lower accuracy for bone involvement, difficulty differentiating benign vs malignant lesions"
+        "content": "False negatives with low/absent uptake; Requires patient preparation (thyroid blockade, medication cessation)"
     },
     {
         "level": "12.",
         "title": "References",
         "content-type": "markdown",
-        "content": "PubMed, SNMMI, Radiopaedia, Wikipedia, URMC Encyclopedia, Mayo Clinic"
+        "content": "SNMMI - MIBG Imaging; PubMed - MIBG Imaging in Neuroblastoma; GE Healthcare - MIBG Systems"
     },
     {
         "level": "prepration-meta-data-prepared_by",
         "title": "prepared_by",
         "content-type": "rawtext",
-        "content": "Hossein Toreyhi"
+        "content": "Pardis Jolfaei"
     },
     {
         "level": "prepration-meta-data-confirmed_by",

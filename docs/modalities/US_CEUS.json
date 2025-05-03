@@ -1,74 +1,221 @@
+[
+  {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "US_CEUS"
+  },
+  {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": [
+          "Ultrasound"
+      ]
+  },
+  {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Contrast-enhanced Ultrasound"
+  },
+  {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": [
+          "CEUS"
+      ]
+  },
+  {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "CEUS utilizes microbubble contrast agents to enhance ultrasound imaging, providing improved visualization of vascular structures and blood flow."
+  },
+  {
+      "level": "1",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Contrast-enhanced Ultrasound (CEUS)"
+  },
+  {
+      "level": "2",
+      "title": "Acronym",
+      "content-type": "markdown",
+      "content": "CEUS"
+  },
+  {
+      "level": "3",
+      "title": "Imaging Principle",
+      "content-type": "markdown",
+      "content": "CEUS utilizes microbubble contrast agents to enhance the backscatter of ultrasound waves, improving visualization of blood flow and vascular structures. Microbubbles resonate with ultrasound waves, creating strong acoustic signals that enhance contrast in real-time imaging."
+  },
+  {
+      "level": "4",
+      "title": "Data Type & File Format",
+      "content-type": "markdown",
+      "content": ""
+  },
+  {
+      "level": "4.1",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "DICOM (.dcm), AVI (.avi), MP4 (.mp4), JPEG (.jpg), PNG (.png), WAV (.wav), MOV (.MOV), RAW (.RAW), SR, TIFF (.TIFF), VIV (.viv), VOL (.vol)"
+  },
+  {
+      "level": "4.2",
+      "title": "Data Type",
+      "content-type": "markdown",
+      "content": "Time-series"
+  },
+  {
+      "level": "4.3",
+      "title": "Related Data Types (parent type)",
+      "content-type": "markdown",
+      "content": "US"
+  },
+  {
+      "level": "4.4",
+      "title": "Standard Storage Format (which one in 4.1)",
+      "content-type": "markdown",
+      "content": "DICOM (.dcm)"
+  },
+  {
+      "level": "4.5",
+      "title": "Conversion Solutions + Reference",
+      "content-type": "table",
+      "content": [
+          ["conversion_from", "conversion_to", "description", "link to code/software"],
+          ["NIfTI (.nii, .nii.gz)", "DICOM (.dcm)", "nii2dcm converts NIfTI files into DICOM format, using Python, Docker, SimpleITK, highdicom.", "https://github.com/tomaroberts/nii2dcm"],
+          ["Analyze (.hdr/.img)", "DICOM (.dcm)", "FSL utilities handle conversion and neuroimaging data processing.", "https://fsl.fmrib.ox.ac.uk/fsl/docs/#/utilities/fslutils"],
+          ["AVI (.avi), MP4 (.mp4), MOV (.MOV)", "DICOM (.dcm)", "Sante DICOM Editor for versatile multimedia conversion.", "https://santesoft.com/win/sante-dicom-editor/howto/movies-to-dicom.html"],
+          ["JPEG (.jpg)", "DICOM (.dcm)", "Python script using Pillow and pydicom to convert images.", "https://github.com/jwitos/JPG-to-DICOM/tree/master"],
+          ["PNG (.png)", "DICOM (.dcm)", "Python script replacing pixel data in existing DICOM files.", "https://github.com/amine0110/convert-images-from-jpr-or-png-into-dicom"],
+          ["MPEG-2", "DICOM (.dcm)", "Java-based conversion using dcm4che framework.", "https://github.com/tomdoel/mpg2dcm/tree/main"],
+          ["RAW (.RAW)", "DICOM (.dcm)", "SimpleITK to create synthetic DICOM series from arrays.", "https://simpleitk.readthedocs.io/en/master/link_DicomSeriesFromArray_docs.html"],
+          ["TIFF (.TIFF)", "DICOM (.dcm)", "pixelmed toolkit for detailed TIFF-to-DICOM conversion.", "https://github.com/ImagingDataCommons/idc-wsi-conversion"]
+      ]
+  },
+  {
+      "level": "5",
+      "title": "Typical Resolution & Image Dimensions",
+      "content-type": "markdown",
+      "content": ""
+  },
+  {
+      "level": "5.1",
+      "title": "Spatial Resolution",
+      "content-type": "markdown",
+      "content": "Typically 50–500 microns; Axial: ~100–300 microns; Lateral: ~200–500 microns"
+  },
+  {
+      "level": "5.2",
+      "title": "Voxel Size / Pixel Spacing",
+      "content-type": "markdown",
+      "content": "Typically 0.05–0.5 mm (depends on transducer)"
+  },
+  {
+      "level": "5.3",
+      "title": "Temporal Resolution (if applicable)",
+      "content-type": "markdown",
+      "content": "High temporal resolution (10–100 fps)"
+  },
+  {
+      "level": "6.1",
+      "title": "Single Image Size",
+      "content-type": "markdown",
+      "content": "Single frame: ~100 KB to 5 MB"
+  },
+  {
+      "level": "6.2",
+      "title": "Typical Study Size",
+      "content-type": "markdown",
+      "content": "~50 MB to several GB"
+  },
+  {
+      "level": "7.1",
+      "title": "Equipment Used",
+      "content-type": "markdown",
+      "content": "High-frequency ultrasound transducers, Contrast-specific imaging modes (e.g., nonlinear imaging), Ultrasound contrast agents (microbubbles)"
+  },
+  {
+      "level": "7.2",
+      "title": "Typical Manufacturers",
+      "content-type": "markdown",
+      "content": "GE Healthcare, Philips Healthcare, Siemens Healthineers, Canon Medical Systems"
+  },
+  {
+      "level": "8.1",
+      "title": "Primary Uses",
+      "content-type": "markdown",
+      "content": "Liver lesion characterization (HCC, metastases, hemangiomas), Kidney and prostate imaging, Cardiovascular imaging (e.g., myocardial perfusion)"
+  },
+  {
+      "level": "8.2",
+      "title": "Specialized Uses",
+      "content-type": "markdown",
+      "content": "Assessing tumor vascularity and treatment response, Imaging inflammatory bowel diseases, Contrast-enhanced endoscopic ultrasound (CE-EUS)"
+  },
+  {"level":"9","title":"Radiation & Safety Considerations","content-type":"markdown","content":""},
+  {"level":"9.1","title":"Ionizing Radiation","content-type":"markdown","content":"None (ultrasound is non-ionizing)"},
+  {"level":"9.2","title":"Radiation Dose (if applicable)","content-type":"markdown","content":"Not applicable (no radiation exposure)"},
+  {"level":"9.3","title":"Safety Concerns","content-type":"markdown","content":"Rare allergic reactions to microbubble contrast agents, Potential cavitation effects (at very high ultrasound intensities)"},
+  {"level":"10","title":"Preprocessing & Data Preparation","content-type":"markdown","content":""},
+  {"level":"10.1","title":"Common Preprocessing Steps","content-type":"markdown","content":"Noise filtering, Motion correction, Contrast-agent tracking, Intensity normalization"},
+  {"level":"10.2","title":"Compression Methods (if any)","content-type":"markdown","content":"DICOM JPEG 2000 for video storage, Proprietary ultrasound system compression"},
+  {
+    "level": "11",
+    "title": "Challenges & Limitations",
+    "content-type": "markdown",
+    "content": ""
+},
 {
-    "id": "US_CEUS",
-    "parents": ["US"],
-    "title": "Contrast-enhanced Ultrasound (CEUS)",
-    "acronyms": ["CEUS"],
-    "shortDescription": " A medical imaging technique that uses ultrasound technology along with a contrast agent (microbubbles) to produce detailed images of blood flow and tissue vascularity. CEUS enhances the visibility of blood vessels, tumors, and other lesions, allowing for improved diagnosis and characterization of various diseases, such as liver, kidney, and vascular disorders.",
-    "imagingPrinciple": "CEUS utilizes microbubble contrast agents to enhance the backscatter of ultrasound waves, improving the visualization of blood flow and vascular structures. The microbubbles resonate with the ultrasound waves, creating a strong acoustic signal that enhances contrast in real-time imaging.",
-    "dataTypeFileFormat": {
-      "primaryFileFormats": ["DICOM (.dcm)"],
-      "dataType": ["DICOM" , "AVI (.avi)," , "MP4 (.mp4) ", "JPEG (.jpg)","PNG (.png) ","WAV (.wav)"],
-      "relatedDataTypes": ["US"],
-      "standardStorageFormat": "DICOM (.dcm)",
-      "conversionSolutions": [       
-        {         "conversion_from": "JPEG",         "conversion_to": "DICOM",         "conversion_description": "Use pydicom + Pillow to embed JPEG pixel data into a DICOM container.",         "conversion_links": ["https://github.com/pydicom/pydicom"]       },   
-        {         "conversion_from": "AVI",         "conversion_to": "DICOM",         "conversion_description": "Filestar enables the conversion of AVI files to DICOM through a straightforward process. Users can right-click on one or more AVI files, select 'Convert with Filestar,' search for 'convert to dicom,' and execute the conversion. ",         "conversion_links": ["https://filestar.com/skills/avi/convert-avi-to-dicom   "]       }  ,
-        {         "conversion_from": "MP4",         "conversion_to": "DICOM",         "conversion_description": "Filestar is a versatile file conversion tool that supports converting MP4 files to DICOM format.",         "conversion_links": ["https://filestar.com/skills/mp4/convert-mp4-to-dicom"]       },   
-        {         "conversion_from": "PNG",         "conversion_to": "DICOM",         "conversion_description": "GroupDocs Conversion App: This free online tool allows you to convert PNG files to DICOM format directly from your browser. Simply upload your PNG image, and the tool will handle the conversion.",         "conversion_links": ["https://products.groupdocs.app/conversion/png-to-dicom?utm_source=chatgpt.com"]       },   
-        {         "conversion_from": "WAV",         "conversion_to": "DICOM",         "conversion_description": "Read the WAV File: Use an audio processing library to read the WAV file and extract its data.Create a DICOM File: Utilize the chosen DICOM library to create a new DICOM file, populating the necessary metadata fields as specified by the Basic Voice Audio Waveform Storage SOP Class.Embed the Audio Data: Insert the audio data from the WAV file into the appropriate DICOM data elements, ensuring that the data is correctly formatted and encoded.Save the DICOM File: Finalize and save the DICOM file, ensuring it adheres to the standard's requirements.Verify the DICOM File: After conversion, use DICOM validation tools to ensure that the file complies with the DICOM standard and can be correctly interpreted by DICOM-compliant systems.",         "conversion_links": ["https://dicom.nema.org/dicom/supps/sup30_lb.pdf?utm_source=chatgpt.com"]       },   
-        {         "conversion_from": "MOV",         "conversion_to": "DICOM",         "conversion_description": "Filestar: A versatile file conversion tool that supports converting MOV files to DICOM. ",         "conversion_links": ["https://filestar.com/skills/mov/convert-mov-to-dicom"]       },   
-        {         "conversion_from": "RAW",         "conversion_to": "DICOM",         "conversion_description": "DCMTK provides a comprehensive set of tools and libraries for working with DICOM files. It allows for the creation and manipulation of DICOM files, including converting RAW data directly into DICOM format without the need to save intermediate files to disk.",         "conversion_links": ["https://forum.dcmtk.org/viewtopic.php?t=2874"]       },   
-        {         "conversion_from": "SR",         "conversion_to": "DICOM",         "conversion_description": "PixelMed offers Java-based tools and libraries for working with DICOM SR files. These tools facilitate the reading, creation, and modification of SR documents, as well as conversion to other formats. For a comprehensive understanding of DICOM SR structures and operations, refer to the DICOM Structured Reporting book by Dr. David Clunie, available through PixelMed. ",         "conversion_links": ["https://github.com/corticometrics/fs2dicom"]       },   
-        {         "conversion_from": "TIFF",         "conversion_to": "DICOM",         "conversion_description": " Python with Aspose.Imaging: Aspose.Imaging offers a Python library to handle image conversions. To convert TIFF to DICOM",         "conversion_links": ["https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/?utm_source=chatgpt.com"]       },   
-        {         "conversion_from": " VIV / VOL",         "conversion_to": "DICOM",         "conversion_description": "a MATLAB-based tool for converting 3D image volumes from NifTi format to DICOMs. This repository contains a GUI which can be used to assign values to common DICOM fields. It also contains functions which can be used in your own code to streamline workflows. This work is part of the U24 co-clinical trial of which CIVM at Duke University is a participant. This work has been funded by NIH U24CA220245.",         "conversion_links": ["https://github.com/mdholbrook/U24_DICOM_tool"]       }   
-           ]   
-    },
-    "typicalResolutionImageDims": {
-      "spatialResolution": " 50–500 microns (depends on frequency and depth)",
-      "voxelSize": " typically in the range of 0.05–0.5 mm",
-      "temporalResolution": "High temporal resolution (real-time imaging)"
-    },
-    "dataSize": {
-      "singleImageSize": "100 KB to 5 MB (depending on resolution and compression)",
-      "typicalStudySize": " (DICOM format): ~50 MB to several GB per study"
-    },
-    "acquisitionHardware": {
-      "equipmentUsed": "High-frequency ultrasound transducers , Contrast-specific imaging modes (e.g., nonlinear imaging), Ultrasound contrast agents (microbubbles)",
-      "typicalManufacturers": ["GE Healthcare"	,"Philips Healthcare",	"Siemens Healthineers",	"Canon Medical Systems"	,"Mindray"]
-    },
-    "commonClinicalApps": {
-      "primaryUses": ["Liver lesion characterization (HCC, metastases, hemangiomas)", "Kidney and prostate imaging","Cardiovascular imaging (e.g., myocardial perfusion)"],
-      "specializedUses": ["Assessing tumor vascularity and treatment response", "Imaging inflammatory bowel diseases","Contrast-enhanced endoscopic ultrasound (CE-EUS)"]
-    },
-    "radiationSafety": {
-      "ionizingRadiation": "No",
-      "radiationDose": "No",
-      "safetyConcerns": "Rare allergic reactions to microbubble contrast agents, Potential cavitation effects (at very high ultrasound intensities)"
-    },
-    "preprocessingData": {
-      "commonPreprocessingSteps": ["Noise filtering"],
-      "compressionMethods": ["DICOM JPEG 2000 for video storage", "Proprietary ultrasound system compression"]
-    },
-    "challengesLimitations": {
-      "technicalChallenges": ["Limited penetration depth (high-frequency ultrasound attenuates quickly)","Operator dependency (user skill affects image quality)", "Microbubble lifespan (contrast agent dissipates quickly)"],
-      "clinicalLimitations": ["Limited reimbursement (varies by country)","Contrast agent availability (not approved in all regions)","Lower sensitivity in obese patients"]
-    },
-    "references": [
-      "https://pubmed.ncbi.nlm.nih.gov/34712527/?utm_source=chatgpt.com", 
-      "https://ajronline.org/doi/10.2214/AJR.09.2553?utm_source=chatgpt.com",
-      "https://www.nature.com/articles/s41598-022-11542-9?utm_source=chatgpt.com",
-      "https://smw.ch/index.php/smw/article/view/2634?utm_source=chatgpt.com",
-      "https://link.springer.com/article/10.1007/s10396-024-01486-0?utm_source=chatgpt.com",
-      "https://insightsimaging.springeropen.com/articles/10.1186/s13244-020-00874-7?utm_source=chatgpt.com",
-      "https://www.e-jlc.org/journal/view.php?doi=10.17998%2Fjlc.19.2.91&utm_source=chatgpt.com"
-    ],
-    "preparation_meta": [
-      {
-        "prepared_by": "Mohammadreza Ghaffarzadeh-Esfahani",
-        "confirmed_by": "...",
-        "date_of_preparation": "...",
-        "planned_next_review": "...",
-        "requires_completion": "false"
-      }
-    ]
-  }
+    "level": "11.1",
+    "title": "Technical Challenges",
+    "content-type": "markdown",
+    "content": "Limited penetration depth (high-frequency ultrasound attenuates quickly), Operator dependency (user skill affects image quality), Microbubble lifespan (contrast agent dissipates quickly)"
+},
+{
+    "level": "11.2",
+    "title": "Clinical Limitations",
+    "content-type": "markdown",
+    "content": "Limited reimbursement (varies by country), Contrast agent availability (not approved in all regions), Lower sensitivity in obese patients"
+},
+{
+    "level": "12",
+    "title": "References (Website, Paper, etc.)",
+    "content-type": "markdown",
+    "content": "[PubMed Reference](https://pubmed.ncbi.nlm.nih.gov/34712527/), [AJR Online](https://ajronline.org/doi/10.2214/AJR.09.2553), [Nature Article](https://www.nature.com/articles/s41598-022-11542-9), [Swiss Medical Weekly](https://smw.ch/index.php/smw/article/view/2634), [Springer Article](https://link.springer.com/article/10.1007/s10396-024-01486-0), [Insights Imaging](https://insightsimaging.springeropen.com/articles/10.1186/s13244-020-00874-7), [E-JLC Journal](https://www.e-jlc.org/journal/view.php?doi=10.17998%2Fjlc.19.2.91)"
+},
+{
+    "level": "prepration-meta-data-prepared_by",
+    "title": "prepared_by",
+    "content-type": "rawtext",
+    "content": "Negin Fathi Hafshejani"
+},
+{
+    "level": "prepration-meta-data-confirmed_by",
+    "title": "confirmed_by",
+    "content-type": "rawtext",
+    "content": "Not confirmed, need to be rechecked "
+},
+{
+    "level": "prepration-meta-data-date_of_preparation",
+    "title": "date_of_preparation",
+    "content-type": "rawtext",
+    "content": "2025-03-18"
+},
+{
+    "level": "prepration-meta-data-planned_next_review",
+    "title": "planned_next_review",
+    "content-type": "rawtext",
+    "content": ""
+},
+{
+    "level": "prepration-meta-data-requires_completion",
+    "title": "requires_completion",
+    "content-type": "rawtext",
+    "content": ""
+}
+]

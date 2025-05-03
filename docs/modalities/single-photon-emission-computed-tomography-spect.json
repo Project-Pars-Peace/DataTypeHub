@@ -3,7 +3,7 @@
         "level": "meta-data-id",
         "title": "id",
         "content-type": "rawtext",
-        "content": "gallium_scan"
+        "content": "single-photon-emission-computed-tomography-spect"
     },
     {
         "level": "meta-data-parents",
@@ -17,43 +17,45 @@
         "level": "meta-data-title",
         "title": "title",
         "content-type": "rawtext",
-        "content": "Gallium Scan"
+        "content": "Single Photon Emission Computed Tomography (SPECT)"
     },
     {
         "level": "meta-data-acronyms",
         "title": "acronyms",
         "content-type": "list_of_strings",
-        "content": []
+        "content": [
+            "SPECT"
+        ]
     },
     {
         "level": "meta-data-shortDescription",
         "title": "shortDescription",
         "content-type": "rawtext",
-        "content": "Gallium scans detect infection, inflammation, and tumors by using injected gallium radiotracers (Gallium-67 or Gallium-68) that accumulate in active tissue, imaged with gamma cameras or PET scanners after a delay."
+        "content": "SPECT uses rotating gamma cameras to reconstruct 3D images of radionuclide distribution in the body, offering functional imaging capabilities for diverse clinical applications like brain, cardiac, and bone disorders."
     },
     {
         "level": "4.",
         "title": "Data Type & File Format",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "4.1.",
         "title": "Primary File Format(s)",
         "content-type": "markdown",
-        "content": "DICOM (.dcm), TIFF, JPEG, BMP (.bmp), PNG, DICOM-RT, OME-TIFF"
+        "content": "DICOM (.dcm), Interfile, NIfTI (.nii, .nii.gz), Analyze (.hdr/.img), ECAT, STL"
     },
     {
         "level": "4.2.",
         "title": "Data Type",
         "content-type": "markdown",
-        "content": "3D volumetric data, grayscale imaging, time-series data (especially for dynamic PET)"
+        "content": "3D volumetric data, functional imaging data, time-series data, grayscale imaging"
     },
     {
         "level": "4.3.",
         "title": "Related Data Types (parent type)",
         "content-type": "markdown",
-        "content": "Nuclear Medicine Imaging (NMI)"
+        "content": "PET, Nuclear Imaging"
     },
     {
         "level": "4.4.",
@@ -73,70 +75,64 @@
                 "link to code/software"
             ],
             [
-                "Interfile",
-                "DICOM",
-                "Python-based intf2dicom tool with pydicom; module importation, cloning repository, direct conversion to DICOM",
-                "https://github.com/qurit/intf2dicom_dosimetry/blob/master/README.md, https://xmedcon.sourceforge.io/utm_source=chatgpt.com"
-            ],
-            [
-                "TIFF",
-                "DICOM",
-                "Batch image conversion using Aspose.Imaging library with predefined mappings and format-specific optimizations",
-                "https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/, https://products.groupdocs.app/conversion/tiff-to-dicom"
-            ],
-            [
-                "JPEG",
-                "DICOM",
-                "Using Pillow and pydicom libraries to create a new DICOM dataset and embed JPEG byte array",
-                "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py, https://products.aspose.app/imaging/conversion/jpg-to-dicom"
-            ],
-            [
-                "BMP",
-                "DICOM",
-                "VTK and GDCM libraries read BMP images and convert them into DICOM with 8-bit handling",
-                "https://stackoverflow.com/questions/5035078/convert-bmp-image-into-dicom, https://products.groupdocs.app/conversion/bmp-to-dicom"
-            ],
-            [
-                "PNG",
-                "DICOM",
-                "Aspose.Imaging library reads PNG, applies options, and converts to DICOM using mapping",
-                "https://products.aspose.com/imaging/python-net/conversion/png-to-dicom/, https://products.groupdocs.app/conversion/png-to-dicom"
-            ],
-            [
-                "DICOM-RT",
-                "DICOM",
-                "SlicerRT extension and Quantitative Reporting module allow exporting RT structure sets into standard DICOM",
-                "https://discourse.slicer.org/t/convert-dicom-rtss-to-dicom-segmentation/19738"
-            ],
-            [
-                "OME-TIFF",
-                "DICOM",
-                "Handled like conventional TIFF using standard conversion libraries; no special tool available",
-                ""
-            ],
-            [
                 "NIfTI",
                 "DICOM",
-                "Extraction of 3D voxel data from NIfTI, conversion slice-by-slice using pydicom, metadata adaptation",
+                "Extract 3D voxel data using Nibabel, convert each 2D slice with pydicom, update metadata, batch conversion supported",
                 "https://pycad.co/nifti2dicom/, https://github.com/amine0110/nifti2dicom"
+            ],
+            [
+                "Interfile",
+                "DICOM",
+                "Python-based intf2dicom tool with pydicom; imports Interfile headers and images into structured DICOM",
+                "https://github.com/qurit/intf2dicom_dosimetry/blob/master/README.md, https://xmedcon.sourceforge.io/?utm_source=chatgpt.com"
             ],
             [
                 "Analyze",
                 "DICOM",
-                "No direct converter; manual export from 3D slicer or reconstruction",
+                "No direct converter; manually extract data and reconstruct DICOM in tools like 3D Slicer",
                 ""
             ],
             [
                 "ECAT",
                 "DICOM",
-                "Two-step conversion: ECAT to NIfTI (PET2BIDS) then to DICOM",
+                "Convert ECAT to NIfTI with PET2BIDS, then NIfTI to DICOM",
                 "https://github.com/openneuropet/PET2BIDS?utm_source=chatgpt.com, https://carimas.fi/?utm_source=chatgpt.com"
             ],
             [
-                ".mat (MATLAB)",
+                "STL",
                 "DICOM",
-                "Manual method using extracted matrix data to generate DICOM slices; community scripts available",
+                "STL mesh to DICOM labelmap using slicer3D, dcmqi tool, or dedicated STL converters",
+                "https://github.com/ImagingDataCommons/idc-dicom-seg-conversions, https://products.groupdocs.app/conversion/stl-to-dicom"
+            ],
+            [
+                "MINC",
+                "DICOM",
+                "Perl-based mnc2dcm tool translating MINC files into standard DICOM series",
+                "https://github.com/andrewjanke/mnc2dcm/blob/master/mnc2dcm, http://mipav.cit.nih.gov/"
+            ],
+            [
+                "RAW/MHD",
+                "DICOM",
+                "Read raw data with numpy/SimpleITK, define metadata manually, write DICOM series",
+                "https://simpleitk.readthedocs.io/en/master/link_DicomSeriesFromArray_docs.html"
+            ],
+            [
+                "NRRD",
+                "DICOM",
+                "Standardize numpy array and convert to DICOM; alternatively use Slicer automatic pipeline",
+                "https://www.onlineconverter.com/nrrd-to-dicom, https://github.com/mhe/pynrrd/issues/115, https://slicer.readthedocs.io/en/latest/developer_guide/python_faq.html#how-to-run-a-cli-module-from-python"
+            ],
+            [
+                "MAT",
+                "DICOM",
+                "MATLAB arrays manually extracted and written into DICOM format using available scripts",
                 "https://de.mathworks.com/matlabcentral/answers/321634-converting-mat-file-to-dicom-file"
+            ],
+            [
+                "PAR/REC",
+                "DICOM",
+                "Convert PAR/REC to NIfTI with dcm2niix, then NIfTI to DICOM",
+                "https://github.com/Maximiliun/dcm2niix"
             ]
         ]
     },
@@ -144,85 +140,85 @@
         "level": "5.",
         "title": "Typical Resolution & Image Dimensions",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "5.1.",
         "title": "Spatial Resolution",
         "content-type": "markdown",
-        "content": "64×64 or 128×128 pixels; FWHM 10–15 mm for Gallium-67 SPECT; 2.4 mm FWHM for Gallium-68 PET"
+        "content": "Typically 10–15 mm; dimensions often 64 × 64 or 128 × 128 pixels (pixel size 3–6 mm)"
     },
     {
         "level": "5.2.",
         "title": "Voxel Size / Pixel Spacing",
         "content-type": "markdown",
-        "content": "Gallium-67 SPECT: 3–4 mm pixels, 6–15 mm slice thickness; Gallium-68 PET: 2–4 mm voxel size"
+        "content": "Voxel size varies; pixel spacing typically 0.5–1.5 mm"
     },
     {
         "level": "5.3.",
         "title": "Temporal Resolution (if applicable)",
         "content-type": "markdown",
-        "content": "Gallium-67: 10 cm/min for WB, 25 seconds/view for SPECT; Gallium-68: imaging within 1 hour post-injection"
+        "content": "Temporal resolution influenced by radiopharmaceutical; 40–50 seconds per acquisition frame"
     },
     {
         "level": "6.",
         "title": "Data Size (Storage Requirements)",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "6.1.",
         "title": "Single Image Size",
         "content-type": "markdown",
-        "content": "Gallium-67: 2–4 MB per slice; Gallium-68: 4–8 MB per slice"
+        "content": "Approximately 32 KB for a 128 × 128 image with 16-bit depth"
     },
     {
         "level": "6.2.",
         "title": "Typical Study Size",
         "content-type": "markdown",
-        "content": "Gallium-67: 100–200 MB per complete study; Gallium-68: 200–400 MB"
+        "content": "Roughly 1.92 MB for a series of 60 slices (uncompressed)"
     },
     {
         "level": "7.",
         "title": "Acquisition Device & Hardware Requirements",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "7.1.",
         "title": "Equipment Used",
         "content-type": "markdown",
-        "content": "Gamma camera, SPECT/CT scanner, PET, PET/CT scanners"
+        "content": "Gamma cameras integrated with CT scanners"
     },
     {
         "level": "7.2.",
         "title": "Typical Manufacturers",
         "content-type": "markdown",
-        "content": "Siemens, GE Healthcare, Philips, Canon Medical Systems, Telix Pharmaceuticals, Eckert & Ziegler"
+        "content": "Siemens Healthineers, GE Healthcare, Spectrum Dynamics, Mediso Medical Imaging Systems, MILabs"
     },
     {
         "level": "8.",
         "title": "Common Clinical Applications",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "8.1.",
         "title": "Primary Uses",
         "content-type": "markdown",
-        "content": "Tumor localization, infection detection, fever of unknown origin workup, lymphoma treatment monitoring, lung damage detection"
+        "content": "Brain disorders (functional imaging), Cardiac perfusion (heart flow problems), Bone metabolism and disorders"
     },
     {
         "level": "8.2.",
         "title": "Specialized Uses",
         "content-type": "markdown",
-        "content": "Prostate cancer imaging, Neuroendocrine tumors"
+        "content": "Functional brain imaging, Myocardial blood flow, Bone infections and tumors"
     },
     {
         "level": "9.",
         "title": "Radiation & Safety Considerations",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "9.1.",
@@ -234,55 +230,55 @@
         "level": "9.2.",
         "title": "Radiation Dose (if applicable)",
         "content-type": "markdown",
-        "content": "Gallium-67: typically 20 mSv (some cases 6–12 mSv); Gallium-68: 3–4.2 mSv"
+        "content": "Average 7 mSv; myocardial SPECT 7–11 mSv; brain SPECT 4–6 mSv; bone SPECT 4–8 mSv; thyroid SPECT 2–4 mSv"
     },
     {
         "level": "9.3.",
         "title": "Safety Concerns",
         "content-type": "markdown",
-        "content": "Contraindicated during pregnancy, breastfeeding precautions, rare allergic reactions, radiation exposure management, caution in liver disease, drug interactions"
+        "content": "Radiation exposure (less than CT), allergic reactions to radiotracer, potential pregnancy risks"
     },
     {
         "level": "10.",
         "title": "Preprocessing & Data Preparation",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "10.1.",
         "title": "Common Preprocessing Steps",
         "content-type": "markdown",
-        "content": "Motion correction, attenuation correction, image co-registration, denoising, volume delineation, partial volume correction, kinetic modeling"
+        "content": "Attenuation correction, Scatter correction, Motion correction, Image reconstruction"
     },
     {
         "level": "10.2.",
         "title": "Compression Methods (if any)",
         "content-type": "markdown",
-        "content": "Lossless and lossy compression, ROI-based compression, Run Length Encoding, Huffman Encoding"
+        "content": "Near-lossless compression methods like wavelet decomposition and entropy encoding; lossless compression techniques for storage"
     },
     {
         "level": "11.",
         "title": "Challenges & Limitations",
         "content-type": "markdown",
-        "content": ""
+        "content": " "
     },
     {
         "level": "11.1.",
         "title": "Technical Challenges",
         "content-type": "markdown",
-        "content": "Motion artifacts, low spatial resolution, attenuation and scatter issues, low count statistics, contamination"
+        "content": "Limited spatial resolution, Patient motion, Attenuation and scatter issues due to tissue density"
     },
     {
         "level": "11.2.",
         "title": "Clinical Limitations",
         "content-type": "markdown",
-        "content": "Difficulty detecting small tumors, limited specificity, challenges in image interpretation, lower accuracy for bone involvement, difficulty differentiating benign vs malignant lesions"
+        "content": "Difficult localization of small lesions, Radiation exposure from radiopharmaceuticals and CT, Limited anatomical detail in standalone SPECT"
     },
     {
         "level": "12.",
         "title": "References",
         "content-type": "markdown",
-        "content": "PubMed, SNMMI, Radiopaedia, Wikipedia, URMC Encyclopedia, Mayo Clinic"
+        "content": "Radiopaedia, SNMMI, PubMed, RadiologyKey, Mayo Clinic, Heart.org, MDPI Sensors"
     },
     {
         "level": "prepration-meta-data-prepared_by",

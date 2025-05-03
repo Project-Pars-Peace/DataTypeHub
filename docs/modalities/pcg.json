@@ -3,14 +3,14 @@
         "level": "meta-data-id",
         "title": "id",
         "content-type": "rawtext",
-        "content": "capnography"
+        "content": "pcg"
     },
     {
         "level": "meta-data-parents",
         "title": "parents",
         "content-type": "list_of_strings",
         "content": [
-            "Pulmonary Monitoring",
+            "Cardiological Monitoring",
             "Biomedical Signal Processing"
         ]
     },
@@ -18,22 +18,21 @@
         "level": "meta-data-title",
         "title": "title",
         "content-type": "rawtext",
-        "content": "Respiratory Waveform (Capnography - EtCO₂)"
+        "content": "Phonocardiography (PCG)"
     },
     {
         "level": "meta-data-acronyms",
         "title": "acronyms",
         "content-type": "list_of_strings",
         "content": [
-            "EtCO₂",
-            "Capnography"
+            "PCG"
         ]
     },
     {
         "level": "meta-data-shortDescription",
         "title": "shortDescription",
         "content-type": "rawtext",
-        "content": "Capnography measures the concentration of exhaled carbon dioxide (CO₂) over time, providing a respiratory waveform (capnogram) that is crucial for monitoring ventilation, airway status, and metabolic activity."
+        "content": "Phonocardiography (PCG) is a technique that records the acoustic signals produced by the heart, capturing heart sounds and murmurs as time-series audio signals, widely used for cardiac diagnostics and heart sound analysis."
     },
     {
         "level": "1.",
@@ -45,61 +44,61 @@
         "level": "1.1.",
         "title": "Modality Name",
         "content-type": "markdown",
-        "content": "Respiratory Waveform (Capnography - EtCO₂)"
+        "content": "Phonocardiography (PCG)"
     },
     {
         "level": "1.2.",
         "title": "Primary Use",
         "content-type": "markdown",
-        "content": "Monitoring respiratory status, verifying airway placement, detecting hypoventilation or apnea"
+        "content": "Recording and analyzing heart sounds (S1, S2, murmurs) for diagnosis of valve and structural heart diseases"
     },
     {
         "level": "1.3.",
         "title": "Signal Type",
         "content-type": "markdown",
-        "content": "Continuous, time-series gas concentration signal (CO₂ in mmHg or %)"
+        "content": "Continuous, time-series audio signal"
     },
     {
         "level": "1.4.",
         "title": "Sampling Frequency (Hz)",
         "content-type": "markdown",
-        "content": "Commonly 25 Hz to 100 Hz; high-fidelity systems may sample at 200 Hz"
+        "content": "Commonly 1000 Hz to 4000 Hz; high-resolution studies may sample at 8–10 kHz"
     },
     {
         "level": "1.5.",
         "title": "Acquisition Device",
         "content-type": "markdown",
-        "content": "Mainstream or sidestream capnographs, integrated patient monitors, portable EtCO₂ monitors"
+        "content": "Electronic stethoscopes, specialized PCG recorders, integrated ECG+PCG systems"
     },
     {
         "level": "1.6.",
         "title": "Number of Channels",
         "content-type": "markdown",
-        "content": "Typically 1 channel (CO₂ waveform); additional channels possible for airway pressure or flow"
+        "content": "Typically 1 channel (heart sound); multi-channel PCG systems exist for chest auscultation at multiple locations"
     },
     {
         "level": "1.7.",
         "title": "File Formats",
         "content-type": "markdown",
-        "content": ".csv, .txt, .edf, .acq, .mat, .xdf"
+        "content": ".wav, .edf, .csv, .txt, .mat, .xdf"
     },
     {
         "level": "1.8.",
         "title": "Amplifier Specifications",
         "content-type": "markdown",
-        "content": "Fast-response infrared CO₂ sensors; high signal-to-noise ratio; minimal lag time"
+        "content": "High-sensitivity microphones; wide dynamic range amplifiers (10–5000 Hz bandwidth)"
     },
     {
         "level": "1.9.",
         "title": "Electrode Type",
         "content-type": "markdown",
-        "content": "Not applicable; utilizes optical gas sensors (infrared absorption)"
+        "content": "Not applicable; uses contact microphones or piezoelectric sensors"
     },
     {
         "level": "1.10.",
         "title": "Placement Protocol",
         "content-type": "markdown",
-        "content": "Sensor connected between airway and ventilator tubing or to a nasal/oral cannula for non-intubated patients"
+        "content": "Chest wall placements: apex, left lower sternal border, base of the heart, pulmonic area"
     },
     {
         "level": "2.",
@@ -111,61 +110,61 @@
         "level": "2.1.",
         "title": "Data Structure",
         "content-type": "markdown",
-        "content": "Single-channel time-series data representing CO₂ concentration changes over time"
+        "content": "Single-channel or multi-channel audio waveforms of heart sounds"
     },
     {
         "level": "2.2.",
         "title": "Time Duration",
         "content-type": "markdown",
-        "content": "Minutes to hours; continuous monitoring during anesthesia, sedation, ICU stay"
+        "content": "Typically 10 seconds to several minutes per recording session"
     },
     {
         "level": "2.3.",
         "title": "Preprocessing Required",
         "content-type": "markdown",
-        "content": "Baseline correction, spike/noise removal, optional low-pass filtering"
+        "content": "Band-pass filtering (20–800 Hz), noise reduction, segmentation into cardiac cycles"
     },
     {
         "level": "2.4.",
         "title": "Artifacts & Noise Sources",
         "content-type": "markdown",
-        "content": "Moisture contamination, disconnection artifacts, motion artifacts (nasal cannula displacement)"
+        "content": "Ambient noise, respiratory sounds, stethoscope movement artifacts"
     },
     {
         "level": "2.5.",
         "title": "Labels/Annotations",
         "content-type": "markdown",
-        "content": "Inspiratory phase start, expiratory phase start, EtCO₂ value (end-tidal CO₂), apnea events"
+        "content": "S1 and S2 heart sound markers, murmur regions, systole/diastole segmentation"
     },
     {
         "level": "2.6.",
         "title": "Signal Amplitude Range",
         "content-type": "markdown",
-        "content": "0–50 mmHg (normal adult EtCO₂ ~35–45 mmHg)"
+        "content": "Scaled amplitude; depends on microphone gain; typical dynamic range is 30–90 dB SPL"
     },
     {
         "level": "2.7.",
         "title": "Frequency Bands",
         "content-type": "markdown",
-        "content": "Breathing-related oscillations (0.1–0.5 Hz); no traditional frequency bands as in ECG/EEG"
+        "content": "Heart sounds: 20–150 Hz (S1/S2); murmurs: 100–1000 Hz"
     },
     {
         "level": "2.8.",
         "title": "Data Compression",
         "content-type": "markdown",
-        "content": "Lossless compression (e.g., Huffman, LZW) preferred; critical to preserve waveform integrity for clinical review"
+        "content": "Lossless compression preferred for medical recordings (.wav, FLAC); lossy compression (MP3) avoided"
     },
     {
         "level": "2.9.",
         "title": "Synchronization",
         "content-type": "markdown",
-        "content": "Frequently synchronized with ECG, SpO₂, BP for full patient monitoring datasets"
+        "content": "Often synchronized with ECG signals for cardiac cycle reference"
     },
     {
         "level": "2.10.",
         "title": "Storage Requirements",
         "content-type": "markdown",
-        "content": "~2–8 MB per hour depending on sampling rate and compression"
+        "content": "~1–10 MB per minute (depends on sampling rate and format)"
     },
     {
         "level": "3.1.",
@@ -179,33 +178,39 @@
                 "link to code/software"
             ],
             [
+                ".WAV",
+                "EDF, CSV",
+                "Extract PCG audio signals and store them in biomedical formats",
+                "https://github.com/joekamath/wave"
+            ],
+            [
                 ".EDF",
                 "CSV",
-                "Extract respiratory capnography waveform stored in European Data Format",
+                "European Data Format signals extracted for analysis",
                 "https://github.com/sccn/EEG-BIDS"
             ],
             [
                 ".ACQ",
                 "CSV, EDF",
-                "BIOPAC capnography data parsed via bioread library",
+                "BIOPAC recordings containing PCG signals parsed using bioread",
                 "https://github.com/uwmadison-chm/bioread"
             ],
             [
                 ".XDF",
                 "CSV, MAT",
-                "Capnography streams extracted from multimodal .xdf files using pyxdf",
+                "Multimodal PCG recordings extracted via pyxdf tools",
                 "https://github.com/sccn/xdf"
-            ],
-            [
-                ".TXT/.CSV",
-                "EDF, MAT",
-                "Plain text or CSV respiratory waveforms reformatted for biomedical analysis",
-                ""
             ],
             [
                 ".MAT",
                 "CSV",
-                "MATLAB capnography files exported into CSV for external use",
+                "MATLAB PCG signals exported for compatibility with analysis pipelines",
+                ""
+            ],
+            [
+                ".TXT/.CSV",
+                "EDF, MAT",
+                "Plain text PCG recordings converted to biomedical formats",
                 ""
             ]
         ]

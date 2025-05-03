@@ -1,0 +1,311 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "scintigraphy"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "Nuclear Medicine Imaging"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Scintigraphy (Bone, Thyroid, Myocardial Perfusion)"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": []
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Scintigraphy uses gamma-emitting radiopharmaceuticals to create 2D images of targeted organ or tissue function, detected via external gamma cameras, often employed in bone, thyroid, and cardiac imaging."
+    },
+    {
+        "level": "4.",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "4.1.",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm), NIfTI, PAR/REC, MINC, ACR-NEMA, ECAT, Analyze, Flat (row voxels), Raw"
+    },
+    {
+        "level": "4.2.",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "Grayscale images (dynamic or static); 3D volumetric data (when hybridized with SPECT)"
+    },
+    {
+        "level": "4.3.",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "Nuclear Medicine Imaging (NMI)"
+    },
+    {
+        "level": "4.4.",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "Voxel extraction via Nibabel, converted slice-by-slice to DICOM using pydicom, metadata from templates",
+                "https://pycad.co/nifti2dicom/, https://github.com/amine0110/nifti2dicom"
+            ],
+            [
+                "Interfile",
+                "DICOM",
+                "Python-based intf2dicom project for conversion of Interfile medical images to DICOM standard",
+                "https://github.com/qurit/intf2dicom_dosimetry/blob/master/README.md, https://xmedcon.sourceforge.io/utm_source=chatgpt.com"
+            ],
+            [
+                "Analyze",
+                "DICOM",
+                "No direct conversion; requires data extraction and new DICOM file creation manually",
+                ""
+            ],
+            [
+                "ECAT",
+                "DICOM",
+                "Indirect conversion: ECAT to NIfTI using PET2BIDS, then NIfTI to DICOM",
+                "https://github.com/openneuropet/PET2BIDS?utm_source=chatgpt.com, https://carimas.fi/?utm_source=chatgpt.com"
+            ],
+            [
+                "STL",
+                "DICOM",
+                "Use Slicer3D, labelmaps, DCMQI and dicom3tool to convert STL to DICOM",
+                "https://github.com/ImagingDataCommons/idc-dicom-seg-, https://products.aspose.app/cad/conversion/stl-to-dcm, https://products.groupdocs.app/conversion/stl-to-dicom"
+            ],
+            [
+                "MINC",
+                "DICOM",
+                "Using mnc2dcm Perl-based solution to reshape MINC into DICOM structure",
+                "https://github.com/andrewjanke/mnc2dcm, http://mipav.cit.nih.gov/"
+            ],
+            [
+                "RAW/ MHD",
+                "DICOM",
+                "SimpleITK methods to load RAW to Numpy, then create DICOM with metadata assignment",
+                "https://simpleitk.readthedocs.io/en/master/link_DicomSeriesFromArray_docs.html"
+            ],
+            [
+                "MAT",
+                "DICOM",
+                "Manual method from MATLAB forum to extract matrices and save as DICOM files",
+                "https://de.mathworks.com/matlabcentral/answers/321634-converting-mat-file-to-dicom-file"
+            ],
+            [
+                "PAR/REC",
+                "DICOM",
+                "Convert PAR/REC to NIfTI using dcm2niix, then convert NIfTI to DICOM",
+                "https://github.com/Maximiliun/dcm2niix"
+            ],
+            [
+                "NRRD",
+                "DICOM",
+                "Using numpy and pydicom or 3D Slicer automatic pipelines to convert",
+                "https://www.onlineconverter.com/nrrd-to-dicom, https://github.com/mhe/pynrrd/issues/115"
+            ]
+        ]
+    },
+    {
+        "level": "5.",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1.",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "128×128 or 256×256 pixels; Full width half maximum (FWHM) between 6–11 mm in planar scintigraphy"
+    },
+    {
+        "level": "5.2.",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "3–4 mm (larger than MRI/CT voxels)"
+    },
+    {
+        "level": "5.3.",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "Dynamic planar: 1 second/frame; Static planar: several minutes/frame; varies depending on protocol"
+    },
+    {
+        "level": "6.",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1.",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "~32 KB–128 KB per image (planar scintigraphy)"
+    },
+    {
+        "level": "6.2.",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "~10 MB to 100 MB (planar studies)"
+    },
+    {
+        "level": "7.",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1.",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "Gamma/Anger Cameras"
+    },
+    {
+        "level": "7.2.",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "GE Healthcare, Siemens Healthineers, Philips Healthcare, Mediso"
+    },
+    {
+        "level": "8.",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1.",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Bone scans for metastasis/fractures, thyroid scans, myocardial perfusion imaging, parathyroid imaging, V/Q scans, adrenal tumor detection"
+    },
+    {
+        "level": "8.2.",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Organ function assessment, receptor imaging, lymphatic mapping, inflammation imaging"
+    },
+    {
+        "level": "9.",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1.",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "Yes"
+    },
+    {
+        "level": "9.2.",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "Whole-body bone scintigraphy: approximately 5 mSv"
+    },
+    {
+        "level": "9.3.",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Low radiation exposure risk; rare allergic reactions; occupational exposure precautions (handling fluids)"
+    },
+    {
+        "level": "10.",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1.",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "Noise reduction, intensity normalization, registration, enhancement, resizing"
+    },
+    {
+        "level": "10.2.",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossy compression, lossless compression, hybrid compression, ROI-based compression"
+    },
+    {
+        "level": "11.",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1.",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Motion artifacts, low spatial resolution, attenuation artifacts, radiopharmaceutical variability"
+    },
+    {
+        "level": "11.2.",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Reduced sensitivity for osteolytic lesions, localization difficulty, overdiagnosis, interobserver variability, benign vs malignant discrimination issues"
+    },
+    {
+        "level": "12.",
+        "title": "References",
+        "content-type": "markdown",
+        "content": "PubMed, SNMMI Journals, Radiopaedia, IAEA, Wikipedia, Mayo Clinic"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Hossein Toreyhi"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-04-26"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": "Confirmed by H.T."
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": "confirmed by H.T."
+    }
+]

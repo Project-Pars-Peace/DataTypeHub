@@ -1,1 +1,221 @@
-{   "id": "mammography",   "parents": ["X-Ray"],   "title": "Mammography",   "acronyms": ["MG"],   "shortDescription": "Low-dose X-ray imaging for breast tissue screening and diagnostics.",   "imagingPrinciple": "Uses low-dose X-rays to capture high-resolution images of breast tissue.",   "dataTypeFileFormat": {     "primaryFileFormats": ["DICOM (.dcm)", "JPEG (.jpg, .jpeg)", "TIFF (.tif)"],     "dataType": ["Grayscale (2D)", "3D Volumetric (Digital Breast Tomosynthesis)", "Time-Series (Contrast-Enhanced)"],     "relatedDataTypes": ["Radiography"],     "standardStorageFormat": "DICOM (.dcm)",     "conversionSolutions": [       {         "conversion_from": "JPEG",         "conversion_to": "DICOM",         "conversion_description": "Use pydicom + Pillow to embed JPEG pixel data into a DICOM container.",         "conversion_links": ["https://github.com/pydicom/pydicom"]       },       {         "conversion_from": "TIFF",         "conversion_to": "DICOM",         "conversion_description": "Use MATLAB or ImageJ plugins to convert TIFF images to DICOM format.",         "conversion_links": ["https://imagej.nih.gov/ij/"]       }     ]   },   "typicalResolutionImageDims": {     "spatialResolution": "Approximately 1024 × 1024 to 4096 × 4096 pixels",     "voxelSize": "50–100 µm per pixel depending on detector",     "temporalResolution": "Not applicable"   },   "dataSize": {     "singleImageSize": "1 to 50 MB per image",     "typicalStudySize": "30–200 MB for a 4-view exam; up to GBs for tomosynthesis"   },   "acquisitionHardware": {     "equipmentUsed": "Dedicated mammography unit with compression paddle; digital or analog detector.",     "typicalManufacturers": ["Hologic", "Siemens Healthineers", "GE Healthcare", "Fujifilm"]   },   "commonClinicalApps": {     "primaryUses": ["Early detection of breast cancer, screening exams."],     "specializedUses": ["Digital Breast Tomosynthesis, Contrast-Enhanced Mammography"]   },   "radiationSafety": {     "ionizingRadiation": "Yes",     "radiationDose": "Typically ~0.2–0.4 mSv per exam",     "safetyConcerns": "Repeated exposure, use shielding if needed. Minimally invasive for patients."   },   "preprocessingData": {     "commonPreprocessingSteps": [       "Noise reduction / denoising",       "Image enhancement and pectoral muscle removal in processing",       "Conversion to standard multi-frame DICOM (for tomosynthesis)"     ],     "compressionMethods": [       "Lossless (JPEG2000) for archiving",       "Lossy compression sometimes used for quick transfer, but not recommended for diagnosis"     ]   },   "challengesLimitations": {     "technicalChallenges": [       "Dense breast tissue can obscure lesions",       "Positioning and compression for consistent image quality"     ],     "clinicalLimitations": [       "False negatives in dense breasts",       "Radiation exposure (though relatively low)",       "Risk of overdiagnosis in screening"     ]   },   "references": [     "https://www.acr.org/Clinical-Resources/Breast-Imaging-Resources",     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3348212/"   ],   "preparation_meta": [     {       "prepared_by": "AI",       "confirmed_by": "Dr. XYZ",       "date_of_preparation": "2025-01-01",       "planned_next_review": "2026-01-01",       "requires_completion": "false"     }   ] }
+[
+    {
+      "level": "meta-data-id",
+      "title": "id",
+      "content-type": "rawtext",
+      "content": "mammography"
+    },
+    {
+      "level": "meta-data-parents",
+      "title": "parents",
+      "content-type": "list_of_strings",
+      "content": ["Radiography"]
+    },
+    {
+      "level": "meta-data-title",
+      "title": "title",
+      "content-type": "rawtext",
+      "content": "Mammography (Conventional, Digital, Tomosynthesis, Contrast-enhanced)"
+    },
+    {
+      "level": "meta-data-acronyms",
+      "title": "acronyms",
+      "content-type": "list_of_strings",
+      "content": ["MG"]
+    },
+    {
+      "level": "meta-data-shortDescription",
+      "title": "shortDescription",
+      "content-type": "rawtext",
+      "content": "Mammography uses low-dose X-rays to acquire high-resolution images of breast tissue for cancer screening, diagnosis, and disease monitoring."
+    },
+    {
+      "level": "1",
+      "title": "Modality Name",
+      "content-type": "markdown",
+      "content": "Mammography (Conventional Mammography, Digital Mammography, Tomosynthesis, Contrast-enhanced Mammography)"
+    },
+    {
+      "level": "2",
+      "title": "Acronym",
+      "content-type": "markdown",
+      "content": "MG"
+    },
+    {
+      "level": "3",
+      "title": "Imaging Principle",
+      "content-type": "markdown",
+      "content": "Mammography acquires images using low-dose X-rays to capture detailed breast tissue images for early cancer detection. Tomosynthesis reconstructs 3D volumes, and contrast-enhanced approaches highlight functional vascular differences."
+    },
+    {
+      "level": "4.1",
+      "title": "Primary File Format(s)",
+      "content-type": "markdown",
+      "content": "DICOM (.dcm), JPEG (.jpg, .jpeg), JPEG 2000 (.jp2, .j2k), TIFF (.tif, .tiff), PNG (.png), HDF5 (.h5)"
+    },
+    {
+      "level": "4.2",
+      "title": "Data Type",
+      "content-type": "markdown",
+      "content": "Grayscale 2D imaging, 3D Volumetric Imaging (DBT), Time-Series (CESM), Functional Imaging (CEM, MBI)"
+    },
+    {
+      "level": "4.3",
+      "title": "Related Data Types (parent type)",
+      "content-type": "markdown",
+      "content": "Radiography"
+    },
+    {
+      "level": "4.4",
+      "title": "Standard Storage Format (which one in 4.1)",
+      "content-type": "markdown",
+      "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+          ["conversion_from", "conversion_to", "description", "link to code/software"],
+          ["JPEG (.jpg, .jpeg)", "DICOM (.dcm)", "Convert JPEG images to DICOM using Python libraries like pydicom, Pillow, and numpy. Process includes reading image, converting pixel data, creating DICOM metadata, and saving.", "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py"],
+          ["JPEG2000 (.jp2, .j2k)", "DICOM (.dcm)", "Convert JPEG 2000 images to DICOM using glymur (for image reading), numpy, and pydicom. Includes metadata assignment and pixel data conversion.", "https://github.com/DraconPern/fmjpeg2koj"],
+          ["TIFF (.tif, .tiff)", "DICOM (.dcm)", "Use Pillow, numpy, and pydicom to convert TIFF to DICOM. Process includes image reading, conversion to numpy array, DICOM metadata creation, and export.", "https://stackoverflow.com/questions/30338697/convert-tiff-to-dicom-using-matlab"],
+          ["PNG (.png)", "DICOM (.dcm)", "Replace pixel data in an existing DICOM with PNG data using Pillow and pydicom. Metadata such as image dimensions and pixel format is updated accordingly.", "https://github.com/pydicom/pydicom/issues/939"],
+          ["BMP (.bmp)", "DICOM (.dcm)", "Convert BMP images to DICOM using VTK's vtkBMPReader and vtkGDCMImageWriter. Handles lookup tables if needed and saves multi-frame or single-frame datasets.", "https://stackoverflow.com/questions/5035078/convert-bmp-image-into-dicom"],
+          ["AVI / MPEG", "DICOM (.dcm)", "Convert cine loops to multi-frame DICOM using ffmpeg to extract frames and pydicom to build DICOM datasets with appropriate metadata.", "https://www.ffmpeg.org/"]
+        ]
+      },
+    {
+      "level": "5.1",
+      "title": "Spatial Resolution",
+      "content-type": "markdown",
+      "content": "5 to 10 lp/mm; 1024×1024 to 4096×4096 pixels. Reference: https://ajronline.org/doi/10.2214/AJR.14.13126"
+    },
+    {
+      "level": "5.2",
+      "title": "Voxel Size / Pixel Spacing",
+      "content-type": "markdown",
+      "content": "Pixel sizes between 50 and 100 µm (e.g., 0.1 mm × 0.1 mm). Reference: https://pubmed.ncbi.nlm.nih.gov/3623862/"
+    },
+    {
+      "level": "5.3",
+      "title": "Temporal Resolution (if applicable)",
+      "content-type": "markdown",
+      "content": "Not applicable"
+    },
+    {
+      "level": "6.1",
+      "title": "Single Image Size",
+      "content-type": "markdown",
+      "content": "1 MB to 50 MB. Reference: https://www.researchgate.net/figure/A-Mammography-image-of-size-1024x1024-which-uses-8-bits-pixel_fig1_247919158"
+    },
+    {
+      "level": "6.2",
+      "title": "Typical Study Size",
+      "content-type": "markdown",
+      "content": "Screening: 30–200 MB; DBT: 800 MB–2.6 GB. Reference: https://ajronline.org/doi/10.2214/AJR.14.12912"
+    },
+    {
+      "level": "7.1",
+      "title": "Equipment Used",
+      "content-type": "markdown",
+      "content": "Mammography units (X-ray tube, compression paddle, image receptor), DBT systems, CAD systems. Reference: https://breast-cancer-research.biomedcentral.com/articles/10.1186/bcr236"
+    },
+    {
+      "level": "7.2",
+      "title": "Typical Manufacturers",
+      "content-type": "markdown",
+      "content": "GE Healthcare, Hologic, Siemens Healthineers, Philips Healthcare, Fujifilm, Agfa HealthCare"
+    },
+    {
+      "level": "8.1",
+      "title": "Primary Uses",
+      "content-type": "markdown",
+      "content": "Early detection and diagnosis of breast cancer. Reference: https://www.nejm.org/doi/full/10.1056/NEJMoa1206809"
+    },
+    {
+      "level": "8.2",
+      "title": "Specialized Uses",
+      "content-type": "markdown",
+      "content": "Digital Breast Tomosynthesis (DBT), Contrast-Enhanced Spectral Mammography, Photon-Counting Mammography. Reference: https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2822381"
+    },
+    {
+      "level": "9.1",
+      "title": "Ionizing Radiation",
+      "content-type": "markdown",
+      "content": "Yes"
+    },
+    {
+      "level": "9.2",
+      "title": "Radiation Dose (if applicable)",
+      "content-type": "markdown",
+      "content": "Approximately 0.2 mSv"
+    },
+    {
+      "level": "9.3",
+      "title": "Safety Concerns",
+      "content-type": "markdown",
+      "content": "Radiation-induced cancer risk, pregnancy concerns, breast implants, and post-treatment limitations. Reference: https://pubmed.ncbi.nlm.nih.gov/20736332/"
+    },
+    {
+      "level": "10.1",
+      "title": "Common Preprocessing Steps",
+      "content-type": "markdown",
+      "content": "Noise reduction, image enhancement, pectoral muscle removal. Reference: https://openbiomedicalengineeringjournal.com/VOLUME/16/ELOCATOR/e187412072209200/FULLTEXT/"
+    },
+    {
+      "level": "10.2",
+      "title": "Compression Methods (if any)",
+      "content-type": "markdown",
+      "content": "Lossless and lossy compression supported. Reference: https://ajronline.org/doi/10.2214/AJR.14.12912"
+    },
+    {
+      "level": "11.1",
+      "title": "Technical Challenges",
+      "content-type": "markdown",
+      "content": "Artifacts, breast positioning, dense tissue masking lesions. Reference: https://ajronline.org/doi/10.2214/AJR.10.7246"
+    },
+    {
+      "level": "11.2",
+      "title": "Clinical Limitations",
+      "content-type": "markdown",
+      "content": "False-positives, false-negatives, overdiagnosis, radiation risk. Reference: https://eurjmedres.biomedcentral.com/articles/10.1186/s40001-015-0140-6"
+    },
+    {
+      "level": "12",
+      "title": "References",
+      "content-type": "markdown",
+      "content": "https://ajronline.org/doi/10.2214/AJR.14.13126, https://pubmed.ncbi.nlm.nih.gov/3623862/, https://www.researchgate.net, https://jamanetwork.com, https://www.nejm.org, https://openbiomedicalengineeringjournal.com, https://eurjmedres.biomedcentral.com"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Pardis Jolfaei"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-04-26"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": "Confirmed by H.T."
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": "confirmed by H.T."
+    }
+  ]
+  

@@ -1,0 +1,320 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "lymphoscintigraphy"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "Nuclear Medicine Imaging",
+            "SPECT"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Lymphoscintigraphy"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "LSG"
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Lymphoscintigraphy uses technetium-99m-labeled radiotracers to visualize lymphatic flow and map sentinel lymph nodes using gamma or SPECT imaging, aiding in cancer staging and evaluation of lymphatic disorders."
+    },
+    {
+        "level": "4.",
+        "title": "Data Type & File Format",
+        "content-type": "markdown",
+        "content": " "
+    },
+    {
+        "level": "4.1.",
+        "title": "Primary File Format(s)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.2.",
+        "title": "Data Type",
+        "content-type": "markdown",
+        "content": "Grayscale Imaging; Time-series imaging (for dynamic studies); 2D planar imaging; 3D SPECT imaging (advanced protocols)"
+    },
+    {
+        "level": "4.3.",
+        "title": "Related Data Types (parent type)",
+        "content-type": "markdown",
+        "content": "Nuclear Medicine Imaging, SPECT Imaging"
+    },
+    {
+        "level": "4.4.",
+        "title": "Standard Storage Format (which one in 4.1)",
+        "content-type": "markdown",
+        "content": "DICOM (.dcm)"
+    },
+    {
+        "level": "4.5",
+        "title": "Conversion Solutions + Reference",
+        "content-type": "table",
+        "content": [
+            [
+                "conversion_from",
+                "conversion_to",
+                "description",
+                "link to code/software"
+            ],
+            [
+                "Interfile",
+                "DICOM",
+                "Uses pydicom and sys modules; clones a GitHub repo; module importation; conversion between Interfile and DICOM",
+                "https://github.com/qurit/intf2dicom_dosimetry/blob/master/README.md, https://xmedcon.sourceforge.io/?utm_source=chatgpt.com"
+            ],
+            [
+                "TIFF",
+                "DICOM",
+                "Batch conversion using Aspose.Imaging; detects input/output formats dynamically; applies rasterization options for vectors; maintains quality; optional auto-delete of output files",
+                "https://products.aspose.com/imaging/python-net/conversion/tiff-to-dicom/, https://products.groupdocs.app/conversion/tiff-to-dicom"
+            ],
+            [
+                "JPEG",
+                "DICOM",
+                "Loads image, creates a new DICOM dataset, converts image data to byte array, saves as DICOM",
+                "https://github.com/jwitos/JPG-to-DICOM/blob/master/jpeg-to-dicom.py, https://products.aspose.app/imaging/conversion/jpg-to-dicom"
+            ],
+            [
+                "BMP",
+                "DICOM",
+                "Using VTK and GDCM libraries; loads BMP image; updates and converts to DICOM; handles 8-bit images",
+                "https://stackoverflow.com/questions/5035078/convert-bmp-image-into-dicom, https://products.groupdocs.app/conversion/bmp-to-dicom"
+            ],
+            [
+                "PNG",
+                "DICOM",
+                "Aspose.Imaging library; maps PNG to DICOM using predefined tuples; loads, converts, and saves image",
+                "https://products.aspose.com/imaging/python-net/conversion/png-to-dicom/, https://products.groupdocs.app/conversion/png-to-dicom"
+            ],
+            [
+                "DICOM-RT",
+                "DICOM",
+                "Using SlicerRT extension and Quantitative Reporting extension in 3D Slicer to export DICOM-RT structures into standard DICOM",
+                "https://discourse.slicer.org/t/convert-dicom-rtss-to-dicom-segmentation/19738"
+            ],
+            [
+                "OME-TIF",
+                "DICOM",
+                "No specific tool; treated like conventional TIFF for conversion",
+                ""
+            ],
+            [
+                "NIfTI",
+                "DICOM",
+                "Extracts 3D voxel data with Nibabel; slices converted into DICOM using pydicom; metadata updated from template; batch processing enabled",
+                "https://pycad.co/nifti2dicom/, https://github.com/amine0110/nifti2dicom"
+            ],
+            [
+                "Analyze",
+                "DICOM",
+                "No direct conversion tool; usually extracted manually or via 3D Slicer and reconstructed into DICOM",
+                ""
+            ],
+            [
+                "ECAT",
+                "DICOM",
+                "Indirect method: ECAT to NIfTI using PET2BIDS, then NIfTI to DICOM conversion",
+                "https://github.com/openneuropet/PET2BIDS?utm_source=chatgpt.com, https://carimas.fi/?utm_source=chatgpt.com"
+            ],
+            [
+                ".mat (MATLAB)",
+                "DICOM",
+                "Code available in forums; manual loading and DICOM writing based on matrices",
+                "https://de.mathworks.com/matlabcentral/answers/321634-converting-mat-file-to-dicom-file"
+            ]
+        ]
+    },
+    {
+        "level": "5.",
+        "title": "Typical Resolution & Image Dimensions",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "5.1.",
+        "title": "Spatial Resolution",
+        "content-type": "markdown",
+        "content": "Planar Imaging: ~128 × 128 pixels to 256 × 256 pixels; SPECT Imaging (if performed): ~64 × 64 or 128 × 128 pixels per slice"
+    },
+    {
+        "level": "5.2.",
+        "title": "Voxel Size / Pixel Spacing",
+        "content-type": "markdown",
+        "content": "~3 mm to 5 mm per pixel"
+    },
+    {
+        "level": "5.3.",
+        "title": "Temporal Resolution (if applicable)",
+        "content-type": "markdown",
+        "content": "Dynamic imaging frames acquired every 30–60 seconds"
+    },
+    {
+        "level": "6.",
+        "title": "Data Size (Storage Requirements)",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "6.1.",
+        "title": "Single Image Size",
+        "content-type": "markdown",
+        "content": "~0.5–2 MB per DICOM image"
+    },
+    {
+        "level": "6.2.",
+        "title": "Typical Study Size",
+        "content-type": "markdown",
+        "content": "Static imaging: ~10–20 MB; Dynamic imaging: ~50–100 MB; SPECT/CT: ~100–300 MB"
+    },
+    {
+        "level": "7.",
+        "title": "Acquisition Device & Hardware Requirements",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "7.1.",
+        "title": "Equipment Used",
+        "content-type": "markdown",
+        "content": "Gamma Camera; SPECT Camera; Optional: Hybrid SPECT/CT scanner"
+    },
+    {
+        "level": "7.2.",
+        "title": "Typical Manufacturers",
+        "content-type": "markdown",
+        "content": "Siemens Healthineers, GE Healthcare, Philips Healthcare, Canon Medical Systems"
+    },
+    {
+        "level": "8.",
+        "title": "Common Clinical Applications",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "8.1.",
+        "title": "Primary Uses",
+        "content-type": "markdown",
+        "content": "Mapping lymphatic drainage pathways; Identification of sentinel lymph nodes; Evaluation of lymphedema"
+    },
+    {
+        "level": "8.2.",
+        "title": "Specialized Uses",
+        "content-type": "markdown",
+        "content": "Preoperative sentinel lymph node localization; Assessment of lymphatic abnormalities (chylous leaks, congenital malformations)"
+    },
+    {
+        "level": "9.",
+        "title": "Radiation & Safety Considerations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "9.1.",
+        "title": "Ionizing Radiation",
+        "content-type": "markdown",
+        "content": "Yes"
+    },
+    {
+        "level": "9.2.",
+        "title": "Radiation Dose (if applicable)",
+        "content-type": "markdown",
+        "content": "Typical patient dose: ~1–2 mSv"
+    },
+    {
+        "level": "9.3.",
+        "title": "Safety Concerns",
+        "content-type": "markdown",
+        "content": "Minimal radiation; Rare allergic reactions to radiocolloids; Proper injection technique required"
+    },
+    {
+        "level": "10.",
+        "title": "Preprocessing & Data Preparation",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "10.1.",
+        "title": "Common Preprocessing Steps",
+        "content-type": "markdown",
+        "content": "DICOM import/anonymization; Motion correction (dynamic studies); Attenuation correction (SPECT/CT); Image smoothing"
+    },
+    {
+        "level": "10.2.",
+        "title": "Compression Methods (if any)",
+        "content-type": "markdown",
+        "content": "Lossless JPEG2000 compression or raw DICOM"
+    },
+    {
+        "level": "11.",
+        "title": "Challenges & Limitations",
+        "content-type": "markdown",
+        "content": ""
+    },
+    {
+        "level": "11.1.",
+        "title": "Technical Challenges",
+        "content-type": "markdown",
+        "content": "Limited spatial resolution; Injection technique critical; Risk of extravasation"
+    },
+    {
+        "level": "11.2.",
+        "title": "Clinical Limitations",
+        "content-type": "markdown",
+        "content": "Does not replace histology; Possible false negatives; Limited anatomical detail without CT"
+    },
+    {
+        "level": "12.",
+        "title": "References",
+        "content-type": "markdown",
+        "content": "https://pubmed.ncbi.nlm.nih.gov/35241267/, https://pubmed.ncbi.nlm.nih.gov/35894448/"
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Pardis Jolfaei"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-04-26"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": "Confirmed by H.T."
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": "confirmed by H.T."
+    }
+]
