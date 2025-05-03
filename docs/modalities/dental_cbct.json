@@ -10,7 +10,7 @@
         "title": "parents",
         "content-type": "list_of_strings",
         "content": [
-            "CT"
+            "Dental", "CT"
         ]
     },
     {
