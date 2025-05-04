@@ -3,7 +3,7 @@
         "level": "meta-data-id",
         "title": "id",
         "content-type": "rawtext",
-        "content": "us_eus"
+        "content": "us_obstetric"
     },
     {
         "level": "meta-data-parents",
@@ -17,14 +17,14 @@
         "level": "meta-data-title",
         "title": "title",
         "content-type": "rawtext",
-        "content": "Endoscopic Ultrasound (EUS) GI and pancreatic imaging"
+        "content": "Obstetric Ultrasound Fetal development monitoring"
     },
     {
         "level": "meta-data-acronyms",
         "title": "acronyms",
         "content-type": "list_of_strings",
         "content": [
-            "EUS",
+            "",
             "",
             "",
             ""
@@ -34,14 +34,12 @@
         "level": "meta-data-shortDescription",
         "title": "shortDescription",
         "content-type": "rawtext",
-        "content": "Endoscopic Ultrasound (EUS) combines endoscopy and ultrasound to obtain detailed images of the digestive tract and surrounding structures. A specialized endoscope with an ultrasound transducer at its tip is inserted into the gastrointestinal tract. The transducer emits high-frequency sound waves that penetrate the tissue layers, and the reflected echoes are captured and processed to create real-time, high-resolution images. This allows visualization of both the superficial layers of the gastrointestinal wall and deeper structures, such as lymph nodes, blood vessels, and adjacent organs like the pancreas. EUS is particularly useful for diagnosing and staging cancers, evaluating submucosal lesions, and guiding fine-needle aspiration (FNA) for tissue sampling."
-    },
+        "content": "Obstetric ultrasound for fetal development monitoring utilizes high-frequency sound waves to create real-time images of the fetus, placenta, and uterus. A transducer emits sound waves that penetrate the body and reflect off tissues, with the returning echoes captured and converted into visual images. This non-invasive, safe imaging technique assesses fetal growth, anatomy, and well-being by measuring parameters like fetal size, organ development, and amniotic fluid levels, aiding in the detection of potential abnormalities or complications during pregnancy."    },
     {
         "level": "3",
         "title": "3. Imaging Principle",
         "content-type": "markdown",
-        "content": "Endoscopic Ultrasound (EUS) combines endoscopy and ultrasound to obtain detailed images of the digestive tract and surrounding structures. A specialized endoscope with an ultrasound transducer at its tip is inserted into the gastrointestinal tract. The transducer emits high-frequency sound waves that penetrate the tissue layers, and the reflected echoes are captured and processed to create real-time, high-resolution images. This allows visualization of both the superficial layers of the gastrointestinal wall and deeper structures, such as lymph nodes, blood vessels, and adjacent organs like the pancreas. EUS is particularly useful for diagnosing and staging cancers, evaluating submucosal lesions, and guiding fine-needle aspiration (FNA) for tissue sampling."
-    },
+        "content": "Obstetric ultrasound for fetal development monitoring utilizes high-frequency sound waves to create real-time images of the fetus, placenta, and uterus. A transducer emits sound waves that penetrate the body and reflect off tissues, with the returning echoes captured and converted into visual images. This non-invasive, safe imaging technique assesses fetal growth, anatomy, and well-being by measuring parameters like fetal size, organ development, and amniotic fluid levels, aiding in the detection of potential abnormalities or complications during pregnancy."    },
     {
         "level": "4",
         "title": "4. Data Type & File Format",
@@ -231,8 +229,8 @@
                 "7.2.Typical Manufacturers"
             ],
             [
-                "\"Ultrasound Machine  Contrast Agent (microbubble-based)  Transducer Probe  Image Processing Software\"",
-                "\"GE Healthcare Philips Healthcare Siemens Healthineers Canon Medical Systems (formerly Toshiba Medical Systems)  Fujifilm Sonosite      Mindray Samsung Medison Bracco Imaging  Lantheus Medical Imaging  Nano Therapeutics Samsung Medison\""
+                "Equipment used for obstetric ultrasound and fetal development monitoring typically includes an ultrasound machine with a transabdominal or transvaginal transducer, which emits high-frequency sound waves to create images of the fetus and maternal structures. The machine is equipped with a monitor to display real-time images, and software for measuring fetal growth, heart rate, and amniotic fluid levels. Gel is applied to the abdomen to facilitate sound wave transmission. Advanced systems may include Doppler ultrasound to assess blood flow in the umbilical cord and fetal vessels, ensuring comprehensive monitoring of fetal health and development.",
+                "GE Healthcare, Philips, Siemens Healthineers, Canon Medical Systems, Samsung Medison."
             ]
         ]
     },
@@ -246,8 +244,8 @@
                 "8.2.Specialized Uses"
             ],
             [
-                "The primary uses of Endoscopic Ultrasound (EUS) in GI and pancreatic imaging include evaluating gastrointestinal (GI) tract abnormalities, such as esophageal, gastric, and rectal cancers, as well as pancreatic lesions and bile duct diseases. EUS is used to assess the depth of tumor invasion, lymph node involvement, and vascular invasion, which helps in staging cancers and guiding treatment. Additionally, EUS-guided fine-needle aspiration (FNA) and biopsy allow for the sampling of tissue from lesions and lymph nodes, enabling diagnosis and genetic testing. EUS also facilitates the evaluation of pancreatic cysts, bile duct stones, and ampullary lesions, and can be used to guide interventions such as celiac plexus neurolysis for pain management in pancreatic cancer patients. Overall, EUS provides high-resolution images and enables minimally invasive diagnostic and therapeutic procedures, making it a valuable tool in the management of GI and pancreatic disorders.",
-                "Endoscopic Ultrasound (EUS) has specialized uses in GI and pancreatic imaging, including evaluating esophageal, gastric, and rectal cancers for staging and assessing depth of tumor invasion. It is also used to diagnose and stage pancreatic cancer, ampullary cancer, and bile duct cancer, as well as to evaluate pancreatic cysts and neuroendocrine tumors. Additionally, EUS-guided fine-needle aspiration (FNA) allows for tissue sampling of lesions and lymph nodes, enabling diagnosis of conditions such as pancreatic cancer, lymphoma, and sarcoidosis. Furthermore, EUS is used to evaluate chronic pancreatitis, pancreatic pseudocysts, and biliary ductal stones, and to guide therapeutic interventions such as celiac plexus block for pain management and drainage of pancreatic pseudocysts and bile duct stones, providing a minimally invasive approach to diagnosis and treatment of various GI and pancreatic disorders."
+                "Obstetric ultrasound for fetal development monitoring is primarily used to assess the growth, health, and development of the fetus during pregnancy. It helps detect abnormalities, confirm gestational age, monitor placental position and amniotic fluid levels, and evaluate fetal anatomy and movement. This non-invasive imaging tool is essential for ensuring the well-being of both the fetus and the mother throughout pregnancy.",
+                "Specialized uses of obstetric ultrasound in fetal development monitoring include assessing gestational age, tracking fetal growth, and detecting congenital anomalies. It evaluates amniotic fluid levels, placental position, and umbilical blood flow, ensuring fetal well-being. Additionally, it aids in identifying multiple pregnancies, guiding interventions, and monitoring high-risk pregnancies to optimize maternal and fetal outcomes."
             ]
         ]
     },
@@ -276,8 +274,8 @@
                 "10.2.Compression Methods (if any)"
             ],
             [
-                "Common preprocessing steps for Contrast-enhanced Ultrasound (CEUS) typically include image normalization to standardize intensity levels, temporal filtering to reduce noise and enhance temporal consistency, and spatial filtering to improve image clarity. Additionally, motion correction is often applied to compensate for patient or organ movement during imaging. Segmentation may be used to isolate regions of interest, and time-intensity curve (TIC) analysis is performed to quantify contrast agent dynamics. These steps collectively enhance image quality and ensure accurate interpretation of perfusion patterns and vascular structures.",
-                "Contrast-enhanced ultrasound (CEUS) typically employs lossy compression methods to reduce file sizes while maintaining diagnostic quality. These methods include JPEG, JPEG 2000, and advanced video codecs like H.264 or H.265, which are optimized for medical imaging. The compression focuses on preserving the dynamic contrast information critical for diagnosis while minimizing artifacts. The choice of method depends on the balance between compression ratio and image fidelity required for clinical analysis."
+                "Conversion of raw ultrasound data to DICOM format.Noise reduction and image enhancement.Alignment and stitching for 3D/4D imaging.",
+                "Lossless compression (e.g., JPEG-LS) for DICOM images. Lossy compression (e.g., JPEG) may be used for non-diagnostic purposes."
             ]
         ]
     },
@@ -291,8 +289,8 @@
                 "11.2.Clinical Limitations"
             ],
             [
-                "Contrast-enhanced ultrasound (CEUS) faces several technical challenges, including the need for specialized ultrasound equipment capable of low mechanical index imaging to preserve microbubble contrast agents. Image interpretation can be complex due to artifacts, motion, and variability in contrast uptake. Additionally, achieving consistent contrast agent distribution and optimizing imaging parameters for different clinical applications can be difficult. Regulatory and safety concerns regarding contrast agents, as well as limited penetration depth in obese patients or deep-seated structures, further complicate its use. Finally, CEUS requires skilled operators to ensure accurate diagnosis and avoid misinterpretation of findings.",
-                "Contrast-enhanced ultrasound (CEUS) has several clinical limitations, including its dependence on operator skill and experience, which can affect image quality and diagnostic accuracy. It is less effective in patients with high body mass index (BMI) or deep-seated lesions due to limited penetration of ultrasound waves. Additionally, CEUS has a relatively narrow field of view compared to CT or MRI, making it less suitable for evaluating large areas or multiple organs simultaneously. The use of ultrasound contrast agents is also contraindicated in patients with certain conditions, such as severe cardiopulmonary disease or known allergies to the agents. Furthermore, CEUS may not provide sufficient detail for characterizing complex or heterogeneous lesions, often requiring complementary imaging modalities for a comprehensive assessment."
+                "mage quality can be affected by maternal body habitus (e.g., obesity).Limited field of view in 3D/4D imaging.Motion artifacts due to fetal movement.",
+                "Difficulty in visualizing certain structures due to fetal position or shadowing.Operator-dependent variability in image acquisition and interpretation. Limited ability to detect subtle abnormalities in early gestation."
             ]
         ]
     },
@@ -302,19 +300,23 @@
         "content-type": "table",
         "content": [
             [
-                "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.869004/full",
+                "https://www.glowm.com/section-view/heading/Diagnostic%20Obstetric%20Ultrasound/item/199",
                 "Column 2"
             ],
             [
-                "https://pmc.ncbi.nlm.nih.gov/articles/PMC7271313/",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC10931841/",
                 ""
             ],
             [
-                "https://apc.amegroups.org/article/view/7870/html",
+                "https://pubmed.ncbi.nlm.nih.gov/33160820/",
                 ""
             ],
             [
-                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6143442/",
+                "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1233187/full",
+                ""
+            ],
+            [
+                "https://www.ncbi.nlm.nih.gov/books/NBK594334/",
                 ""
             ]
         ]
