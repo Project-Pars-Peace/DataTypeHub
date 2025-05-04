@@ -1,0 +1,315 @@
+[
+    {
+        "level": "meta-data-id",
+        "title": "id",
+        "content-type": "rawtext",
+        "content": "us_eus"
+    },
+    {
+        "level": "meta-data-parents",
+        "title": "parents",
+        "content-type": "list_of_strings",
+        "content": [
+            "US"
+        ]
+    },
+    {
+        "level": "meta-data-title",
+        "title": "title",
+        "content-type": "rawtext",
+        "content": "Endoscopic Ultrasound (EUS) GI and pancreatic imaging"
+    },
+    {
+        "level": "meta-data-acronyms",
+        "title": "acronyms",
+        "content-type": "list_of_strings",
+        "content": [
+            "EUS",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "level": "meta-data-shortDescription",
+        "title": "shortDescription",
+        "content-type": "rawtext",
+        "content": "Endoscopic Ultrasound (EUS) combines endoscopy and ultrasound to obtain detailed images of the digestive tract and surrounding structures. A specialized endoscope with an ultrasound transducer at its tip is inserted into the gastrointestinal tract. The transducer emits high-frequency sound waves that penetrate the tissue layers, and the reflected echoes are captured and processed to create real-time, high-resolution images. This allows visualization of both the superficial layers of the gastrointestinal wall and deeper structures, such as lymph nodes, blood vessels, and adjacent organs like the pancreas. EUS is particularly useful for diagnosing and staging cancers, evaluating submucosal lesions, and guiding fine-needle aspiration (FNA) for tissue sampling."
+    },
+    {
+        "level": "3",
+        "title": "3. Imaging Principle",
+        "content-type": "markdown",
+        "content": "Endoscopic Ultrasound (EUS) combines endoscopy and ultrasound to obtain detailed images of the digestive tract and surrounding structures. A specialized endoscope with an ultrasound transducer at its tip is inserted into the gastrointestinal tract. The transducer emits high-frequency sound waves that penetrate the tissue layers, and the reflected echoes are captured and processed to create real-time, high-resolution images. This allows visualization of both the superficial layers of the gastrointestinal wall and deeper structures, such as lymph nodes, blood vessels, and adjacent organs like the pancreas. EUS is particularly useful for diagnosing and staging cancers, evaluating submucosal lesions, and guiding fine-needle aspiration (FNA) for tissue sampling."
+    },
+    {
+        "level": "4",
+        "title": "4. Data Type & File Format",
+        "content-type": "table",
+        "content": [
+            [
+                "4.1.Primary File Format(s)",
+                "4.2.Data Type",
+                "4.3.Related Data Types (parent type)",
+                "4.4.Standard Storage Format (which one in 4.1)",
+                "4.5.Conversion Solutions + Reference",
+                "description",
+                "references"
+            ],
+            [
+                "DICOM (.dcm)",
+                "grayscale imaging",
+                "US",
+                "DICOM (.dcm)",
+                "NIfTI (.nii, .nii.gz)",
+                "nii2dcm is a specialized conversion tool that transforms NIfTI neuroimaging files (.nii/.nii.gz) into DICOM format, addressing a significant gap in medical imaging workflows. Built with Python as its core language, the solution leverages several powerful tools including pip for dependency management, Docker for containerization, SimpleITK for image processing, and highdicom for DICOM manipulation. The tool features a straightforward command-line interface that allows users to specify DICOM modality types during conversion (such as MR for MRI scans). For flexible deployment, nii2dcm is available both as a pip-installable package and as a pre-built Docker container. The project is actively developed with support for additional imaging modalities planned for future releases, making it a valuable resource for researchers and clinicians working with medical imaging data.",
+                "https://github.com/tomaroberts/nii2dcm"
+            ],
+            [
+                ".MOV",
+                "In some advanced applications, Doppler imaging (a functional imaging modality) may be used alongside grayscale imaging to assess blood flow in vessels.",
+                "",
+                "",
+                "Analyze (.hdr/.img)",
+                "FSL (FMRIB Software Library) offers a comprehensive suite of command-line utilities for neuroimaging data processing and analysis. These tools collectively enable researchers to manipulate, transform, and extract valuable information from brain imaging datasets. The utility tools include format converters (fslascii2img, fsl2ascii), file type managers (fslchfiletype, fslcreatehd, fsleditHD), mathematical operators (fslmaths, fslfft), data extraction tools (fslroi, fslmeants), statistical analyzers (fslstats, fslcc), dimensional manipulators (fslmerge, fslsplit, fslslice), and header information processors (fslhd, fslinfo, fslval). Additionally, FSL provides specialized orientation tools (fslreorient2std, fslcpgeom, fslorient, fslswapdim) that ensure proper spatial alignment of brain images according to standard neuroanatomical conventions. Written primarily in C++ with Python interfaces, FSL integrates multiple computational libraries including NIfTI I/O libraries, matrix calculation tools, statistical packages, and optimization algorithms to deliver a powerful platform for neuroscientific research that maintains compatibility with major neuroimaging data formats.",
+                "https://fsl.fmrib.ox.ac.uk/fsl/docs/#/utilities/fslutils"
+            ],
+            [
+                "AVI (.avi),",
+                "While EUS typically produces 2D images, modern systems can also generate 3D volumetric reconstructions by combining multiple 2D slices.",
+                "",
+                "",
+                " SAFA - Datatypes SAFA - Datatypes  100% B15  AVI (.avi)      \t AVI (.avi) Turn on screen reader support   To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slashArman Gharehbaghi has left the document.",
+                "\"Sante DICOM Editor is a versatile and powerful tool designed for handling DICOM files, which are commonly used in medical imaging. Here are some of its key features:  DICOM File Editing: You can create, edit, and modify DICOM files, including adding or removing attributes and editing sequence attributes.  2D/3D Viewer: It provides advanced viewing capabilities for both 2D and 3D medical images.  Anonymizer: The tool can anonymize DICOM files to protect patient privacy.  Converter: It can convert various file formats (e.g., JPEG, TIFF, BMP, PNG) to DICOM and vice versa.  PACS Client and Mini PACS Server: It supports Picture Archiving and Communication System (PACS) functionalities, allowing you to store, retrieve, and manage medical images.  Patient CD/DVD Burner: You can burn patient data onto CDs or DVDs, complete with a built-in viewer.  Batch Processing: The editor supports batch processing, enabling you to modify multiple DICOM files simultaneously.  DICOM Network Services: It supports various DICOM network services, including C-FIND, C-MOVE, C-STORE, and C-ECHO.\"",
+                "https://santesoft.com/win/sante-dicom-editor/howto/movies-to-dicom.html"
+            ],
+            [
+                ".RAW",
+                "",
+                "",
+                "",
+                "MP4 (.mp4) ",
+                "\"Sante DICOM Editor is a versatile and powerful tool designed for handling DICOM files, which are commonly used in medical imaging. Here are some of its key features:  DICOM File Editing: You can create, edit, and modify DICOM files, including adding or removing attributes and editing sequence attributes.  2D/3D Viewer: It provides advanced viewing capabilities for both 2D and 3D medical images.  Anonymizer: The tool can anonymize DICOM files to protect patient privacy.  Converter: It can convert various file formats (e.g., JPEG, TIFF, BMP, PNG) to DICOM and vice versa.  PACS Client and Mini PACS Server: It supports Picture Archiving and Communication System (PACS) functionalities, allowing you to store, retrieve, and manage medical images.  Patient CD/DVD Burner: You can burn patient data onto CDs or DVDs, complete with a built-in viewer.  Batch Processing: The editor supports batch processing, enabling you to modify multiple DICOM files simultaneously.  DICOM Network Services: It supports various DICOM network services, including C-FIND, C-MOVE, C-STORE, and C-ECHO.\"",
+                "https://santesoft.com/win/sante-dicom-editor/howto/movies-to-dicom.html"
+            ],
+            [
+                "MP4 (.mp4) ",
+                "",
+                "",
+                "",
+                "JPEG (.jpg)",
+                "This Python script automates the conversion of JPEG, PNG, or BMP images into DICOM files by loading the image with Pillow, handling various image modes to extract pixel data as a NumPy array, and then constructing a DICOM dataset using pydicom. It meticulously sets essential DICOM tags, including file metadata, image dimensions, photometric interpretation, pixel representation, and generates unique identifiers for the DICOM object. Finally, it saves the populated DICOM dataset as a .dcm file, ensuring compatibility with medical imaging systems by adhering to DICOM standards.",
+                "https://github.com/jwitos/JPG-to-DICOM/tree/master"
+            ],
+            [
+                ".SR",
+                "",
+                "",
+                "",
+                "PNG (.png) ",
+                "\"This Python script replaces the pixel data of an existing DICOM file with the pixel data from a PNG or JPG image. It reads a pre-existing DICOM file and a new image, then, based on the image's mode (grayscale 'L' or color 'RGBA'), it extracts the pixel data into a NumPy array, sets the appropriate DICOM tags (dimensions, photometric interpretation, samples per pixel, bit depth, and pixel representation), and replaces the original DICOM's `PixelData` with the new image's pixel data, finally saving the modified DICOM file with a new name. \"",
+                "https://github.com/amine0110/convert-images-from-jpr-or-png-into-dicom"
+            ],
+            [
+                "JPEG (.jpg)",
+                "",
+                "",
+                "",
+                "MPEG-2",
+                "\"This code snippet is a Maven `pom.xml` file, which defines the project structure, dependencies, and metadata for a Java application named \"\"mpeg2dcm,\"\" designed to convert MPEG video files to DICOM format. It specifies project details like group ID, artifact ID, version, and licensing (MIT License), along with developer and source code management information. The file outlines the project's dependencies, including the `dcm4che-core` library for DICOM handling, logging libraries (Log4j and SLF4j), and utility libraries (commons-io and commons-cli). Crucially, it declares a dependency on the dcm4che repository, indicating that the project leverages the dcm4che library for DICOM manipulation, suggesting that the application processes MPEG video data and constructs DICOM files by utilizing the dcm4che framework's capabilities. \"",
+                "https://github.com/tomdoel/mpg2dcm/tree/main"
+            ],
+            [
+                ".TIFF",
+                "",
+                "",
+                "",
+                "MOV (.MOV)",
+                "\"Sante DICOM Editor is a versatile and powerful tool designed for handling DICOM files, which are commonly used in medical imaging. Here are some of its key features:  DICOM File Editing: You can create, edit, and modify DICOM files, including adding or removing attributes and editing sequence attributes.  2D/3D Viewer: It provides advanced viewing capabilities for both 2D and 3D medical images.  Anonymizer: The tool can anonymize DICOM files to protect patient privacy.  Converter: It can convert various file formats (e.g., JPEG, TIFF, BMP, PNG) to DICOM and vice versa.  PACS Client and Mini PACS Server: It supports Picture Archiving and Communication System (PACS) functionalities, allowing you to store, retrieve, and manage medical images.  Patient CD/DVD Burner: You can burn patient data onto CDs or DVDs, complete with a built-in viewer.  Batch Processing: The editor supports batch processing, enabling you to modify multiple DICOM files simultaneously.  DICOM Network Services: It supports various DICOM network services, including C-FIND, C-MOVE, C-STORE, and C-ECHO.\"",
+                "https://santesoft.com/win/sante-dicom-editor/howto/movies-to-dicom.html"
+            ],
+            [
+                "PNG (.png) ",
+                "",
+                "",
+                "",
+                "Raw data files (.RAW)",
+                "\"This Python code demonstrates how to generate a synthetic 3D DICOM series from a NumPy array using the SimpleITK library, ensuring it's readable by DICOM viewers.  Here's a breakdown:  Array Generation and Image Creation:  It generates a 3D NumPy array filled with random numbers, allowing the user to specify the data type (int16 or float64). This array is then converted into a SimpleITK image, and its spacing is set. DICOM Metadata Configuration:  The code initializes a sitk.ImageFileWriter to write DICOM files. It creates a list of DICOM tag values (series_tag_values) to populate the metadata of each slice. This includes tags for series time, date, image type (DERIVED\\SECONDARY), series instance UID, image orientation, and series description. If the image data type is float64, it adds additional metadata tags related to rescale slope and intercept, bits allocated, bits stored, high bit, and pixel representation. This is crucial for correctly representing floating-point pixel values in DICOM. Slice Writing:  The writeSlices function is defined to write individual slices of the 3D image as DICOM files. For each slice, it sets the shared series tags and slice-specific tags, such as instance creation date and time, image position (patient), and instance number. The slice is then written to the specified output directory with a .dcm extension. DICOM Series Reading and Verification:  After writing the DICOM series, the code reads it back using sitk.ImageSeriesReader. It configures the reader to load all DICOM tags, including private tags. It then compares the spacing of the re-read image with the original image to verify that the DICOM series was written and read correctly. The code also handles errors if the specified directory does not contain a DICOM series. In essence, this code provides a practical example of how to create a DICOM series from a NumPy array, paying careful attention to the necessary metadata, especially when dealing with floating-point pixel values. It also demonstrates how to read the newly created DICOM series.\"",
+                "https://simpleitk.readthedocs.io/en/master/link_DicomSeriesFromArray_docs.html"
+            ],
+            [
+                ".VIV / .VOL",
+                "",
+                "",
+                "",
+                "TIFF (.TIFF)",
+                "\"This document describes a sophisticated process for converting Whole Slide Imaging (WSI) files (SVS, generic TIFF, and OME-TIFF) into dual-personality DICOM-TIFF files, emphasizing lossless conversion and detailed metadata management. The conversion, driven by a Bourne Shell script and the `pixelmed` toolkit's `TIFFToDicom` Java program, preserves the original compressed tile data, re-injects JPEG tables, and corrects certain TIFF defects. It generates a DICOM series with one file per pyramid layer and channel, extracting macro and label images. Metadata is gathered from various sources, including TIFF headers, SVS ImageDescription tags, OME-XML, and collection-specific spreadsheets, and is mapped to DICOM attributes via a JSON metadata file. The process handles multiple slides per subject by grouping them into a single DICOM study, ensuring consistent UIDs and dates through state files. For multichannel images, channel-specific metadata is encoded in the DICOM SpecimenPreparationSequence and OpticalPathSequence. Collection-specific clinical trial information is also included. The output DICOM files, while TIFF-compatible, contain only one layer each and may not work with tools expecting combined layers. The inclusion of offset tables (BOT or EOT) depends on the collection's conversion date. The process is illustrated with examples from TCGA and HTAN collections, highlighting the handling of metadata, compression, and specific DICOM attributes. \"",
+                "https://github.com/ImagingDataCommons/idc-wsi-conversion"
+            ],
+            [
+                "WAV (.wav)",
+                "",
+                "",
+                "",
+                "MP4",
+                "\"Sante DICOM Editor  Sante DICOM Editor is a user-friendly application that allows conversion of various video formats, including MP4, to DICOM files. To convert using this tool:  Navigate to \"\"File\"\" > \"\"Image\"\" > \"\"Batch Image\"\" > \"\"Convert Movies (avi, wmv, mpg, mp4) to DICOM\"\". Select the folder containing your MP4 files. Click \"\"Convert\"\" to generate DICOM files from the selected videos. This process creates a new DICOM file for each video, which can later be edited to modify header information such as patient details.  SANTESOFT.COM  2. Filestar  Filestar is a versatile file conversion tool that supports converting MP4 files to DICOM format. To perform the conversion:  Right-click on the MP4 file(s) on your desktop and select \"\"Convert with Filestar\"\". In the search box, type \"\"convert to dicom\"\". Press \"\"Convert\"\" to initiate the process. This method provides a straightforward approach to converting video files without the need for complex configurations. \"",
+                "https://filestar.com/skills/mp4/convert-mp4-to-dicom"
+            ],
+            [
+                "",
+                "",
+                "",
+                "",
+                "WAV",
+                "\"Read the WAV File: Use an audio processing library to read the WAV file and extract its data. Create a DICOM File: Utilize the chosen DICOM library to create a new DICOM file, populating the necessary metadata fields as specified by the Basic Voice Audio Waveform Storage SOP Class. Embed the Audio Data: Insert the audio data from the WAV file into the appropriate DICOM data elements, ensuring that the data is correctly formatted and encoded. Save the DICOM File: Finalize and save the DICOM file, ensuring it adheres to the standard's requirements. Verify the DICOM File: After conversion, use DICOM validation tools to ensure that the file complies with the DICOM standard and can be correctly interpreted by DICOM-compliant systems.\"",
+                "https://dicom.nema.org/dicom/supps/sup30_lb.pdf?utm_source=chatgpt.com"
+            ],
+            [
+                "",
+                "",
+                "",
+                "",
+                "SR",
+                "\"PixelMed offers Java-based tools and libraries for working with DICOM SR files. These tools facilitate the reading, creation, and modification of SR documents, as well as conversion to other formats. For a comprehensive understanding of DICOM SR structures and operations, refer to the \"\"DICOM Structured Reporting\"\" book by Dr. David Clunie, available through PixelMed.  \"",
+                "https://www.dclunie.com/pixelmed/DICOMSR.book.pdf?utm_source=chatgpt.com"
+            ],
+            [
+                "",
+                "",
+                "",
+                "",
+                " VIV / VOL",
+                "a MATLAB-based tool for converting 3D image volumes from NifTi format to DICOMs. This repository contains a GUI which can be used to assign values to common DICOM fields. It also contains functions which can be used in your own code to streamline workflows. This work is part of the U24 co-clinical trial of which CIVM at Duke University is a participant. This work has been funded by NIH U24CA220245.",
+                "https://github.com/mdholbrook/U24_DICOM_tool"
+            ]
+        ]
+    },
+    {
+        "level": "7",
+        "title": "7. Acquisition Device & Hardware Requirements",
+        "content-type": "table",
+        "content": [
+            [
+                "7.1.Equipment Used",
+                "7.2.Typical Manufacturers"
+            ],
+            [
+                "\"Ultrasound Machine  Contrast Agent (microbubble-based)  Transducer Probe  Image Processing Software\"",
+                "\"GE Healthcare Philips Healthcare Siemens Healthineers Canon Medical Systems (formerly Toshiba Medical Systems)  Fujifilm Sonosite      Mindray Samsung Medison Bracco Imaging  Lantheus Medical Imaging  Nano Therapeutics Samsung Medison\""
+            ]
+        ]
+    },
+    {
+        "level": "8",
+        "title": "8. Common Clinical Applications",
+        "content-type": "table",
+        "content": [
+            [
+                "8.1.Primary Uses",
+                "8.2.Specialized Uses"
+            ],
+            [
+                "The primary uses of Endoscopic Ultrasound (EUS) in GI and pancreatic imaging include evaluating gastrointestinal (GI) tract abnormalities, such as esophageal, gastric, and rectal cancers, as well as pancreatic lesions and bile duct diseases. EUS is used to assess the depth of tumor invasion, lymph node involvement, and vascular invasion, which helps in staging cancers and guiding treatment. Additionally, EUS-guided fine-needle aspiration (FNA) and biopsy allow for the sampling of tissue from lesions and lymph nodes, enabling diagnosis and genetic testing. EUS also facilitates the evaluation of pancreatic cysts, bile duct stones, and ampullary lesions, and can be used to guide interventions such as celiac plexus neurolysis for pain management in pancreatic cancer patients. Overall, EUS provides high-resolution images and enables minimally invasive diagnostic and therapeutic procedures, making it a valuable tool in the management of GI and pancreatic disorders.",
+                "Endoscopic Ultrasound (EUS) has specialized uses in GI and pancreatic imaging, including evaluating esophageal, gastric, and rectal cancers for staging and assessing depth of tumor invasion. It is also used to diagnose and stage pancreatic cancer, ampullary cancer, and bile duct cancer, as well as to evaluate pancreatic cysts and neuroendocrine tumors. Additionally, EUS-guided fine-needle aspiration (FNA) allows for tissue sampling of lesions and lymph nodes, enabling diagnosis of conditions such as pancreatic cancer, lymphoma, and sarcoidosis. Furthermore, EUS is used to evaluate chronic pancreatitis, pancreatic pseudocysts, and biliary ductal stones, and to guide therapeutic interventions such as celiac plexus block for pain management and drainage of pancreatic pseudocysts and bile duct stones, providing a minimally invasive approach to diagnosis and treatment of various GI and pancreatic disorders."
+            ]
+        ]
+    },
+    {
+        "level": "9",
+        "title": "9. Radiation & Safety Considerations",
+        "content-type": "table",
+        "content": [
+            [
+                "9.1.Ionizing Radiation",
+                "9.2.Radiation Dose (if applicable)"
+            ],
+            [
+                "No",
+                "No"
+            ]
+        ]
+    },
+    {
+        "level": "10",
+        "title": "10. Preprocessing & Data Preparation",
+        "content-type": "table",
+        "content": [
+            [
+                "10.1.Common Preprocessing Steps",
+                "10.2.Compression Methods (if any)"
+            ],
+            [
+                "Common preprocessing steps for Contrast-enhanced Ultrasound (CEUS) typically include image normalization to standardize intensity levels, temporal filtering to reduce noise and enhance temporal consistency, and spatial filtering to improve image clarity. Additionally, motion correction is often applied to compensate for patient or organ movement during imaging. Segmentation may be used to isolate regions of interest, and time-intensity curve (TIC) analysis is performed to quantify contrast agent dynamics. These steps collectively enhance image quality and ensure accurate interpretation of perfusion patterns and vascular structures.",
+                "Contrast-enhanced ultrasound (CEUS) typically employs lossy compression methods to reduce file sizes while maintaining diagnostic quality. These methods include JPEG, JPEG 2000, and advanced video codecs like H.264 or H.265, which are optimized for medical imaging. The compression focuses on preserving the dynamic contrast information critical for diagnosis while minimizing artifacts. The choice of method depends on the balance between compression ratio and image fidelity required for clinical analysis."
+            ]
+        ]
+    },
+    {
+        "level": "11",
+        "title": "11. Challenges & Limitations",
+        "content-type": "table",
+        "content": [
+            [
+                "11.1.Technical Challenges",
+                "11.2.Clinical Limitations"
+            ],
+            [
+                "Contrast-enhanced ultrasound (CEUS) faces several technical challenges, including the need for specialized ultrasound equipment capable of low mechanical index imaging to preserve microbubble contrast agents. Image interpretation can be complex due to artifacts, motion, and variability in contrast uptake. Additionally, achieving consistent contrast agent distribution and optimizing imaging parameters for different clinical applications can be difficult. Regulatory and safety concerns regarding contrast agents, as well as limited penetration depth in obese patients or deep-seated structures, further complicate its use. Finally, CEUS requires skilled operators to ensure accurate diagnosis and avoid misinterpretation of findings.",
+                "Contrast-enhanced ultrasound (CEUS) has several clinical limitations, including its dependence on operator skill and experience, which can affect image quality and diagnostic accuracy. It is less effective in patients with high body mass index (BMI) or deep-seated lesions due to limited penetration of ultrasound waves. Additionally, CEUS has a relatively narrow field of view compared to CT or MRI, making it less suitable for evaluating large areas or multiple organs simultaneously. The use of ultrasound contrast agents is also contraindicated in patients with certain conditions, such as severe cardiopulmonary disease or known allergies to the agents. Furthermore, CEUS may not provide sufficient detail for characterizing complex or heterogeneous lesions, often requiring complementary imaging modalities for a comprehensive assessment."
+            ]
+        ]
+    },
+    {
+        "level": "12",
+        "title": "12. References (Website, Paper, etc.)",
+        "content-type": "table",
+        "content": [
+            [
+                "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.869004/full",
+                "Column 2"
+            ],
+            [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC7271313/",
+                ""
+            ],
+            [
+                "https://apc.amegroups.org/article/view/7870/html",
+                ""
+            ],
+            [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6143442/",
+                ""
+            ]
+        ]
+    },
+    {
+        "level": "prepration-meta-data-prepared_by",
+        "title": "prepared_by",
+        "content-type": "rawtext",
+        "content": "Mohammadreza Ghaffarzadeh-Esfahani"
+    },
+    {
+        "level": "prepration-meta-data-confirmed_by",
+        "title": "confirmed_by",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-date_of_preparation",
+        "title": "date_of_preparation",
+        "content-type": "rawtext",
+        "content": "2025-05-04"
+    },
+    {
+        "level": "prepration-meta-data-planned_next_review",
+        "title": "planned_next_review",
+        "content-type": "rawtext",
+        "content": ""
+    },
+    {
+        "level": "prepration-meta-data-requires_completion",
+        "title": "requires_completion",
+        "content-type": "rawtext",
+        "content": ""
+    }
+]
